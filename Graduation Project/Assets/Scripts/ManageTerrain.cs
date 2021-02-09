@@ -54,6 +54,37 @@ public class ManageTerrain : EditorWindow
         
     }
 
+    
+    void AddTerrains()
+    {
+        if (Selection.activeGameObject == null)
+        {
+            Debug.LogWarning("no terrain was selected");
+            return;
+        }
+
+        if (Selection.activeGameObject.GetComponent<Terrain>() == null)
+        {
+            Debug.LogWarning("this object is not Terrain");
+            return;
+        }
+        
+        bool isTerrainInList = false;
+        foreach (var gameObj in terrainObjs)
+        {
+            if (Selection.activeGameObject.name == gameObj.name)
+            {
+                Debug.LogWarning("already this terrain exit");
+                isTerrainInList = true;
+            }
+        }
+
+        if (!isTerrainInList)
+        {
+            terrainObjs.Add(Selection.activeGameObject);
+        }
+        
+    }
     void SelectTerrain(int index)
     {
         foreach (var gameobj in terrainObjs)
@@ -70,7 +101,13 @@ public class ManageTerrain : EditorWindow
         {			
             AddTerrain();							
         }
-			
+        
+        GUILayout.Space(10);
+		
+        if(GUILayout.Button("Add Terrains"))
+        {			
+            AddTerrains();							
+        }
         GUILayout.Space(10);
 
         if(GUILayout.Button("Init Terrain"))
