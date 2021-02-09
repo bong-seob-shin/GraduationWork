@@ -23,7 +23,7 @@ public class SplitTerrain : EditorWindow {
 	const int terrainsCount = 4;		
 	
 	// Add submenu
-    [MenuItem("Terrain/Split")]
+	[MenuItem("Terrain/Split")]
 	static void Init()
     {
 		// Get existing open window or if none, make a new one:
