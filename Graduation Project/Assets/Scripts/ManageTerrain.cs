@@ -57,31 +57,14 @@ public class ManageTerrain : EditorWindow
     
     void AddTerrains()
     {
-        if (Selection.activeGameObject == null)
+        if (terrainObjs.Count == 0)
         {
-            Debug.LogWarning("no terrain was selected");
-            return;
-        }
+            GameObject[] gObjs = Selection.gameObjects;
 
-        if (Selection.activeGameObject.GetComponent<Terrain>() == null)
-        {
-            Debug.LogWarning("this object is not Terrain");
-            return;
-        }
-        
-        bool isTerrainInList = false;
-        foreach (var gameObj in terrainObjs)
-        {
-            if (Selection.activeGameObject.name == gameObj.name)
+            foreach (var gObj in gObjs)
             {
-                Debug.LogWarning("already this terrain exit");
-                isTerrainInList = true;
+                terrainObjs.Add(gObj);
             }
-        }
-
-        if (!isTerrainInList)
-        {
-            terrainObjs.Add(Selection.activeGameObject);
         }
         
     }
