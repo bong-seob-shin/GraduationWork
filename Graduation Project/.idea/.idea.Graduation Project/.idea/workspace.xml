@@ -22,13 +22,9 @@
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain 0 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 0 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain 0 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 0 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain 1 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 1 0.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain 2 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 2 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain 0 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 0 0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain 3 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 3 3.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +86,7 @@
       <workItem from="1612833285626" duration="1654000" />
       <workItem from="1613396194254" duration="1851000" />
       <workItem from="1613472267794" duration="2989000" />
+      <workItem from="1613476491839" duration="772000" />
     </task>
     <servers />
   </component>

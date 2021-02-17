@@ -123,6 +123,17 @@ public class ManageTerrain : EditorWindow
                 gameObj.SetActive(true);
             }
         }
+        
+        GUILayout.Space(10);
+        
+        if(GUILayout.Button("hide All Terrains"))
+        {
+            Debug.Log(terrainObjs.Count);
+            foreach (var gameObj in terrainObjs)
+            {
+                gameObj.SetActive(false);
+            }
+        }
     
         GUILayout.Space(10);
 
