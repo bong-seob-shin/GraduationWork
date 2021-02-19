@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain 0 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 0 0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terrain 3 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 3 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +35,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../바탕화면/유니티 기말텀프/GameEngineFinal/유니티 기말과제 텀프/Assets/Classical City/Script/PlayerMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/SplitTerrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +104,8 @@
       <workItem from="1613396194254" duration="1851000" />
       <workItem from="1613472267794" duration="2989000" />
       <workItem from="1613476491839" duration="772000" />
+      <workItem from="1613642968104" duration="13158000" />
+      <workItem from="1613735637210" duration="2983000" />
     </task>
     <servers />
   </component>
@@ -111,9 +130,14 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1920" y="0" width="1096" height="1607" key="dock-window-1" timestamp="1612826641647">
+    <state x="2453" y="0" width="554" height="1887" key="dock-window-1" timestamp="1613735923306">
       <screen x="1920" y="0" width="1080" height="1880" />
     </state>
-    <state x="1920" y="0" width="1096" height="1607" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1612826641647" />
+    <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1613735923306" />
+    <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@1920.0.1080.1880" timestamp="1613660564667" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1613644646369">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1613644646369" />
   </component>
 </project>
