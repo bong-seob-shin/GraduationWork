@@ -143,7 +143,6 @@ public class Player : MonoBehaviour
 
     private void Running()
     {
-        Debug.Log("쉬프트 눌림");
         _applySpeed = _runSpeed;
         
     }
