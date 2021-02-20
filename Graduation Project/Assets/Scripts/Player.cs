@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -19,12 +20,20 @@ public class Player : MonoBehaviour
     [Tooltip("점프 조정")]
     [SerializeField]
     private float _jumpForce;
-
+    
     [Tooltip("플레이어 상태 변수")]
     private bool _isRun;
     private bool _isGround = true;
-    public bool _isCrouch = false;
+    private bool _isCrouch = false;
+    private bool _isNearCar = false;
+    [SerializeField]
+    private bool _isRideCar = false;
 
+
+    [Tooltip("자동차 탑승 쿨다운")]
+    [SerializeField]
+    private float _rideCoolDown = 1.0f;
+    
     [Tooltip("얼마나 앉을건지")]
     [SerializeField]
     private float _crouchPosY;
@@ -36,8 +45,9 @@ public class Player : MonoBehaviour
     
 
     private CapsuleCollider _capsuleCollider;
-    
 
+    private RaycastHit _hitInfo;
+    
     
     private Rigidbody _playerRb;
     private enum PlayerState
@@ -83,12 +93,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        IsGround();
-        KeyboardInput();
-        CharacterRotation();
-        Move();
-        
-        _stateMachine.ExecuteUpdate();
+        if (!_isRideCar)
+        {
+            IsGround();
+            KeyboardInput();
+            CharacterRotation();
+            Move();
+            _stateMachine.ExecuteUpdate();
+        }
+
+        if (_rideCoolDown > 0.0f)
+        {
+            _rideCoolDown -= Time.deltaTime;
+        }
     }
 
  
@@ -123,6 +140,12 @@ public class Player : MonoBehaviour
             {
                 Jump();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F)&&_rideCoolDown<=0)
+        {
+            
+            IsNearCar();
         }
     }
     
@@ -171,4 +194,28 @@ public class Player : MonoBehaviour
     {
         return _sensitivity;
     }
+
+    private void IsNearCar()
+    {
+        _isNearCar = Physics.Raycast(transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
+        
+        if (_isNearCar&&!_isRideCar)
+        {
+            _isRideCar = true;
+            _capsuleCollider.enabled = false;
+            _playerRb.isKinematic = true;
+            _hitInfo.transform.GetComponent<CarController>().setCarControll(this);
+            Debug.Log("Ride!!");
+        }
+    }
+
+    public void TakeoffCar()
+    {
+        _rideCoolDown = 1.0f;
+        _isRideCar = false;
+        _capsuleCollider.enabled = true;
+        _playerRb.isKinematic = false;
+        
+    }
+   
 }
