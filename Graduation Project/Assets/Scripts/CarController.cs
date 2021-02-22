@@ -12,6 +12,11 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private bool _isCarStartControll = false;
 
+    [Tooltip("자동차 탑승 쿨다운")]
+    [SerializeField]
+    private float _rideCoolDown = 1.0f;
+
+    
     private Player _driver;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +31,11 @@ public class CarController : MonoBehaviour
         {
             Move();
             KeyboardInput();
+
+            if (_rideCoolDown > 0)
+            {
+                _rideCoolDown -= Time.deltaTime;
+            }
         }
     }
     
@@ -41,14 +51,15 @@ public class CarController : MonoBehaviour
         Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *_carSpeed;
 
         _carRb.MovePosition(transform.position + _velocity * Time.deltaTime);
-
+        _driver.transform.rotation = transform.rotation;
         _driver.transform.position = transform.position;
     }
 
     private void KeyboardInput()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F)&&_rideCoolDown<=0)
         {
+            _rideCoolDown = 1;
             _isCarStartControll = false;
             _driver.TakeoffCar();
             _driver = null;
