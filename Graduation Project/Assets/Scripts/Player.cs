@@ -147,6 +147,11 @@ public class Player : MonoBehaviour
             
             IsNearCar();
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Getup();
+        }
     }
     
     
@@ -211,11 +216,21 @@ public class Player : MonoBehaviour
 
     public void TakeoffCar()
     {
+        
         _rideCoolDown = 1.0f;
         _isRideCar = false;
         _capsuleCollider.enabled = true;
         _playerRb.isKinematic = false;
-        
+
+        Getup();
     }
-   
+
+    private void Getup()
+    {
+        if (transform.rotation.z != 0)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0,0,0));
+
+        }
+    }
 }

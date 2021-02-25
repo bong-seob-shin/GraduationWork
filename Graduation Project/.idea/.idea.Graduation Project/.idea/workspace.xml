@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Models/car.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/car.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/car.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/car.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Document/Development Plan Doc/졸업작품 기획서/졸업작품 세부 기획서.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Document/Development Plan Doc/졸업작품 기획서/졸업작품 세부 기획서.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +109,7 @@
       <workItem from="1613735637210" duration="2983000" />
       <workItem from="1613751561403" duration="886000" />
       <workItem from="1613836619176" duration="5873000" />
+      <workItem from="1614282382089" duration="7398000" />
     </task>
     <servers />
   </component>
@@ -136,9 +139,9 @@
     </state>
     <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1613836948742" />
     <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@1920.0.1080.1880" timestamp="1613660564667" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1613838736607">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614282731871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1613838736607" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1614282731871" />
   </component>
 </project>
