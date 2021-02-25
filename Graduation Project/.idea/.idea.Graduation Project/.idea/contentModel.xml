@@ -11,6 +11,7 @@
           <e p="Camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
+          <e p="CarController.cs" t="Include" />
           <e p="ManageTerrain.cs" t="Include" />
           <e p="Player State" t="Include">
             <e p="IState.cs" t="Include" />
