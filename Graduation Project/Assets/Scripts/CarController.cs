@@ -28,7 +28,7 @@ public class CarController : MonoBehaviour
     [SerializeField]
     private float _rideCoolDown = 1.0f;
 
-
+    public Camera carCamera;
     
     
     [SerializeField] private WheelCollider frontRightWheelCollider;
@@ -62,6 +62,13 @@ public class CarController : MonoBehaviour
             {
                 _rideCoolDown -= Time.deltaTime;
             }
+        }
+        else
+        {
+            frontLeftWheelCollider.brakeTorque = _decelerationForce;
+            frontRightWheelCollider.brakeTorque = _decelerationForce;
+            RearLeftWheelCollider.brakeTorque = _decelerationForce;
+            RearRightWheelCollider.brakeTorque = _decelerationForce;
         }
     }
     
@@ -98,7 +105,7 @@ public class CarController : MonoBehaviour
     
   
         _driver.transform.rotation = transform.rotation;
-        _driver.transform.position = transform.position;
+        _driver.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
 
@@ -118,10 +125,7 @@ public class CarController : MonoBehaviour
 
     }
 
-    private void Deceleration()
-    {
-        
-    }
+   
     private void UpdateWheel()
     {
         UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
@@ -151,7 +155,8 @@ public class CarController : MonoBehaviour
             _rideCoolDown = 1;
             _isCarStartControll = false;
             _driver.transform.position = new Vector3(transform.position.x+5,transform.position.y, transform.position.z);
-            
+            carCamera.gameObject.SetActive(false);
+            _driver.gameObject.SetActive(true);
             _driver.TakeoffCar();
            
             Debug.Log("TakeOff!");
@@ -164,6 +169,8 @@ public class CarController : MonoBehaviour
     {
         _driver = player;
         _driverOriginRotation = player.transform.rotation;
+        _driver.gameObject.SetActive(false);
+        carCamera.gameObject.SetActive(true);
         _isCarStartControll = true;
     }
     

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    private float _lookSensitivity;
+    private float _lookSensitivity = 15;
 
 
     [SerializeField] //카메라 상하 제한 각 
@@ -12,11 +12,7 @@ public class CameraMove : MonoBehaviour
     
     private float _currentCameraRotationX = 0;
     // Start is called before the first frame update
-    void Awake()
-    {
-
-        _lookSensitivity = GetComponentInParent<Player>().getSensitivity();
-    }
+    
 
     // Update is called once per frame
     void Update()
