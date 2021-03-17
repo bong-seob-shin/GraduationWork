@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
 
+    public Vector3 centerOfMass;    
+    
     [Tooltip("자동차 속도 및 방향")]
     private float _moveDirX;
     private float _moveDirZ;
@@ -17,7 +20,8 @@ public class CarController : MonoBehaviour
 
     [SerializeField] private float _breakForce;
     [SerializeField] private float _maxSteeringAngle;
-    
+
+    private Rigidbody _carRigid;
     
     private bool isBreaking;
   
@@ -43,10 +47,18 @@ public class CarController : MonoBehaviour
     
     private Player _driver;
 
+    
+    
     [SerializeField]
     private Quaternion _driverOriginRotation;
     // Start is called before the first frame update
-   
+
+    private void Awake()
+    {
+        _carRigid = GetComponent<Rigidbody>();
+        
+        _carRigid.centerOfMass = centerOfMass;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -78,8 +90,8 @@ public class CarController : MonoBehaviour
 
         if (_moveDirZ != 0f)
         {
-            frontLeftWheelCollider.motorTorque = _moveDirZ * _motorForce;
-            frontRightWheelCollider.motorTorque = _moveDirZ * _motorForce;
+            RearLeftWheelCollider.motorTorque = _moveDirZ * _motorForce;
+            RearRightWheelCollider.motorTorque = _moveDirZ * _motorForce;
             
             frontLeftWheelCollider.brakeTorque = 0;
             frontRightWheelCollider.brakeTorque =0;
@@ -146,24 +158,25 @@ public class CarController : MonoBehaviour
     }
     private void KeyboardInput()
     {
-        _moveDirX = Input.GetAxisRaw("Horizontal");
-        _moveDirZ = Input.GetAxisRaw("Vertical");
-        isBreaking = Input.GetKey(KeyCode.Space);
-        
         if (Input.GetKeyDown(KeyCode.F)&&_rideCoolDown<=0)
         {
-            _rideCoolDown = 1;
+            
             _isCarStartControll = false;
             _driver.transform.position = new Vector3(transform.position.x+5,transform.position.y, transform.position.z);
             carCamera.gameObject.SetActive(false);
             _driver.gameObject.SetActive(true);
             _driver.TakeoffCar();
-           
+            
+            _rideCoolDown = 1;
             Debug.Log("TakeOff!");
         }
-
-       
-
+        
+        _moveDirX = Input.GetAxisRaw("Horizontal");
+        _moveDirZ = Input.GetAxisRaw("Vertical");
+        isBreaking = Input.GetKey(KeyCode.Space);
+        
+        
+        
     }
     public void setCarControll(Player player)
     {

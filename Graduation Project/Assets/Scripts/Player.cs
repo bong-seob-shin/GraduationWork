@@ -62,7 +62,8 @@ public class Player : MonoBehaviour
     private StateMachine _stateMachine;
     
     private Dictionary<PlayerState, IState> _stateDic = new Dictionary<PlayerState,IState>(); // 상태를 보관할 딕션어리
-  
+
+    public Transform rayCastPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -105,7 +106,17 @@ public class Player : MonoBehaviour
         if (_rideCoolDown > 0.0f)
         {
             _rideCoolDown -= Time.deltaTime;
+            if (transform.rotation.z != 0)
+            {
+                Debug.Log("Get up!!");
+
+                transform.rotation = Quaternion.Euler(new Vector3(0,0,0));
+
+            }
         }
+        
+        
+       
     }
 
  
@@ -148,10 +159,7 @@ public class Player : MonoBehaviour
             IsNearCar();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Getup();
-        }
+       
     }
     
     
@@ -202,7 +210,7 @@ public class Player : MonoBehaviour
 
     private void IsNearCar()
     {
-        _isNearCar = Physics.Raycast(transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
+        _isNearCar = Physics.Raycast(rayCastPoint.transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
         
         if (_isNearCar&&!_isRideCar)
         {
@@ -222,15 +230,8 @@ public class Player : MonoBehaviour
         _capsuleCollider.enabled = true;
         _playerRb.isKinematic = false;
 
-        Getup();
+        
     }
 
-    private void Getup()
-    {
-        if (transform.rotation.z != 0)
-        {
-            transform.rotation = Quaternion.Euler(new Vector3(0,0,0));
-
-        }
-    }
+    
 }
