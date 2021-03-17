@@ -49,9 +49,6 @@ public class CarController : MonoBehaviour
 
     
     
-    [SerializeField]
-    private Quaternion _driverOriginRotation;
-    // Start is called before the first frame update
 
     private void Awake()
     {
@@ -63,6 +60,7 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         if (_isCarStartControll)
         {
             
@@ -181,7 +179,6 @@ public class CarController : MonoBehaviour
     public void setCarControll(Player player)
     {
         _driver = player;
-        _driverOriginRotation = player.transform.rotation;
         _driver.gameObject.SetActive(false);
         carCamera.gameObject.SetActive(true);
         _isCarStartControll = true;

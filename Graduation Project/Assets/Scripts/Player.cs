@@ -203,10 +203,7 @@ public class Player : MonoBehaviour
         _playerRb.velocity = transform.up * _jumpForce;
     }
 
-    public float getSensitivity()
-    {
-        return _sensitivity;
-    }
+  
 
     private void IsNearCar()
     {

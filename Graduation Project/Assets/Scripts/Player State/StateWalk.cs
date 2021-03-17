@@ -6,6 +6,7 @@ public class StateWalk : IState
 {
    public void OperateEnter()
    {
+      
    }
 
    public void OperateUpdate()
