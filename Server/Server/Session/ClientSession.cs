@@ -20,7 +20,8 @@ namespace Server
         {
             Console.WriteLine($"OnConnected: {endPoint}");
 
-            Program.Room.Enter(this);
+            Program.Room.Push( () => Program.Room.Enter(this) );
+
         }
 
         // PacketSession 클래스에서 sealed로 OnRecv() 막았기 때문에 여기서 사용 불가능!!
@@ -37,7 +38,8 @@ namespace Server
             SessionManager.Instance.Remove(this);
             if (Room != null)
             {
-                Room.Leave(this);
+                GameRoom room = Room;
+                room.Push(() => room.Leave(this));
                 Room = null;
             }
 
@@ -46,7 +48,7 @@ namespace Server
 
         public override void OnSend(int numOfBytes)
         {
-            Console.WriteLine($"Transferred bytes: {numOfBytes}");
+           // Console.WriteLine($"Transferred bytes: {numOfBytes}");
         }
     }
 }
