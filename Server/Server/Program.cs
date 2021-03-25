@@ -12,17 +12,16 @@ namespace Server
     class Program
     {
         static Listener _listener = new Listener();
+        public static GameRoom Room = new GameRoom();
 
         static void Main(string[] args)
         {
-            PacketManager.Instance.Register();
-
             string host = Dns.GetHostName();
             IPHostEntry ipHost = Dns.GetHostEntry(host);
             IPAddress ipAddr = ipHost.AddressList[0];
             IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
 
-            _listener.Init(endPoint, () => { return new ClientSession(); }); // 리스너는 무엇을 만들어 줄지만 결정
+            _listener.Init(endPoint, () => { return SessionManager.Instance.Generate(); }); // 리스너는 무엇을 만들어 줄지만 결정
             Console.WriteLine("Listening...");
 
             while (true)
