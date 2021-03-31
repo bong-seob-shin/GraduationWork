@@ -33,8 +33,8 @@ public class CarController : MonoBehaviour
     private float _rideCoolDown = 1.0f;
 
     public Camera carCamera;
-    
-    
+
+    public Transform takeOffPos;
     [SerializeField] private WheelCollider frontRightWheelCollider;
     [SerializeField] private WheelCollider frontLeftWheelCollider;
     [SerializeField] private WheelCollider RearRightWheelCollider;
@@ -115,7 +115,7 @@ public class CarController : MonoBehaviour
     
   
         _driver.transform.rotation = transform.rotation;
-        _driver.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        _driver.transform.position = takeOffPos.position;
     }
 
 
@@ -160,7 +160,6 @@ public class CarController : MonoBehaviour
         {
             
             _isCarStartControll = false;
-            _driver.transform.position = new Vector3(transform.position.x+5,transform.position.y, transform.position.z);
             carCamera.gameObject.SetActive(false);
             _driver.gameObject.SetActive(true);
             _driver.TakeoffCar();
