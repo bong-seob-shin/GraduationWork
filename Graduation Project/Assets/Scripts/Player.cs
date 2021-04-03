@@ -55,13 +55,12 @@ public class Player : MonoBehaviour
     private Animator _playerAnim;
   
     
-    [Tooltip("허리 움직이기")]
+    [Tooltip("목 움직이기")]
     public Transform cameraTansform;
-    private Transform _playerSpineTransform;
-    private Vector3 _spineDir = new Vector3();
-    
-    [SerializeField]
-    private  Vector3 _spineOffset = new Vector3(0, -40, -100);
+    private Transform _playerNeckTransform;
+    private Vector3 _neckDir = new Vector3();
+
+    [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
     
     private enum PlayerState
     {
@@ -105,7 +104,7 @@ public class Player : MonoBehaviour
         _playerAnim = gameObject.GetComponent<Animator>();
         if (_playerAnim)
         {
-            _playerSpineTransform = _playerAnim.GetBoneTransform(HumanBodyBones.Spine); //spine bone transform받아오기
+            _playerNeckTransform = _playerAnim.GetBoneTransform(HumanBodyBones.Neck); //spine bone transform받아오기
         }
     }
 
@@ -142,9 +141,9 @@ public class Player : MonoBehaviour
 
     private void OperationBonRotate()
     {
-        _spineDir = cameraTansform.position + cameraTansform.forward * 50;
-        _playerSpineTransform.LookAt(_spineDir);
-        _playerSpineTransform.rotation = _playerSpineTransform.rotation * Quaternion.Euler(_spineOffset); //상체 움직임 보정
+        _neckDir = cameraTansform.position + cameraTansform.forward * 50;
+        _playerNeckTransform.LookAt(_neckDir);
+        _playerNeckTransform.rotation = _playerNeckTransform.rotation * Quaternion.Euler(_neckOffset); //상체 움직임 보정
     }
 
     void KeyboardInput()//키입력처리

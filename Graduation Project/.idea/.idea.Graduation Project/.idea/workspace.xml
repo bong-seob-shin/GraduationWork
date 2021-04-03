@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Ch35_nonPBR@Running.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Ch35_nonPBR@Running.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Ch35_1003_Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Ch35_1003_Diffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Player.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Player.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +111,7 @@
       <workItem from="1615978395752" duration="3815000" />
       <workItem from="1617223043514" duration="641000" />
       <workItem from="1617442997223" duration="724000" />
+      <workItem from="1617444342396" duration="408000" />
     </task>
     <servers />
   </component>
