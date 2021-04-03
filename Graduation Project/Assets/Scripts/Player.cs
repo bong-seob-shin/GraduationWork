@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
@@ -50,6 +51,18 @@ public class Player : MonoBehaviour
     
     
     private Rigidbody _playerRb;
+
+    private Animator _playerAnim;
+  
+    
+    [Tooltip("허리 움직이기")]
+    public Transform cameraTansform;
+    private Transform _playerSpineTransform;
+    private Vector3 _spineDir = new Vector3();
+    
+    [SerializeField]
+    private  Vector3 _spineOffset = new Vector3(0, -40, -100);
+    
     private enum PlayerState
     {
         Idle,
@@ -89,6 +102,11 @@ public class Player : MonoBehaviour
         _runSpeed = _walkSpeed * 3;
         _playerRb = gameObject.GetComponent<Rigidbody>();
         _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
+        _playerAnim = gameObject.GetComponent<Animator>();
+        if (_playerAnim)
+        {
+            _playerSpineTransform = _playerAnim.GetBoneTransform(HumanBodyBones.Spine); //spine bone transform받아오기
+        }
     }
 
     // Update is called once per frame
@@ -114,13 +132,21 @@ public class Player : MonoBehaviour
 
             }
         }
-        
-        
-       
     }
 
- 
-    
+
+    private void LateUpdate()
+    {
+        OperationBonRotate();
+    }
+
+    private void OperationBonRotate()
+    {
+        _spineDir = cameraTansform.position + cameraTansform.forward * 50;
+        _playerSpineTransform.LookAt(_spineDir);
+        _playerSpineTransform.rotation = _playerSpineTransform.rotation * Quaternion.Euler(_spineOffset); //상체 움직임 보정
+    }
+
     void KeyboardInput()//키입력처리
     {
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) ||
