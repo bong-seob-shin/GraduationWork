@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     
     private Rigidbody _playerRb;
 
-    private Animator _playerAnim;
+    public Animator _playerAnim;
   
     
     [Tooltip("목 움직이기")]
