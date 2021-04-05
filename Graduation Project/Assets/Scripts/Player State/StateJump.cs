@@ -11,6 +11,7 @@ public class StateJump : IState
         if (player.isGround)
         {
 
+            player.playerAnim.SetTrigger("Jump");
             player.playerRb.velocity = player.transform.up * player.jumpForce;
         }
     }

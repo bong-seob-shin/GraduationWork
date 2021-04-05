@@ -7,7 +7,7 @@ public class StateIdle : IState
     Player player = Player.Instance;
     public void OperateEnter()
     {
-        
+        player.playerAnim.SetBool("Idle" ,true);
     }
 
     public void OperateUpdate()
@@ -16,5 +16,6 @@ public class StateIdle : IState
 
     public void OperateExit()
     {
+        player.playerAnim.SetBool("Idle" ,false);
     }
 }

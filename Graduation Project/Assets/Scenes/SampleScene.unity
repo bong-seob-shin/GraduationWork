@@ -1570,17 +1570,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22a835712f5b4642a3e366d482b1e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walkSpeed: 3
-  _runSpeed: 9
-  _crouchSpeed: 0
-  _applySpeed: 0
-  _jumpForce: 5
+  walkSpeed: 3
+  runSpeed: 0
+  crouchSpeed: 0
+  applySpeed: 0
+  jumpForce: 5
+  isRun: 0
+  isGround: 1
+  isCrouch: 0
+  isNearCar: 0
   _isRideCar: 0
   _rideCoolDown: 1
   _crouchPosY: 0
   _sensitivity: 15
+  playerRb: {fileID: 0}
+  playerAnim: {fileID: 0}
   cameraTansform: {fileID: 1297650284}
   _neckOffset: {x: 0, y: 0, z: 0}
+  w_keyPress: 0
+  a_keyPress: 0
+  s_keyPress: 0
+  d_keyPress: 0
   rayCastPoint: {fileID: 591884546}
 --- !u!4 &592692827 stripped
 Transform:
@@ -1613,10 +1623,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.08
+  m_Radius: 0.2
+  m_Height: 1.83
   m_Direction: 1
-  m_Center: {x: 0, y: 0.94, z: 0}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!95 &592692830
 Animator:
   serializedVersion: 3

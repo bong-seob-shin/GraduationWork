@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.Rendering.HighDefinition;
 
 public class Player : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class Player : MonoBehaviour
     
     public Rigidbody playerRb;
 
-    public Animator _playerAnim;
+    public Animator playerAnim;
   
     
     [Tooltip("목 움직이기")]
@@ -70,7 +71,11 @@ public class Player : MonoBehaviour
         Jump
     }
 
-
+    [Tooltip("키입력 변수")] 
+    [HideInInspector] public bool w_keyPress = false;
+    [HideInInspector] public bool a_keyPress = false;
+    [HideInInspector] public bool s_keyPress = false;
+    [HideInInspector] public bool d_keyPress = false;
     private StateMachine _stateMachine;
     
     private Dictionary<PlayerState, IState> _stateDic = new Dictionary<PlayerState,IState>(); // 상태를 보관할 딕션어리
@@ -127,10 +132,10 @@ public class Player : MonoBehaviour
         runSpeed = walkSpeed * 3;
         playerRb = gameObject.GetComponent<Rigidbody>();
         _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
-        _playerAnim = gameObject.GetComponent<Animator>();
-        if (_playerAnim)
+        playerAnim = gameObject.GetComponent<Animator>();
+        if (playerAnim)
         {
-            _playerNeckTransform = _playerAnim.GetBoneTransform(HumanBodyBones.Neck); //spine bone transform받아오기
+            _playerNeckTransform = playerAnim.GetBoneTransform(HumanBodyBones.Neck); //spine bone transform받아오기
         }
     }
 
@@ -176,20 +181,28 @@ public class Player : MonoBehaviour
     {
         _stateMachine.SetState(_stateDic[PlayerState.Idle]);
         
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) ||
-            Input.GetKeyDown(KeyCode.D))
+        w_keyPress = false;
+        a_keyPress = false;
+        s_keyPress = false;
+        d_keyPress = false;
+        
+        w_keyPress = Input.GetKey(KeyCode.W);
+        a_keyPress = Input.GetKey(KeyCode.A);
+        s_keyPress = Input.GetKey(KeyCode.S);
+        d_keyPress = Input.GetKey(KeyCode.D);
+        
+        if (w_keyPress || a_keyPress || s_keyPress || d_keyPress)
         {
-            
             _stateMachine.SetState(_stateDic[PlayerState.Walk]);
             
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                _stateMachine.SetState(_stateDic[PlayerState.Run]);
+                
+            }
         }
         
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            _stateMachine.SetState(_stateDic[PlayerState.Run]);
-           
-
-        }
+       
        
         
         if (Input.GetKeyDown(KeyCode.Space))

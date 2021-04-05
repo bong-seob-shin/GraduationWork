@@ -8,7 +8,7 @@ public class StateRun : IState
 
     public void OperateEnter()
     {
-        
+        player.playerAnim.SetBool("Run" , true);
         player.applySpeed = player.runSpeed;
         
     }
@@ -20,6 +20,7 @@ public class StateRun : IState
     public void OperateExit()
     {
         player.applySpeed = player.walkSpeed;
+        player.playerAnim.SetBool("Run" , false);
 
     }
 }

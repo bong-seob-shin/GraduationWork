@@ -8,7 +8,10 @@ public class StateWalk : IState
 
    public void OperateEnter()
    {
-      
+      if (player.w_keyPress)
+      {
+         player.playerAnim.SetBool("Walk", true);
+      }
    }
 
    public void OperateUpdate()
@@ -18,6 +21,7 @@ public class StateWalk : IState
 
    public void OperateExit()
    {
-      
+      player.playerAnim.SetBool("Walk" , false);
+
    }
 }
