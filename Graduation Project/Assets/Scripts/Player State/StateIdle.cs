@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class StateIdle : IState
 {
+    Player player = Player.Instance;
     public void OperateEnter()
     {
+        
     }
 
     public void OperateUpdate()

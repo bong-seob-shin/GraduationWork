@@ -7,26 +7,26 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [Tooltip("스피드 조정")]
-    [SerializeField]
-    private float _walkSpeed;
-    [SerializeField]
-    private float _runSpeed;
-    [SerializeField]
-    private float _crouchSpeed;
+    private static Player instance = null;
     
-    [SerializeField]
-    private float _applySpeed;//걷기와 뛰기 함수를 두개만들지말고 이동하는것에 속도를 적용한다.
+    [Tooltip("스피드 조정")]
+   
+    public float walkSpeed;
+    public float runSpeed;
+    public float crouchSpeed;
+    
+    
+    public float applySpeed;//걷기와 뛰기 함수를 두개만들지말고 이동하는것에 속도를 적용한다.
 
     [Tooltip("점프 조정")]
     [SerializeField]
-    private float _jumpForce;
+    public float jumpForce;
     
     [Tooltip("플레이어 상태 변수")]
-    private bool _isRun;
-    private bool _isGround = true;
-    private bool _isCrouch = false;
-    private bool _isNearCar = false;
+    [HideInInspector]public bool isRun;
+    [HideInInspector]public bool isGround = true;
+    [HideInInspector]public bool isCrouch = false;
+    [HideInInspector]public bool isNearCar = false;
     [SerializeField]
     private bool _isRideCar = false;
 
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
     private RaycastHit _hitInfo;
     
     
-    private Rigidbody _playerRb;
+    public Rigidbody playerRb;
 
     public Animator _playerAnim;
   
@@ -77,10 +77,36 @@ public class Player : MonoBehaviour
 
     public Transform rayCastPoint;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public static Player Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                return null;
+            }
+
+            return instance;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
         
         //상태를 생성함 -> 새로운 상태가 생기면 추가하면됨
         IState idle = new StateIdle();
@@ -97,9 +123,9 @@ public class Player : MonoBehaviour
         
         _stateMachine = new StateMachine(idle);
         
-        _applySpeed = _walkSpeed;
-        _runSpeed = _walkSpeed * 3;
-        _playerRb = gameObject.GetComponent<Rigidbody>();
+        applySpeed = walkSpeed;
+        runSpeed = walkSpeed * 3;
+        playerRb = gameObject.GetComponent<Rigidbody>();
         _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
         _playerAnim = gameObject.GetComponent<Animator>();
         if (_playerAnim)
@@ -148,6 +174,8 @@ public class Player : MonoBehaviour
 
     void KeyboardInput()//키입력처리
     {
+        _stateMachine.SetState(_stateDic[PlayerState.Idle]);
+        
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) ||
             Input.GetKeyDown(KeyCode.D))
         {
@@ -156,35 +184,30 @@ public class Player : MonoBehaviour
             
         }
         
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             _stateMachine.SetState(_stateDic[PlayerState.Run]);
            
 
-            Running();
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            StopRunning();
-        }
+       
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _stateMachine.SetState(_stateDic[PlayerState.Jump]);
-
-            if (_isGround)
-            {
-                Jump();
-            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.F)&&_rideCoolDown<=0)
         {
-            
             IsNearCar();
         }
 
        
+       
+
+
+
     }
     
     
@@ -197,48 +220,34 @@ public class Player : MonoBehaviour
         Vector3 _moveHorizontal = transform.right * _moveDirX;
         Vector3 _moveVertical = transform.forward * _moveDirZ;
 
-        Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *_applySpeed;
+        Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *applySpeed;
 
-        _playerRb.MovePosition(transform.position + _velocity * Time.deltaTime);
-    }
-
-    private void Running()
-    {
-        _applySpeed = _runSpeed;
-        
-    }
-
-    private void StopRunning()
-    {
-        _applySpeed = _walkSpeed;
+        playerRb.MovePosition(transform.position + _velocity * Time.deltaTime);
     }
     
     private void CharacterRotation()
     {
         float _yRotation = Input.GetAxisRaw("Mouse X");
         Vector3 _charcterRotationY = new Vector3(0f, _yRotation, 0f) * _sensitivity;
-        _playerRb.MoveRotation(_playerRb.rotation*Quaternion.Euler(_charcterRotationY));
+        playerRb.MoveRotation(playerRb.rotation*Quaternion.Euler(_charcterRotationY));
     }
     private void IsGround()
     {
-        _isGround = Physics.Raycast(transform.position, Vector3.down, _capsuleCollider.bounds.extents.y + 0.1f);
+        isGround = Physics.Raycast(transform.position, Vector3.down, _capsuleCollider.bounds.extents.y + 0.1f);
     }
-    private void Jump()
-    {
-        _playerRb.velocity = transform.up * _jumpForce;
-    }
+  
 
   
 
     private void IsNearCar()
     {
-        _isNearCar = Physics.Raycast(rayCastPoint.transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
+        isNearCar = Physics.Raycast(rayCastPoint.transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
         
-        if (_isNearCar&&!_isRideCar)
+        if (isNearCar&&!_isRideCar)
         {
             _isRideCar = true;
             _capsuleCollider.enabled = false;
-            _playerRb.isKinematic = true;
+            playerRb.isKinematic = true;
             _hitInfo.transform.GetComponent<CarController>().setCarControll(this);
             Debug.Log("Ride!!");
         }
@@ -250,7 +259,7 @@ public class Player : MonoBehaviour
         _rideCoolDown = 1.0f;
         _isRideCar = false;
         _capsuleCollider.enabled = true;
-        _playerRb.isKinematic = false;
+        playerRb.isKinematic = false;
 
         
     }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StateWalk : IState
 {
+   Player player = Player.Instance;
+
    public void OperateEnter()
    {
       

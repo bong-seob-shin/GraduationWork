@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class StateJump : IState
 {
+    Player player = Player.Instance;
+
     public void OperateEnter()
     {
+        if (player.isGround)
+        {
+
+            player.playerRb.velocity = player.transform.up * player.jumpForce;
+        }
     }
 
     public void OperateUpdate()
