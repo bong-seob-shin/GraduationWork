@@ -201,10 +201,6 @@ public class Player : MonoBehaviour
                 
             }
         }
-        
-       
-       
-        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _stateMachine.SetState(_stateDic[PlayerState.Jump]);
@@ -215,12 +211,7 @@ public class Player : MonoBehaviour
         {
             IsNearCar();
         }
-
-       
-       
-
-
-
+        
     }
     
     
@@ -236,6 +227,8 @@ public class Player : MonoBehaviour
         Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *applySpeed;
 
         playerRb.MovePosition(transform.position + _velocity * Time.deltaTime);
+
+        
     }
     
     private void CharacterRotation()

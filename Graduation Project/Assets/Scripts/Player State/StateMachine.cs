@@ -36,7 +36,11 @@ public class StateMachine
         
     }
 
-
+    public IState GetCurrentState()
+    {
+        return CurrentState;
+    }
+    
     public void ExecuteUpdate()
     {
         CurrentState.OperateUpdate();

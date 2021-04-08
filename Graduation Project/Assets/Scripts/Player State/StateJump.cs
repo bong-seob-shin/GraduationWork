@@ -14,6 +14,7 @@ public class StateJump : IState
             player.playerAnim.SetTrigger("Jump");
             player.playerRb.velocity = player.transform.up * player.jumpForce;
         }
+        
     }
 
     public void OperateUpdate()

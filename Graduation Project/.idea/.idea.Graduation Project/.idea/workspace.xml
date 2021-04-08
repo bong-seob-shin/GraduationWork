@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +49,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SplitTerrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -115,7 +115,9 @@
       <workItem from="1617223043514" duration="641000" />
       <workItem from="1617442997223" duration="724000" />
       <workItem from="1617444342396" duration="408000" />
-      <workItem from="1617619269215" duration="4263000" />
+      <workItem from="1617619269215" duration="4845000" />
+      <workItem from="1617702854248" duration="1759000" />
+      <workItem from="1617710304502" duration="662000" />
     </task>
     <servers />
   </component>
