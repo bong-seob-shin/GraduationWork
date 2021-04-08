@@ -14,12 +14,12 @@ public class CarController : MonoBehaviour
     private float _currentSteeringAngle;
     private float _currentBreakForce;
     [SerializeField]
-    private float _decelerationForce;
+    private float _decelerationForce = 500;
     [SerializeField]
-    private float _motorForce;
+    private float _motorForce = 1000;
 
-    [SerializeField] private float _breakForce;
-    [SerializeField] private float _maxSteeringAngle;
+    [SerializeField] private float _breakForce = 3000;
+    [SerializeField] private float _maxSteeringAngle = 30;
 
     private Rigidbody _carRigid;
     
@@ -35,15 +35,15 @@ public class CarController : MonoBehaviour
     public Camera carCamera;
 
     public Transform takeOffPos;
-    [SerializeField] private WheelCollider frontRightWheelCollider;
-    [SerializeField] private WheelCollider frontLeftWheelCollider;
-    [SerializeField] private WheelCollider RearRightWheelCollider;
-    [SerializeField] private WheelCollider RearLeftWheelCollider;
+    [HideInInspector] public WheelCollider frontRightWheelCollider;
+    [HideInInspector] public WheelCollider frontLeftWheelCollider;
+    [HideInInspector] public WheelCollider RearRightWheelCollider;
+    [HideInInspector] public WheelCollider RearLeftWheelCollider;
     
-    [SerializeField] Transform  frontRightWheelTransform;
-    [SerializeField] Transform  frontLeftWheelTransform;
-    [SerializeField] Transform  RearRightWheelTransform;
-    [SerializeField] Transform  RearLeftWheelTransform;
+    [HideInInspector] public Transform  frontRightWheelTransform;
+    [HideInInspector] public Transform  frontLeftWheelTransform;
+    [HideInInspector] public Transform  RearRightWheelTransform;
+    [HideInInspector] public Transform  RearLeftWheelTransform;
     
     private Player _driver;
 
