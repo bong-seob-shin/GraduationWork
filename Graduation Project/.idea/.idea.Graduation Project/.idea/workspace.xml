@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Flatland_Grass_1.FBX" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Flatland_Grass_1.FBX" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Natures/Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Natures/Grass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain 0 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 0 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +119,7 @@
       <workItem from="1617702854248" duration="1759000" />
       <workItem from="1617710304502" duration="662000" />
       <workItem from="1617882898007" duration="96000" />
+      <workItem from="1618142560151" duration="846000" />
     </task>
     <servers />
   </component>
