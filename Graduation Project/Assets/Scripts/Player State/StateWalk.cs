@@ -12,6 +12,18 @@ public class StateWalk : IState
       {
          player.playerAnim.SetBool("Walk", true);
       }
+      else if (player.s_keyPress)
+      {
+         
+      }
+      else if (player.a_keyPress)
+      {
+         
+      }
+      else if (player.d_keyPress)
+      {
+         
+      }
    }
 
    public void OperateUpdate()

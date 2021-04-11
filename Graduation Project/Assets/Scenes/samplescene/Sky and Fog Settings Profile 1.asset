@@ -118,6 +118,7 @@ MonoBehaviour:
   - {fileID: 2119803913273216412}
   - {fileID: 5935400222214327526}
   - {fileID: -8752263522532202659}
+  - {fileID: 4595774191747319981}
 --- !u!114 &2119803913273216412
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -309,11 +310,11 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   mode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   meteringMode:
-    m_OverrideState: 0
-    m_Value: 2
+    m_OverrideState: 1
+    m_Value: 0
   luminanceSource:
     m_OverrideState: 0
     m_Value: 1
@@ -321,8 +322,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   compensation:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.5
   limitMin:
     m_OverrideState: 0
     m_Value: -10
