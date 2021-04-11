@@ -54,13 +54,17 @@ public class Player : MonoBehaviour
     public Rigidbody playerRb;
 
     public Animator playerAnim;
-  
+
+    public float DirX = 0;
+    public float DirZ = 0;
     
     [Tooltip("목 움직이기")]
     public Transform cameraTansform;
     private Transform _playerNeckTransform;
     private Vector3 _neckDir = new Vector3();
 
+    
+    
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
     
     private enum PlayerState

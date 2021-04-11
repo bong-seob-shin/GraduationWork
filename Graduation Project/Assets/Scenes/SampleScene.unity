@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2019,6 +2019,8 @@ MonoBehaviour:
   _sensitivity: 15
   playerRb: {fileID: 0}
   playerAnim: {fileID: 0}
+  DirX: 0
+  DirZ: 0
   cameraTansform: {fileID: 1297650284}
   _neckOffset: {x: 0, y: 0, z: 0}
   w_keyPress: 0
@@ -2058,7 +2060,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.2
-  m_Height: 1.8
+  m_Height: 1.82
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!95 &592692830

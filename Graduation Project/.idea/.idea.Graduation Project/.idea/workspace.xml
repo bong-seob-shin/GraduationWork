@@ -21,12 +21,30 @@
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Back Walk.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Back Walk.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/Character.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Character.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Walk.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Walk.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/samplescene/Sky and Fog Settings Profile 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/samplescene/Sky and Fog Settings Profile 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Left Walking.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Left Walking.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Right Walking.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Right Walking.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Back.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Back.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Left.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Left.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Right.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Right.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Walk.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Walk.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +67,15 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/SplitTerrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
       </list>
     </option>
   </component>
@@ -120,7 +138,7 @@
       <workItem from="1617702854248" duration="1759000" />
       <workItem from="1617710304502" duration="662000" />
       <workItem from="1617882898007" duration="96000" />
-      <workItem from="1618142560151" duration="2059000" />
+      <workItem from="1618142560151" duration="5651000" />
     </task>
     <servers />
   </component>

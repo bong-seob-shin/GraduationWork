@@ -10,19 +10,39 @@ public class StateWalk : IState
    {
       if (player.w_keyPress)
       {
-         player.playerAnim.SetBool("Walk", true);
+         if (player.DirZ < 0.5f)
+         {
+            player.DirZ += 0.02f;
+         }
+
+         player.playerAnim.SetFloat("MoveDirZ" , player.DirZ);
       }
-      else if (player.s_keyPress)
+      if (player.s_keyPress)
       {
-         
+         if (player.DirZ > -0.5f)
+         {
+            player.DirZ -= 0.02f;
+         }
+         player.playerAnim.SetFloat("MoveDirZ" , player.DirZ);
+
       }
-      else if (player.a_keyPress)
+      if (player.a_keyPress)
       {
-         
+         if (player.DirX > -0.5f)
+         {
+            player.DirX -= 0.02f;
+         }
+         player.playerAnim.SetFloat("MoveDirX" , player.DirX);
+
       }
-      else if (player.d_keyPress)
+      if (player.d_keyPress)
       {
+         if (player.DirX < 0.5f)
+         {
+            player.DirX += 0.02f;
+         }
          
+         player.playerAnim.SetFloat("MoveDirX" , player.DirX);
       }
    }
 
@@ -33,7 +53,7 @@ public class StateWalk : IState
 
    public void OperateExit()
    {
-      player.playerAnim.SetBool("Walk" , false);
+      
 
    }
 }

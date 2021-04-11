@@ -8,7 +8,7 @@ public class CameraMove : MonoBehaviour
 
 
     [SerializeField] //카메라 상하 제한 각 
-    private float _cameraRotationLimit;
+    private float _cameraRotationLimit = 45;
     
     private float _currentCameraRotationX = 0;
     // Start is called before the first frame update

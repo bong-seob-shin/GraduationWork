@@ -8,13 +8,19 @@ public class StateJump : IState
 
     public void OperateEnter()
     {
+
         if (player.isGround)
         {
 
             player.playerAnim.SetTrigger("Jump");
             player.playerRb.velocity = player.transform.up * player.jumpForce;
         }
-        
+        else
+        {
+            Debug.Log("Jump");
+
+        }
+
     }
 
     public void OperateUpdate()
