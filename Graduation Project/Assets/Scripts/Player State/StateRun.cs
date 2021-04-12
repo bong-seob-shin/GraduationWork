@@ -10,39 +10,60 @@ public class StateRun : IState
     {
         if (player.w_keyPress)
         {
-            if (player.DirZ < 1f)
+            if (player.dirZ < 1f)
             {
-                player.DirZ += 0.02f;
+                player.dirZ += 0.02f;
+            }
+            else
+            {
+                player.dirZ = 1f;
             }
 
-            player.playerAnim.SetFloat("MoveDirZ" , player.DirZ);
+            player.anim.SetFloat("MoveDirZ" , player.dirZ);
+            player.anim.SetFloat("MoveDirX" , player.dirX);
+
         }
         if (player.s_keyPress)
         {
-            if (player.DirZ > -1f)
+            if (player.dirZ > -1f)
             {
-                player.DirZ -= 0.02f;
+                player.dirZ -= 0.02f;
             }
-            player.playerAnim.SetFloat("MoveDirZ" , player.DirZ);
+            else
+            {
+                player.dirZ = -1f;
+            }
+            player.anim.SetFloat("MoveDirZ" , player.dirZ);
+            player.anim.SetFloat("MoveDirX" , player.dirX);
 
         }
         if (player.a_keyPress)
         {
-            if (player.DirX > -1f)
+            if (player.dirX > -1f)
             {
-                player.DirX -= 0.02f;
+                player.dirX -= 0.02f;
             }
-            player.playerAnim.SetFloat("MoveDirX" , player.DirX);
+            else
+            {
+                player.dirX = -1f;
+            }
+            player.anim.SetFloat("MoveDirZ" , player.dirZ);
+            player.anim.SetFloat("MoveDirX" , player.dirX);
 
         }
         if (player.d_keyPress)
         {
-            if (player.DirX < 1f)
+            if (player.dirX < 1f)
             {
-                player.DirX += 0.02f;
+                player.dirX += 0.02f;
+            }
+            else
+            {
+                player.dirX = 1f;
             }
          
-            player.playerAnim.SetFloat("MoveDirX" , player.DirX);
+            player.anim.SetFloat("MoveDirZ" , player.dirZ);
+            player.anim.SetFloat("MoveDirX" , player.dirX);
         }
         player.applySpeed = player.runSpeed;
         
@@ -54,7 +75,7 @@ public class StateRun : IState
 
     public void OperateExit()
     {
-        player.applySpeed = player.walkSpeed;
-
+        player.applySpeed = player.speed;
+  
     }
 }

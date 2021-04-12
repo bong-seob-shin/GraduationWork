@@ -20,28 +20,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Back Walk.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Back Walk.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Character.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Character.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Left Walking.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Left Walking.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Right Walking.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Right Walking.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Back.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Back.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Right.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run Right.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Walk.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Walk.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buggy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buggy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuggyPrefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuggyPrefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Building 01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Building 01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Building 02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Building 02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Building 03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Building 03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Water Tank.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Buildings/Water Tank.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Flatland_Grass_1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Flatland_Grass_1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Monster1_temp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Monster1_temp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Flatland_Grasses 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Flatland_Grasses 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Flatland_Grasses.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Flatland_Grasses.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Grass Mass.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Grass Mass.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Rock01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Rock01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Rock02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Rock02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Rock03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Rock03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Tree.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Tree.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Tree_lod0.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Tree_lod0.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Tree_lod1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Tree_lod1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Tree_lod2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Natures/Tree_lod2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Fence1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Fence1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Fence2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Fence2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Fireplug.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Fireplug.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Street Lamp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Street Lamp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Rifle1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Rifle1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/car.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/car.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
@@ -67,15 +110,21 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/SplitTerrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NoneControllObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NoneAnimationObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
       </list>
     </option>
   </component>
@@ -138,7 +187,8 @@
       <workItem from="1617702854248" duration="1759000" />
       <workItem from="1617710304502" duration="662000" />
       <workItem from="1617882898007" duration="96000" />
-      <workItem from="1618142560151" duration="5651000" />
+      <workItem from="1618142560151" duration="6005000" />
+      <workItem from="1618246134821" duration="7945000" />
     </task>
     <servers />
   </component>
@@ -168,9 +218,9 @@
     </state>
     <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1613836948742" />
     <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@1920.0.1080.1880" timestamp="1613660564667" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614282731871">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1618252571321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1614282731871" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618252571321" />
   </component>
 </project>

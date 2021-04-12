@@ -3,14 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarController : MonoBehaviour
+public class CarController : NoneAnimationObj
 {
 
     public Vector3 centerOfMass;    
     
     [Tooltip("자동차 속도 및 방향")]
-    private float _moveDirX;
-    private float _moveDirZ;
     private float _currentSteeringAngle;
     private float _currentBreakForce;
     [SerializeField]
@@ -82,14 +80,14 @@ public class CarController : MonoBehaviour
         }
     }
     
-    private void Move()
+    protected override void Move()
     {
 
 
-        if (_moveDirZ != 0f)
+        if (dirZ != 0f)
         {
-            RearLeftWheelCollider.motorTorque = _moveDirZ * _motorForce;
-            RearRightWheelCollider.motorTorque = _moveDirZ * _motorForce;
+            RearLeftWheelCollider.motorTorque = dirZ * _motorForce;
+            RearRightWheelCollider.motorTorque = dirZ * _motorForce;
             
             frontLeftWheelCollider.brakeTorque = 0;
             frontRightWheelCollider.brakeTorque =0;
@@ -129,7 +127,7 @@ public class CarController : MonoBehaviour
 
     private void Handling()
     {
-        _currentSteeringAngle = _maxSteeringAngle * _moveDirX;
+        _currentSteeringAngle = _maxSteeringAngle * dirX;
         frontLeftWheelCollider.steerAngle = _currentSteeringAngle;
         frontRightWheelCollider.steerAngle = _currentSteeringAngle;
 
@@ -168,8 +166,8 @@ public class CarController : MonoBehaviour
             Debug.Log("TakeOff!");
         }
         
-        _moveDirX = Input.GetAxisRaw("Horizontal");
-        _moveDirZ = Input.GetAxisRaw("Vertical");
+        dirX = Input.GetAxisRaw("Horizontal");
+        dirZ = Input.GetAxisRaw("Vertical");
         isBreaking = Input.GetKey(KeyCode.Space);
         
         

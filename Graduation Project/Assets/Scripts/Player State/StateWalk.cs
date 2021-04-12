@@ -10,39 +10,44 @@ public class StateWalk : IState
    {
       if (player.w_keyPress)
       {
-         if (player.DirZ < 0.5f)
+         if (player.dirZ < 0.5f)
          {
-            player.DirZ += 0.02f;
+            player.dirZ += 0.02f;
          }
+        
 
-         player.playerAnim.SetFloat("MoveDirZ" , player.DirZ);
+         player.anim.SetFloat("MoveDirZ" , player.dirZ);
+         player.anim.SetFloat("MoveDirX" , player.dirX);
       }
       if (player.s_keyPress)
       {
-         if (player.DirZ > -0.5f)
+         if (player.dirZ > -0.5f)
          {
-            player.DirZ -= 0.02f;
+            player.dirZ -= 0.02f;
          }
-         player.playerAnim.SetFloat("MoveDirZ" , player.DirZ);
-
+       
+         player.anim.SetFloat("MoveDirZ" , player.dirZ);
+         player.anim.SetFloat("MoveDirX" , player.dirX);
       }
       if (player.a_keyPress)
       {
-         if (player.DirX > -0.5f)
+         if (player.dirX > -0.5f)
          {
-            player.DirX -= 0.02f;
+            player.dirX -= 0.02f;
          }
-         player.playerAnim.SetFloat("MoveDirX" , player.DirX);
+        
+         player.anim.SetFloat("MoveDirZ" , player.dirZ);
+         player.anim.SetFloat("MoveDirX" , player.dirX);
 
       }
       if (player.d_keyPress)
       {
-         if (player.DirX < 0.5f)
+         if (player.dirX < 0.5f)
          {
-            player.DirX += 0.02f;
+            player.dirX += 0.02f;
          }
-         
-         player.playerAnim.SetFloat("MoveDirX" , player.DirX);
+         player.anim.SetFloat("MoveDirZ" , player.dirZ);
+         player.anim.SetFloat("MoveDirX" , player.dirX);
       }
    }
 
@@ -53,7 +58,7 @@ public class StateWalk : IState
 
    public void OperateExit()
    {
-      
+
 
    }
 }

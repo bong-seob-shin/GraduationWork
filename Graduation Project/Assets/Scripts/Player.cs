@@ -6,13 +6,12 @@ using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 
-public class Player : MonoBehaviour
+public class Player : AnimationObj
 {
     private static Player instance = null;
     
     [Tooltip("스피드 조정")]
-   
-    public float walkSpeed;
+    
     public float runSpeed;
     public float crouchSpeed;
     
@@ -37,7 +36,6 @@ public class Player : MonoBehaviour
     private float _rideCoolDown = 1.0f;
     
     [Tooltip("얼마나 앉을건지")]
-    [SerializeField]
     private float _crouchPosY;
     private float _originPosY;
     private float _applyCouchPosY;
@@ -53,15 +51,12 @@ public class Player : MonoBehaviour
     
     public Rigidbody playerRb;
 
-    public Animator playerAnim;
-
-    public float DirX = 0;
-    public float DirZ = 0;
+    
     
     [Tooltip("목 움직이기")]
-    public Transform cameraTansform;
+    private Transform _cameraTansform;
     private Transform _playerNeckTransform;
-    private Vector3 _neckDir = new Vector3();
+    private Vector3 _neckDir = new Vector3(0,0,0);
 
     
     
@@ -98,6 +93,7 @@ public class Player : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
     }
 
     public static Player Instance
@@ -131,16 +127,19 @@ public class Player : MonoBehaviour
         _stateDic.Add(PlayerState.Jump, jump);
         
         _stateMachine = new StateMachine(idle);
+
+        speed = 3.0f;
         
-        applySpeed = walkSpeed;
-        runSpeed = walkSpeed * 3;
+        applySpeed = speed;
+        runSpeed = speed * 3;
         playerRb = gameObject.GetComponent<Rigidbody>();
         _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
-        playerAnim = gameObject.GetComponent<Animator>();
-        if (playerAnim)
+        if (anim)
         {
-            _playerNeckTransform = playerAnim.GetBoneTransform(HumanBodyBones.Neck); //spine bone transform받아오기
+            _playerNeckTransform = anim.GetBoneTransform(HumanBodyBones.Neck); //spine bone transform받아오기
         }
+
+        _cameraTansform = GetComponentInChildren<Camera>().transform;
     }
 
     // Update is called once per frame
@@ -176,7 +175,7 @@ public class Player : MonoBehaviour
 
     private void OperationBonRotate()
     {
-        _neckDir = cameraTansform.position + cameraTansform.forward * 50;
+        _neckDir = _cameraTansform.position + _cameraTansform.forward * 50;
         _playerNeckTransform.LookAt(_neckDir);
         _playerNeckTransform.rotation = _playerNeckTransform.rotation * Quaternion.Euler(_neckOffset); //상체 움직임 보정
     }
@@ -189,12 +188,14 @@ public class Player : MonoBehaviour
         a_keyPress = false;
         s_keyPress = false;
         d_keyPress = false;
-        
+
         w_keyPress = Input.GetKey(KeyCode.W);
         a_keyPress = Input.GetKey(KeyCode.A);
         s_keyPress = Input.GetKey(KeyCode.S);
         d_keyPress = Input.GetKey(KeyCode.D);
-        
+
+
+       
         if (w_keyPress || a_keyPress || s_keyPress || d_keyPress)
         {
             _stateMachine.SetState(_stateDic[PlayerState.Walk]);
@@ -204,6 +205,27 @@ public class Player : MonoBehaviour
                 _stateMachine.SetState(_stateDic[PlayerState.Run]);
                 
             }
+        }
+
+
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
+        {
+            dirZ = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            dirX = 0;
+        }
+        
+        if (w_keyPress && s_keyPress)
+        {
+            dirZ = 0;
+        }
+       
+        if (a_keyPress && d_keyPress)
+        {
+            dirX = 0;
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -219,14 +241,14 @@ public class Player : MonoBehaviour
     }
     
     
-    private void Move()
+    protected override void Move()
     {
        
         float _moveDirX = Input.GetAxisRaw("Horizontal");
         float _moveDirZ = Input.GetAxisRaw("Vertical");
 
-        Vector3 _moveHorizontal = transform.right * _moveDirX;
-        Vector3 _moveVertical = transform.forward * _moveDirZ;
+        Vector3 _moveHorizontal = transform.right * dirX;
+        Vector3 _moveVertical = transform.forward * dirZ;
 
         Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *applySpeed;
 
