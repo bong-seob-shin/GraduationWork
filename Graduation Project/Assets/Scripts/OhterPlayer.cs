@@ -46,7 +46,7 @@ public class OhterPlayer : NoneControlObj
     
     
     [Tooltip("목 움직이기")]
-    private Transform _cameraTansform;
+    private Transform targetTransform; //서버에서 현재 목위치를 전달 받아야함
     private Transform _playerNeckTransform;
     private Vector3 _neckDir = new Vector3(0,0,0);
 
@@ -54,7 +54,7 @@ public class OhterPlayer : NoneControlObj
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
     
-    private enum PlayerState
+    private enum PlayerState //상태는 오브젝트마다 다를거같아서 따로 관리하는게 좋을것 같음
     {
         Idle,
         Walk,
@@ -68,7 +68,7 @@ public class OhterPlayer : NoneControlObj
         
         speed = 3.0f;
         
-        destPos = new Vector3(0,0,0);
+        destPos = transform.position;//위치 조정을 여기서 해주면될듯함
         
         applySpeed = speed;
         runSpeed = speed * 3;
@@ -81,7 +81,7 @@ public class OhterPlayer : NoneControlObj
             _playerNeckTransform = anim.GetBoneTransform(HumanBodyBones.Neck); //spine bone transform받아오기
         }
 
-        _cameraTansform = GetComponentInChildren<Camera>().transform;
+       
     }
 
     // Update is called once per frame
@@ -100,12 +100,12 @@ public class OhterPlayer : NoneControlObj
 
     private void LateUpdate()
     {
-        OperationBonRotate();
+       // OperationBonRotate();
     }
 
     private void OperationBonRotate()
     {
-        _neckDir = _cameraTansform.position + _cameraTansform.forward * 50;
+        _neckDir = targetTransform.position + targetTransform.forward * 50;
         _playerNeckTransform.LookAt(_neckDir);
         _playerNeckTransform.rotation = _playerNeckTransform.rotation * Quaternion.Euler(_neckOffset); //상체 움직임 보정
     }
@@ -117,9 +117,11 @@ public class OhterPlayer : NoneControlObj
     
     private void CharacterRotation()
     {
-        float _yRotation = Input.GetAxisRaw("Mouse X");
-        Vector3 _charcterRotationY = new Vector3(0f, _yRotation, 0f) * _sensitivity;
-        playerRb.MoveRotation(playerRb.rotation*Quaternion.Euler(_charcterRotationY));
+        Vector3 Horizontal = transform.right * dirX;
+        Vector3 Vertical = transform.forward * dirZ;
+
+        Vector3 direction = (Horizontal + Vertical).normalized;
+        playerRb.MoveRotation(playerRb.rotation*Quaternion.Euler(direction));
     }
     private void IsGround()
     {

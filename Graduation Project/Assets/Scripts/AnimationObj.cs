@@ -8,13 +8,6 @@ public class AnimationObj : ObjManager //애니메이션을 하는 오브젝트�
     public Animator anim;
 
      
-   private void Start()
-   {
-       anim =  anim = gameObject.GetComponent<Animator>(); //애니메이터 받아오기
-   }
-
-   private void Update()
-   {
-      
-   }
+  
+   
 }

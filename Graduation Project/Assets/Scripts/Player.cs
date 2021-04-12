@@ -129,7 +129,7 @@ public class Player : AnimationObj
         _stateMachine = new StateMachine(idle);
 
         speed = 3.0f;
-        
+        anim =  anim = gameObject.GetComponent<Animator>(); 
         applySpeed = speed;
         runSpeed = speed * 3;
         playerRb = gameObject.GetComponent<Rigidbody>();
@@ -243,9 +243,6 @@ public class Player : AnimationObj
     
     protected override void Move()
     {
-       
-        float _moveDirX = Input.GetAxisRaw("Horizontal");
-        float _moveDirZ = Input.GetAxisRaw("Vertical");
 
         Vector3 _moveHorizontal = transform.right * dirX;
         Vector3 _moveVertical = transform.forward * dirZ;
