@@ -2035,7 +2035,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8379619258376327039}
-  m_LocalRotation: {x: -0, y: -0.934115, z: -0, w: 0.35697234}
+  m_LocalRotation: {x: 0, y: -0.93411416, z: 0, w: 0.35697442}
   m_LocalPosition: {x: 2261.19, y: 110.24, z: 3471.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2110,6 +2110,7 @@ MonoBehaviour:
   dirZ: 0
   anim: {fileID: 0}
   destPos: {x: 0, y: 0, z: 0}
+  moveDir: {x: 0, y: 0, z: 0}
   runSpeed: 0
   crouchSpeed: 0
   applySpeed: 0
@@ -2118,7 +2119,8 @@ MonoBehaviour:
   isGround: 1
   isCrouch: 0
   isNearCar: 0
-  _sensitivity: 15
+  state: 0
+  isJump: 0
   playerRb: {fileID: 0}
   _neckOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &8567364340468816731

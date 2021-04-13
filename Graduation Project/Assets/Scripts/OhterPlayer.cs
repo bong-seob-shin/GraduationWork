@@ -87,7 +87,7 @@ public class OhterPlayer : NoneControlObj
     {
         if (!_isRideCar)
         {
-           
+            Move();
             AnimUpdate();
             if (isJump)
             {

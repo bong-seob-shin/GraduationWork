@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/OtherPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/OtherPlayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../바탕화면/유니티 기말텀프/GameEngineFinal/유니티 기말과제 텀프/Assets/Classical City/Script/PlayerMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,9 +61,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKSnap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGrab.cs" />
       </list>
     </option>
   </component>
@@ -128,7 +131,7 @@
       <workItem from="1618142560151" duration="6005000" />
       <workItem from="1618246134821" duration="7945000" />
       <workItem from="1618254389017" duration="674000" />
-      <workItem from="1618297491240" duration="6808000" />
+      <workItem from="1618297491240" duration="15549000" />
     </task>
     <servers />
   </component>

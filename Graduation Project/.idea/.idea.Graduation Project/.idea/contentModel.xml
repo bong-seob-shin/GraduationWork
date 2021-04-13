@@ -29,6 +29,10 @@
           <e p="Player.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="SplitTerrain.cs" t="Include" />
+          <e p="Weapon" t="Include">
+            <e p="DebugDrawLine.cs" t="Include" />
+            <e p="IKGrab.cs" t="Include" />
+          </e>
         </e>
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">

@@ -55,8 +55,8 @@ public class Player : AnimationObj
     
     [Tooltip("목 움직이기")]
     private Transform _cameraTansform;
-    private Transform _playerNeckTransform;
-    private Vector3 _neckDir = new Vector3(0,0,0);
+    private Transform _playerSpineTransform;
+    private Vector3 _spineDir = new Vector3(0,0,0);
 
     
     
@@ -136,7 +136,7 @@ public class Player : AnimationObj
         _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
         if (anim)
         {
-            _playerNeckTransform = anim.GetBoneTransform(HumanBodyBones.Neck); //spine bone transform받아오기
+            _playerSpineTransform = anim.GetBoneTransform(HumanBodyBones.Spine); //spine bone transform받아오기
         }
 
         _cameraTansform = GetComponentInChildren<Camera>().transform;
@@ -175,9 +175,9 @@ public class Player : AnimationObj
 
     private void OperationBonRotate()
     {
-        _neckDir = _cameraTansform.position + _cameraTansform.forward * 50;
-        _playerNeckTransform.LookAt(_neckDir);
-        _playerNeckTransform.rotation = _playerNeckTransform.rotation * Quaternion.Euler(_neckOffset); //상체 움직임 보정
+        _spineDir = _cameraTansform.position + _cameraTansform.forward * 50;
+        _playerSpineTransform.LookAt(_spineDir);
+        _playerSpineTransform.rotation = _playerSpineTransform.rotation * Quaternion.Euler(_neckOffset); //상체 움직임 보정
     }
 
     void KeyboardInput()//키입력처리
