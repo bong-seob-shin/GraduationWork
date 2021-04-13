@@ -8,6 +8,7 @@ public class StateWalk : IState
 
    public void OperateEnter()
    {
+      
       if (player.w_keyPress)
       {
          if (player.dirZ < 0.5f)

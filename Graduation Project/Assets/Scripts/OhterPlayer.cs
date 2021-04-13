@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class OhterPlayer : NoneControlObj
 {
@@ -13,28 +14,25 @@ public class OhterPlayer : NoneControlObj
 
     [Tooltip("점프 조정")]
     [SerializeField]
-    public float jumpForce;
+    public float jumpForce = 5;
     
     [Tooltip("플레이어 상태 변수")]
     [HideInInspector]public bool isRun;
     [HideInInspector]public bool isGround = true;
     [HideInInspector]public bool isCrouch = false;
     [HideInInspector]public bool isNearCar = false;
-    
+    [HideInInspector] public AnimState state = AnimState.Idle;
+
+    public bool isJump;
     private bool _isRideCar = false;
-
-
     
-   
     
     [Tooltip("얼마나 앉을건지")]
     private float _crouchPosY;
     private float _originPosY;
     private float _applyCouchPosY;
 
-    [SerializeField]
-    private float _sensitivity = 15;
-    
+   
 
     private CapsuleCollider _capsuleCollider;
 
@@ -54,7 +52,7 @@ public class OhterPlayer : NoneControlObj
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
     
-    private enum PlayerState //상태는 오브젝트마다 다를거같아서 따로 관리하는게 좋을것 같음
+    [HideInInspector] public enum AnimState //상태는 오브젝트마다 다를거같아서 따로 관리하는게 좋을것 같음
     {
         Idle,
         Walk,
@@ -89,12 +87,26 @@ public class OhterPlayer : NoneControlObj
     {
         if (!_isRideCar)
         {
-            IsGround();
-            CharacterRotation();
-            Move();
-          
+           
+            AnimUpdate();
+            if (isJump)
+            {
+                Jump();
+            }
         }
 
+    }
+
+    private void Jump()
+    {
+        anim.SetTrigger("Jump");
+        isJump = false;
+    }
+
+    private void AnimUpdate()
+    {
+        anim.SetFloat("MoveDirX", dirX);
+        anim.SetFloat("MoveDirZ", dirZ);
     }
 
 
@@ -115,18 +127,8 @@ public class OhterPlayer : NoneControlObj
     
   
     
-    private void CharacterRotation()
-    {
-        Vector3 Horizontal = transform.right * dirX;
-        Vector3 Vertical = transform.forward * dirZ;
-
-        Vector3 direction = (Horizontal + Vertical).normalized;
-        playerRb.MoveRotation(playerRb.rotation*Quaternion.Euler(direction));
-    }
-    private void IsGround()
-    {
-        isGround = Physics.Raycast(transform.position, Vector3.down, _capsuleCollider.bounds.extents.y + 0.1f);
-    }
+    
+    
   
 
   
