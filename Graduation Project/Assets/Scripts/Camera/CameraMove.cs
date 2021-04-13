@@ -30,11 +30,16 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         CameraRotation();
-        Transform neckTransform = playeranim.GetBoneTransform(HumanBodyBones.Head);
-        transform.position = neckTransform.position+posOffSet;
+        
         //transform.position = Vector3.Lerp (transform.position, headTransform.position, smoothing * Time.deltaTime);
     }
-    
+
+    private void LateUpdate()
+    {
+        Transform neckTransform = playeranim.GetBoneTransform(HumanBodyBones.Head);
+        transform.position = neckTransform.position+posOffSet;
+    }
+
     private void CameraRotation()
     {
         float _xRotation = Input.GetAxisRaw("Mouse Y");

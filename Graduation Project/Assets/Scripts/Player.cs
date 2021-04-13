@@ -271,14 +271,17 @@ public class Player : AnimationObj
     private void IsNearCar()
     {
         isNearCar = Physics.Raycast(rayCastPoint.transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
-        
-        if (isNearCar&&!_isRideCar)
+
+        if (isNearCar)
         {
-            _isRideCar = true;
-            _capsuleCollider.enabled = false;
-            playerRb.isKinematic = true;
-            _hitInfo.transform.GetComponent<CarController>().setCarControll(this);
-            Debug.Log("Ride!!");
+            if (_hitInfo.transform.GetComponent<CarController>() != null && !_isRideCar)
+            {
+                _isRideCar = true;
+                _capsuleCollider.enabled = false;
+                playerRb.isKinematic = true;
+                _hitInfo.transform.GetComponent<CarController>().setCarControll(this);
+                Debug.Log("Ride!!");
+            }
         }
     }
 
@@ -289,8 +292,9 @@ public class Player : AnimationObj
         _isRideCar = false;
         _capsuleCollider.enabled = true;
         playerRb.isKinematic = false;
+        dirX = 0;
+        dirZ = 0;
 
-        
     }
 
     

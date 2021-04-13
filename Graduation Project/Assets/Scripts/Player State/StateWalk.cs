@@ -15,7 +15,11 @@ public class StateWalk : IState
          {
             player.dirZ += 0.02f;
          }
-        
+
+         if (player.dirZ > 0.5f)
+         {
+            player.dirZ -= 0.02f;
+         }
 
          player.anim.SetFloat("MoveDirZ" , player.dirZ);
          player.anim.SetFloat("MoveDirX" , player.dirX);
@@ -26,7 +30,10 @@ public class StateWalk : IState
          {
             player.dirZ -= 0.02f;
          }
-       
+         if (player.dirZ < -0.5f)
+         {
+            player.dirZ += 0.02f;
+         }
          player.anim.SetFloat("MoveDirZ" , player.dirZ);
          player.anim.SetFloat("MoveDirX" , player.dirX);
       }
@@ -36,7 +43,10 @@ public class StateWalk : IState
          {
             player.dirX -= 0.02f;
          }
-        
+         if (player.dirX < -0.5f)
+         {
+            player.dirX += 0.02f;
+         }
          player.anim.SetFloat("MoveDirZ" , player.dirZ);
          player.anim.SetFloat("MoveDirX" , player.dirX);
 
@@ -46,6 +56,10 @@ public class StateWalk : IState
          if (player.dirX < 0.5f)
          {
             player.dirX += 0.02f;
+         }
+         if (player.dirX > 0.5f)
+         {
+            player.dirX -= 0.02f;
          }
          player.anim.SetFloat("MoveDirZ" , player.dirZ);
          player.anim.SetFloat("MoveDirX" , player.dirX);

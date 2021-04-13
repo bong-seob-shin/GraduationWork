@@ -12,7 +12,7 @@ public class StateRun : IState
         {
             if (player.dirZ < 1f)
             {
-                player.dirZ += 0.02f;
+                player.dirZ += 0.04f;
             }
             else
             {
@@ -27,7 +27,7 @@ public class StateRun : IState
         {
             if (player.dirZ > -1f)
             {
-                player.dirZ -= 0.02f;
+                player.dirZ -= 0.04f;
             }
             else
             {
@@ -41,7 +41,7 @@ public class StateRun : IState
         {
             if (player.dirX > -1f)
             {
-                player.dirX -= 0.02f;
+                player.dirX -= 0.04f;
             }
             else
             {
@@ -55,7 +55,7 @@ public class StateRun : IState
         {
             if (player.dirX < 1f)
             {
-                player.dirX += 0.02f;
+                player.dirX += 0.04f;
             }
             else
             {
