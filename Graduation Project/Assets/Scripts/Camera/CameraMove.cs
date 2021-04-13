@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,12 +13,26 @@ public class CameraMove : MonoBehaviour
     
     private float _currentCameraRotationX = 0;
     // Start is called before the first frame update
-    
+
+
+    public float smoothing =0;
+
+    public Animator playeranim;
+
+    public Vector3 posOffSet = new Vector3(0,0,0);
+    private void Awake()
+    {
+        playeranim = GetComponentInParent<Animator>();
+       
+    }
 
     // Update is called once per frame
     void Update()
     {
         CameraRotation();
+        Transform neckTransform = playeranim.GetBoneTransform(HumanBodyBones.Head);
+        transform.position = neckTransform.position+posOffSet;
+        //transform.position = Vector3.Lerp (transform.position, headTransform.position, smoothing * Time.deltaTime);
     }
     
     private void CameraRotation()
