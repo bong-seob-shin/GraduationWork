@@ -51,14 +51,15 @@ public class Player : AnimationObj
     
     public Rigidbody playerRb;
 
-    
+
+    private IKGunGrab _gunGrab;
     
     [Tooltip("목 움직이기")]
     private Transform _cameraTansform;
     private Transform _playerSpineTransform;
     private Vector3 _spineDir = new Vector3(0,0,0);
 
-    
+    public GameObject gun;
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
     
@@ -93,7 +94,8 @@ public class Player : AnimationObj
         {
             Destroy(this.gameObject);
         }
-        
+
+        _gunGrab = GetComponentInChildren<IKGunGrab>();
     }
 
     public static Player Instance
@@ -237,7 +239,19 @@ public class Player : AnimationObj
         {
             IsNearCar();
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            gun.SetActive(true);
+            _gunGrab.isGrabed = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            _gunGrab.isGrabed = false;
+            gun.SetActive(false);
+        }
+
     }
     
     

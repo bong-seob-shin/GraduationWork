@@ -7241,9 +7241,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 256707524873784425, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: m_Name
+      value: PlayerCam
+      objectReference: {fileID: 0}
     - target: {fileID: 256707524873784426, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: near clip plane
-      value: 0.2
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 256707524873784426, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_projectionMatrixMode
@@ -7285,6 +7289,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.005
       objectReference: {fileID: 0}
+    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 6212757873428080717}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2259.072
@@ -7558,7 +7566,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6490969669588327388}
-  - component: {fileID: 4600878393304804538}
   m_Layer: 0
   m_Name: FireArea
   m_TagString: Untagged
@@ -7566,18 +7573,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4600878393304804538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4600878393304804537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54066d3b0a370314b8d654befea2f022, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5065195003084402837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7735,13 +7730,46 @@ GameObject:
   - component: {fileID: 6733997387418792695}
   - component: {fileID: 7700079384736988498}
   - component: {fileID: 5564437233934436760}
+  - component: {fileID: 6212757873428080718}
+  - component: {fileID: 6212757873428080719}
   m_Layer: 0
   m_Name: Rifle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
+--- !u!114 &6212757873428080718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212757873428080717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244083bcf7191e641b2e4a121fe153cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 30
+  fpsCam: {fileID: 230920557}
+--- !u!111 &6212757873428080719
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212757873428080717}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: bbeb97727935f6942841dc485338c6d0, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: bbeb97727935f6942841dc485338c6d0, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!4 &6490969669588327388
 Transform:
   m_ObjectHideFlags: 0
