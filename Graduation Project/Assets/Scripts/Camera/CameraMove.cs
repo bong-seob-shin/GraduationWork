@@ -13,13 +13,10 @@ public class CameraMove : MonoBehaviour
     
     private float _currentCameraRotationX = 0;
     // Start is called before the first frame update
-
-
-    public float smoothing =0;
+    
 
     public Animator playeranim;
 
-    public Vector3 posOffSet = new Vector3(0,0,0);
     private void Awake()
     {
         playeranim = GetComponentInParent<Animator>();
@@ -30,14 +27,14 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         CameraRotation();
-        
+       
         //transform.position = Vector3.Lerp (transform.position, headTransform.position, smoothing * Time.deltaTime);
     }
 
     private void LateUpdate()
     {
         Transform neckTransform = playeranim.GetBoneTransform(HumanBodyBones.Head);
-        transform.position = neckTransform.position+posOffSet;
+        transform.position = neckTransform.position;
     }
 
     private void CameraRotation()
