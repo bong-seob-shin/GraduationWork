@@ -176,9 +176,11 @@ public class CarController : NoneAnimationObj
     public void setCarControll(Player player)
     {
         _driver = player;
+        _driver.myCam.gameObject.SetActive(false);
         _driver.gameObject.SetActive(false);
         carCamera.gameObject.SetActive(true);
         _isCarStartControll = true;
+        
     }
     
     

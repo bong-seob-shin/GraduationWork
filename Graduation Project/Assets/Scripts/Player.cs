@@ -27,8 +27,7 @@ public class Player : AnimationObj
     [HideInInspector]public bool isGround = true;
     [HideInInspector]public bool isCrouch = false;
     [HideInInspector]public bool isNearCar = false;
-    [SerializeField]
-    private bool _isRideCar = false;
+    public bool _isRideCar = false;
 
 
     [Tooltip("자동차 탑승 쿨다운")]
@@ -51,14 +50,17 @@ public class Player : AnimationObj
     
     public Rigidbody playerRb;
 
-    
+
+    private IKGunGrab _gunGrab;
     
     [Tooltip("목 움직이기")]
     private Transform _cameraTansform;
     private Transform _playerSpineTransform;
     private Vector3 _spineDir = new Vector3(0,0,0);
 
-    
+    public GameObject gun;
+
+    public Camera myCam;
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
     
@@ -93,7 +95,10 @@ public class Player : AnimationObj
         {
             Destroy(this.gameObject);
         }
-        
+
+        _gunGrab = GetComponentInChildren<IKGunGrab>();
+        myCam = GetComponentInChildren<Camera>();
+
     }
 
     public static Player Instance
@@ -237,7 +242,19 @@ public class Player : AnimationObj
         {
             IsNearCar();
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            gun.SetActive(true);
+            _gunGrab.isGrabed = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            _gunGrab.isGrabed = false;
+            gun.SetActive(false);
+        }
+
     }
     
     
@@ -294,7 +311,7 @@ public class Player : AnimationObj
         playerRb.isKinematic = false;
         dirX = 0;
         dirZ = 0;
-
+        myCam.gameObject.SetActive(true);
     }
 
     
