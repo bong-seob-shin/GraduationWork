@@ -24,9 +24,10 @@ public class Player : AnimationObj
     
     [Tooltip("플레이어 상태 변수")]
     [HideInInspector]public bool isRun;
-    [HideInInspector]public bool isGround = true;
+    public bool isGround = true;
     [HideInInspector]public bool isCrouch = false;
     [HideInInspector]public bool isNearCar = false;
+    [HideInInspector] public bool isJump = false;
     public bool _isRideCar = false;
 
 
@@ -170,6 +171,8 @@ public class Player : AnimationObj
                 
             }
         }
+        
+        Debug.DrawRay(transform.position, Vector3.down*(_capsuleCollider.bounds.extents.y/5.0f), Color.blue);
     }
 
 
@@ -279,7 +282,13 @@ public class Player : AnimationObj
     }
     private void IsGround()
     {
-        isGround = Physics.Raycast(transform.position, Vector3.down, _capsuleCollider.bounds.extents.y + 0.1f);
+        isGround = Physics.Raycast(transform.position, Vector3.down, _capsuleCollider.bounds.extents.y/5.0f);
+        isJump = true;
+        if (isGround && !isJump)
+        {
+            anim.ResetTrigger("Jump");
+        }
+        
     }
   
 

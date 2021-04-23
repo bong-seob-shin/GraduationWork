@@ -44,7 +44,7 @@ public class OhterPlayer : NoneControlObj
     
     
     [Tooltip("목 움직이기")]
-    private Transform targetTransform; //서버에서 현재 목위치를 전달 받아야함
+    //private Transform targetTransform; //서버에서 현재 목위치를 전달 받아야함
     private Transform _playerNeckTransform;
     private Vector3 _neckDir = new Vector3(0,0,0);
 
@@ -115,12 +115,12 @@ public class OhterPlayer : NoneControlObj
        // OperationBonRotate();
     }
 
-    private void OperationBonRotate()
-    {
-        _neckDir = targetTransform.position + targetTransform.forward * 50;
-        _playerNeckTransform.LookAt(_neckDir);
-        _playerNeckTransform.rotation = _playerNeckTransform.rotation * Quaternion.Euler(_neckOffset); //상체 움직임 보정
-    }
+    // private void OperationBonRotate()
+    // {
+    //     _neckDir = targetTransform.position + targetTransform.forward * 50; //  받아온 vector
+    //     _playerNeckTransform.LookAt(_neckDir);
+    //     _playerNeckTransform.rotation = _playerNeckTransform.rotation * Quaternion.Euler(_neckOffset); //상체 움직임 보정
+    // }
 
    
     
