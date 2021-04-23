@@ -9,13 +9,14 @@ public class StateJump : IState
     public void OperateEnter()
     {
 
-        if (player.isGround)
+        if (player.isGround&&player.isJump)
         {
 
             player.anim.SetTrigger("Jump");
             player.playerRb.velocity = player.transform.up * player.jumpForce;
+            player.isJump = false;
         }
-       
+      
 
     }
 
@@ -25,5 +26,7 @@ public class StateJump : IState
 
     public void OperateExit()
     {
+       
+
     }
 }

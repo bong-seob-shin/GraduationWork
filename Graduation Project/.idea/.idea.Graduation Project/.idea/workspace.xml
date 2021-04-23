@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Buggy.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buggy.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
@@ -49,14 +51,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControllObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneAnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKSnap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
@@ -65,8 +65,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGunGrab.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
       </list>
     </option>
   </component>
@@ -134,6 +136,7 @@
       <workItem from="1618254389017" duration="674000" />
       <workItem from="1618297491240" duration="18643000" />
       <workItem from="1618423423646" duration="1821000" />
+      <workItem from="1619177787655" duration="5186000" />
     </task>
     <servers />
   </component>
