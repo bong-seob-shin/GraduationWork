@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Buggy.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buggy.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Monster1_temp.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,13 +61,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/DebugDrawLine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGunGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
       </list>
     </option>
   </component>
@@ -137,6 +136,8 @@
       <workItem from="1618297491240" duration="18643000" />
       <workItem from="1618423423646" duration="1821000" />
       <workItem from="1619177787655" duration="5186000" />
+      <workItem from="1619285880846" duration="39000" />
+      <workItem from="1619285930918" duration="936000" />
     </task>
     <servers />
   </component>
@@ -170,9 +171,9 @@
     </state>
     <state x="694" y="141" width="1096" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618302181257" />
     <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@1920.0.1080.1880" timestamp="1613660564667" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1618252571321">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619286743649">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618252571321" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1619286743649" />
   </component>
 </project>

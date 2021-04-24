@@ -2,15 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.VFX;
 
 public class Gun : MonoBehaviour
 {
+
+    private const float FireRate = 0.2f;
     public float damage = 10f;
     public float range = 100f;
 
     public Camera fpsCam;
 
     private Animation _gunAnim;
+
+    public VisualEffect muzzleFlash;
+
+    private float _currentFireRate =FireRate;
+
+    private int _bulletCount = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,28 +29,48 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        GunFireRateCalc();
+        
+        if (Input.GetButton("Fire1"))
         {
-            Shoot();
+            if (_currentFireRate <= 0 )
+            {
+                Shoot();
+            }
         }
 
-        if (Input.GetButtonUp("Fire1")) 
+        
+            
+        
+    }
+
+    private void GunFireRateCalc()
+    {
+        
+
+        if (_currentFireRate > 0)
         {
-            _gunAnim.Stop();
+            _currentFireRate -= Time.deltaTime;
         }
     }
 
     private void Shoot()
     {
-        _gunAnim.Play();
+        if (!_gunAnim.isPlaying)
+        {
+            _gunAnim.Play();
+        }
+
+        muzzleFlash.SendEvent("OnPlay");
 
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+           // Debug.Log(hit.transform.name);
         }
-        
-        
+
+        _currentFireRate = FireRate;
+        _bulletCount -= 1;
     }
     
     private void OnDrawGizmos()
