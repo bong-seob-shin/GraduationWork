@@ -59,9 +59,10 @@ public class Player : AnimationObj
     private Transform _playerSpineTransform;
     private Vector3 _spineDir = new Vector3(0,0,0);
 
-    public GameObject gun;
-
-    public Camera myCam;
+    public GameObject currentWeapon;
+    private Animation _weaponGunAnim;
+    
+    [HideInInspector]public Camera myCam;
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
     
@@ -99,6 +100,7 @@ public class Player : AnimationObj
 
         _gunGrab = GetComponentInChildren<IKGunGrab>();
         myCam = GetComponentInChildren<Camera>();
+        _weaponGunAnim = currentWeapon.GetComponent<Animation>();
 
     }
 
@@ -248,16 +250,27 @@ public class Player : AnimationObj
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            gun.SetActive(true);
+            currentWeapon.SetActive(true);
             _gunGrab.isGrabed = true;
+            _weaponGunAnim.Play("GunEject");
+
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             _gunGrab.isGrabed = false;
-            gun.SetActive(false);
+            currentWeapon.SetActive(false);
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            applySpeed = speed / 2.0f;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            applySpeed = speed;
+        }
     }
     
     

@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
 
     public Camera fpsCam;
 
-    private Animation _gunAnim;
+    public Animation gunAnim;
 
     public VisualEffect muzzleFlash;
 
@@ -23,15 +23,15 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _gunAnim = GetComponent<Animation>();
+        gunAnim = GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void Update()
     {
         GunFireRateCalc();
-        
-        if (Input.GetButton("Fire1"))
+
+        if (Input.GetKey(KeyCode.Mouse0)) 
         {
             if (_currentFireRate <= 0 )
             {
@@ -56,9 +56,9 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
-        if (!_gunAnim.isPlaying)
+        if (!gunAnim.isPlaying)
         {
-            _gunAnim.Play();
+            gunAnim.Play("GunShot");
         }
 
         muzzleFlash.SendEvent("OnPlay");

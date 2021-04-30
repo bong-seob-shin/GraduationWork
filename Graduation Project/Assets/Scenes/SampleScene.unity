@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
+  m_IndirectSpecularColor: {r: 131.19772, g: 162.48279, b: 214.93106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca2b3934921c58c418ddd981131ef45f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca2b3934921c58c418ddd981131ef45f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2098,8 +2098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f766cf425d06cb46991c30d1e0cbb76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHandTestPos: {fileID: 138101847}
-  RightHandTestPos: {fileID: 613709282}
+  leftHandPos: {fileID: 138101847}
+  RightHandPos: {fileID: 613709282}
   isGrabed: 0
 --- !u!1 &519019502
 GameObject:
@@ -3092,7 +3092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e161ec73617586e46b5393e683bc64b3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e161ec73617586e46b5393e683bc64b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8331,7 +8331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026344471336204789, guid: 9ebafb13e48099d46b891e3b3e186a78, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1026344471336204789, guid: 9ebafb13e48099d46b891e3b3e186a78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8408,6 +8408,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: gun
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: currentWeapon
       value: 
       objectReference: {fileID: 6212757873428080717}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
@@ -8927,6 +8931,7 @@ MonoBehaviour:
   damage: 10
   range: 30
   fpsCam: {fileID: 230920557}
+  gunAnim: {fileID: 0}
   muzzleFlash: {fileID: 325071220}
 --- !u!111 &6212757873428080719
 Animation:
@@ -8937,9 +8942,10 @@ Animation:
   m_GameObject: {fileID: 6212757873428080717}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bbeb97727935f6942841dc485338c6d0, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: bbeb97727935f6942841dc485338c6d0, type: 2}
+  - {fileID: 7400000, guid: 21f5f581961aa824791b8d21b7af7e26, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -8988,7 +8994,7 @@ Transform:
   - {fileID: 613709282}
   m_Father: {fileID: 1000494236}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -84.514, y: 234.263, z: -148.497}
+  m_LocalEulerAnglesHint: {x: -83.26892, y: 376.34058, z: -288.30975}
 --- !u!33 &7700079384736988498
 MeshFilter:
   m_ObjectHideFlags: 0
