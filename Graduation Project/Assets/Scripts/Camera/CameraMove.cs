@@ -20,9 +20,10 @@ public class CameraMove : MonoBehaviour
     private void Awake()
     {
         playeranim = GetComponentInParent<Animator>();
-       
+     
     }
 
+  
     // Update is called once per frame
     void Update()
     {

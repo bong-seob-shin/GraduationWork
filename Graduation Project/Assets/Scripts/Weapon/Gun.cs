@@ -17,9 +17,13 @@ public class Gun : MonoBehaviour
 
     public VisualEffect muzzleFlash;
 
-    private float _currentFireRate =FireRate;
+    public float currentFireRate =FireRate;
 
     private int _bulletCount = 20;
+
+    public bool isShoot =false;
+
+    public bool isPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,26 +35,27 @@ public class Gun : MonoBehaviour
     {
         GunFireRateCalc();
 
-        if (Input.GetKey(KeyCode.Mouse0)) 
+        if (isShoot)
         {
-            if (_currentFireRate <= 0 )
+            if (currentFireRate <= 0)
             {
                 Shoot();
             }
         }
 
-        
-            
-        
+
+
+
+
     }
 
     private void GunFireRateCalc()
     {
         
 
-        if (_currentFireRate > 0)
+        if (currentFireRate > 0)
         {
-            _currentFireRate -= Time.deltaTime;
+            currentFireRate -= Time.deltaTime;
         }
     }
 
@@ -63,18 +68,26 @@ public class Gun : MonoBehaviour
 
         muzzleFlash.SendEvent("OnPlay");
 
-        RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        if (isPlayer)
         {
-           // Debug.Log(hit.transform.name);
-        }
+            RaycastHit hit;
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+            {
+                // Debug.Log(hit.transform.name);
+            }
 
-        _currentFireRate = FireRate;
-        _bulletCount -= 1;
+
+            _bulletCount -= 1;
+        }
+        currentFireRate = FireRate;
+
     }
     
     private void OnDrawGizmos()
     {
-        Debug.DrawLine(fpsCam.transform.position, fpsCam.transform.position+fpsCam.transform.forward*range);
+        if (isPlayer)
+        {
+            Debug.DrawLine(fpsCam.transform.position, fpsCam.transform.position + fpsCam.transform.forward * range);
+        }
     }
 }

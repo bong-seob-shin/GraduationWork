@@ -59,8 +59,7 @@ public class Player : AnimationObj
     private Transform _playerSpineTransform;
     private Vector3 _spineDir = new Vector3(0,0,0);
 
-    public GameObject currentWeapon;
-    private Animation _weaponGunAnim;
+  
     
     [HideInInspector]public Camera myCam;
     
@@ -97,10 +96,13 @@ public class Player : AnimationObj
         {
             Destroy(this.gameObject);
         }
-
+        anim = gameObject.GetComponent<Animator>(); 
+        playerRb = gameObject.GetComponent<Rigidbody>();
+        _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
         _gunGrab = GetComponentInChildren<IKGunGrab>();
         myCam = GetComponentInChildren<Camera>();
-        _weaponGunAnim = currentWeapon.GetComponent<Animation>();
+        myCam.gameObject.GetComponent<CameraMove>().enabled = true; //갑자기 생긴 버그 때문에 고치기위해서 카메라무브 스크립트를 게임 시작하면 켜줌
+        weaponGunAnim = currentWeapon.GetComponent<Animation>();
 
     }
 
@@ -137,11 +139,10 @@ public class Player : AnimationObj
         _stateMachine = new StateMachine(idle);
 
         speed = 3.0f;
-        anim =  anim = gameObject.GetComponent<Animator>(); 
+        
         applySpeed = speed;
         runSpeed = speed * 3;
-        playerRb = gameObject.GetComponent<Rigidbody>();
-        _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
+        
         if (anim)
         {
             _playerSpineTransform = anim.GetBoneTransform(HumanBodyBones.Spine); //spine bone transform받아오기
@@ -250,15 +251,21 @@ public class Player : AnimationObj
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            isEquipWeapon = true; //이 변수를 보내자
+
             currentWeapon.SetActive(true);
             _gunGrab.isGrabed = true;
-            _weaponGunAnim.Play("GunEject");
+            weaponGunAnim.Play("GunEject");
+            myGun.currentFireRate = 1.0f;
 
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
+        {           
+            isEquipWeapon = false; //이 변수를 보내자
+
             _gunGrab.isGrabed = false;
+
             currentWeapon.SetActive(false);
         }
 
@@ -270,6 +277,18 @@ public class Player : AnimationObj
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             applySpeed = speed;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            isShoot = true;//여기서 총쏘고 있다는 것을 샌드하자
+            myGun.isShoot = isShoot;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            isShoot = false;//여기서 총쏘고 있다는 것을 샌드하자
+            myGun.isShoot = isShoot;
         }
     }
     
