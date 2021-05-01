@@ -23,7 +23,7 @@ public class Gun : MonoBehaviour
 
     public bool isShoot =false;
 
-    public bool isPlayer;
+    public bool isPlayer; //플레이어인지 구분
     // Start is called before the first frame update
     void Start()
     {
