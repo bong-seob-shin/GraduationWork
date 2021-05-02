@@ -20,14 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SplitTerrain.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SplitTerrain.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/M_Building01_Deco.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/M_Building01_Deco.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/M_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/M_Glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/WhiteWood_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/WhiteWood_BaseColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/White_Wood_basecolor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/White_Wood_basecolor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/chimney.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/chimney.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/roof.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/roof.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/BuggyPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/BuggyPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/IKGunGrab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../바탕화면/유니티 기말텀프/GameEngineFinal/유니티 기말과제 텀프/Assets/Classical City/Script/PlayerMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,8 +74,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +93,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../지빠귀\Graduation Project.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\bong1\OneDrive\바탕 화면\지빠귀" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -146,7 +160,7 @@
       <workItem from="1619795640664" duration="5805000" />
       <workItem from="1619870354262" duration="701000" />
       <workItem from="1619889945241" duration="2733000" />
-      <workItem from="1619948893246" duration="10003000" />
+      <workItem from="1619948893246" duration="11489000" />
     </task>
     <servers />
   </component>

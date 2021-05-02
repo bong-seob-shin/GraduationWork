@@ -284,7 +284,7 @@ Camera:
   m_FOVAxisMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 21.962704
+  m_FocalLength: 22.228148
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -292,8 +292,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.18
-  far clip plane: 3000
-  field of view: 57.302692
+  far clip plane: 1000
+  field of view: 56.725323
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -702,6 +702,7 @@ MonoBehaviour:
   myGun: {fileID: 6212757873428080718}
   weaponGunAnim: {fileID: 0}
   isShoot: 0
+  rideCarID: -1
   runSpeed: 0
   crouchSpeed: 0
   applySpeed: 0
