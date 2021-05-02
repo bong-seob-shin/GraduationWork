@@ -6,6 +6,8 @@ using UnityEngine;
 public class CarController : NoneAnimationObj
 {
 
+    public static IDictionary<int, CarController> carList= new Dictionary<int, CarController>(); //모든 차 리스트를 담아 놓았음 (id, 객체)
+    
     public Vector3 centerOfMass;    
     
     [Tooltip("자동차 속도 및 방향")]
@@ -24,7 +26,7 @@ public class CarController : NoneAnimationObj
     private bool isBreaking;
   
     [SerializeField]
-    private bool _isCarStartControll = false;
+    private bool _isCarStartControll = false; // 차가 현재 컨트롤 되고 있는지 변수
 
     [Tooltip("자동차 탑승 쿨다운")]
     [SerializeField]
@@ -43,8 +45,9 @@ public class CarController : NoneAnimationObj
     [HideInInspector] public Transform  RearRightWheelTransform;
     [HideInInspector] public Transform  RearLeftWheelTransform;
     
-    private Player _driver;
-
+    private AnimationObj _driver;
+    public int usingUserId = 1; // 원래 디폴트 값은 -1로 둘예정이지만 싱글모드에서 확인용으로 1을 디폴트로 주었다. 서버에서는 이값을 브로드캐스팅해서 모든 차들에게 전달해서 업데이트 해주면된다.
+    
     
     
 
@@ -53,6 +56,8 @@ public class CarController : NoneAnimationObj
         _carRigid = GetComponent<Rigidbody>();
         
         _carRigid.centerOfMass = centerOfMass;
+        this.id = 1;//지금은 id 1로줬음
+        carList.Add(id, this);
     }
 
     // Update is called once per frame
@@ -61,8 +66,15 @@ public class CarController : NoneAnimationObj
         
         if (_isCarStartControll)
         {
-            
-            KeyboardInput();
+            if (_driver.id == usingUserId)
+            {
+                KeyboardInput();
+            }
+            else
+            {
+                //update otherplayer's car info //아더플레이어가 움직인 차정보를 동기화 하는 코드가 필요함 
+                //dirX와 dirY를 동기화 해야함
+            }
             Move();
             Handling();
             UpdateWheel();
@@ -70,8 +82,9 @@ public class CarController : NoneAnimationObj
             {
                 _rideCoolDown -= Time.deltaTime;
             }
+          
         }
-        else
+        else//자동 감속
         {
             frontLeftWheelCollider.brakeTorque = _decelerationForce;
             frontRightWheelCollider.brakeTorque = _decelerationForce;
@@ -160,7 +173,7 @@ public class CarController : NoneAnimationObj
             _isCarStartControll = false;
             carCamera.gameObject.SetActive(false);
             _driver.gameObject.SetActive(true);
-            _driver.TakeoffCar();
+            _driver.gameObject.GetComponent<Player>().TakeoffCar();
             
             _rideCoolDown = 1;
             Debug.Log("TakeOff!");
@@ -176,12 +189,18 @@ public class CarController : NoneAnimationObj
     public void setCarControll(Player player)
     {
         _driver = player;
-        _driver.myCam.gameObject.SetActive(false);
+        _driver.gameObject.GetComponent<Player>().myCam.gameObject.SetActive(false);
         _driver.gameObject.SetActive(false);
         carCamera.gameObject.SetActive(true);
         _isCarStartControll = true;
         
     }
-    
+    public void setOtherCarControll(OhterPlayer player)
+    {
+        _driver = player;
+        _driver.gameObject.SetActive(false);
+        _isCarStartControll = true;
+        
+    }
     
 }

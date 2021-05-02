@@ -52,7 +52,7 @@ public class OhterPlayer : NoneControlObj
 
 
     private bool _isGunEject = false; //총 꺼내는 애니메이션 반복을 막기 위한 변수
-  
+
     
     //총 드는거는 ikGunGrab 스크립트의 isgrab 이 총 드는 스크립트인데  true가 되면 총을 잡음 이걸 이용해서 플레이어에서 isgrab이 true될 때 넘기고 서버에서  그걸 넘겨 받으면 될 것 같음 총 여러개 되었을 때는 enum으로 해서 바꿔주면 될거같음
     
@@ -130,6 +130,13 @@ public class OhterPlayer : NoneControlObj
                 myGun.isShoot = isShoot;
             }
         }
+        else
+        {
+            if (rideCarID > 0)
+            {
+                CarController.carList[rideCarID].setOtherCarControll(this);
+            }
+        }
 
     }
 
@@ -145,18 +152,7 @@ public class OhterPlayer : NoneControlObj
         anim.SetFloat("MoveDirZ", dirZ);
     }
 
-    
-    private void LateUpdate()
-    {
-       // OperationBonRotate();
-    }
 
-    // private void OperationBonRotate()
-    // {
-    //     _neckDir = targetTransform.position + targetTransform.forward * 50; //  받아온 vector
-    //     _playerNeckTransform.LookAt(_neckDir);
-    //     _playerNeckTransform.rotation = _playerNeckTransform.rotation * Quaternion.Euler(_neckOffset); //상체 움직임 보정
-    // }
 
    
     

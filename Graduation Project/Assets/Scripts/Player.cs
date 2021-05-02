@@ -59,8 +59,8 @@ public class Player : AnimationObj
     private Transform _playerSpineTransform;
     private Vector3 _spineDir = new Vector3(0,0,0);
 
-  
-    
+
+
     [HideInInspector]public Camera myCam;
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
@@ -86,6 +86,7 @@ public class Player : AnimationObj
 
     private void Awake()
     {
+        this.id = 1;//차 타는거 테스트
         if (instance == null)
         {
             instance = this;
@@ -332,13 +333,16 @@ public class Player : AnimationObj
 
         if (isNearCar)
         {
-            if (_hitInfo.transform.GetComponent<CarController>() != null && !_isRideCar)
+            CarController car = _hitInfo.transform.GetComponent<CarController>();
+            
+            if ( car != null && !_isRideCar)
             {
                 _isRideCar = true;
                 _capsuleCollider.enabled = false;
                 playerRb.isKinematic = true;
-                _hitInfo.transform.GetComponent<CarController>().setCarControll(this);
+                car.setCarControll(this);
                 Debug.Log("Ride!!");
+                rideCarID = car.id; //여기서 넣은 ridecarID를 서버에 보내서
             }
         }
     }

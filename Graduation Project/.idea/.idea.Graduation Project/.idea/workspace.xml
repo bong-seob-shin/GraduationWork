@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Water/waternormal.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Water/waternormal.jpeg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Shader/Water.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Water.shadergraph" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
@@ -53,10 +55,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControllObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneAnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKSnap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
@@ -65,10 +65,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGunGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
       </list>
     </option>
   </component>
@@ -144,6 +146,7 @@
       <workItem from="1619795640664" duration="5805000" />
       <workItem from="1619870354262" duration="701000" />
       <workItem from="1619889945241" duration="2733000" />
+      <workItem from="1619948893246" duration="9088000" />
     </task>
     <servers />
   </component>
@@ -181,9 +184,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1619799538874" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619800062957">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619951911433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1619800062957" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1619951911433" />
   </component>
 </project>
