@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/IKGunGrab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/SplitTerrain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ManageTerrain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NoneControllObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NoneAnimationObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKSnap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/DebugDrawLine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGrab.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGunGrab.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonsterRange.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1oDeMGs1YdBI1c81pV5oN8x5Gis" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="" />
+      <created>1612825541877</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612825541877</updated>
+      <workItem from="1612825544455" duration="6487000" />
+      <workItem from="1612833285626" duration="1654000" />
+      <workItem from="1613396194254" duration="1851000" />
+      <workItem from="1613472267794" duration="2989000" />
+      <workItem from="1613476491839" duration="772000" />
+      <workItem from="1613642968104" duration="13158000" />
+      <workItem from="1613735637210" duration="2983000" />
+      <workItem from="1613751561403" duration="886000" />
+      <workItem from="1613836619176" duration="5873000" />
+      <workItem from="1614282382089" duration="7398000" />
+      <workItem from="1614775251482" duration="2747000" />
+      <workItem from="1615978395752" duration="3815000" />
+      <workItem from="1617223043514" duration="641000" />
+      <workItem from="1617442997223" duration="724000" />
+      <workItem from="1617444342396" duration="408000" />
+      <workItem from="1617619269215" duration="4845000" />
+      <workItem from="1617702854248" duration="1759000" />
+      <workItem from="1617710304502" duration="662000" />
+      <workItem from="1617882898007" duration="96000" />
+      <workItem from="1618142560151" duration="6005000" />
+      <workItem from="1618246134821" duration="7945000" />
+      <workItem from="1618254389017" duration="674000" />
+      <workItem from="1618297491240" duration="18643000" />
+      <workItem from="1618423423646" duration="1821000" />
+      <workItem from="1619177787655" duration="5186000" />
+      <workItem from="1619285880846" duration="39000" />
+      <workItem from="1619285930918" duration="1802000" />
+      <workItem from="1619788420972" duration="371000" />
+      <workItem from="1619791517690" duration="2538000" />
+      <workItem from="1619795640664" duration="5805000" />
+      <workItem from="1619870354262" duration="701000" />
+      <workItem from="1619889945241" duration="2733000" />
+      <workItem from="1619943914415" duration="7580000" />
+      <workItem from="1619971102733" duration="201000" />
+      <workItem from="1619984853967" duration="24000" />
+      <workItem from="1619984904239" duration="1606000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1618298293863">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618298293863" />
+    <state x="694" y="141" width="1096" height="1027" key="dock-window-1" timestamp="1618302181257">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="694" y="141" width="1096" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618302181257" />
+    <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@1920.0.1080.1880" timestamp="1613660564667" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1619799538874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1619799538874" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619943980390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1619943980390" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1619800062957" />
+  </component>
+</project>
