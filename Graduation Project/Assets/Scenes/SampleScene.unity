@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 131.18076, g: 162.51416, b: 215.03311, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8406,15 +8406,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 256707524873784426, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_SensorSize.x
-      value: 70.41
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 256707524873784426, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_SensorSize.y
-      value: 52.63
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 256707524873784426, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: field of view
-      value: 100.30273
+      value: 56.725323
+      objectReference: {fileID: 0}
+    - target: {fileID: 256707524873784426, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: m_FocalLength
+      value: 22.228148
       objectReference: {fileID: 0}
     - target: {fileID: 256707524873784427, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: antialiasing
