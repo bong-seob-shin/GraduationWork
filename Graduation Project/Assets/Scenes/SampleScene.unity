@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 131.15268, g: 162.57007, b: 215.2687, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8955,6 +8955,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 256707524873784426, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: m_FocalLength
+      value: 22.228148
+      objectReference: {fileID: 0}
+    - target: {fileID: 256707524873784426, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: field of view
+      value: 56.725323
+      objectReference: {fileID: 0}
+    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: hpText
+      value: 
+      objectReference: {fileID: 664634584}
+    - target: {fileID: 256707525176383581, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1438.4
@@ -9003,6 +9019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: bulletText
+      value: 
+      objectReference: {fileID: 875327396}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
 --- !u!1001 &325385524211307301

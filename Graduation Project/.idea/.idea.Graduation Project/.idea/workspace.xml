@@ -20,17 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/M_Building01_Deco.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/M_Building01_Deco.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/M_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/M_Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/WhiteWood_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/WhiteWood_BaseColor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/White_Wood_basecolor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/White_Wood_basecolor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/chimney.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/chimney.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/roof.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/Forest Village/Materials/roof.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/BuggyPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/BuggyPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +55,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControllObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneAnimationObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKSnap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
@@ -70,13 +63,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGunGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -161,6 +155,7 @@
       <workItem from="1619870354262" duration="701000" />
       <workItem from="1619889945241" duration="2733000" />
       <workItem from="1619948893246" duration="11489000" />
+      <workItem from="1620064081104" duration="2277000" />
     </task>
     <servers />
   </component>

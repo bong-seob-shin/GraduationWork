@@ -12,7 +12,8 @@ public class ObjManager : MonoBehaviour
    public float dirX;
    public float dirZ;
 
-
+   public int MaxHP;
+   public int HP;
    
    protected virtual void Move() 
    {

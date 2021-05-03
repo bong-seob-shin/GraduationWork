@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 
@@ -83,6 +84,8 @@ public class Player : AnimationObj
 
     public Transform rayCastPoint;
 
+
+    public TextMeshProUGUI hpText;
     private void Awake()
     {
         this.id = 1;//차 타는거 테스트
@@ -103,7 +106,7 @@ public class Player : AnimationObj
         myCam = GetComponentInChildren<Camera>();
         myCam.gameObject.GetComponent<CameraMove>().enabled = true; //갑자기 생긴 버그 때문에 고치기위해서 카메라무브 스크립트를 게임 시작하면 켜줌
         weaponGunAnim = currentWeapon.GetComponent<Animation>();
-
+        myGun.bulletText.text = "Bullet  " +myGun. bulletCount.ToString() + " / " + myGun.maxBulletCount.ToString();
     }
 
     public static Player Instance
@@ -140,6 +143,8 @@ public class Player : AnimationObj
 
         speed = 3.0f;
         
+        MaxHP = 100;
+        HP = MaxHP;
         applySpeed = speed;
         runSpeed = speed * 3;
         
@@ -156,11 +161,11 @@ public class Player : AnimationObj
     {
         if (!_isRideCar)
         {
-            IsGround();
+            //IsGround();
             KeyboardInput();
-            CharacterRotation();
-            Move();
-            _stateMachine.ExecuteUpdate();
+            //CharacterRotation();
+            //Move();
+            //_stateMachine.ExecuteUpdate();
         }
 
         if (_rideCoolDown > 0.0f)
@@ -174,10 +179,24 @@ public class Player : AnimationObj
                 
             }
         }
-        
+
+        hpText.text = "HP  " + HP.ToString() +" / "+MaxHP.ToString();
         Debug.DrawRay(transform.position, Vector3.down*(_capsuleCollider.bounds.extents.y/5.0f), Color.blue);
     }
 
+ 
+
+    private void FixedUpdate()//물리적인 충돌을 계산하기위해서 움직임등을 모두 fixedupdate에 넣음 이 update는 매 프레임마다 불림
+    {
+        if (!_isRideCar)
+        {
+            IsGround();
+            //KeyboardInput();
+            CharacterRotation();
+            Move();
+            _stateMachine.ExecuteUpdate();
+        }
+    }
 
     private void LateUpdate()
     {
@@ -252,6 +271,9 @@ public class Player : AnimationObj
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             isEquipWeapon = true; //이 변수를 보내자
+            
+            
+            myGun.bulletText.gameObject.SetActive(true);//ui setActive
 
             currentWeapon.SetActive(true);
             _gunGrab.isGrabed = true;
@@ -267,6 +289,8 @@ public class Player : AnimationObj
             _gunGrab.isGrabed = false;
 
             currentWeapon.SetActive(false);
+
+            myGun.bulletText.gameObject.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
@@ -289,6 +313,14 @@ public class Player : AnimationObj
         {
             isShoot = false;//여기서 총쏘고 있다는 것을 샌드하자
             myGun.isShoot = isShoot;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (_gunGrab.isGrabed)
+            {
+                myGun.Reload();
+            }
         }
     }
     

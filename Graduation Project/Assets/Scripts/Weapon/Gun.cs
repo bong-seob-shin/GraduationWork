@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.VFX;
@@ -19,15 +20,18 @@ public class Gun : MonoBehaviour
 
     public float currentFireRate =FireRate;
 
-    private int _bulletCount = 20;
+    public int maxBulletCount = 20;
+    public int bulletCount = 20;
 
     public bool isShoot =false;
 
+    public TextMeshProUGUI bulletText;
     public bool isPlayer; //플레이어인지 구분
     // Start is called before the first frame update
     void Start()
     {
         gunAnim = GetComponent<Animation>();
+
     }
 
     // Update is called once per frame
@@ -37,12 +41,13 @@ public class Gun : MonoBehaviour
 
         if (isShoot)
         {
-            if (currentFireRate <= 0)
+            if (currentFireRate <= 0 &&bulletCount>0)
             {
                 Shoot();
             }
         }
 
+        bulletText.text = "Bullet  " + bulletCount.ToString() + " / " + maxBulletCount.ToString();
 
 
 
@@ -77,7 +82,7 @@ public class Gun : MonoBehaviour
             }
 
 
-            _bulletCount -= 1;
+            bulletCount -= 1;
         }
         currentFireRate = FireRate;
 
@@ -89,5 +94,10 @@ public class Gun : MonoBehaviour
         {
             Debug.DrawLine(fpsCam.transform.position, fpsCam.transform.position + fpsCam.transform.forward * range);
         }
+    }
+
+    public void Reload()
+    {
+        bulletCount = maxBulletCount;
     }
 }
