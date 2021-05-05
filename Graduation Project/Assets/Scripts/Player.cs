@@ -35,7 +35,7 @@ public class Player : AnimationObj
     [SerializeField]
     private float _interactCoolDown = 1.0f;
 
-    
+    public bool isOnLift = false;
     
     // [Tooltip("얼마나 앉을건지")]
     // private float _crouchPosY;
@@ -337,6 +337,7 @@ public class Player : AnimationObj
 
         //playerRb.MovePosition(transform.position + _velocity * Time.deltaTime);
         playerRb.position += _velocity * Time.deltaTime;
+        
 
 
     }
@@ -404,5 +405,27 @@ public class Player : AnimationObj
         myCam.gameObject.SetActive(true);
     }
 
-    
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.CompareTag("floor"))
+        {
+            playerRb.useGravity = false;
+        }
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.collider.CompareTag("floor"))
+        {
+            transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.collider.CompareTag("floor"))
+        {
+            playerRb.useGravity = true;
+        }
+    }
 }

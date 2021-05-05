@@ -11,6 +11,15 @@ public class InteractiveButton : MonoBehaviour
     
     [SerializeField]private bool isOn =false;
     [SerializeField] private bool isSwitch = false;
+    
+    [HideInInspector]public enum ButtonTypes
+    {
+        Single,
+        DoubleA,
+        DoubleB
+    }
+
+    public ButtonTypes currentButtonTypes;
     private void Update()
     {
         if (isSwitch)
@@ -26,17 +35,16 @@ public class InteractiveButton : MonoBehaviour
 
     public void InteractObj()
     {
-        if (!isOn)
+        if (!isOn&&(currentButtonTypes == ButtonTypes.Single || currentButtonTypes == ButtonTypes.DoubleA))
         {
+            
             for (int i = 0; i < interactiveObjAnims.Length; i++)
             {
-               // interactiveObjAnims[i].Stop();
 
                 string animName = interactiveObjAnims[i].name;
                 Debug.Log("온" + animName);
                 interactiveObjAnims[i][animName].normalizedTime= 0f;
                 interactiveObjAnims[i][animName].speed = 1f;
-                //interactiveObjAnims[i].Play();
             }
 
             isOn = !isOn;
@@ -44,17 +52,15 @@ public class InteractiveButton : MonoBehaviour
             return;
         }
 
-        if (isOn)
+        if (isOn&&(currentButtonTypes == ButtonTypes.Single || currentButtonTypes == ButtonTypes.DoubleB))
         {
             for (int i = 0; i < interactiveObjAnims.Length; i++)
             {
 
-                //interactiveObjAnims[i].Stop();
                 string animName = interactiveObjAnims[i].name;
                 Debug.Log("오프" + animName);
                 interactiveObjAnims[i][animName].normalizedTime= 1f;
                 interactiveObjAnims[i][animName].speed = -1f;
-                //interactiveObjAnims[i].Play();
             }
 
             isOn = !isOn;
