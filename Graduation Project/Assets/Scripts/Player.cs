@@ -29,7 +29,7 @@ public class Player : AnimationObj
     [HideInInspector]public bool isInteract = false;
     [HideInInspector] public bool isJump = false;
     public bool _isRideCar = false;
-
+    [HideInInspector] public bool onInteractKey = false;
 
     [Tooltip("상호작용 버튼 쿨다운")]
     [SerializeField]
@@ -62,7 +62,7 @@ public class Player : AnimationObj
     private Vector3 _spineDir = new Vector3(0,0,0);
 
 
-
+    
     [HideInInspector]public Camera myCam;
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
@@ -88,6 +88,7 @@ public class Player : AnimationObj
 
 
     public TextMeshProUGUI hpText;
+    public TextMeshProUGUI interactText;
     private void Awake()
     {
         this.id = 1;//차 타는거 테스트
@@ -165,6 +166,7 @@ public class Player : AnimationObj
         {
             //IsGround();
             KeyboardInput();
+            Interact();
             //CharacterRotation();
             //Move();
             //_stateMachine.ExecuteUpdate();
@@ -267,7 +269,7 @@ public class Player : AnimationObj
 
         if (Input.GetKeyDown(KeyCode.F)&&_interactCoolDown<=0)
         {
-            Interact();
+            onInteractKey = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -337,7 +339,8 @@ public class Player : AnimationObj
 
         //playerRb.MovePosition(transform.position + _velocity * Time.deltaTime);
         playerRb.position += _velocity * Time.deltaTime;
-        
+        //playerRb.position += _velocity * Time.deltaTime;
+
 
 
     }
@@ -364,33 +367,69 @@ public class Player : AnimationObj
 
     private void Interact()
     {
-        isInteract = Physics.Raycast(rayCastPoint.transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
-
+        int layerMask = (-1) - (1 << LayerMask.NameToLayer("PlayerCamera"));
+        isInteract = Physics.Raycast(myCam.transform.position,  myCam.transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f,layerMask);
+        Debug.DrawRay(myCam.transform.position,  myCam.transform.forward,Color.blue);
+        
         if (isInteract)
         {
             CarController car = _hitInfo.transform.GetComponent<CarController>();
             InteractiveButton ib = _hitInfo.transform.GetComponent<InteractiveButton>();
-            
-            if ( car != null && !_isRideCar)
+            InteractiveDoubleButton idb = _hitInfo.transform.GetComponent<InteractiveDoubleButton>();
+            if ( car != null && !_isRideCar )
             {
-                _isRideCar = true;
-                _capsuleCollider.enabled = false;
-                playerRb.isKinematic = true;
-                car.setCarControll(this);
-                rideCarID = car.id; //여기서 넣은 ridecarID를 서버에 보내서
+                if (onInteractKey)
+                {
+                    _isRideCar = true;
+                    _capsuleCollider.enabled = false;
+                    playerRb.isKinematic = true;
+                    car.setCarControll(this);
+                    rideCarID = car.id; //여기서 넣은 ridecarID를 서버에 보내서
+                    onInteractKey = false;
+                }
+                else
+                {
+                    interactText.text = "Interact Key 'F'";
+                    Debug.Log(_hitInfo.transform.name);
+                }
             }
 
-            if (ib != null)
+            if (ib != null )
             {
-                ib.InteractObj();
-                Debug.Log("불렸음");
-                _interactCoolDown = 1.0f;
+                if (onInteractKey)
+                {
+                    ib.InteractObjs();
+                    Debug.Log("불렸음");
+                    _interactCoolDown = 1.0f;
+                    onInteractKey = false;
+                }
+                else
+                {
+                    interactText.text = "Interact Key 'F'";
+                    Debug.Log(_hitInfo.transform.name);
+                }
             }
-            else
+            if (idb != null )
             {
-                Debug.Log("안댐");
+                if (onInteractKey)
+                {
+                    idb.InteractObjs();
+                    Debug.Log("불렸음");
+                    _interactCoolDown = 1.0f;
+                    onInteractKey = false;
+                }
+                else
+                {
+                    interactText.text = "Interact Key 'F'";
+                    Debug.Log(_hitInfo.transform.name);
+                }
             }
         }
+        else
+        {
+            interactText.text = " ";
+        }
+        onInteractKey = false;
     }
 
     public void TakeoffCar()
@@ -405,27 +444,5 @@ public class Player : AnimationObj
         myCam.gameObject.SetActive(true);
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.collider.CompareTag("floor"))
-        {
-            playerRb.useGravity = false;
-        }
-    }
-
-    private void OnCollisionStay(Collision other)
-    {
-        if (other.collider.CompareTag("floor"))
-        {
-            transform.position = new Vector3(transform.position.x, other.transform.position.y+0.1f, transform.position.z);
-        }
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.collider.CompareTag("floor"))
-        {
-            playerRb.useGravity = true;
-        }
-    }
+   
 }

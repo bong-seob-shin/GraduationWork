@@ -4,22 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 
-public class InteractiveButton : MonoBehaviour
+public class InteractiveButton : InteractObj
 {
 
     public Animation[] interactiveObjAnims;
     
-    [SerializeField]private bool isOn =false;
-    [SerializeField] private bool isSwitch = false;
-    
-    [HideInInspector]public enum ButtonTypes
-    {
-        Single,
-        DoubleA,
-        DoubleB
-    }
 
-    public ButtonTypes currentButtonTypes;
+   
+    
+
+   
     private void Update()
     {
         if (isSwitch)
@@ -33,9 +27,9 @@ public class InteractiveButton : MonoBehaviour
         }
     }
 
-    public void InteractObj()
+    public override void InteractObjs()
     {
-        if (!isOn&&(currentButtonTypes == ButtonTypes.Single || currentButtonTypes == ButtonTypes.DoubleA))
+        if (!isOn)
         {
             
             for (int i = 0; i < interactiveObjAnims.Length; i++)
@@ -49,11 +43,11 @@ public class InteractiveButton : MonoBehaviour
 
             isOn = !isOn;
             isSwitch = true;
-            
+
             return;
         }
 
-        if (isOn&&(currentButtonTypes == ButtonTypes.Single || currentButtonTypes == ButtonTypes.DoubleB))
+        if (isOn)
         {
             for (int i = 0; i < interactiveObjAnims.Length; i++)
             {

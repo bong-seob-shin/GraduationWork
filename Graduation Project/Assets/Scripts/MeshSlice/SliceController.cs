@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class SliceController : MonoBehaviour {
-	public AudioClip sliceMissSound;
-	AudioSource audioSource;
 	Vector3 sliceStartPos, sliceEndPos;
 	bool isSlicing = false;
 	GameObject startUI, endUI, lineUI;
@@ -14,8 +12,6 @@ public class SliceController : MonoBehaviour {
 	void Start () {
 		// UV Mapping Camera
 		MeshSlicer.uvCamera = Instantiate( (GameObject)Resources.Load("Prefabs/MeshSlice/UV_Camera") );
-		// Init sound
-		audioSource = gameObject.AddComponent<AudioSource>();
 		// Init GUI
 		GameObject canvas = GameObject.Find("Canvas");
 		GameObject pointPrefab = (GameObject)Resources.Load("Prefabs/MeshSlice/Slice_Point");
@@ -89,8 +85,6 @@ public class SliceController : MonoBehaviour {
 				}
 			}
 		}
-		if(!isSliced) {
-			audioSource.PlayOneShot(sliceMissSound, 1.0f);
-		}
+		
 	}
 }
