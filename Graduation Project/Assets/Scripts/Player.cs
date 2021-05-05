@@ -66,6 +66,8 @@ public class Player : AnimationObj
     [HideInInspector]public Camera myCam;
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
+
+    public GameObject CenterUI;
     
     private enum PlayerState
     {
@@ -381,6 +383,7 @@ public class Player : AnimationObj
                 if (onInteractKey)
                 {
                     _isRideCar = true;
+                    CenterUI.SetActive(false);
                     _capsuleCollider.enabled = false;
                     playerRb.isKinematic = true;
                     car.setCarControll(this);
@@ -434,7 +437,7 @@ public class Player : AnimationObj
 
     public void TakeoffCar()
     {
-        
+        CenterUI.SetActive(true);
         _interactCoolDown = 1.0f;
         _isRideCar = false;
         _capsuleCollider.enabled = true;
