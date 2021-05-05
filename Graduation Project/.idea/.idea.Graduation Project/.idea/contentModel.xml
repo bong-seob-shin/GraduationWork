@@ -12,6 +12,7 @@
           <e p="Camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
+          <e p="ClosedMonster.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ManageTerrain.cs" t="Include" />
             <e p="SplitTerrain.cs" t="Include" />
@@ -23,8 +24,8 @@
           <e p="Managers" t="Include">
             <e p="UIManager.cs" t="Include" />
           </e>
-          <e p="Monster.cs" t="Include" />
-          <e p="MonsterRange.cs" t="Include" />
+          <e p="MonsterBullet.cs" t="Include" />
+          <e p="MonsterManager.cs" t="Include" />
           <e p="NoneAnimationObj.cs" t="Include" />
           <e p="NoneControlObj.cs" t="Include" />
           <e p="ObjManager.cs" t="Include" />
@@ -39,6 +40,7 @@
           </e>
           <e p="Player.cs" t="Include" />
           <e p="RandomSpawner.cs" t="Include" />
+          <e p="RangedMonster.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="Weapon" t="Include">
             <e p="DebugDrawLine.cs" t="Include" />

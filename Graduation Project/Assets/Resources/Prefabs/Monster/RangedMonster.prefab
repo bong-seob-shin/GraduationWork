@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4131226813214502911}
   - component: {fileID: 4131226813214502908}
   - component: {fileID: 4131226813214502909}
-  - component: {fileID: 4131226813214502906}
   - component: {fileID: 4131226813214502907}
   - component: {fileID: 4131226813214502904}
+  - component: {fileID: -1582044554337729761}
   m_Layer: 0
   m_Name: RangedMonster
   m_TagString: Untagged
@@ -100,26 +100,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4131226813214502906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4131226813214502905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7a5daa658a02b745a74429541d8979d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nav: {fileID: 4131226813214502907}
-  rigid: {fileID: 4131226813214502904}
-  meshCollider: {fileID: 4131226813214502909}
-  attackTerm: 3
-  colls: []
-  isDead: 0
-  isHit: 0
-  projectile: {fileID: 4131226814563710094}
 --- !u!195 &4131226813214502907
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -158,6 +138,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-1582044554337729761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4131226813214502905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee9890cf9d922d4da1ae7905b1b85bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  dirX: 0
+  dirZ: 0
+  MaxHP: 0
+  HP: 0
+  nav: {fileID: 4131226813214502907}
+  isDead: 0
+  rigid: {fileID: 4131226813214502904}
+  meshCollider: {fileID: 4131226813214502909}
+  attackTerm: 3
+  colls: []
+  isHit: 0
+  projectile: {fileID: 4131226814563710094}
 --- !u!1 &4131226814563710094
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +175,8 @@ GameObject:
   - component: {fileID: 4131226814563710096}
   - component: {fileID: 4131226814563710097}
   - component: {fileID: 4131226814563710098}
+  - component: {fileID: 2256375652827870012}
+  - component: {fileID: 2641028477072206644}
   m_Layer: 0
   m_Name: MonsterBullet
   m_TagString: Untagged
@@ -185,7 +192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131226814563710094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.535, z: 0}
+  m_LocalPosition: {x: -0.01, y: 0.535, z: -0}
   m_LocalScale: {x: 0.19542, y: 0.19542, z: 0.19542}
   m_Children: []
   m_Father: {fileID: 4131226813214502910}
@@ -288,3 +295,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &2256375652827870012
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4131226814563710094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2641028477072206644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4131226814563710094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae2fbed84e9ad749a2dd3b18088147b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

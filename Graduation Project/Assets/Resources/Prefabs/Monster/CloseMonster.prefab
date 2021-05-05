@@ -417,9 +417,8 @@ GameObject:
   - component: {fileID: 3610802879979027839}
   - component: {fileID: 7276702926840964869}
   - component: {fileID: 8201237587045079927}
-  - component: {fileID: 8201237587045079924}
   - component: {fileID: 8201237587045079922}
-  - component: {fileID: 8201237587045079925}
+  - component: {fileID: 3264906911459574219}
   m_Layer: 0
   m_Name: CloseMonster
   m_TagString: Untagged
@@ -478,19 +477,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &8201237587045079924
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4132042462894696389}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 2.79, y: 3.48, z: 6.5}
-  m_Center: {x: 0, y: 1.8, z: 0.01}
 --- !u!195 &8201237587045079922
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -506,14 +492,14 @@ NavMeshAgent:
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8201237587045079925
+--- !u!114 &3264906911459574219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,7 +508,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4132042462894696389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b09c54ac00717c34b8f9d63c058dd6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fd85030a7a938d4287528d0273a8b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
@@ -531,10 +517,10 @@ MonoBehaviour:
   MaxHP: 0
   HP: 0
   nav: {fileID: 8201237587045079922}
-  anim: {fileID: 7276702926840964869}
-  rigid: {fileID: 8201237587045079927}
-  meshCollider: {fileID: 8201237588047193722}
   isDead: 0
+  rigid: {fileID: 8201237587045079927}
+  anim: {fileID: 7276702926840964869}
+  meshCollider: {fileID: 8201237588047193722}
   isHit: 0
   attackTerm: 3
   colls: []

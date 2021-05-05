@@ -3,48 +3,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
-public class Monster : ObjManager
+public class RangedMonster : MonsterManager
 {
-    [SerializeField] private NavMeshAgent nav;
-
-    [SerializeField] private Animator anim;
-    [SerializeField] private Rigidbody rigid;
-
     //보류
-    [SerializeField] private MeshCollider meshCollider;
+    [SerializeField] private CapsuleCollider meshCollider;
 
     private Vector3 monsterStartPos;
 
+    private bool alreadyAttacked = false;
+    [SerializeField] private float attackTerm;
+
+    public Collider[] colls;
+    
     // 상태값
-    public bool isDead = false;
     public bool isHit = false;
     private bool isAttack = false;
 
     private float timer;
-    
-    
-    private bool alreadyAttacked = false;
-    [SerializeField] private float attackTerm;
-    private float currentAttackTerm;
-    public Collider[] colls;
-    
+
+    public GameObject projectile;
+
+    private Vector3 bulletStartPos;
+
     private Transform target;
     private bool targetOn;
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
-        meshCollider = GetComponent<MeshCollider>();
+        meshCollider = GetComponent<CapsuleCollider>();
         nav = GetComponent<NavMeshAgent>();
 
+        bulletStartPos = GetComponentInChildren<VisualEffect>().transform.position;
+        
         monsterStartPos = transform.position;
 
         nav.enabled = true;
-        
         // 플레이어 타겟 잡는 곳
         targetOn = false;
-        currentAttackTerm = attackTerm;
+
+        this.MaxHP = 300;
+        this.HP = this.MaxHP;
+
     }
 
     // Update is called once per frame
@@ -53,7 +55,6 @@ public class Monster : ObjManager
         if (!isDead)
         {
             colls = Physics.OverlapSphere(transform.position, 20.0f);
-            
             for (int i = 0; i < colls.Length; i++)
             {
                 if (colls[i].tag == "Player")
@@ -66,30 +67,32 @@ public class Monster : ObjManager
 
             if (targetOn)
             {
-                currentAttackTerm -= Time.deltaTime;
                 if (Vector3.Distance(target.position, transform.position) <= 20)
                 {
                     TraceTarget();
-                    isAttack = false;
                 }
 
                 if (Vector3.Distance(target.position, transform.position) > 20)
                 {
                     StopTrace();
+                    targetOn = false;
                 }
 
-                if (Vector3.Distance(target.position, transform.position) <= 4.0f)
+                if (Vector3.Distance(target.position, transform.position) <= 10.0f)
                 {
-                    if (!isAttack && currentAttackTerm <= 0.0f)
+                    if (!isAttack)
                     {
-                        Debug.Log("attack");
                         AttackTarget();
-                        currentAttackTerm = attackTerm;
                     }
                 }
             }
+            
+            if (this.HP <= 0)
+            {
+                Dead();
+            }
         }
-
+        
         if (isDead)
         {
             timer += Time.deltaTime;
@@ -99,39 +102,50 @@ public class Monster : ObjManager
             }
         }
     }
-
+    
     private void TraceTarget()
     {
         // 플레이어와의 거리가 20보다 가까울 때 
         nav.Resume();
         transform.LookAt(target);
-        anim.SetBool("Walking", true);
         nav.SetDestination(target.position);
     }
-
+    
     private void StopTrace()
     {
         nav.SetDestination(monsterStartPos);
-        if (Vector3.Distance(monsterStartPos, transform.position) <= 0.1f)
+        if (Vector3.Distance(monsterStartPos , transform.position) <= 0.1f)
         {
-            anim.SetBool("Walking", false);
             nav.Stop();
         }
     }
-
+    
     private void AttackTarget()
     {
-        isAttack = true;
+        if (!alreadyAttacked)
+        {
+            Fire();
+        }
+        
         nav.Stop();
-        anim.SetTrigger("Attack");
-
     }
 
-    private void Dead()
+    private void Fire()
     {
-        isDead = true;
-        nav.Stop();
-        rigid.velocity = Vector3.zero;
-        //anim.SetTrigger("Dead");
+        Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+        rb.AddForce(transform.forward * 10f , ForceMode.Impulse);
+        rb.AddForce(transform.up * 5f , ForceMode.Impulse);
+
+        // Vector3 dirToTarget = target.transform.position - transform.position;
+        // transform.forward = -dirToTarget.normalized;
+
+        alreadyAttacked = true;
+        Invoke(nameof(ResetAttack),attackTerm);
+        //rb.velocity = dirToTarget.normalized * 20;
+    }
+
+    private void ResetAttack()
+    {
+        alreadyAttacked = false;
     }
 }

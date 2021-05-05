@@ -9,7 +9,7 @@ public class Gun : MonoBehaviour
 {
 
     private const float FireRate = 0.2f;
-    public float damage = 10f;
+    public int damage = 10;
     public float range = 100f;
 
     public Camera fpsCam;
@@ -27,6 +27,8 @@ public class Gun : MonoBehaviour
 
     public TextMeshProUGUI bulletText;
     public bool isPlayer; //플레이어인지 구분
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,16 +50,11 @@ public class Gun : MonoBehaviour
         }
 
         bulletText.text = "Bullet  " + bulletCount.ToString() + " / " + maxBulletCount.ToString();
-
-
-
-
+        
     }
 
     private void GunFireRateCalc()
     {
-        
-
         if (currentFireRate > 0)
         {
             currentFireRate -= Time.deltaTime;
@@ -76,9 +73,21 @@ public class Gun : MonoBehaviour
         if (isPlayer)
         {
             RaycastHit hit;
-            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+            int layerMask = (-1) - (1 << LayerMask.NameToLayer("PlayerCamera"));  // Everything에서 Player 레이어만 제외하고 충돌 체크함
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,layerMask))
             {
-                // Debug.Log(hit.transform.name);
+                Debug.Log(hit.transform.name);
+                ClosedMonster monster = hit.transform.GetComponent<ClosedMonster>();
+                RangedMonster Rmonster = hit.transform.GetComponent<RangedMonster>();
+                if (monster != null)
+                {
+                    monster.hit(damage);
+                }
+
+                if (Rmonster != null)
+                {
+                    Rmonster.hit(damage);
+                }
             }
 
 
