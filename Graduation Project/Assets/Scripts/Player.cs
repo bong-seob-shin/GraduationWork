@@ -26,19 +26,21 @@ public class Player : AnimationObj
     [HideInInspector]public bool isRun;
     public bool isGround = true;
     [HideInInspector]public bool isCrouch = false;
-    [HideInInspector]public bool isNearCar = false;
+    [HideInInspector]public bool isInteract = false;
     [HideInInspector] public bool isJump = false;
     public bool _isRideCar = false;
 
 
-    [Tooltip("자동차 탑승 쿨다운")]
+    [Tooltip("상호작용 버튼 쿨다운")]
     [SerializeField]
-    private float _rideCoolDown = 1.0f;
+    private float _interactCoolDown = 1.0f;
+
     
-    [Tooltip("얼마나 앉을건지")]
-    private float _crouchPosY;
-    private float _originPosY;
-    private float _applyCouchPosY;
+    
+    // [Tooltip("얼마나 앉을건지")]
+    // private float _crouchPosY;
+    // private float _originPosY;
+    // private float _applyCouchPosY;
 
     [SerializeField]
     private float _sensitivity = 15;
@@ -168,9 +170,9 @@ public class Player : AnimationObj
             //_stateMachine.ExecuteUpdate();
         }
 
-        if (_rideCoolDown > 0.0f)
+        if (_interactCoolDown > 0.0f)
         {
-            _rideCoolDown -= Time.deltaTime;
+            _interactCoolDown -= Time.deltaTime;
             if (transform.rotation.z != 0)
             {
                 Debug.Log("Get up!!");
@@ -263,9 +265,9 @@ public class Player : AnimationObj
             
         }
 
-        if (Input.GetKeyDown(KeyCode.F)&&_rideCoolDown<=0)
+        if (Input.GetKeyDown(KeyCode.F)&&_interactCoolDown<=0)
         {
-            IsNearCar();
+            Interact();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -359,13 +361,14 @@ public class Player : AnimationObj
 
   
 
-    private void IsNearCar()
+    private void Interact()
     {
-        isNearCar = Physics.Raycast(rayCastPoint.transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
+        isInteract = Physics.Raycast(rayCastPoint.transform.position, transform.forward,out _hitInfo,_capsuleCollider.bounds.extents.z + 1f);
 
-        if (isNearCar)
+        if (isInteract)
         {
             CarController car = _hitInfo.transform.GetComponent<CarController>();
+            InteractiveButton ib = _hitInfo.transform.GetComponent<InteractiveButton>();
             
             if ( car != null && !_isRideCar)
             {
@@ -373,8 +376,18 @@ public class Player : AnimationObj
                 _capsuleCollider.enabled = false;
                 playerRb.isKinematic = true;
                 car.setCarControll(this);
-                Debug.Log("Ride!!");
                 rideCarID = car.id; //여기서 넣은 ridecarID를 서버에 보내서
+            }
+
+            if (ib != null)
+            {
+                ib.InteractObj();
+                Debug.Log("불렸음");
+                _interactCoolDown = 1.0f;
+            }
+            else
+            {
+                Debug.Log("안댐");
             }
         }
     }
@@ -382,7 +395,7 @@ public class Player : AnimationObj
     public void TakeoffCar()
     {
         
-        _rideCoolDown = 1.0f;
+        _interactCoolDown = 1.0f;
         _isRideCar = false;
         _capsuleCollider.enabled = true;
         playerRb.isKinematic = false;
