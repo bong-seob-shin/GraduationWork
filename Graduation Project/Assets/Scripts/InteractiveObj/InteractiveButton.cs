@@ -49,6 +49,7 @@ public class InteractiveButton : MonoBehaviour
 
             isOn = !isOn;
             isSwitch = true;
+            
             return;
         }
 

@@ -7957,7 +7957,7 @@ MonoBehaviour:
   - {fileID: 1647374651}
   isOn: 0
   isSwitch: 0
-  currentButtonTypes: 2
+  currentButtonTypes: 1
 --- !u!65 &1799684201
 BoxCollider:
   m_ObjectHideFlags: 0

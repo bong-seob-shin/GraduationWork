@@ -417,7 +417,7 @@ public class Player : AnimationObj
     {
         if (other.collider.CompareTag("floor"))
         {
-            transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, other.transform.position.y+0.1f, transform.position.z);
         }
     }
 
