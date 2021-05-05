@@ -24,6 +24,13 @@
           <e p="Managers" t="Include">
             <e p="UIManager.cs" t="Include" />
           </e>
+          <e p="MeshSlice" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="FruitLauncher.cs" t="Include" />
+            <e p="MeshSlicer.cs" t="Include" />
+            <e p="SliceableObject.cs" t="Include" />
+            <e p="SliceController.cs" t="Include" />
+          </e>
           <e p="MonsterBullet.cs" t="Include" />
           <e p="MonsterManager.cs" t="Include" />
           <e p="NoneAnimationObj.cs" t="Include" />
