@@ -17,12 +17,16 @@ public class LiftTrigger : MonoBehaviour
 
    private void OnTriggerEnter(Collider other)
    {
-      if (other.CompareTag("floor") || other.CompareTag("ceiling"))
+      if (other.CompareTag("floor"))
       {
          if (isAcivate)
          {
             for (int i = 0; i < interactiveObjAnims.Length; i++)
             {
+               string animName = interactiveObjAnims[i].name;
+               Debug.Log("온" + animName);
+               interactiveObjAnims[i][animName].normalizedTime= 1f;
+               interactiveObjAnims[i][animName].speed = -1f;
                interactiveObjAnims[i].Play();
             }
 
@@ -30,6 +34,24 @@ public class LiftTrigger : MonoBehaviour
             isAcivate = false;
          }
       }
-     
+
+      if (other.CompareTag("ceiling"))
+      {
+         if (isAcivate)
+         {
+            for (int i = 0; i < interactiveObjAnims.Length; i++)
+            {
+               string animName = interactiveObjAnims[i].name;
+               Debug.Log("온" + animName);
+               interactiveObjAnims[i][animName].normalizedTime = 0f;
+               interactiveObjAnims[i][animName].speed = 1f;
+               interactiveObjAnims[i].Play();
+            }
+
+            anotherLift.isAcivate = true;
+            isAcivate = false;
+         }
+      }
+
    }
 }
