@@ -5,9 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - floor
-  - SpawnPoint
   - Sliceable
   - ceiling
+  - Terrain
+  - CSpawnPoint
+  - RSpawnPoint
   layers:
   - Default
   - TransparentFX

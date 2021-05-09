@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 67337361}
   m_Layer: 0
   m_Name: Terrain 2 2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1749,7 +1749,7 @@ GameObject:
   - component: {fileID: 256534656}
   m_Layer: 0
   m_Name: Terrain 2 0
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2481,7 +2481,7 @@ GameObject:
   - component: {fileID: 472085247}
   m_Layer: 0
   m_Name: ClosedMonsterSpawner
-  m_TagString: SpawnPoint
+  m_TagString: CSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2498,12 +2498,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a32350baf2e5c04ba3990f58bdc6d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 4132042462894696389, guid: 43876361dd151cc43a1b2bb6e36b8dd3, type: 3}
+  enemyPrefabs: {fileID: 4132042462894696389, guid: 43876361dd151cc43a1b2bb6e36b8dd3, type: 3}
   spawnPoints: []
   radius: 20
-  spawnTime: 5
-  count: 10
+  CspawnTime: 3
+  Ccount: 10
+  Cterrain: {fileID: 519019505}
 --- !u!4 &472085248
 Transform:
   m_ObjectHideFlags: 0
@@ -2512,7 +2512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472085246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2272.4, y: 109.99206, z: 3553.29}
+  m_LocalPosition: {x: 1940.3, y: 179.97, z: 3275.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2707,7 +2707,7 @@ GameObject:
   - component: {fileID: 519019504}
   m_Layer: 0
   m_Name: Terrain 1 2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4248,7 +4248,7 @@ GameObject:
   - component: {fileID: 700423393}
   m_Layer: 0
   m_Name: Terrain 0 2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5261,7 +5261,7 @@ GameObject:
   - component: {fileID: 887392220}
   m_Layer: 0
   m_Name: Terrain 1 1
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5832,7 +5832,7 @@ GameObject:
   - component: {fileID: 978340239}
   m_Layer: 0
   m_Name: Terrain 3 2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6962,7 +6962,7 @@ GameObject:
   - component: {fileID: 1079103641}
   m_Layer: 0
   m_Name: Terrain 1 0
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7841,7 +7841,7 @@ GameObject:
   - component: {fileID: 1270539981}
   m_Layer: 0
   m_Name: Terrain 1 3
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9289,7 +9289,7 @@ GameObject:
   - component: {fileID: 1455187464}
   m_Layer: 0
   m_Name: Terrain 3 3
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9365,7 +9365,7 @@ GameObject:
   - component: {fileID: 1469033242}
   m_Layer: 0
   m_Name: Terrain 2 1
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9647,7 +9647,7 @@ GameObject:
   - component: {fileID: 1490876416}
   m_Layer: 0
   m_Name: Terrain 0 1
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9785,7 +9785,7 @@ GameObject:
   - component: {fileID: 1507264314}
   m_Layer: 0
   m_Name: Terrain 0 3
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9860,7 +9860,7 @@ GameObject:
   - component: {fileID: 1510036171}
   m_Layer: 0
   m_Name: RangedMonsterSpawner
-  m_TagString: SpawnPoint
+  m_TagString: RSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9874,15 +9874,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1510036170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a32350baf2e5c04ba3990f58bdc6d57, type: 3}
+  m_Script: {fileID: 11500000, guid: 502c6aad3b4db2647aed363908ae117d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 4131226813214502905, guid: 0f25c8752c61d0743a751be32c93a5ff, type: 3}
+  enemyPrefabs: {fileID: 4131226813214502905, guid: 0f25c8752c61d0743a751be32c93a5ff, type: 3}
   spawnPoints: []
   radius: 20
-  spawnTime: 5
+  spawnTime: 3
   count: 10
+  terrain: {fileID: 519019505}
 --- !u!4 &1510036172
 Transform:
   m_ObjectHideFlags: 0
@@ -9891,7 +9891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510036170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2191.1, y: 109.99206, z: 3548.9}
+  m_LocalPosition: {x: 1836.05, y: 220.35, z: 3587.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10163,7 +10163,7 @@ GameObject:
   - component: {fileID: 1599006391}
   m_Layer: 0
   m_Name: Terrain 2 3
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10762,7 +10762,7 @@ GameObject:
   - component: {fileID: 1721094101}
   m_Layer: 0
   m_Name: Terrain 3 0
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11244,7 +11244,7 @@ GameObject:
   - component: {fileID: 1813816076}
   m_Layer: 0
   m_Name: Terrain 0 0
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11844,7 +11844,7 @@ GameObject:
   - component: {fileID: 1964271468}
   m_Layer: 0
   m_Name: TerrainGroup_0
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13400,7 +13400,7 @@ GameObject:
   - component: {fileID: 2138652741}
   m_Layer: 0
   m_Name: Terrain 3 1
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

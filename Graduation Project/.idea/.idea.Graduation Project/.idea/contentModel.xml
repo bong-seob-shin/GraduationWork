@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\bong1\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\bong1\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Graduation Project.-1971131616.00" t="ExcludeRecursive" />
-    <e p="C:\Users\bong1\OneDrive\바탕 화면\졸업작품\GraduationWork\Graduation Project" t="IncludeRecursive">
+    <e p="C:\Users\qoreh\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\qoreh\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Graduation Project.-1441082320.00" t="ExcludeRecursive" />
+    <e p="C:\Users\qoreh\OneDrive\바탕 화면\GraduationWork\Graduation Project" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Font" t="Include">
           <e p="1001fonts-joaquin-eula.txt" t="Include" />
         </e>
+        <e p="Samples" t="Include">
+          <e p="Terrain Tools" t="Include">
+            <e p="0.1.0-preview" t="Include">
+              <e p="Terrain Assets" t="Include">
+                <e p="ThirdPartyNotices.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="AnimationObj.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
-          <e p="ClosedMonster.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ManageTerrain.cs" t="Include" />
             <e p="SplitTerrain.cs" t="Include" />
@@ -38,8 +46,14 @@
             <e p="SliceableObject.cs" t="Include" />
             <e p="SliceController.cs" t="Include" />
           </e>
-          <e p="MonsterBullet.cs" t="Include" />
-          <e p="MonsterManager.cs" t="Include" />
+          <e p="Monster" t="Include">
+            <e p="ClosedMonster.cs" t="Include" />
+            <e p="CMRandomSpawner.cs" t="Include" />
+            <e p="MonsterBullet.cs" t="Include" />
+            <e p="MonsterManager.cs" t="Include" />
+            <e p="RangedMonster.cs" t="Include" />
+            <e p="RMRandomSpawner.cs" t="Include" />
+          </e>
           <e p="NoneAnimationObj.cs" t="Include" />
           <e p="NoneControlObj.cs" t="Include" />
           <e p="ObjManager.cs" t="Include" />
@@ -53,8 +67,6 @@
             <e p="StateWalk.cs" t="Include" />
           </e>
           <e p="Player.cs" t="Include" />
-          <e p="RandomSpawner.cs" t="Include" />
-          <e p="RangedMonster.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="Weapon" t="Include">
             <e p="DebugDrawLine.cs" t="Include" />

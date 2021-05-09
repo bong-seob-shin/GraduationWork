@@ -22,15 +22,19 @@
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/ObjAnim/Basement Lift Outer Door.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/ObjAnim/Basement Lift Outer Door.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/ObjAnim/Lift Door Back.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/ObjAnim/Lift Door Back.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/MeshSlice/Slice_Line.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/MeshSlice/Slice_Line.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/MeshSlice/Slice_Point 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/MeshSlice/Slice_Point 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/MeshSlice/Slice_Point.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/MeshSlice/Slice_Point.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/LiftTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/LiftTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +43,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractiveObj/MovingFloor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveDoubleButton.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -71,7 +71,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs" />
@@ -87,6 +86,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/LiftTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RandomSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" />
       </list>
     </option>
   </component>
@@ -182,6 +185,7 @@
       <workItem from="1620239004079" duration="1221000" />
       <workItem from="1620240579974" duration="7000" />
       <workItem from="1620241618878" duration="14622000" />
+      <workItem from="1620567119499" duration="14859000" />
     </task>
     <servers />
   </component>
