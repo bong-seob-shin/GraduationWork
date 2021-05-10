@@ -10,40 +10,41 @@ public class CMRandomSpawner : MonoBehaviour
     public GameObject[] spawnPoints;
     public float radius = 2;
 
-    public float CspawnTime = 10.0f;
-    private float CcurrentTime;
+    public float spawnTime = 10.0f;
+    private float currentTime;
    
-    private int CCrandomInt;
-    private int CrandomIntTwo;
-    private Vector3 CrandomVec;
-    private Vector3 CSpawnVec;
+    private int CrandomInt;
+    private int randomIntTwo;
+    private Vector3 randomVec;
+    private Vector3 SpawnVec;
 
-    public int Ccount;
-    private bool CstopSpawn = false;
-
-    public Terrain Cterrain;
+    private int count;
+    public int maxCount;
+    private bool stopSpawn = false;
 
     private void Start()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("CSpawnPoint");
-        CcurrentTime = CspawnTime;
+        currentTime = spawnTime;
+
+        count = 0;
     }
 
     private void Update()
     {
-        if (!CstopSpawn)
+        if (!stopSpawn)
         {
-            CcurrentTime -= Time.deltaTime;
-            if (CcurrentTime <= 0.0f)
+            currentTime -= Time.deltaTime;
+            if (currentTime <= 0.0f)
             {
                 SpawnRandom();
-                CcurrentTime = CspawnTime;
-                Ccount++;
+                currentTime = spawnTime;
+                count++;
             }
 
-            if (Ccount >= 20)
+            if (count >= maxCount)
             {
-                CstopSpawn = true;
+                stopSpawn = true;
             }
         }
     }
@@ -61,21 +62,32 @@ public class CMRandomSpawner : MonoBehaviour
    
     void SpawnRandom()
     {
-        CrandomIntTwo = GetRandom(spawnPoints.Length);
-        CrandomVec = GetRandomVector(spawnPoints[CrandomIntTwo].transform.position);
+        randomIntTwo = GetRandom(spawnPoints.Length);
+        randomVec = GetRandomVector(spawnPoints[randomIntTwo].transform.position);
 
-        CrandomVec.y = transform.position.y + 50.0f;
-       
-        RaycastHit Chit;
-        if (Physics.Raycast(new Vector3(CrandomVec.x,CrandomVec.y,CrandomVec.z),Vector3.down, out Chit,150.0f))
+        randomVec.y = randomVec.y + 50.0f;
+        
+        RaycastHit hit;
+        if (Physics.Raycast(new Vector3(randomVec.x,randomVec.y,randomVec.z),Vector3.down, out hit,150.0f))
         {
-            if (Chit.collider.gameObject.GetComponent<Terrain>())
+            if (hit.collider.gameObject.GetComponent<Terrain>())
             {
-                TerrainData data = Cterrain.terrainData;
-                float height = data.GetHeight((int) CrandomVec.x, (int) CrandomVec.y);
-                Debug.Log(height);
-                Instantiate(enemyPrefabs, new Vector3(CrandomVec.x,height,CrandomVec.z), spawnPoints[CrandomIntTwo].transform.rotation);
+                TerrainData data = Terrain.activeTerrain.terrainData;
+                float height = data.GetHeight((int) randomVec.x, (int) randomVec.y);
+                if (randomVec.y >= height)
+                {
+                    Instantiate(enemyPrefabs, new Vector3(randomVec.x, randomVec.y, randomVec.z),
+                        spawnPoints[randomIntTwo].transform.rotation);
+                    
+                }
+                else
+                {
+                    count--;
+                }
+
             }
         }
+        
+        
     }
 }

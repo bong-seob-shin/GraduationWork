@@ -2485,7 +2485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &472085247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2501,9 +2501,8 @@ MonoBehaviour:
   enemyPrefabs: {fileID: 4132042462894696389, guid: 43876361dd151cc43a1b2bb6e36b8dd3, type: 3}
   spawnPoints: []
   radius: 20
-  CspawnTime: 3
-  Ccount: 10
-  Cterrain: {fileID: 519019505}
+  spawnTime: 3
+  maxCount: 10
 --- !u!4 &472085248
 Transform:
   m_ObjectHideFlags: 0
@@ -9881,8 +9880,7 @@ MonoBehaviour:
   spawnPoints: []
   radius: 20
   spawnTime: 3
-  count: 10
-  terrain: {fileID: 519019505}
+  maxCount: 10
 --- !u!4 &1510036172
 Transform:
   m_ObjectHideFlags: 0

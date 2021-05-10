@@ -20,21 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/CloseMonster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/CloseMonster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +78,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" />
       </list>
     </option>
   </component>
@@ -186,6 +176,8 @@
       <workItem from="1620240579974" duration="7000" />
       <workItem from="1620241618878" duration="14622000" />
       <workItem from="1620567119499" duration="14859000" />
+      <workItem from="1620651428475" duration="1985000" />
+      <workItem from="1620654005855" duration="7187000" />
     </task>
     <servers />
   </component>
@@ -210,9 +202,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1618298293863">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1620662691900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620662691900" />
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618298293863" />
     <state x="694" y="141" width="1096" height="1027" key="dock-window-1" timestamp="1618302181257">
       <screen x="0" y="0" width="1920" height="1040" />

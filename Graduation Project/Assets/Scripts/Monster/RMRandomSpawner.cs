@@ -20,14 +20,18 @@ public class RMRandomSpawner : MonoBehaviour
     private Vector3 randomVec;
     private Vector3 SpawnVec;
 
-    public int count;
+    private int count;
+    public int maxCount;
     private bool stopSpawn = false;
 
-    public Terrain terrain;
+    private float height;
+    
     private void Start()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("RSpawnPoint");
         currentTime = spawnTime;
+
+        count = 0;
     }
 
     private void Update()
@@ -37,12 +41,24 @@ public class RMRandomSpawner : MonoBehaviour
             currentTime -= Time.deltaTime;
             if (currentTime <= 0.0f)
             {
-                SpawnRandom();
-                currentTime = spawnTime;
-                count++;
+                randomIntTwo = GetRandom(spawnPoints.Length);
+                randomVec = GetRandomVector(spawnPoints[randomIntTwo].transform.position);
+
+                height = Terrain.activeTerrain.SampleHeight(randomVec);
+                
+                RaycastHit hit;
+                if (Physics.Raycast(new Vector3(randomVec.x,height,randomVec.z),Vector3.down, out hit,150.0f))
+                {
+                    if (hit.transform.CompareTag("Terrain"))
+                    {
+                        SpawnRandom(height);
+                        currentTime = spawnTime;
+                        count++;
+                    }
+                }
             }
 
-            if (count >= 20)
+            if (count >= maxCount)
             {
                 stopSpawn = true;
             }
@@ -60,26 +76,9 @@ public class RMRandomSpawner : MonoBehaviour
         return (UnityEngine.Random.insideUnitSphere * radius) + vec;
     }
    
-    void SpawnRandom()
+    void SpawnRandom(float height)
     {
-        randomIntTwo = GetRandom(spawnPoints.Length);
-        randomVec = GetRandomVector(spawnPoints[randomIntTwo].transform.position);
-        
-        
-        randomVec.y = transform.position.y + 50.0f;
-       
-        RaycastHit hit;
-        if (Physics.Raycast(new Vector3(randomVec.x,randomVec.y,randomVec.z),Vector3.down, out hit,150.0f))
-        {
-            if (hit.collider.gameObject.GetComponent<Terrain>())
-            {
-                TerrainData data = terrain.terrainData;
-                float height = data.GetHeight((int) randomVec.x, (int) randomVec.y);
-
-                Instantiate(enemyPrefabs, new Vector3(randomVec.x,height,randomVec.z), spawnPoints[randomIntTwo].transform.rotation);
-                Debug.Log(height);
-            }
-        }
-
+        Debug.Log(height);
+        Instantiate(enemyPrefabs, new Vector3(randomVec.x,height,randomVec.z),spawnPoints[randomIntTwo].transform.rotation );
     }
 }
