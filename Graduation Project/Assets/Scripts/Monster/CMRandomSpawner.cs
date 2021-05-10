@@ -65,26 +65,17 @@ public class CMRandomSpawner : MonoBehaviour
         randomIntTwo = GetRandom(spawnPoints.Length);
         randomVec = GetRandomVector(spawnPoints[randomIntTwo].transform.position);
 
-        randomVec.y = randomVec.y + 50.0f;
-        
         RaycastHit hit;
-        if (Physics.Raycast(new Vector3(randomVec.x,randomVec.y,randomVec.z),Vector3.down, out hit,150.0f))
+        if (Physics.Raycast(new Vector3(randomVec.x,randomVec.y + 50.0f,randomVec.z),Vector3.down, out hit,150.0f))
         {
             if (hit.collider.gameObject.GetComponent<Terrain>())
             {
-                TerrainData data = Terrain.activeTerrain.terrainData;
-                float height = data.GetHeight((int) randomVec.x, (int) randomVec.y);
-                if (randomVec.y >= height)
-                {
-                    Instantiate(enemyPrefabs, new Vector3(randomVec.x, randomVec.y, randomVec.z),
-                        spawnPoints[randomIntTwo].transform.rotation);
-                    
-                }
-                else
-                {
-                    count--;
-                }
-
+                Instantiate(enemyPrefabs, new Vector3(randomVec.x,hit.point.y,randomVec.z),spawnPoints[randomIntTwo].transform.rotation );
+            }
+            else
+            {
+                currentTime = 0.1f;
+                count--;
             }
         }
         
