@@ -27,8 +27,10 @@ public class Gun : MonoBehaviour
 
     public TextMeshProUGUI bulletText;
     public bool isPlayer; //플레이어인지 구분
-    
 
+    public GameObject bulletMark;
+
+    public GameObject markParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +79,12 @@ public class Gun : MonoBehaviour
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,layerMask))
             {
                 Debug.Log(hit.transform.name);
+                GameObject mark =  Instantiate(bulletMark, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
+                GameObject markP =  Instantiate(markParticle, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
+                mark.transform.LookAt(hit.point+hit.normal);
+                markP.transform.LookAt(hit.point+hit.normal);
+                Destroy(mark, 5f);
+                Destroy(markP, 1f);
                 ClosedMonster monster = hit.transform.GetComponent<ClosedMonster>();
                 RangedMonster Rmonster = hit.transform.GetComponent<RangedMonster>();
                 if (monster != null)

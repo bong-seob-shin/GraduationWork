@@ -23,18 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain 1 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +65,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/SliceController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractObj.cs" />
@@ -90,6 +79,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
       </list>
     </option>
   </component>
@@ -186,6 +176,7 @@
       <workItem from="1620240579974" duration="7000" />
       <workItem from="1620241618878" duration="14622000" />
       <workItem from="1620567119499" duration="14859000" />
+      <workItem from="1620653968074" duration="2472000" />
     </task>
     <servers />
   </component>
