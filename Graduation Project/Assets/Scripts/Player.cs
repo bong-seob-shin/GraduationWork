@@ -198,13 +198,19 @@ public class Player : AnimationObj
             invincibilityTime -= Time.deltaTime;
         }
 
-        if (HP < 0)
+        if (HP <= 0)
         {
             HP = 0;
             anim.SetBool("Dead", true);
             _capsuleCollider.direction = 2;
             camCol.enabled = false;
             isDead = true;
+            
+            _gunGrab.isGrabed = false;
+
+            currentWeapon.SetActive(false);
+
+            myGun.bulletText.gameObject.SetActive(false);
         }
     }
 
@@ -485,7 +491,7 @@ public class Player : AnimationObj
     {
         if (other.CompareTag("Trap"))
         {
-            hit(50);
+            hit(10);
         }
     }
 }

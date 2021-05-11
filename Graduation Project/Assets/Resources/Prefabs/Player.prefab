@@ -249,7 +249,8 @@ GameObject:
   - component: {fileID: 256707524873784428}
   - component: {fileID: 8298754116817073810}
   - component: {fileID: 3319683389131562470}
-  m_Layer: 0
+  - component: {fileID: 151562305}
+  m_Layer: 9
   m_Name: PlayerCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -439,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraRotationLimit: 45
+  camDeadoffset: {x: 0, y: 4.5, z: -3}
   playeranim: {fileID: 0}
 --- !u!54 &8298754116817073810
 Rigidbody:
@@ -454,8 +456,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!135 &3319683389131562470
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -468,7 +470,19 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
-  m_Center: {x: 0, y: -0.5, z: 0.29}
+  m_Center: {x: 0, y: -0.02, z: 0.48}
+--- !u!114 &151562305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256707524873784425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a16d29656d1f0429ebc65d118627de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &256707525177143040
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +654,7 @@ GameObject:
   - component: {fileID: 488933487}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -724,7 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22a835712f5b4642a3e366d482b1e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   dirX: 0
   dirZ: 0
   MaxHP: 0
@@ -735,28 +749,34 @@ MonoBehaviour:
   myGun: {fileID: 6212757873428080718}
   weaponGunAnim: {fileID: 0}
   isShoot: 0
+  isDead: 0
   rideCarID: -1
   runSpeed: 0
   crouchSpeed: 0
   applySpeed: 0
-  jumpForce: 5
+  jumpForce: 20000
   isRun: 0
   isGround: 1
   isCrouch: 0
-  isNearCar: 0
+  isInteract: 0
   isJump: 0
   _isRideCar: 0
-  _rideCoolDown: 1
+  onInteractKey: 0
+  _interactCoolDown: 1
+  isOnLift: 0
   _sensitivity: 15
+  camCol: {fileID: 3319683389131562470}
   playerRb: {fileID: 0}
   myCam: {fileID: 256707524873784426}
   _neckOffset: {x: 0, y: 0, z: 0}
+  CenterUI: {fileID: 0}
   w_keyPress: 0
   a_keyPress: 0
   s_keyPress: 0
   d_keyPress: 0
   rayCastPoint: {fileID: 256707525177143043}
   hpText: {fileID: 0}
+  interactText: {fileID: 0}
 --- !u!114 &488933487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2336,6 +2356,8 @@ MonoBehaviour:
   isShoot: 0
   bulletText: {fileID: 0}
   isPlayer: 1
+  bulletMark: {fileID: 4427172854510938909, guid: 5b317e3801f4a5a4698893c1944e57ea, type: 3}
+  markParticle: {fileID: 634407154434794664, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
 --- !u!111 &6212757873428080719
 Animation:
   m_ObjectHideFlags: 0
