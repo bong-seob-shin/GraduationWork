@@ -204,7 +204,7 @@ public class Player : AnimationObj
         if (!_isRideCar)
         {
             IsGround();
-            //KeyboardInput();
+            
             CharacterRotation();
             Move();
             _stateMachine.ExecuteUpdate();
@@ -238,16 +238,85 @@ public class Player : AnimationObj
         d_keyPress = Input.GetKey(KeyCode.D);
 
 
-       
-        if (w_keyPress || a_keyPress || s_keyPress || d_keyPress)
+
+        if (!isDead)
         {
-            _stateMachine.SetState(_stateDic[PlayerState.Walk]);
-            
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (w_keyPress || a_keyPress || s_keyPress || d_keyPress)
             {
-                _stateMachine.SetState(_stateDic[PlayerState.Run]);
-                
+                _stateMachine.SetState(_stateDic[PlayerState.Walk]);
+
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    _stateMachine.SetState(_stateDic[PlayerState.Run]);
+
+                }
             }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _stateMachine.SetState(_stateDic[PlayerState.Jump]);
+            
+            }
+
+            if (Input.GetKeyDown(KeyCode.F)&&_interactCoolDown<=0)
+            {
+                onInteractKey = true;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                isEquipWeapon = true; //이 변수를 보내자
+            
+            
+                myGun.bulletText.gameObject.SetActive(true);//ui setActive
+
+                currentWeapon.SetActive(true);
+                _gunGrab.isGrabed = true;
+                weaponGunAnim.Play("GunEject");
+                myGun.currentFireRate = 1.0f;
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {           
+                isEquipWeapon = false; //이 변수를 보내자
+
+                _gunGrab.isGrabed = false;
+
+                currentWeapon.SetActive(false);
+
+                myGun.bulletText.gameObject.SetActive(false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                applySpeed = speed / 2.0f;
+            }
+
+            if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                applySpeed = speed;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                isShoot = true;//여기서 총쏘고 있다는 것을 샌드하자
+                myGun.isShoot = isShoot;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                isShoot = false;//여기서 총쏘고 있다는 것을 샌드하자
+                myGun.isShoot = isShoot;
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                if (_gunGrab.isGrabed)
+                {
+                    myGun.Reload();
+                }
+            }
+            
         }
 
 
@@ -270,71 +339,7 @@ public class Player : AnimationObj
         {
             dirX = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _stateMachine.SetState(_stateDic[PlayerState.Jump]);
-            
-        }
-
-        if (Input.GetKeyDown(KeyCode.F)&&_interactCoolDown<=0)
-        {
-            onInteractKey = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            isEquipWeapon = true; //이 변수를 보내자
-            
-            
-            myGun.bulletText.gameObject.SetActive(true);//ui setActive
-
-            currentWeapon.SetActive(true);
-            _gunGrab.isGrabed = true;
-            weaponGunAnim.Play("GunEject");
-            myGun.currentFireRate = 1.0f;
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {           
-            isEquipWeapon = false; //이 변수를 보내자
-
-            _gunGrab.isGrabed = false;
-
-            currentWeapon.SetActive(false);
-
-            myGun.bulletText.gameObject.SetActive(false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            applySpeed = speed / 2.0f;
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            applySpeed = speed;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            isShoot = true;//여기서 총쏘고 있다는 것을 샌드하자
-            myGun.isShoot = isShoot;
-        }
-
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-            isShoot = false;//여기서 총쏘고 있다는 것을 샌드하자
-            myGun.isShoot = isShoot;
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (_gunGrab.isGrabed)
-            {
-                myGun.Reload();
-            }
-        }
+       
     }
     
     

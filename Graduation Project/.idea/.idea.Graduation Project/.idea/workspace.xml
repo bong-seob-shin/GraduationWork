@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/VFX/MonsterSpawnPortal.vfx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/VFX/MonsterSpawnPortal.vfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +50,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonsterRange.cs" />
@@ -79,6 +75,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       </list>
     </option>
@@ -179,7 +176,7 @@
       <workItem from="1620651428475" duration="1985000" />
       <workItem from="1620654005855" duration="7187000" />
       <workItem from="1620666217945" duration="1175000" />
-      <workItem from="1620715583015" duration="379000" />
+      <workItem from="1620715583015" duration="1393000" />
     </task>
     <servers />
   </component>

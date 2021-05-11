@@ -16,7 +16,9 @@ public class AnimationObj : ObjManager //애니메이션을 하는 오브젝트�
     [HideInInspector]public Animation weaponGunAnim; // 무기 애니메이션을 실행하기 위한 애니메이션 변수
 
     [HideInInspector] public bool isShoot = false; // 총을 쏘고있다는 것을 알리는 변수
-    
+
+
+    [HideInInspector] public bool isDead = false;
     
     public int rideCarID = -1; // 이건 cellpos에 있어야함! 그래야 아더가 차를 알아서 탈 수 있음
 }
