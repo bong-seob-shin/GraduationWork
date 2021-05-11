@@ -47,7 +47,9 @@ public class Player : AnimationObj
     
 
     private CapsuleCollider _capsuleCollider;
-
+    public SphereCollider camCol;
+    
+    
     private RaycastHit _hitInfo;
     
     
@@ -195,13 +197,22 @@ public class Player : AnimationObj
         {
             invincibilityTime -= Time.deltaTime;
         }
+
+        if (HP < 0)
+        {
+            HP = 0;
+            anim.SetBool("Dead", true);
+            _capsuleCollider.direction = 2;
+            camCol.enabled = false;
+            isDead = true;
+        }
     }
 
  
 
     private void FixedUpdate()//물리적인 충돌을 계산하기위해서 움직임등을 모두 fixedupdate에 넣음 이 update는 매 프레임마다 불림
     {
-        if (!_isRideCar)
+        if (!_isRideCar && !isDead)
         {
             IsGround();
             
@@ -213,7 +224,10 @@ public class Player : AnimationObj
 
     private void LateUpdate()
     {
-        OperationBonRotate();
+        if (!isDead)
+        {
+            OperationBonRotate();
+        }
     }
 
     private void OperationBonRotate()
@@ -471,7 +485,7 @@ public class Player : AnimationObj
     {
         if (other.CompareTag("Trap"))
         {
-            hit(10);
+            hit(50);
         }
     }
 }

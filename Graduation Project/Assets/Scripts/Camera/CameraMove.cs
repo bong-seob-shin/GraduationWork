@@ -13,29 +13,44 @@ public class CameraMove : MonoBehaviour
     
     private float _currentCameraRotationX = 0;
     // Start is called before the first frame update
-    
 
+    public Vector3 camDeadoffset;
+
+    private bool isSetThridCam = false;
     public Animator playeranim;
-
+    private Rigidbody camRg;
     private void Awake()
     {
         playeranim = GetComponentInParent<Animator>();
-     
+        camRg = GetComponent<Rigidbody>();
+       
+        
     }
 
   
     // Update is called once per frame
     void Update()
     {
+        Player _player = Player.Instance;
         CameraRotation();
        
-        //transform.position = Vector3.Lerp (transform.position, headTransform.position, smoothing * Time.deltaTime);
+        
     }
 
     private void LateUpdate()
     {
+        Player _player = Player.Instance;
         Transform neckTransform = playeranim.GetBoneTransform(HumanBodyBones.Head);
-        transform.position = neckTransform.position;
+        if (!_player.isDead)
+        {
+            transform.position = neckTransform.position;
+        }
+        if(_player.isDead)
+        {
+          
+                transform.localPosition =  new Vector3(camDeadoffset.x, camDeadoffset.y, camDeadoffset.z);
+           
+        }
     }
 
     private void CameraRotation()
@@ -46,5 +61,12 @@ public class CameraMove : MonoBehaviour
         _currentCameraRotationX = Mathf.Clamp(_currentCameraRotationX, -_cameraRotationLimit, _cameraRotationLimit);
         
         transform.localEulerAngles = new Vector3(_currentCameraRotationX,0f,0f);
+    }
+    
+    private void CharacterRotation()
+    {
+        float _yRotation = Input.GetAxisRaw("Mouse X");
+        Vector3 _charcterRotationY = new Vector3(0f, _yRotation, 0f) * _lookSensitivity;
+        camRg.MoveRotation(camRg.rotation*Quaternion.Euler(_charcterRotationY));
     }
 }

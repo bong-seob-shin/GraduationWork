@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.18076, g: 162.51416, b: 215.03311, a: 1}
+  m_IndirectSpecularColor: {r: 131.19772, g: 162.48279, b: 214.93106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14114,6 +14114,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 256707524873784428, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: camDeadoffset.x
+      value: 1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 256707524873784428, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: camDeadoffset.y
+      value: 2.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 256707524873784428, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: camDeadoffset.z
+      value: -0.81
+      objectReference: {fileID: 0}
     - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: hpText
       value: 
@@ -14134,6 +14146,10 @@ PrefabInstance:
       propertyPath: CenterUI
       value: 
       objectReference: {fileID: 5474066}
+    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: camCol
+      value: 
+      objectReference: {fileID: 256707525726772738}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1417.29
@@ -14228,6 +14244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+--- !u!135 &256707525726772738 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 3319683389131562470, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+  m_PrefabInstance: {fileID: 256707525726772737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &325385524211307301
 PrefabInstance:
   m_ObjectHideFlags: 0

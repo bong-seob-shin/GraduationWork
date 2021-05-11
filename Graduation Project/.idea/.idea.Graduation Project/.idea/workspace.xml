@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Character.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Character.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Oil.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Oil.shadergraph" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +51,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/DebugDrawLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKGunGrab.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneControlObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CarController.cs" />
@@ -77,6 +80,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
       </list>
     </option>
   </component>
@@ -176,7 +180,7 @@
       <workItem from="1620651428475" duration="1985000" />
       <workItem from="1620654005855" duration="7187000" />
       <workItem from="1620666217945" duration="1175000" />
-      <workItem from="1620715583015" duration="1393000" />
+      <workItem from="1620715583015" duration="5682000" />
     </task>
     <servers />
   </component>
