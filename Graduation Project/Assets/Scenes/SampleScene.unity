@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
+  m_IndirectSpecularColor: {r: 131.18076, g: 162.51416, b: 215.03311, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -216,7 +216,7 @@ RectTransform:
   - {fileID: 126380213}
   - {fileID: 2127395542}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1703,7 +1703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 817519010550879341, guid: 7ee04a6d9acef0843ba61d5bf725b871, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 817519010550879341, guid: 7ee04a6d9acef0843ba61d5bf725b871, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1853,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 817519010550879341, guid: 7ee04a6d9acef0843ba61d5bf725b871, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 817519010550879341, guid: 7ee04a6d9acef0843ba61d5bf725b871, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2167,7 +2167,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &360289858
 BoxCollider:
@@ -2515,7 +2515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477504275
 GameObject:
@@ -2554,7 +2554,7 @@ Transform:
   - {fileID: 1037846704}
   - {fileID: 1275443620}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &483147923
 PrefabInstance:
@@ -2780,9 +2780,10 @@ GameObject:
   - component: {fileID: 519681654}
   - component: {fileID: 519681656}
   - component: {fileID: 519681655}
+  - component: {fileID: 519681657}
   m_Layer: 0
   m_Name: Disgusting Oil  (13)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2850,6 +2851,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519681653}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &519681657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519681653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.12, y: 1, z: 7.57}
+  m_Center: {x: 1.02, y: -0.43, z: 0}
 --- !u!1001 &523019123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2923,9 +2937,10 @@ GameObject:
   - component: {fileID: 531572014}
   - component: {fileID: 531572016}
   - component: {fileID: 531572015}
+  - component: {fileID: 531572017}
   m_Layer: 0
   m_Name: Disgusting Oil  (20)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2993,6 +3008,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531572013}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &531572017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531572013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.97, y: 1, z: 7.97}
+  m_Center: {x: -0.05, y: -0.21, z: -0.51}
 --- !u!1001 &544756822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3398,9 +3426,10 @@ GameObject:
   - component: {fileID: 581661169}
   - component: {fileID: 581661171}
   - component: {fileID: 581661170}
+  - component: {fileID: 581661172}
   m_Layer: 0
   m_Name: Disgusting Oil  (9)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3468,6 +3497,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581661168}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &581661172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581661168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.28, y: 1, z: 5.27}
+  m_Center: {x: -0.001953125, y: -0.42, z: 1.59}
 --- !u!1 &581876909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,7 +3651,7 @@ RectTransform:
   - {fileID: 689094506}
   - {fileID: 85219170}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3862,7 +3904,7 @@ Transform:
   m_Children:
   - {fileID: 1442150709}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &661378934
 PrefabInstance:
@@ -4087,9 +4129,10 @@ GameObject:
   - component: {fileID: 688866196}
   - component: {fileID: 688866198}
   - component: {fileID: 688866197}
+  - component: {fileID: 688866199}
   m_Layer: 0
   m_Name: Disgusting Oil  (16)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4157,6 +4200,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688866195}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &688866199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688866195}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.01, y: 1, z: 7.66}
+  m_Center: {x: -0.001953125, y: -0.31, z: -0.4}
 --- !u!1 &689094505
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,9 +4633,10 @@ GameObject:
   - component: {fileID: 750180717}
   - component: {fileID: 750180719}
   - component: {fileID: 750180718}
+  - component: {fileID: 750180720}
   m_Layer: 0
   m_Name: 'Disgusting Oil '
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4647,6 +4704,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750180716}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &750180720
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750180716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.37, y: 1, z: 7.55}
+  m_Center: {x: -0.001953125, y: -0.46, z: 0}
 --- !u!1 &750366443
 GameObject:
   m_ObjectHideFlags: 0
@@ -5177,9 +5247,10 @@ GameObject:
   - component: {fileID: 880260164}
   - component: {fileID: 880260166}
   - component: {fileID: 880260165}
+  - component: {fileID: 880260167}
   m_Layer: 0
   m_Name: Disgusting Oil  (7)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5247,6 +5318,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880260163}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &880260167
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880260163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.87, y: 1, z: 7}
+  m_Center: {x: -0.001953125, y: -0.34, z: 0}
 --- !u!1 &887392218
 GameObject:
   m_ObjectHideFlags: 0
@@ -5458,9 +5542,10 @@ GameObject:
   - component: {fileID: 900983592}
   - component: {fileID: 900983594}
   - component: {fileID: 900983593}
+  - component: {fileID: 900983595}
   m_Layer: 0
   m_Name: Disgusting Oil  River
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5528,6 +5613,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900983591}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &900983595
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900983591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1, z: 9.66}
+  m_Center: {x: 0.15, y: -0.87, z: 0.6}
 --- !u!1 &907603316
 GameObject:
   m_ObjectHideFlags: 0
@@ -5574,7 +5672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &930503048 stripped
 GameObject:
@@ -5972,9 +6070,10 @@ GameObject:
   - component: {fileID: 1000875065}
   - component: {fileID: 1000875067}
   - component: {fileID: 1000875066}
+  - component: {fileID: 1000875068}
   m_Layer: 0
   m_Name: Disgusting Oil  (10)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6042,6 +6141,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000875064}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1000875068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000875064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.57, y: 1, z: 7.25}
+  m_Center: {x: 1.12, y: -0.42, z: -1.11}
 --- !u!4 &1002479623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5554059201245884946, guid: 7b2172f053d3b744684835d9697e3ef9, type: 3}
@@ -6946,7 +7058,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1079103639
 GameObject:
@@ -7035,9 +7147,10 @@ GameObject:
   - component: {fileID: 1116737785}
   - component: {fileID: 1116737787}
   - component: {fileID: 1116737786}
+  - component: {fileID: 1116737788}
   m_Layer: 0
   m_Name: Disgusting Oil  (5)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7105,6 +7218,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116737784}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1116737788
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116737784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.65, y: 1, z: 7.05}
+  m_Center: {x: -0.001953125, y: -0.47, z: -1.34}
 --- !u!1 &1118852259
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,9 +7242,10 @@ GameObject:
   - component: {fileID: 1118852260}
   - component: {fileID: 1118852262}
   - component: {fileID: 1118852261}
+  - component: {fileID: 1118852263}
   m_Layer: 0
   m_Name: Disgusting Oil  (23)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7186,6 +7313,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118852259}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1118852263
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118852259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.69, y: 1, z: 7.25}
+  m_Center: {x: -0.41, y: -0.45, z: 0.69}
 --- !u!1001 &1123825673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7624,7 +7764,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1189937329 stripped
 Transform:
@@ -7652,9 +7792,10 @@ GameObject:
   - component: {fileID: 1239638577}
   - component: {fileID: 1239638579}
   - component: {fileID: 1239638578}
+  - component: {fileID: 1239638580}
   m_Layer: 0
   m_Name: Disgusting Oil  (17)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7722,6 +7863,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239638576}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1239638580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239638576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.87, y: 1, z: 7.84}
+  m_Center: {x: 0.56, y: -0.41, z: 0.91}
 --- !u!1 &1244665119
 GameObject:
   m_ObjectHideFlags: 0
@@ -7869,9 +8023,10 @@ GameObject:
   - component: {fileID: 1269916298}
   - component: {fileID: 1269916300}
   - component: {fileID: 1269916299}
+  - component: {fileID: 1269916301}
   m_Layer: 0
   m_Name: Disgusting Oil  (12)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7939,6 +8094,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269916297}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1269916301
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269916297}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.5, y: 1, z: 7.66}
+  m_Center: {x: -0.32, y: -0.36, z: 0}
 --- !u!1 &1270539979
 GameObject:
   m_ObjectHideFlags: 0
@@ -8072,9 +8240,10 @@ GameObject:
   - component: {fileID: 1275672231}
   - component: {fileID: 1275672233}
   - component: {fileID: 1275672232}
+  - component: {fileID: 1275672234}
   m_Layer: 0
   m_Name: Disgusting Oil  (14)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8142,6 +8311,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275672230}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1275672234
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275672230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.64, y: 1, z: 5.91}
+  m_Center: {x: 1.11, y: -0.47, z: -0.72}
 --- !u!1001 &1277696222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8329,9 +8511,10 @@ GameObject:
   - component: {fileID: 1319420086}
   - component: {fileID: 1319420088}
   - component: {fileID: 1319420087}
+  - component: {fileID: 1319420089}
   m_Layer: 0
   m_Name: Disgusting Oil  (8)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8399,6 +8582,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319420085}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1319420089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319420085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.13, y: 1, z: 7.63}
+  m_Center: {x: 0.65, y: -0.44, z: 0.67}
 --- !u!111 &1335710743 stripped
 Animation:
   m_CorrespondingSourceObject: {fileID: 1807946156, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
@@ -8513,9 +8709,10 @@ GameObject:
   - component: {fileID: 1368793918}
   - component: {fileID: 1368793920}
   - component: {fileID: 1368793919}
+  - component: {fileID: 1368793921}
   m_Layer: 0
   m_Name: Disgusting Oil  (18)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8583,6 +8780,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368793917}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1368793921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368793917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.67, y: 1, z: 4.76}
+  m_Center: {x: 1.23, y: -0.46, z: -2.4}
 --- !u!4 &1375148146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2028405768379620930, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
@@ -8629,9 +8839,10 @@ GameObject:
   - component: {fileID: 1386241737}
   - component: {fileID: 1386241739}
   - component: {fileID: 1386241738}
+  - component: {fileID: 1386241740}
   m_Layer: 0
   m_Name: Disgusting Oil  (2)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8699,6 +8910,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386241736}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1386241740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386241736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.25, y: 1, z: 7.42}
+  m_Center: {x: 0.44, y: -0.46, z: 0}
 --- !u!65 &1399777047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9019,9 +9243,10 @@ GameObject:
   - component: {fileID: 1430247423}
   - component: {fileID: 1430247425}
   - component: {fileID: 1430247424}
+  - component: {fileID: 1430247426}
   m_Layer: 0
   m_Name: Disgusting Oil  (6)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9089,6 +9314,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430247422}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1430247426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430247422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.9, y: 1, z: 8.12}
+  m_Center: {x: -1.02, y: -0.47, z: 0.91}
 --- !u!1 &1442150708
 GameObject:
   m_ObjectHideFlags: 0
@@ -9133,9 +9371,10 @@ GameObject:
   - component: {fileID: 1444029275}
   - component: {fileID: 1444029277}
   - component: {fileID: 1444029276}
+  - component: {fileID: 1444029278}
   m_Layer: 0
   m_Name: Disgusting Oil  (15)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9203,6 +9442,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444029274}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1444029278
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444029274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.55, y: 1, z: 7.1}
+  m_Center: {x: -1.17, y: -0.35, z: 0}
 --- !u!1 &1444734335
 GameObject:
   m_ObjectHideFlags: 0
@@ -9385,7 +9637,7 @@ Transform:
   m_LocalScale: {x: 30, y: 100, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455187462
 GameObject:
@@ -10005,7 +10257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1510637973
 PrefabInstance:
@@ -10107,7 +10359,7 @@ Transform:
   - {fileID: 1335893793}
   - {fileID: 1792630056}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1547029145
 GameObject:
@@ -10608,9 +10860,10 @@ GameObject:
   - component: {fileID: 1686957548}
   - component: {fileID: 1686957550}
   - component: {fileID: 1686957549}
+  - component: {fileID: 1686957551}
   m_Layer: 0
   m_Name: Disgusting Oil  (4)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10678,6 +10931,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686957547}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1686957551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686957547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.83, y: 1, z: 6.99}
+  m_Center: {x: -0.001953125, y: -0.48, z: -1.34}
 --- !u!1001 &1701248214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11075,9 +11341,10 @@ GameObject:
   - component: {fileID: 1723789106}
   - component: {fileID: 1723789108}
   - component: {fileID: 1723789107}
+  - component: {fileID: 1723789109}
   m_Layer: 0
   m_Name: Disgusting Oil  (22)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11145,6 +11412,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723789105}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1723789109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723789105}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.15, y: 1, z: 8.33}
+  m_Center: {x: -0.001953125, y: -0.45, z: 0}
 --- !u!1 &1758899737 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1688155931388260363, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
@@ -11458,7 +11738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 817519010550879341, guid: 7ee04a6d9acef0843ba61d5bf725b871, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 817519010550879341, guid: 7ee04a6d9acef0843ba61d5bf725b871, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11797,7 +12077,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1929066840
 PrefabInstance:
@@ -11872,9 +12152,10 @@ GameObject:
   - component: {fileID: 1942109284}
   - component: {fileID: 1942109286}
   - component: {fileID: 1942109285}
+  - component: {fileID: 1942109287}
   m_Layer: 0
   m_Name: Disgusting Oil  (11)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11942,6 +12223,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942109283}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1942109287
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942109283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.82, y: 1, z: 8.9}
+  m_Center: {x: -0.001953125, y: -0.49, z: 0}
 --- !u!1 &1950382219
 GameObject:
   m_ObjectHideFlags: 0
@@ -12055,7 +12349,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1964271467
 GameObject:
@@ -12115,7 +12409,7 @@ Transform:
   - {fileID: 978340238}
   - {fileID: 1455187463}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978173470
 GameObject:
@@ -12128,9 +12422,10 @@ GameObject:
   - component: {fileID: 1978173471}
   - component: {fileID: 1978173473}
   - component: {fileID: 1978173472}
+  - component: {fileID: 1978173474}
   m_Layer: 0
   m_Name: Disgusting Oil  (19)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12198,6 +12493,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978173470}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1978173474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978173470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.5, y: 1, z: 7.77}
+  m_Center: {x: -0.001953125, y: -0.22, z: 0}
 --- !u!1 &2003567443
 GameObject:
   m_ObjectHideFlags: 0
@@ -12209,9 +12517,10 @@ GameObject:
   - component: {fileID: 2003567444}
   - component: {fileID: 2003567446}
   - component: {fileID: 2003567445}
+  - component: {fileID: 2003567447}
   m_Layer: 0
   m_Name: Disgusting Oil  (21)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12279,6 +12588,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003567443}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &2003567447
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003567443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.38, y: 1, z: 8.28}
+  m_Center: {x: -0.001953125, y: -0.38, z: 0}
 --- !u!1 &2007324694
 GameObject:
   m_ObjectHideFlags: 0
@@ -12449,7 +12771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -213.758, y: 291.551, z: -86.524994}
 --- !u!114 &2035111237
 MonoBehaviour:
@@ -12573,9 +12895,10 @@ GameObject:
   - component: {fileID: 2049270935}
   - component: {fileID: 2049270937}
   - component: {fileID: 2049270936}
+  - component: {fileID: 2049270938}
   m_Layer: 0
   m_Name: Disgusting Oil  (1)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12643,75 +12966,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049270934}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &2054130893
-PrefabInstance:
+--- !u!65 &2049270938
+BoxCollider:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049270934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 634407154434794664, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_Name
-      value: BulletMark
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794667, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794667, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794667, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2259.6272
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 110.455
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3505.3232
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 634407154434794669, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
+  m_Size: {x: 7.19, y: 1, z: 5.45}
+  m_Center: {x: -0.04, y: -0.23, z: 0}
 --- !u!1 &2059789766
 GameObject:
   m_ObjectHideFlags: 0
@@ -13237,7 +13504,7 @@ Transform:
   - {fileID: 4540669598166023322}
   - {fileID: 5519718634176047128}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2085445849
 GameObject:
@@ -13338,7 +13605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2111636454
 PrefabInstance:
@@ -13475,9 +13742,10 @@ GameObject:
   - component: {fileID: 2126491711}
   - component: {fileID: 2126491713}
   - component: {fileID: 2126491712}
+  - component: {fileID: 2126491714}
   m_Layer: 0
   m_Name: Disgusting Oil  (24)
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13545,6 +13813,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126491710}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &2126491714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126491710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.07, y: 1, z: 6.07}
+  m_Center: {x: -1.5, y: -0.33, z: 0.45}
 --- !u!1 &2127395541
 GameObject:
   m_ObjectHideFlags: 0
@@ -13794,7 +14075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026344471336204789, guid: 9ebafb13e48099d46b891e3b3e186a78, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1026344471336204789, guid: 9ebafb13e48099d46b891e3b3e186a78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13855,15 +14136,15 @@ PrefabInstance:
       objectReference: {fileID: 5474066}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2256.91
+      value: 1417.29
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 110.14
+      value: 225.72
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3509.04
+      value: 4935.69
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -13883,7 +14164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

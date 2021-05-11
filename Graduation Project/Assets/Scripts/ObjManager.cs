@@ -26,7 +26,7 @@ public class ObjManager : MonoBehaviour
    }
    
    //피격 함수
-   public void hit(int damage)
+   public virtual void hit(int damage)
    {
       HP -= damage;
       Debug.Log(transform.name + ":" + HP);

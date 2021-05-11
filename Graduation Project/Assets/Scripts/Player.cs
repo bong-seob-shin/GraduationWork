@@ -68,6 +68,8 @@ public class Player : AnimationObj
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
 
     public GameObject CenterUI;
+
+    private float invincibilityTime = 1.0f;
     
     private enum PlayerState
     {
@@ -188,6 +190,11 @@ public class Player : AnimationObj
 
         hpText.text = "HP  " + HP.ToString() +" / "+MaxHP.ToString();
         Debug.DrawRay(transform.position, Vector3.down*(_capsuleCollider.bounds.extents.y/5.0f), Color.blue);
+
+        if (invincibilityTime > 0)
+        {
+            invincibilityTime -= Time.deltaTime;
+        }
     }
 
  
@@ -342,10 +349,18 @@ public class Player : AnimationObj
         //playerRb.MovePosition(transform.position + _velocity * Time.deltaTime);
         playerRb.position += _velocity * Time.deltaTime;
         //playerRb.position += _velocity * Time.deltaTime;
-
-
-
     }
+
+    public override void hit(int damage)
+    {
+        if (invincibilityTime < 0)
+        {
+            HP -= damage;
+            Debug.Log(transform.name + ":" + HP);
+            invincibilityTime = 1.0f;
+        }
+    }
+    
     
     private void CharacterRotation()
     {
@@ -447,5 +462,11 @@ public class Player : AnimationObj
         myCam.gameObject.SetActive(true);
     }
 
-   
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Trap"))
+        {
+            hit(10);
+        }
+    }
 }
