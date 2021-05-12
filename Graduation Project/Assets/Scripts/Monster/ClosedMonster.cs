@@ -100,7 +100,7 @@ public class ClosedMonster : MonsterManager
             timer += Time.deltaTime;
             if (timer >= 2.0)
             {
-                gameObject.SetActive(false);
+                Destroy(this.gameObject);
             }
         }
     }

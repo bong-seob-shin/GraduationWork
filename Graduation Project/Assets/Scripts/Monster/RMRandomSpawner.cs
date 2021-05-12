@@ -9,7 +9,7 @@ public class RMRandomSpawner : MonoBehaviour
 {
     public GameObject enemyPrefabs;
     public GameObject[] spawnPoints;
-
+    public GameObject portalPrefab;
     public float radius = 2;
 
     public float spawnTime = 10.0f;
@@ -72,6 +72,8 @@ public class RMRandomSpawner : MonoBehaviour
         {
             if (hit.collider.gameObject.GetComponent<Terrain>())
             {
+                Instantiate(portalPrefab, new Vector3(randomVec.x, hit.point.y + portalPrefab.transform.localScale.y, randomVec.z),
+                    spawnPoints[randomIntTwo].transform.rotation);
                 Instantiate(enemyPrefabs, new Vector3(randomVec.x,hit.point.y,randomVec.z),spawnPoints[randomIntTwo].transform.rotation );
             }
             else

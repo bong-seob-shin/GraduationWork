@@ -8,7 +8,10 @@ using UnityEngine.VFX;
 public class RangedMonster : MonsterManager
 {
     //보류
-    [SerializeField] private CapsuleCollider meshCollider;
+    [SerializeField] private MeshCollider meshCollider;
+
+    public GameObject head;
+    
 
     private Vector3 monsterStartPos;
 
@@ -33,7 +36,7 @@ public class RangedMonster : MonsterManager
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
-        meshCollider = GetComponent<CapsuleCollider>();
+        meshCollider = GetComponent<MeshCollider>();
         nav = GetComponent<NavMeshAgent>();
 
         bulletStartPos = GetComponentInChildren<VisualEffect>().transform.position;
@@ -46,7 +49,6 @@ public class RangedMonster : MonsterManager
 
         this.MaxHP = 300;
         this.HP = this.MaxHP;
-
     }
 
     // Update is called once per frame
@@ -98,7 +100,7 @@ public class RangedMonster : MonsterManager
             timer += Time.deltaTime;
             if (timer >= 2.0)
             {
-                gameObject.SetActive(false);
+                Destroy(this.gameObject);
             }
         }
     }
@@ -107,7 +109,13 @@ public class RangedMonster : MonsterManager
     {
         // 플레이어와의 거리가 20보다 가까울 때 
         nav.Resume();
-        transform.LookAt(target);
+        //transform.LookAt(target);
+        Vector3 dirToTarget = target.transform.position - this.transform.position;
+        this.transform.forward = dirToTarget.normalized;
+        this.transform.rotation = Quaternion.LookRotation(dirToTarget,Vector3.up);
+        
+        this.transform.LookAt(target);
+        
         nav.SetDestination(target.position);
     }
     
