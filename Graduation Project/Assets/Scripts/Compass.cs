@@ -18,7 +18,7 @@ public class Compass : MonoBehaviour
        
         float rotAngle = Vector3.SignedAngle(dirXY, playerTransform.forward, Vector3.up);
        
-        Debug.Log(rotAngle);
+       
         transform.eulerAngles = new Vector3(0, 0, rotAngle);
     }
 }
