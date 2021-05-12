@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering.HighDefinition;
 
 public class MonsterManager : ObjManager
 { 
@@ -12,7 +13,7 @@ public class MonsterManager : ObjManager
     protected override void Dead()
     {
         isDead = true;
-        nav.Stop();
+        nav.enabled = false;
         rigid.velocity = Vector3.zero;
         //anim.SetTrigger("Dead");
     }

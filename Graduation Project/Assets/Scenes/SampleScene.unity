@@ -16783,6 +16783,7 @@ MonoBehaviour:
   menuImg: {fileID: 689094507}
   centerPoint: {fileID: 126380214}
   gameUI: {fileID: 85219169}
+  isMenuOn: 0
   mySController: {fileID: 151562305}
 --- !u!4 &1925061106
 Transform:

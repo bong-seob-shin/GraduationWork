@@ -10,6 +10,8 @@ public class ClosedMonster : MonsterManager
 {
     public Animator anim;
 
+    public GameObject livedparts;
+    public GameObject deadparts;
     //보류
     [SerializeField] private MeshCollider meshCollider;
 
@@ -25,7 +27,6 @@ public class ClosedMonster : MonsterManager
     public float attackTerm;
     private float currentAttackTerm;
     public Collider[] colls;
-    
     private Transform target;
     private bool targetOn;
 
@@ -50,6 +51,11 @@ public class ClosedMonster : MonsterManager
     // Update is called once per frame
     void Update()
     {
+        if (isHit)
+        {
+            StopTrace();
+            Rigidity();
+        }
         if (!isDead)
         {
             colls = Physics.OverlapSphere(transform.position, 20.0f);
@@ -91,7 +97,10 @@ public class ClosedMonster : MonsterManager
 
             if (this.HP <= 0)
             {
+                livedparts.SetActive(false);
+                deadparts.SetActive(true);
                 Dead();
+                
             }
         }
 
@@ -130,4 +139,11 @@ public class ClosedMonster : MonsterManager
         nav.Stop();
         anim.SetTrigger("Attack");
     }
+
+    public void Rigidity()
+    {
+        anim.SetTrigger("Hit");
+        isHit = false;
+    }
+       
 }
