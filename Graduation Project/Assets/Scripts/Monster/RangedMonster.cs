@@ -10,8 +10,7 @@ public class RangedMonster : MonsterManager
     //보류
     [SerializeField] private MeshCollider meshCollider;
 
-    public GameObject head;
-    
+    public GameObject FirePos;
 
     private Vector3 monsterStartPos;
 
@@ -39,7 +38,7 @@ public class RangedMonster : MonsterManager
         meshCollider = GetComponent<MeshCollider>();
         nav = GetComponent<NavMeshAgent>();
 
-        bulletStartPos = GetComponentInChildren<VisualEffect>().transform.position;
+        bulletStartPos = FirePos.transform.position;
         
         monsterStartPos = transform.position;
 
@@ -140,9 +139,9 @@ public class RangedMonster : MonsterManager
 
     private void Fire()
     {
-        Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+        Rigidbody rb = Instantiate(projectile, FirePos.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * 10f , ForceMode.Impulse);
-        rb.AddForce(transform.up * 5f , ForceMode.Impulse);
+        rb.AddForce(transform.up * 2f , ForceMode.Impulse);
 
         // Vector3 dirToTarget = target.transform.position - transform.position;
         // transform.forward = -dirToTarget.normalized;

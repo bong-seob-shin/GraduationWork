@@ -77,11 +77,17 @@ public class CMRandomSpawner : MonoBehaviour
             }
             else
             {
-                currentTime = 0.1f;
+                currentTime = 0f;
                 count--;
             }
         }
         
         
+    }
+    void OnDrawGizmosSelected()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(transform.position, radius);
     }
 }

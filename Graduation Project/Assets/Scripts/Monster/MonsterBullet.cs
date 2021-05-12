@@ -13,5 +13,10 @@ public class MonsterBullet : MonoBehaviour
             other.gameObject.GetComponent<Player>().hit(damage);
             Destroy(this.gameObject);
         }
+
+        if (other.CompareTag("Terrain"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

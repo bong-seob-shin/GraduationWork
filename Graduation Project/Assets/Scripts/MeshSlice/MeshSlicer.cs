@@ -155,6 +155,7 @@ public static class MeshSlicer {
 			}
 			// Delete original
 			GameObject.Destroy(obj);
+			
 		}
 	}
 	
@@ -246,6 +247,15 @@ public static class MeshSlicer {
 		sliceMeshCollider.convex = true;
 		sliceMeshCollider.material = obj.GetComponent<Collider>().material;
 		slice.GetComponent<Rigidbody>().velocity = obj.GetComponent<Rigidbody>().velocity;
+
+		for (int i = 0; i < slice.transform.childCount; i++)
+		{
+			slice.transform.GetChild(i).gameObject.SetActive(false);
+		}
+		
+		
+		slice.AddComponent<MeshDestroy>();
+
 	}
 	
 	public struct CustomPlane {

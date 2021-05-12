@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour
 
     public VisualEffect muzzleFlash;
 
-    public float currentFireRate =FireRate;
+    public float currentFireRate = FireRate;
 
     public int maxBulletCount = 20;
     public int bulletCount = 20;
