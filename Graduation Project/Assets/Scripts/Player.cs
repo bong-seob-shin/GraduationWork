@@ -95,6 +95,8 @@ public class Player : AnimationObj
 
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI interactText;
+
+    public Transform cheatPos;
     private void Awake()
     {
         this.id = 1;//차 타는거 테스트
@@ -336,7 +338,16 @@ public class Player : AnimationObj
                     myGun.Reload();
                 }
             }
-            
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                transform.position = cheatPos.position;
+            }
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                HP = MaxHP;
+            }
         }
 
 

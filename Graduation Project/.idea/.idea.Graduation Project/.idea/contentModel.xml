@@ -24,6 +24,7 @@
           <e p="Camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
+          <e p="Compass.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ManageTerrain.cs" t="Include" />
             <e p="SplitTerrain.cs" t="Include" />
