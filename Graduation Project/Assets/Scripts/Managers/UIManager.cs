@@ -14,13 +14,14 @@ public class UIManager : MonoBehaviour
     public Image menuImg;
     public Image centerPoint;
     public GameObject gameUI;
-    private bool isMenuOn = false;
+    [SerializeField]private bool isMenuOn = false;
 
     public SliceController mySController;
     
     private void Awake()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -32,7 +33,18 @@ public class UIManager : MonoBehaviour
             menuImg.gameObject.SetActive(isMenuOn);
             gameUI.SetActive(!isMenuOn);
             centerPoint.gameObject.SetActive(!isMenuOn);
-            Cursor.visible = isMenuOn;
+            
+            if (isMenuOn)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
+            }
             mySController.enabled = !isMenuOn;
         }
     }
@@ -49,6 +61,8 @@ public class UIManager : MonoBehaviour
         menuImg.gameObject.SetActive(false);
         centerPoint.gameObject.SetActive(true);
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         gameUI.SetActive(true);
         isMenuOn = false;
         mySController.enabled = true;
