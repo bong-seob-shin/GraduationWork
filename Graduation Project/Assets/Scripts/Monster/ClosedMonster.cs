@@ -12,8 +12,7 @@ public class ClosedMonster : MonsterManager
 
     public GameObject livedparts;
     public GameObject deadparts;
-    //보류
-    [SerializeField] private MeshCollider meshCollider;
+    public MeshCollider meshCollider;
 
     private Vector3 monsterStartPos;
 
@@ -22,13 +21,15 @@ public class ClosedMonster : MonsterManager
     private bool isAttack = false;
 
     private float timer;
-
-    private bool alreadyAttacked = false;
+    
     public float attackTerm;
     private float currentAttackTerm;
+    private float motionDelay = 1.0f;
     public Collider[] colls;
     private Transform target;
     private bool targetOn;
+
+    public BoxCollider attackCol;
 
     private void Awake()
     {
@@ -69,32 +70,33 @@ public class ClosedMonster : MonsterManager
                     break;
                 }
             }
-
+    
             if (targetOn)
             {
                 currentAttackTerm -= Time.deltaTime;
-                if (Vector3.Distance(target.position, transform.position) <= 20)
+                if (Vector3.Distance(target.position, transform.position) <= 20
+                    &&  Vector3.Distance(target.position , transform.position) >= 3.0f)
                 {
+                    attackCol.gameObject.SetActive(false);
                     TraceTarget();
                     isAttack = false;
                 }
-
+                
                 if (Vector3.Distance(target.position, transform.position) > 20)
                 {
                     StopTrace();
                 }
-
-                if (Vector3.Distance(target.position, transform.position) <= 4.0f)
+                
+                if (Vector3.Distance(target.position, transform.position) <= 3.0f)
                 {
-                    if (!isAttack && currentAttackTerm <= 0.0f)
+                    nav.Stop();
+                    if (currentAttackTerm <= 0.0f)
                     {
-                        Debug.Log("attack");
                         AttackTarget();
                         currentAttackTerm = attackTerm;
                     }
                 }
             }
-
             if (this.HP <= 0)
             {
                 livedparts.SetActive(false);
@@ -126,7 +128,7 @@ public class ClosedMonster : MonsterManager
     private void StopTrace()
     {
         nav.SetDestination(monsterStartPos);
-        if (Vector3.Distance(monsterStartPos, transform.position) <= 0.1f)
+        if (Vector3.Distance(monsterStartPos, transform.position) <= 1.0f)
         {
             anim.SetBool("Walking", false);
             nav.Stop();
@@ -138,6 +140,7 @@ public class ClosedMonster : MonsterManager
         isAttack = true;
         nav.Stop();
         anim.SetTrigger("Attack");
+        attackCol.gameObject.SetActive(true);
     }
 
     public void Rigidity()
