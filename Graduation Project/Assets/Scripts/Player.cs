@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.UI;
 
 public class Player : AnimationObj
 {
@@ -63,7 +64,6 @@ public class Player : AnimationObj
     private Transform _playerSpineTransform;
     private Vector3 _spineDir = new Vector3(0,0,0);
 
-
     
     [HideInInspector]public Camera myCam;
     
@@ -72,7 +72,8 @@ public class Player : AnimationObj
     public GameObject CenterUI;
 
     private float invincibilityTime = 1.0f;
-    
+    public Image hitImage;
+
     private enum PlayerState
     {
         Idle,
@@ -198,6 +199,9 @@ public class Player : AnimationObj
         if (invincibilityTime > 0)
         {
             invincibilityTime -= Time.deltaTime;
+            var tempColor = hitImage.color;
+            tempColor.a = invincibilityTime;
+            hitImage.color = tempColor;
         }
 
         if (HP <= 0)
