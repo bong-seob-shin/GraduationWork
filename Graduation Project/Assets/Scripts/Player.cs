@@ -34,7 +34,7 @@ public class Player : AnimationObj
 
     [Tooltip("상호작용 버튼 쿨다운")]
     [SerializeField]
-    private float _interactCoolDown = 1.0f;
+    private float _interactCoolDown = 0.0f;
 
     public bool isOnLift = false;
     
@@ -71,7 +71,7 @@ public class Player : AnimationObj
 
     public GameObject CenterUI;
 
-    private float invincibilityTime = 1.0f;
+    private float invincibilityTime = 0.0f;
     public Image hitImage;
 
     private enum PlayerState
@@ -393,7 +393,7 @@ public class Player : AnimationObj
 
     public override void hit(int damage)
     {
-        if (invincibilityTime < 0)
+        if (invincibilityTime <= 0)
         {
             HP -= damage;
             Debug.Log(transform.name + ":" + HP);

@@ -96,7 +96,7 @@ public class Gun : MonoBehaviour
                 if (Rmonster != null)
                 {
                     Rmonster.hit(damage);
-                    monster.isHit = true;
+                    Rmonster.isHit = true;
                 }
             }
 

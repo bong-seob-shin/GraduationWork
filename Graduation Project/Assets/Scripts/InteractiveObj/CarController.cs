@@ -44,13 +44,16 @@ public class CarController : NoneAnimationObj
     [HideInInspector] public Transform  frontLeftWheelTransform;
     [HideInInspector] public Transform  RearRightWheelTransform;
     [HideInInspector] public Transform  RearLeftWheelTransform;
-    
+
+    public GameObject CarHandle;
     private AnimationObj _driver;
     public int usingUserId = 1; // 원래 디폴트 값은 -1로 둘예정이지만 싱글모드에서 확인용으로 1을 디폴트로 주었다. 서버에서는 이값을 브로드캐스팅해서 모든 차들에게 전달해서 업데이트 해주면된다.
-    
-    
-    
 
+
+
+    public float constrictHandleAngle = 60.0f;
+    [SerializeField]private float currentHandleAngle = 0;
+    
     private void Awake()
     {
         _carRigid = GetComponent<Rigidbody>();
@@ -91,6 +94,8 @@ public class CarController : NoneAnimationObj
             RearLeftWheelCollider.brakeTorque = _decelerationForce;
             RearRightWheelCollider.brakeTorque = _decelerationForce;
         }
+        
+        
     }
     
     protected override void Move()
@@ -144,6 +149,41 @@ public class CarController : NoneAnimationObj
         frontLeftWheelCollider.steerAngle = _currentSteeringAngle;
         frontRightWheelCollider.steerAngle = _currentSteeringAngle;
 
+       
+        currentHandleAngle += _currentSteeringAngle/10.0f;
+
+        if (dirX == 0)
+        {
+            Debug.Log("dirx =0");
+            if (currentHandleAngle > 5)
+            {
+                Debug.Log("curangle >5");
+                currentHandleAngle -=  _maxSteeringAngle/10.0f;
+                CarHandle.transform.Rotate(Vector3.forward, -_maxSteeringAngle/10.0f);
+                
+            }
+            if (currentHandleAngle < -5)
+            {
+                currentHandleAngle +=  _maxSteeringAngle/10.0f;
+                CarHandle.transform.Rotate(Vector3.forward, _maxSteeringAngle/10.0f);
+                
+            }
+        }
+        if ( currentHandleAngle <= constrictHandleAngle && currentHandleAngle >= -constrictHandleAngle)
+        {
+            CarHandle.transform.Rotate(Vector3.forward, _currentSteeringAngle/10.0f);
+        }
+
+        if (currentHandleAngle > constrictHandleAngle)
+        {
+            currentHandleAngle = constrictHandleAngle;
+        }
+        if (currentHandleAngle < -constrictHandleAngle)
+        {
+            currentHandleAngle = -constrictHandleAngle;
+        }
+
+       
     }
 
    
