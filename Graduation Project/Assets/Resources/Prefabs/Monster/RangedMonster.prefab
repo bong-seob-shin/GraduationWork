@@ -143,6 +143,7 @@ MonoBehaviour:
   colls: []
   isHit: 0
   projectile: {fileID: 4789494208505684673, guid: 4bcc85182e025674cbfd5cc539896982, type: 3}
+  HeadPart: {fileID: 2998243409814360001}
 --- !u!195 &2998243408160713190
 NavMeshAgent:
   m_ObjectHideFlags: 0

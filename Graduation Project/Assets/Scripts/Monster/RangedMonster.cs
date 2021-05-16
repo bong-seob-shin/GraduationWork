@@ -32,6 +32,7 @@ public class RangedMonster : MonsterManager
     private Transform target;
     private bool targetOn;
 
+    public GameObject HeadPart;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -90,6 +91,8 @@ public class RangedMonster : MonsterManager
             
             if (this.HP <= 0)
             {
+                HeadPart.transform.parent = null;
+                HeadPart.AddComponent<Rigidbody>();
                 Dead();
             }
         }
@@ -100,6 +103,7 @@ public class RangedMonster : MonsterManager
             if (timer >= 2.0)
             {
                 Destroy(this.gameObject);
+                Destroy(HeadPart);
             }
         }
     }

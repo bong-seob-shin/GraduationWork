@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/CloseMonster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/CloseMonster.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/SliceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/SliceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/RangedMonster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/RangedMonster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +35,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Compass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -77,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Compass.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterBullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" />
@@ -91,6 +90,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/SliceController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" />
       </list>
     </option>
   </component>
@@ -201,6 +201,7 @@
       <workItem from="1621089886079" duration="229000" />
       <workItem from="1621090367874" duration="4921000" />
       <workItem from="1621097869780" duration="1198000" />
+      <workItem from="1621158825694" duration="430000" />
     </task>
     <servers />
   </component>
