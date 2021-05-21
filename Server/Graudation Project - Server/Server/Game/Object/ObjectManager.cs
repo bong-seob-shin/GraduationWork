@@ -12,7 +12,7 @@ namespace Server.Game
 		object _lock = new object();
 		Dictionary<int, Player> _players = new Dictionary<int, Player>();
 		Dictionary<int, Monster> _monsters = new Dictionary<int, Monster>();
-
+		Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
 
 		// [UNUSED(1)][TYPE(7)][ID(24)]
 		int _counter = 0;
@@ -34,6 +34,12 @@ namespace Server.Game
 				{
 					_monsters.Add(gameObject.Id, gameObject as Monster);
 				}
+
+				if (gameObject.ObjectType == GameObjectType.Buggy)
+				{
+					_buggy.Add(gameObject.Id, gameObject as Buggy);
+				}
+
 			}
 
 			return gameObject;

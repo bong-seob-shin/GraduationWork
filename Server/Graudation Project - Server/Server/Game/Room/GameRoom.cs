@@ -13,13 +13,19 @@ namespace Server.Game
 
         Dictionary<int, Player> _players = new Dictionary<int, Player>();
         Dictionary<int, Monster> _monsters = new Dictionary<int, Monster>();
+        Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
 
         public void Init(int mapId)
         {
             Monster monster = ObjectManager.Instance.Add<Monster>();
             monster.PosInfo.PosX = 2249;
             monster.PosInfo.PosY = 110;
-            EnterGame(monster);            
+            EnterGame(monster);
+
+            Buggy buggy = ObjectManager.Instance.Add<Buggy>();
+            buggy.PosInfo.PosX = 2255;
+            buggy.PosInfo.PosY = 110;
+            EnterGame(buggy);
         }
 
         public void Update()
@@ -61,9 +67,14 @@ namespace Server.Game
                             if (player != p)
                                 spawnPacket.Objects.Add(p.Info);
                         }
-
                         foreach (Monster m in _monsters.Values)
+                        {
                             spawnPacket.Objects.Add(m.Info);
+                        }
+                        foreach (Buggy b in _buggy.Values)
+                        {
+                            spawnPacket.Objects.Add(b.Info);
+                        }
 
                         player.Session.Send(spawnPacket);
                     }
@@ -74,6 +85,13 @@ namespace Server.Game
                     Monster monster = gameObject as Monster;
                     _monsters.Add(gameObject.Id, monster);
                     monster.Room = this;
+                }
+
+                else if (type == GameObjectType.Buggy)
+                {
+                    Buggy buggy = gameObject as Buggy;
+                    _buggy.Add(gameObject.Id, buggy);
+                    buggy.Room = this;
                 }
 
 
@@ -98,13 +116,6 @@ namespace Server.Game
             {
                 if (type == GameObjectType.Player)
                 {
-                    //Player player = _players.Find(p => p.Info.PlayerId == playerId);
-                    //if (player == null)
-                    //    return;
-
-                    //_players.Remove(player);
-                    //player.Room = null;
-
                     Player player = null;
                     if (_players.Remove(objectId, out player) == false)
                         return;
@@ -125,6 +136,15 @@ namespace Server.Game
                         return;
 
                     monster.Room = null;
+                }
+
+                else if (type == GameObjectType.Buggy)
+                {
+                    Buggy buggy = null;
+                    if (_buggy.Remove(objectId, out buggy) == false)
+                        return;
+
+                    buggy.Room = null;
                 }
 
                 // 타인한테 정보 전송
