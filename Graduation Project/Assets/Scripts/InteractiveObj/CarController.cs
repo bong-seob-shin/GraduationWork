@@ -6,7 +6,7 @@ using UnityEngine;
 public class CarController : NoneAnimationObj
 {
 
-    public static IDictionary<int, CarController> carList= new Dictionary<int, CarController>(); //모든 차 리스트를 담아 놓았음 (id, 객체)
+    public static IDictionary<int, CarController> carList= new Dictionary<int, CarController>(); //모든 차 리스트를 담아 놓았음 (id, 객체) 객체를 생성할때 add를 해주자!, 이것을 이용해서 아더가 서버에서 전달받은 차번호로 차를 탈 수있다.
     
     public Vector3 centerOfMass;    
     
@@ -46,8 +46,8 @@ public class CarController : NoneAnimationObj
     [HideInInspector] public Transform  RearLeftWheelTransform;
 
     public GameObject CarHandle;
-    private AnimationObj _driver;
-    public int usingUserId = 1; // 원래 디폴트 값은 -1로 둘예정이지만 싱글모드에서 확인용으로 1을 디폴트로 주었다. 서버에서는 이값을 브로드캐스팅해서 모든 차들에게 전달해서 업데이트 해주면된다.
+    private AnimationObj _driver; //
+    public int usingUserId = -1; //누가 타고있는지을 알려주는 변수 모든차들에게 브로드캐스팅해서 넘겨줘야함 값이 변경될때마다
 
 
 
@@ -59,7 +59,7 @@ public class CarController : NoneAnimationObj
         _carRigid = GetComponent<Rigidbody>();
         
         _carRigid.centerOfMass = centerOfMass;
-        this.id = 1;//지금은 id 1로줬음
+        this.id = 1;//지금은 id 1로줬음 생성될때 아이디를 줘야함
         carList.Add(id, this);
     }
 
@@ -69,14 +69,30 @@ public class CarController : NoneAnimationObj
         
         if (_isCarStartControll)
         {
-            if (_driver.id == usingUserId)
+            if (_driver.isPlayer) //_driver객체가 플레이어일때
             {
                 KeyboardInput();
             }
-            else
+            else//아닐때
             {
+                //dirx diry를 가진 패킷받기
+                
                 //update otherplayer's car info //아더플레이어가 움직인 차정보를 동기화 하는 코드가 필요함 
-                //dirX와 dirY를 동기화 해야함
+                //핸들의 회전값들이나 이런게 필요가없긴함
+                //필요하다면 위치x,y와 rotation값을 주고받아도되는데 내생각에는 dirx와 diry를 넘겨주면 알아서 코드상에서 자동차가 그거에 따라서 움직일것이라고 생각함
+                //그래서 dirX와 dirY를 동기화 해야함
+                //요약------> dirx dirY(carController의)를 보내고 받자
+                //봐야되는스크립트 otherplayer, animationobj, carctr
+
+                _driver.rideCarID = usingUserId;//임시 해결책(1)
+                if (_driver.rideCarID < 0) //아더가 rideCarID 를 -1로 전달받으면 차에서 내리게됨 이부분이 애매한데 아더의 ridecarID의 값을 서버에서 받아서 바꿔주고 싶지만
+                                           //other스크립트가 꺼져있어 거기서 패킷을 주고 받을 수가없음 해결책(1)은 usingUserID를 차가 계속 동기화 해서 이것을 rideCarID에다가 넣어주는것임 [87번줄]
+                {
+                    _isCarStartControll = false;
+            
+                    _driver.gameObject.SetActive(true);
+
+                }
             }
             Move();
             Handling();
@@ -211,12 +227,20 @@ public class CarController : NoneAnimationObj
         {
             
             _isCarStartControll = false;
-            carCamera.gameObject.SetActive(false);
-            _driver.gameObject.SetActive(true);
-            _driver.gameObject.GetComponent<Player>().TakeoffCar();
             
+            _driver.gameObject.SetActive(true);
+            
+
             _rideCoolDown = 1;
+            usingUserId = -1;
+            //내리기전에 여기서 패킷을 한번더 보내서 usingUserID를 동기화해준다.
             Debug.Log("TakeOff!");
+            if (_driver.isPlayer)
+            {
+                _driver.gameObject.GetComponent<Player>().TakeoffCar();
+                carCamera.gameObject.SetActive(false);
+            }
+            
         }
         
         dirX = Input.GetAxisRaw("Horizontal");
@@ -233,14 +257,15 @@ public class CarController : NoneAnimationObj
         _driver.gameObject.SetActive(false);
         carCamera.gameObject.SetActive(true);
         _isCarStartControll = true;
-        
+        usingUserId = _driver.id;//여기서 변경됨
+
     }
-    public void setOtherCarControll(OhterPlayer player)
+    public void setOtherCarControll(OhterPlayer other)
     {
-        _driver = player;
+        _driver = other;
         _driver.gameObject.SetActive(false);
         _isCarStartControll = true;
-        
+        usingUserId = _driver.id;//여기서 변경됨
     }
     
 }

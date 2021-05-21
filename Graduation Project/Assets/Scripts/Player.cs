@@ -29,7 +29,6 @@ public class Player : AnimationObj
     [HideInInspector]public bool isCrouch = false;
     [HideInInspector]public bool isInteract = false;
     [HideInInspector] public bool isJump = false;
-    public bool _isRideCar = false;
     [HideInInspector] public bool onInteractKey = false;
 
     [Tooltip("상호작용 버튼 쿨다운")]
@@ -119,6 +118,7 @@ public class Player : AnimationObj
         myCam.gameObject.GetComponent<CameraMove>().enabled = true; //갑자기 생긴 버그 때문에 고치기위해서 카메라무브 스크립트를 게임 시작하면 켜줌
         weaponGunAnim = currentWeapon.GetComponent<Animation>();
         myGun.bulletText.text = "Bullet  " +myGun. bulletCount.ToString() + " / " + myGun.maxBulletCount.ToString();
+        isPlayer = true;
     }
 
     public static Player Instance
@@ -171,7 +171,7 @@ public class Player : AnimationObj
     // Update is called once per frame
     void Update()
     {
-        if (!_isRideCar)
+        if (rideCarID<0)
         {
             //IsGround();
             KeyboardInput();
@@ -224,7 +224,7 @@ public class Player : AnimationObj
 
     private void FixedUpdate()//물리적인 충돌을 계산하기위해서 움직임등을 모두 fixedupdate에 넣음 이 update는 매 프레임마다 불림
     {
-        if (!_isRideCar && !isDead)
+        if (rideCarID<0 && !isDead)
         {
             IsGround();
             
@@ -433,17 +433,19 @@ public class Player : AnimationObj
             CarController car = _hitInfo.transform.GetComponent<CarController>();
             InteractiveButton ib = _hitInfo.transform.GetComponent<InteractiveButton>();
             InteractiveDoubleButton idb = _hitInfo.transform.GetComponent<InteractiveDoubleButton>();
-            if ( car != null && !_isRideCar )
+            if ( car != null && rideCarID<0 )
             {
                 if (onInteractKey)
                 {
-                    _isRideCar = true;
-                    CenterUI.SetActive(false);
-                    _capsuleCollider.enabled = false;
-                    playerRb.isKinematic = true;
-                    car.setCarControll(this);
-                    rideCarID = car.id; //여기서 넣은 ridecarID를 서버에 보내서
-                    onInteractKey = false;
+                    if (car.usingUserId < 0)
+                    {
+                        CenterUI.SetActive(false);
+                        _capsuleCollider.enabled = false;
+                        playerRb.isKinematic = true;
+                        car.setCarControll(this);
+                        rideCarID = car.id; //여기서 넣은 ridecarID를 서버에 보내서 아더가 받으면 차를타게된다.
+                        onInteractKey = false;
+                    }
                 }
                 else
                 {
@@ -494,12 +496,13 @@ public class Player : AnimationObj
     {
         CenterUI.SetActive(true);
         _interactCoolDown = 1.0f;
-        _isRideCar = false;
         _capsuleCollider.enabled = true;
         playerRb.isKinematic = false;
         dirX = 0;
         dirZ = 0;
         myCam.gameObject.SetActive(true);
+        rideCarID = -1; // 차를 내릴때 불리는 함수에서 rideCarID를 디폴트값으로 수정한다.
+
     }
 
     private void OnTriggerStay(Collider other)

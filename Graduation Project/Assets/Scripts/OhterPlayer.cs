@@ -26,7 +26,6 @@ public class OhterPlayer : NoneControlObj
     [HideInInspector] public AnimState state = AnimState.Idle;
 
     public bool isJump;
-    private bool _isRideCar = false;
     
     
     [Tooltip("얼마나 앉을건지")]
@@ -99,7 +98,7 @@ public class OhterPlayer : NoneControlObj
     // Update is called once per frame
     void Update()
     {
-        if (!_isRideCar)
+        if (rideCarID<0)//차를 타고있지 않은 상태
         {
             Move();
             AnimUpdate();
@@ -132,10 +131,9 @@ public class OhterPlayer : NoneControlObj
         }
         else
         {
-            if (rideCarID > 0)
-            {
-                CarController.carList[rideCarID].setOtherCarControll(this);
-            }
+            
+            CarController.carList[rideCarID].setOtherCarControll(this);
+            
         }
 
     }
