@@ -17,15 +17,22 @@ namespace Server.Game
 
         public void Init(int mapId)
         {
-            Monster monster = ObjectManager.Instance.Add<Monster>();
-            monster.PosInfo.PosX = 2249;
-            monster.PosInfo.PosY = 110;
-            EnterGame(monster);
 
-            Buggy buggy = ObjectManager.Instance.Add<Buggy>();
-            buggy.PosInfo.PosX = 2255;
-            buggy.PosInfo.PosY = 110;
-            EnterGame(buggy);
+            for (int i = 0; i < 5; ++i)
+            {
+                Monster monster = ObjectManager.Instance.Add<Monster>();
+                monster.PosInfo.PosX = 2249 + 30 * i;
+                monster.PosInfo.PosY = 110;
+                EnterGame(monster);
+            }
+
+            for (int i = 0; i < 3; ++i)
+            {
+                Buggy buggy = ObjectManager.Instance.Add<Buggy>();
+                buggy.PosInfo.PosX = 2255 + 20 * i;
+                buggy.PosInfo.PosY = 110;
+                EnterGame(buggy);
+            }
         }
 
         public void Update()
@@ -67,14 +74,12 @@ namespace Server.Game
                             if (player != p)
                                 spawnPacket.Objects.Add(p.Info);
                         }
-                        foreach (Monster m in _monsters.Values)
-                        {
+
+                        foreach (Monster m in _monsters.Values)                        
                             spawnPacket.Objects.Add(m.Info);
-                        }
+
                         foreach (Buggy b in _buggy.Values)
-                        {
                             spawnPacket.Objects.Add(b.Info);
-                        }
 
                         player.Session.Send(spawnPacket);
                     }
@@ -98,7 +103,7 @@ namespace Server.Game
                 // 타인한테 새로운 신입에 대한 정보 보내기
                 {
                     S_Spawn spawnPacket = new S_Spawn();
-                    spawnPacket.Objects.Add(gameObject.Info);
+                    spawnPacket.Objects.Add(gameObject.Info);                    
                     foreach (Player p in _players.Values)
                     {
                         if (p.Id != gameObject.Id)

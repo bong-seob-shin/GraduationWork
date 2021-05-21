@@ -30,17 +30,17 @@ namespace Server.Game
 					_players.Add(gameObject.Id, gameObject as Player);
 				}
 
-				if (gameObject.ObjectType == GameObjectType.Monster)
-				{
-					_monsters.Add(gameObject.Id, gameObject as Monster);
-				}
+                if (gameObject.ObjectType == GameObjectType.Monster)
+                {
+                    _monsters.Add(gameObject.Id, gameObject as Monster);
+                }
 
-				if (gameObject.ObjectType == GameObjectType.Buggy)
-				{
-					_buggy.Add(gameObject.Id, gameObject as Buggy);
-				}
+                if (gameObject.ObjectType == GameObjectType.Buggy)
+                {
+                    _buggy.Add(gameObject.Id, gameObject as Buggy);
+                }
 
-			}
+            }
 
 			return gameObject;
 		}
