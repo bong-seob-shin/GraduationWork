@@ -22153,10 +22153,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 151562305, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 230920557}
     - target: {fileID: 325071219, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -22170,6 +22166,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5474066}
     - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: hitImage
+      value: 
+      objectReference: {fileID: 799151893}
+    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: hpText
       value: 
       objectReference: {fileID: 664634584}
@@ -22181,10 +22181,6 @@ PrefabInstance:
       propertyPath: cheatPos
       value: 
       objectReference: {fileID: 911819929}
-    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: hitImage
-      value: 
-      objectReference: {fileID: 799151893}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2256.91
@@ -22229,18 +22225,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1103782077813285850, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -22249,10 +22233,6 @@ PrefabInstance:
       propertyPath: bulletText
       value: 
       objectReference: {fileID: 875327396}
-    - target: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: damage
-      value: 80
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
 --- !u!1001 &325385524211307301
