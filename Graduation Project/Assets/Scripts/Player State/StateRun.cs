@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class StateRun : IState
 {
     Player player = Player.Instance;
-
+    UIManager uiManager = UIManager.instance;
     public void OperateEnter()
     {
         if (player.w_keyPress)
@@ -71,6 +72,14 @@ public class StateRun : IState
 
     public void OperateUpdate()
     {
+        if (uiManager.crossHairSize < 220.0f)
+        {
+            uiManager.crossHairSize += 60.0f*Time.deltaTime;
+        }
+        if(uiManager.crossHairSize > 220.0f)
+        {
+            uiManager.crossHairSize -= 30.0f*Time.deltaTime;
+        }
     }
 
     public void OperateExit()

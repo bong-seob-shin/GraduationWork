@@ -5,7 +5,7 @@ using UnityEngine;
 public class StateWalk : IState
 {
    Player player = Player.Instance;
-
+   UIManager uiManager = UIManager.instance;
    public void OperateEnter()
    {
       
@@ -68,7 +68,14 @@ public class StateWalk : IState
 
    public void OperateUpdate()
    {
-      
+      if (uiManager.crossHairSize < 160.0f)
+      {
+         uiManager.crossHairSize += 30.0f * Time.deltaTime;
+      }
+      if(uiManager.crossHairSize > 160.0f)
+      {
+         uiManager.crossHairSize -= 30.0f * Time.deltaTime;
+      }
    }
 
    public void OperateExit()

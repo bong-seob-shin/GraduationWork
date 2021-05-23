@@ -5,7 +5,7 @@ using UnityEngine;
 public class StateIdle : IState
 {
     Player player = Player.Instance;
-  
+    UIManager uiManager = UIManager.instance;
     public void OperateEnter()
     {
         
@@ -16,6 +16,14 @@ public class StateIdle : IState
 
     public void OperateUpdate()
     {
+        if (uiManager.crossHairSize > 80f)
+        {
+            uiManager.crossHairSize -= 60.0f*Time.deltaTime;
+        }
+        else if(uiManager.crossHairSize <80f)
+        {
+            uiManager.crossHairSize =80f;
+        }
     }
 
     public void OperateExit()

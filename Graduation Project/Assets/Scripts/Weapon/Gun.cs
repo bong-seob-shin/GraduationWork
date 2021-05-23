@@ -31,11 +31,13 @@ public class Gun : MonoBehaviour
     public GameObject bulletMark;
 
     public GameObject markParticle;
+    
+    UIManager _uiManager;
     // Start is called before the first frame update
     void Start()
     {
         gunAnim = GetComponent<Animation>();
-
+        _uiManager = UIManager.instance;
     }
 
     // Update is called once per frame
@@ -79,6 +81,8 @@ public class Gun : MonoBehaviour
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,layerMask))
             {
                 Debug.Log(hit.transform.name);
+                
+                
                 GameObject mark =  Instantiate(bulletMark, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 GameObject markP =  Instantiate(markParticle, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 mark.transform.LookAt(hit.point+hit.normal);
@@ -100,11 +104,15 @@ public class Gun : MonoBehaviour
                 }
             }
 
-
+            if (_uiManager.crossHairSize < 300.0f)
+            {
+                _uiManager.crossHairSize += 1200.0f * Time.deltaTime;
+            }
+            
             bulletCount -= 1;
         }
         currentFireRate = FireRate;
-
+        
     }
     
     private void OnDrawGizmos()

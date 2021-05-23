@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
     
     public RectTransform crossHair;
     [Range(80f, 250f)]
-    public float size = 80f;
+    public float crossHairSize = 80f;
     private void Awake()
     {
         Cursor.visible = false;
@@ -78,7 +78,7 @@ public class UIManager : MonoBehaviour
             mySController.enabled = !isMenuOn;
         }
         
-        crossHair.sizeDelta = new Vector2(size , size);
+        crossHair.sizeDelta = new Vector2(crossHairSize , crossHairSize);
     }
 
     public void QuitGame()
