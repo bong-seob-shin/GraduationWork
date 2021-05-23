@@ -74,6 +74,9 @@
           </e>
           <e p="Player.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="CrossHair.cs" t="Include" />
+          </e>
           <e p="Weapon" t="Include">
             <e p="DebugDrawLine.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
