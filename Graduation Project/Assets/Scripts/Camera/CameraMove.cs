@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    private float _lookSensitivity = 15;
+    
+    Player _player;
+
 
 
     [SerializeField] //카메라 상하 제한 각 
@@ -19,11 +21,12 @@ public class CameraMove : MonoBehaviour
     private bool isSetThridCam = false;
     public Animator playeranim;
     private Rigidbody camRg;
+    public float retroForce = 20.0f;
     private void Awake()
     {
         playeranim = GetComponentInParent<Animator>();
         camRg = GetComponent<Rigidbody>();
-       
+        _player = Player.Instance;
         
     }
 
@@ -31,7 +34,7 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Player _player = Player.Instance;
+        _player = Player.Instance;
         CameraRotation();
        
         
@@ -56,17 +59,24 @@ public class CameraMove : MonoBehaviour
     private void CameraRotation()
     {
         float _xRotation = Input.GetAxisRaw("Mouse Y");
-        float _cameraRotationX = _xRotation * _lookSensitivity;
+        float _cameraRotationX = _xRotation * _player.sensitivity;
         _currentCameraRotationX -= _cameraRotationX;
+
+        
         _currentCameraRotationX = Mathf.Clamp(_currentCameraRotationX, -_cameraRotationLimit, _cameraRotationLimit);
         
         transform.localEulerAngles = new Vector3(_currentCameraRotationX,0f,0f);
     }
-    
+
+
+    public void HorizontalRetro()
+    {
+        _currentCameraRotationX -= retroForce;
+    }
     private void CharacterRotation()
     {
         float _yRotation = Input.GetAxisRaw("Mouse X");
-        Vector3 _charcterRotationY = new Vector3(0f, _yRotation, 0f) * _lookSensitivity;
+        Vector3 _charcterRotationY = new Vector3(0f, _yRotation, 0f) * _player.sensitivity;
         camRg.MoveRotation(camRg.rotation*Quaternion.Euler(_charcterRotationY));
     }
 }

@@ -18,7 +18,7 @@ public class StateIdle : IState
     {
         if (uiManager.crossHairSize > 80f)
         {
-            uiManager.crossHairSize -= 60.0f*Time.deltaTime;
+            uiManager.crossHairSize -= 200.0f*Time.deltaTime;
         }
         else if(uiManager.crossHairSize <80f)
         {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
+  m_IndirectSpecularColor: {r: 131.19772, g: 162.48279, b: 214.93106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21147,6 +21147,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.19, y: 1, z: 5.45}
   m_Center: {x: -0.04, y: -0.23, z: 0}
+--- !u!114 &2054459249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+  m_PrefabInstance: {fileID: 256707525726772737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244083bcf7191e641b2e4a121fe153cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2059789766
 GameObject:
   m_ObjectHideFlags: 0
@@ -22512,6 +22523,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 256707524873784428, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: retroForce
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: CenterUI
       value: 
@@ -22532,6 +22547,10 @@ PrefabInstance:
       propertyPath: cheatPos
       value: 
       objectReference: {fileID: 911819929}
+    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: currentGun
+      value: 
+      objectReference: {fileID: 2054459249}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2256.91

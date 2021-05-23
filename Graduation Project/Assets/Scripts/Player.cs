@@ -42,8 +42,7 @@ public class Player : AnimationObj
     // private float _originPosY;
     // private float _applyCouchPosY;
 
-    [SerializeField]
-    private float _sensitivity = 15;
+    public float sensitivity = 15;
     
 
     private CapsuleCollider _capsuleCollider;
@@ -57,6 +56,7 @@ public class Player : AnimationObj
 
 
     private IKGunGrab _gunGrab;
+
     
     [Tooltip("목 움직이기")]
     private Transform _cameraTansform;
@@ -99,6 +99,7 @@ public class Player : AnimationObj
     public Transform cheatPos;
     private void Awake()
     {
+        
         this.id = 1;//차 타는거 테스트
         if (instance == null)
         {
@@ -405,7 +406,7 @@ public class Player : AnimationObj
     private void CharacterRotation()
     {
         float _yRotation = Input.GetAxisRaw("Mouse X");
-        Vector3 _charcterRotationY = new Vector3(0f, _yRotation, 0f) * _sensitivity;
+        Vector3 _charcterRotationY = new Vector3(0f, _yRotation, 0f) * sensitivity;
         playerRb.MoveRotation(playerRb.rotation*Quaternion.Euler(_charcterRotationY));
     }
     private void IsGround()

@@ -33,11 +33,17 @@ public class Gun : MonoBehaviour
     public GameObject markParticle;
     
     UIManager _uiManager;
+
+    private Player _player;
+
+    private CameraMove retroCameraMove;
     // Start is called before the first frame update
     void Start()
     {
         gunAnim = GetComponent<Animation>();
         _uiManager = UIManager.instance;
+        _player = Player.Instance;
+        retroCameraMove = _player.myCam.GetComponent<CameraMove>();
     }
 
     // Update is called once per frame
@@ -80,9 +86,9 @@ public class Gun : MonoBehaviour
             int layerMask = (-1) - (1 << LayerMask.NameToLayer("PlayerCamera"));  // Everything에서 Player 레이어만 제외하고 충돌 체크함
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,layerMask))
             {
-                Debug.Log(hit.transform.name);
                 
-                
+
+                retroCameraMove.HorizontalRetro();
                 GameObject mark =  Instantiate(bulletMark, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 GameObject markP =  Instantiate(markParticle, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 mark.transform.LookAt(hit.point+hit.normal);
