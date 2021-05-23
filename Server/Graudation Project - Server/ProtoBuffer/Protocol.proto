@@ -78,6 +78,8 @@ message PositionInfo {
   bool isJump = 11;
   bool IsShoot = 12;
   bool IsEquiq = 13;
+  int32 carId = 14;
+  int32 caruserId = 15;
 }
 
 message StatInfo {
