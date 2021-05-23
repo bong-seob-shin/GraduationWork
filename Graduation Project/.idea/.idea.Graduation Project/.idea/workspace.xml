@@ -21,12 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +67,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/LiftTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Compass.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" />
@@ -94,6 +90,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
       </list>
     </option>
   </component>
@@ -207,7 +204,7 @@
       <workItem from="1621158825694" duration="1301000" />
       <workItem from="1621566276639" duration="2844000" />
       <workItem from="1621569348237" duration="217000" />
-      <workItem from="1621769864635" duration="7321000" />
+      <workItem from="1621769864635" duration="10504000" />
     </task>
     <servers />
   </component>
@@ -232,11 +229,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1620662691900">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1621777952146">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620662691900" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618298293863" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1621777952146" />
     <state x="694" y="141" width="1096" height="1027" key="dock-window-1" timestamp="1618302181257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

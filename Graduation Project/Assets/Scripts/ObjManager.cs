@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObjManager : MonoBehaviour
 {
-   
-   public int id { get; set; }
+
+   public int id;
 
    public float speed = 0f;
 

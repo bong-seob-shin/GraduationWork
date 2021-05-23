@@ -740,6 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22a835712f5b4642a3e366d482b1e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   speed: 3
   dirX: 0
   dirZ: 0
@@ -771,16 +772,16 @@ MonoBehaviour:
   playerRb: {fileID: 0}
   myCam: {fileID: 256707524873784426}
   _neckOffset: {x: 0, y: 0, z: 0}
-  CenterUI: {fileID: 0}
-  hitImage: {fileID: 0}
+  CenterUI: {fileID: 2201024886472405560, guid: 8a7e427848305864a8b6f388898aabcd, type: 3}
+  hitImage: {fileID: 439406364325621305, guid: 4a40d8b2b0bf11a4f90e13231b40102c, type: 3}
   w_keyPress: 0
   a_keyPress: 0
   s_keyPress: 0
   d_keyPress: 0
   rayCastPoint: {fileID: 256707525177143043}
-  hpText: {fileID: 0}
-  interactText: {fileID: 0}
-  cheatPos: {fileID: 0}
+  hpText: {fileID: 6803459192705351127, guid: 3f821cab848fbb344865f32d5db51cac, type: 3}
+  interactText: {fileID: 4222959106189382666, guid: ebc8079c3adacd64993b3e1ca8829f0d, type: 3}
+  cheatPos: {fileID: 4318919605543629200, guid: 28b38c530d3827f4c8bc12049a6b9410, type: 3}
 --- !u!114 &488933487
 MonoBehaviour:
   m_ObjectHideFlags: 0
