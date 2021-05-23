@@ -59,8 +59,11 @@ public class Gun : MonoBehaviour
             }
         }
 
-        bulletText.text = "Bullet  " + bulletCount.ToString() + " / " + maxBulletCount.ToString();
-        
+        if (isPlayer)
+        {
+            bulletText.text = "Bullet  " + bulletCount.ToString() + " / " + maxBulletCount.ToString();
+        }
+
     }
 
     private void GunFireRateCalc()
