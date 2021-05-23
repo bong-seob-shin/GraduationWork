@@ -24,11 +24,13 @@ public class UIManager : MonoBehaviour
     public RectTransform crossHair;
     [Range(80f, 250f)]
     public float crossHairSize = 80f;
+
+    private Player _player;
     private void Awake()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-
+        
         if (instance == null)
         {
             instance = this;
@@ -39,6 +41,8 @@ public class UIManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
+
     }
     
     public static UIManager Instance
@@ -52,6 +56,12 @@ public class UIManager : MonoBehaviour
 
             return instance;
         }
+    }
+
+    private void Start()
+    {
+        _player =Player.Instance;
+
     }
 
     // Update is called once per frame
@@ -77,7 +87,13 @@ public class UIManager : MonoBehaviour
             }
             mySController.enabled = !isMenuOn;
         }
-        
+
+
+        if (!_player.myGun.gameObject.activeSelf)
+        {
+            if(centerPoint.activeSelf) centerPoint.SetActive(false);
+        }
+
         crossHair.sizeDelta = new Vector2(crossHairSize , crossHairSize);
     }
 

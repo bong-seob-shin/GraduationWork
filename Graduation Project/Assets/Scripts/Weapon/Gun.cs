@@ -88,7 +88,6 @@ public class Gun : MonoBehaviour
             {
                 
 
-                retroCameraMove.HorizontalRetro();
                 GameObject mark =  Instantiate(bulletMark, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 GameObject markP =  Instantiate(markParticle, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 mark.transform.LookAt(hit.point+hit.normal);
@@ -109,10 +108,11 @@ public class Gun : MonoBehaviour
                     Rmonster.isHit = true;
                 }
             }
+            retroCameraMove.HorizontalRetro();
 
             if (_uiManager.crossHairSize < 300.0f)
             {
-                _uiManager.crossHairSize += 1200.0f * Time.deltaTime;
+                _uiManager.crossHairSize += 2400.0f * Time.deltaTime;
             }
             
             bulletCount -= 1;

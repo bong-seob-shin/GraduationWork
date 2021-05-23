@@ -21,23 +21,28 @@ public class CameraMove : MonoBehaviour
     private bool isSetThridCam = false;
     public Animator playeranim;
     private Rigidbody camRg;
-    public float retroForce = 20.0f;
+    private UIManager _uiManager;
+    public float retroForce;
     private void Awake()
     {
         playeranim = GetComponentInParent<Animator>();
         camRg = GetComponent<Rigidbody>();
-        _player = Player.Instance;
         
     }
 
-  
+
+    private void Start()
+    {
+        _player = Player.Instance;
+        _uiManager = UIManager.instance;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        _player = Player.Instance;
-        CameraRotation();
        
-        
+        CameraRotation();
+        retroForce = _uiManager.crossHairSize / 80;
     }
 
     private void LateUpdate()

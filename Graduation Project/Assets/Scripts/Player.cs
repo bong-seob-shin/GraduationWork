@@ -97,6 +97,8 @@ public class Player : AnimationObj
     public TextMeshProUGUI interactText;
 
     public Transform cheatPos;
+
+    private UIManager _uiManager;
     private void Awake()
     {
         
@@ -119,6 +121,7 @@ public class Player : AnimationObj
         myCam.gameObject.GetComponent<CameraMove>().enabled = true; //갑자기 생긴 버그 때문에 고치기위해서 카메라무브 스크립트를 게임 시작하면 켜줌
         weaponGunAnim = currentWeapon.GetComponent<Animation>();
         myGun.bulletText.text = "Bullet  " +myGun. bulletCount.ToString() + " / " + myGun.maxBulletCount.ToString();
+        
         isPlayer = true;
     }
 
@@ -167,6 +170,8 @@ public class Player : AnimationObj
         }
 
         _cameraTansform = GetComponentInChildren<Camera>().transform;
+        _uiManager = UIManager.instance;
+
     }
 
     // Update is called once per frame
@@ -300,6 +305,7 @@ public class Player : AnimationObj
                 _gunGrab.isGrabed = true;
                 weaponGunAnim.Play("GunEject");
                 myGun.currentFireRate = 1.0f;
+                _uiManager.centerPoint.SetActive(true);
 
             }
 
@@ -312,6 +318,8 @@ public class Player : AnimationObj
                 currentWeapon.SetActive(false);
 
                 myGun.bulletText.gameObject.SetActive(false);
+                
+                _uiManager.centerPoint.SetActive(false);
             }
 
             if (Input.GetKeyDown(KeyCode.LeftControl))

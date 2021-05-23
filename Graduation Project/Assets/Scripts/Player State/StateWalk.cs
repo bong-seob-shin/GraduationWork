@@ -74,7 +74,7 @@ public class StateWalk : IState
       }
       if(uiManager.crossHairSize > 160.0f)
       {
-         uiManager.crossHairSize -= 30.0f * Time.deltaTime;
+         uiManager.crossHairSize -= 150.0f * Time.deltaTime;
       }
    }
 
