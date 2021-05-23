@@ -177,7 +177,7 @@ public class Player : AnimationObj
     // Update is called once per frame
     void Update()
     {
-        if (rideCarID<0)
+        if (rideCarID<=0)
         {
             //IsGround();
             KeyboardInput();
@@ -230,7 +230,7 @@ public class Player : AnimationObj
 
     private void FixedUpdate()//물리적인 충돌을 계산하기위해서 움직임등을 모두 fixedupdate에 넣음 이 update는 매 프레임마다 불림
     {
-        if (rideCarID<0 && !isDead)
+        if (rideCarID<=0 && !isDead)
         {
             IsGround();
             
@@ -442,7 +442,7 @@ public class Player : AnimationObj
             CarController car = _hitInfo.transform.GetComponent<CarController>();
             InteractiveButton ib = _hitInfo.transform.GetComponent<InteractiveButton>();
             InteractiveDoubleButton idb = _hitInfo.transform.GetComponent<InteractiveDoubleButton>();
-            if ( car != null && rideCarID<0 )
+            if ( car != null && rideCarID<=0 )
             {
                 if (onInteractKey)
                 {

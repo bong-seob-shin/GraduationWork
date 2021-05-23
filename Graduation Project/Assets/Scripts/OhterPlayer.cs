@@ -98,7 +98,7 @@ public class OhterPlayer : NoneControlObj
     // Update is called once per frame
     void Update()
     {
-        if (rideCarID<0)//차를 타고있지 않은 상태
+        if (rideCarID<=0)//차를 타고있지 않은 상태
         {
             Move();
             AnimUpdate();
