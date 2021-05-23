@@ -8,20 +8,50 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance = null;
+    
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI bulletText;
 
     public Image menuImg;
-    public Image centerPoint;
+    public GameObject centerPoint;
     public GameObject gameUI;
     [SerializeField]private bool isMenuOn = false;
 
     public SliceController mySController;
     
+    
+    public RectTransform crossHair;
+    [Range(80f, 250f)]
+    public float size = 80f;
     private void Awake()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
+    public static UIManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                return null;
+            }
+
+            return instance;
+        }
     }
 
     // Update is called once per frame
@@ -32,7 +62,7 @@ public class UIManager : MonoBehaviour
             isMenuOn = !isMenuOn;
             menuImg.gameObject.SetActive(isMenuOn);
             gameUI.SetActive(!isMenuOn);
-            centerPoint.gameObject.SetActive(!isMenuOn);
+            centerPoint.SetActive(!isMenuOn);
             
             if (isMenuOn)
             {
@@ -47,6 +77,8 @@ public class UIManager : MonoBehaviour
             }
             mySController.enabled = !isMenuOn;
         }
+        
+        crossHair.sizeDelta = new Vector2(size , size);
     }
 
     public void QuitGame()
@@ -59,7 +91,7 @@ public class UIManager : MonoBehaviour
     {
         
         menuImg.gameObject.SetActive(false);
-        centerPoint.gameObject.SetActive(true);
+        centerPoint.SetActive(true);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
