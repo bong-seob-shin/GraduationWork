@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameUI;
     [SerializeField]private bool isMenuOn = false;
 
-    public SliceController mySController;
+    //public SliceController mySController;
     
     
     public RectTransform crossHair;
@@ -85,7 +85,7 @@ public class UIManager : MonoBehaviour
                 Cursor.visible = false;
 
             }
-            mySController.enabled = !isMenuOn;
+            //mySController.enabled = !isMenuOn;
         }
 
 
@@ -113,7 +113,7 @@ public class UIManager : MonoBehaviour
 
         gameUI.SetActive(true);
         isMenuOn = false;
-        mySController.enabled = true;
+        //mySController.enabled = true;
 
     }
 }

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BULLET ?? / ??
+  m_text: Bullet  11 / 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f5272d9d2d04e348b011ca3bb71465a, type: 2}
   m_sharedMaterial: {fileID: -8364211198418745388, guid: 4f5272d9d2d04e348b011ca3bb71465a, type: 2}

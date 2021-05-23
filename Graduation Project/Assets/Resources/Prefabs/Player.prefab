@@ -2360,7 +2360,7 @@ MonoBehaviour:
   maxBulletCount: 20
   bulletCount: 20
   isShoot: 0
-  bulletText: {fileID: 0}
+  bulletText: {fileID: 8202321298508954372, guid: cee84e53956bd0d4282e55a1027ede79, type: 3}
   isPlayer: 1
   bulletMark: {fileID: 4427172854510938909, guid: 5b317e3801f4a5a4698893c1944e57ea, type: 3}
   markParticle: {fileID: 634407154434794664, guid: ffedd89947cc32344b7125b9461002e0, type: 3}
