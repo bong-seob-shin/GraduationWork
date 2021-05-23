@@ -442,6 +442,7 @@ MonoBehaviour:
   _cameraRotationLimit: 45
   camDeadoffset: {x: 0, y: 4.5, z: -3}
   playeranim: {fileID: 0}
+  retroForce: 1
 --- !u!54 &8298754116817073810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -751,6 +752,7 @@ MonoBehaviour:
   weaponGunAnim: {fileID: 0}
   isShoot: 0
   isDead: 0
+  isPlayer: 0
   rideCarID: -1
   runSpeed: 0
   crouchSpeed: 0
@@ -761,11 +763,10 @@ MonoBehaviour:
   isCrouch: 0
   isInteract: 0
   isJump: 0
-  _isRideCar: 0
   onInteractKey: 0
   _interactCoolDown: 1
   isOnLift: 0
-  _sensitivity: 15
+  sensitivity: 15
   camCol: {fileID: 3319683389131562470}
   playerRb: {fileID: 0}
   myCam: {fileID: 256707524873784426}
