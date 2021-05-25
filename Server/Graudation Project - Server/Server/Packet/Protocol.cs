@@ -36,20 +36,22 @@ namespace Google.Protobuf.Protocol {
             "b3NpdGlvbkluZm8iewoKT2JqZWN0SW5mbxIQCghvYmplY3RJZBgBIAEoBRIM",
             "CgRuYW1lGAIgASgJEicKB3Bvc0luZm8YAyABKAsyFi5Qcm90b2NvbC5Qb3Np",
             "dGlvbkluZm8SJAoIc3RhdEluZm8YBCABKAsyEi5Qcm90b2NvbC5TdGF0SW5m",
-            "byKHAgoMUG9zaXRpb25JbmZvEgwKBHBvc1gYASABKAISDAoEcG9zWRgCIAEo",
+            "byKGAgoMUG9zaXRpb25JbmZvEgwKBHBvc1gYASABKAISDAoEcG9zWRgCIAEo",
             "AhIMCgRwb3NaGAMgASgCEgwKBGRpclgYBCABKAISDAoEZGlyWhgFIAEoAhIM",
             "CgRyb3RZGAYgASgCEg4KBnNwaW5lWBgHIAEoAhIOCgZzcGluZVkYCCABKAIS",
             "DgoGc3BpbmVaGAkgASgCEh4KBXN0YXRlGAogASgOMg8uUHJvdG9jb2wuU3Rh",
             "dGUSDgoGaXNKdW1wGAsgASgIEg8KB0lzU2hvb3QYDCABKAgSDwoHSXNFcXVp",
-            "cRgNIAEoCBINCgVjYXJJZBgOIAEoBRISCgp1c2luZ2NhcklkGA8gASgFImUK",
-            "CFN0YXRJbmZvEg0KBWxldmVsGAEgASgFEgoKAmhwGAIgASgFEg0KBW1heEhw",
-            "GAMgASgFEg4KBmF0dGFjaxgEIAEoBRINCgVzcGVlZBgFIAEoAhIQCgh0b3Rh",
-            "bEV4cBgGIAEoBSpfCgVNc2dJZBIQCgxTX0VOVEVSX0dBTUUQABIQCgxTX0xF",
-            "QVZFX0dBTUUQARILCgdTX1NQQVdOEAISDQoJU19ERVNQQVdOEAMSCgoGQ19N",
-            "T1ZFEAQSCgoGU19NT1ZFEAUqMwoFU3RhdGUSCAoESURMRRAAEgoKBk1PVklO",
-            "RxABEgoKBkFUVEFDSxACEggKBERFQUQQAyo+Cg5HYW1lT2JqZWN0VHlwZRII",
-            "CgROT05FEAASCgoGUExBWUVSEAESCwoHTU9OU1RFUhACEgkKBUJVR0dZEANC",
-            "G6oCGEdvb2dsZS5Qcm90b2J1Zi5Qcm90b2NvbGIGcHJvdG8z"));
+            "cRgNIAEoCBINCgVjYXJJZBgOIAEoBRIRCgljYXJ1c2VySWQYDyABKAUiZQoI",
+            "U3RhdEluZm8SDQoFbGV2ZWwYASABKAUSCgoCaHAYAiABKAUSDQoFbWF4SHAY",
+            "AyABKAUSDgoGYXR0YWNrGAQgASgFEg0KBXNwZWVkGAUgASgCEhAKCHRvdGFs",
+            "RXhwGAYgASgFKl8KBU1zZ0lkEhAKDFNfRU5URVJfR0FNRRAAEhAKDFNfTEVB",
+            "VkVfR0FNRRABEgsKB1NfU1BBV04QAhINCglTX0RFU1BBV04QAxIKCgZDX01P",
+            "VkUQBBIKCgZTX01PVkUQBSozCgVTdGF0ZRIICgRJRExFEAASCgoGTU9WSU5H",
+            "EAESCgoGQVRUQUNLEAISCAoEREVBRBADKncKDkdhbWVPYmplY3RUeXBlEggK",
+            "BE5PTkUQABIKCgZQTEFZRVIQARITCg9DTU9OU1RFUlNQQVdORVIQAhITCg9S",
+            "TU9OU1RFUlNQQVdORVIQAxIMCghDTU9OU1RFUhAEEgwKCFJNT05TVEVSEAUS",
+            "CQoFQlVHR1kQBkIbqgIYR29vZ2xlLlByb3RvYnVmLlByb3RvY29sYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.State), typeof(global::Google.Protobuf.Protocol.GameObjectType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,7 +63,7 @@ namespace Google.Protobuf.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_Move), global::Google.Protobuf.Protocol.S_Move.Parser, new[]{ "ObjectId", "PosInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PlayerInfo), global::Google.Protobuf.Protocol.PlayerInfo.Parser, new[]{ "PlayerId", "Name", "PosInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ObjectInfo), global::Google.Protobuf.Protocol.ObjectInfo.Parser, new[]{ "ObjectId", "Name", "PosInfo", "StatInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PositionInfo), global::Google.Protobuf.Protocol.PositionInfo.Parser, new[]{ "PosX", "PosY", "PosZ", "DirX", "DirZ", "RotY", "SpineX", "SpineY", "SpineZ", "State", "IsJump", "IsShoot", "IsEquiq", "CarId", "UsingcarId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PositionInfo), global::Google.Protobuf.Protocol.PositionInfo.Parser, new[]{ "PosX", "PosY", "PosZ", "DirX", "DirZ", "RotY", "SpineX", "SpineY", "SpineZ", "State", "IsJump", "IsShoot", "IsEquiq", "CarId", "CaruserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.StatInfo), global::Google.Protobuf.Protocol.StatInfo.Parser, new[]{ "Level", "Hp", "MaxHp", "Attack", "Speed", "TotalExp" }, null, null, null, null)
           }));
     }
@@ -88,8 +90,11 @@ namespace Google.Protobuf.Protocol {
   public enum GameObjectType {
     [pbr::OriginalName("NONE")] None = 0,
     [pbr::OriginalName("PLAYER")] Player = 1,
-    [pbr::OriginalName("MONSTER")] Monster = 2,
-    [pbr::OriginalName("BUGGY")] Buggy = 3,
+    [pbr::OriginalName("CMONSTERSPAWNER")] Cmonsterspawner = 2,
+    [pbr::OriginalName("RMONSTERSPAWNER")] Rmonsterspawner = 3,
+    [pbr::OriginalName("CMONSTER")] Cmonster = 4,
+    [pbr::OriginalName("RMONSTER")] Rmonster = 5,
+    [pbr::OriginalName("BUGGY")] Buggy = 6,
   }
 
   #endregion
@@ -1327,7 +1332,7 @@ namespace Google.Protobuf.Protocol {
       isShoot_ = other.isShoot_;
       isEquiq_ = other.isEquiq_;
       carId_ = other.carId_;
-      usingcarId_ = other.usingcarId_;
+      caruserId_ = other.caruserId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1490,14 +1495,14 @@ namespace Google.Protobuf.Protocol {
       }
     }
 
-    /// <summary>Field number for the "usingcarId" field.</summary>
-    public const int UsingcarIdFieldNumber = 15;
-    private int usingcarId_;
+    /// <summary>Field number for the "caruserId" field.</summary>
+    public const int CaruserIdFieldNumber = 15;
+    private int caruserId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UsingcarId {
-      get { return usingcarId_; }
+    public int CaruserId {
+      get { return caruserId_; }
       set {
-        usingcarId_ = value;
+        caruserId_ = value;
       }
     }
 
@@ -1528,7 +1533,7 @@ namespace Google.Protobuf.Protocol {
       if (IsShoot != other.IsShoot) return false;
       if (IsEquiq != other.IsEquiq) return false;
       if (CarId != other.CarId) return false;
-      if (UsingcarId != other.UsingcarId) return false;
+      if (CaruserId != other.CaruserId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1549,7 +1554,7 @@ namespace Google.Protobuf.Protocol {
       if (IsShoot != false) hash ^= IsShoot.GetHashCode();
       if (IsEquiq != false) hash ^= IsEquiq.GetHashCode();
       if (CarId != 0) hash ^= CarId.GetHashCode();
-      if (UsingcarId != 0) hash ^= UsingcarId.GetHashCode();
+      if (CaruserId != 0) hash ^= CaruserId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1619,9 +1624,9 @@ namespace Google.Protobuf.Protocol {
         output.WriteRawTag(112);
         output.WriteInt32(CarId);
       }
-      if (UsingcarId != 0) {
+      if (CaruserId != 0) {
         output.WriteRawTag(120);
-        output.WriteInt32(UsingcarId);
+        output.WriteInt32(CaruserId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1673,8 +1678,8 @@ namespace Google.Protobuf.Protocol {
       if (CarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CarId);
       }
-      if (UsingcarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UsingcarId);
+      if (CaruserId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CaruserId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1729,8 +1734,8 @@ namespace Google.Protobuf.Protocol {
       if (other.CarId != 0) {
         CarId = other.CarId;
       }
-      if (other.UsingcarId != 0) {
-        UsingcarId = other.UsingcarId;
+      if (other.CaruserId != 0) {
+        CaruserId = other.CaruserId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1800,7 +1805,7 @@ namespace Google.Protobuf.Protocol {
             break;
           }
           case 120: {
-            UsingcarId = input.ReadInt32();
+            CaruserId = input.ReadInt32();
             break;
           }
         }

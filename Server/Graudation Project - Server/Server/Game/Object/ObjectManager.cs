@@ -11,7 +11,7 @@ namespace Server.Game
 
 		object _lock = new object();
 		Dictionary<int, Player> _players = new Dictionary<int, Player>();
-		Dictionary<int, MonsterSpawner> _monsters = new Dictionary<int, MonsterSpawner>();
+		Dictionary<int, CMonsterSpawner> _cmonsterspawn = new Dictionary<int, CMonsterSpawner>();
 		Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
 
 		// [UNUSED(1)][TYPE(7)][ID(24)]
@@ -30,15 +30,10 @@ namespace Server.Game
 					_players.Add(gameObject.Id, gameObject as Player);
 				}
 
-                if (gameObject.ObjectType == GameObjectType.Monster)
-                {
-                    _monsters.Add(gameObject.Id, gameObject as MonsterSpawner);
-                }
-
-                if (gameObject.ObjectType == GameObjectType.Buggy)
-                {
-                    _buggy.Add(gameObject.Id, gameObject as Buggy);
-                }
+     //           if (gameObject.ObjectType == GameObjectType.Cmonsterspawner)
+     //           {
+					//_cmonsterspawn.Add(gameObject.Id, gameObject as CMonsterSpawner);
+     //           }
 
             }
 

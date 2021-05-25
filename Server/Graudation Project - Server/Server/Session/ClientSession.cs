@@ -15,7 +15,7 @@ namespace Server
 	public class ClientSession : PacketSession
 	{
 		public Player MyPlayer { get; set; }
-		public MonsterSpawner Monster_Spawn { get; set; }
+		public CMonsterSpawner Monster_Spawn { get; set; }
 		public int SessionId { get; set; }
 
 		public void Send(IMessage packet)
@@ -58,18 +58,6 @@ namespace Server
 			}				
 
 			RoomManager.Instance.Find(1).EnterGame(MyPlayer);
-
-
-			//// 몬스터 스포너 초기 위치 지정
-			//Monster_Spawn = ObjectManager.Instance.Add<MonsterSpawner>();
-			//{
-			//	Monster_Spawn.Info.PosInfo.PosX = 2259;
-			//	Monster_Spawn.Info.PosInfo.PosY = 110;
-			//	Monster_Spawn.Info.PosInfo.PosZ = 3476;
-
-			//	Monster_Spawn.Session = this;
-			//}
-			//RoomManager.Instance.Find(1).EnterGame(Monster_Spawn);
 
 		}
 
