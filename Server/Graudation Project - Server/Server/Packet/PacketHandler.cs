@@ -12,6 +12,7 @@ class PacketHandler
 	public static void C_MoveHandler(PacketSession session, IMessage packet)
 	{
 		C_Move movePacket = packet as C_Move;
+
 		ClientSession clientSession = session as ClientSession;
 
 		Player player = clientSession.MyPlayer;

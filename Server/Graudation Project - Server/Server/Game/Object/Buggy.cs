@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Server.Game
 {
-    class Buggy : GameObject
+    public class Buggy : GameObject
     {
         public Buggy()
         {

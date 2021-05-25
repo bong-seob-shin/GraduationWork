@@ -12,34 +12,24 @@ namespace Server.Game
         public int RoomId { get; set; }
 
         Dictionary<int, Player> _players = new Dictionary<int, Player>();
-        Dictionary<int, Monster> _monsters = new Dictionary<int, Monster>();
+        Dictionary<int, MonsterSpawner> _monsters = new Dictionary<int, MonsterSpawner>();
         Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
 
         public void Init(int mapId)
         {
-
-            for (int i = 0; i < 5; ++i)
-            {
-                Monster monster = ObjectManager.Instance.Add<Monster>();
-                monster.PosInfo.PosX = 2249 + 30 * i;
-                monster.PosInfo.PosY = 110;
-                EnterGame(monster);
-            }
-
-            for (int i = 0; i < 3; ++i)
-            {
-                Buggy buggy = ObjectManager.Instance.Add<Buggy>();
-                buggy.PosInfo.PosX = 2255 + 20 * i;
-                buggy.PosInfo.PosY = 110;
-                EnterGame(buggy);
-            }
+            // 근거리 몬스터 스포너
+            //MonsterSpawner monster = ObjectManager.Instance.Add<MonsterSpawner>();
+            //monster.PosInfo.PosX = 2261;
+            //monster.PosInfo.PosY = 110;
+            //monster.PosInfo.PosZ = 3476;
+            //EnterGame(monster);
         }
 
         public void Update()
         {
             lock (_lock)
             {
-                foreach (Monster monster in _monsters.Values)
+                foreach (MonsterSpawner monster in _monsters.Values)
                 {
                     monster.Update();
                 }
@@ -75,7 +65,7 @@ namespace Server.Game
                                 spawnPacket.Objects.Add(p.Info);
                         }
 
-                        foreach (Monster m in _monsters.Values)                        
+                        foreach (MonsterSpawner m in _monsters.Values)                        
                             spawnPacket.Objects.Add(m.Info);
 
                         foreach (Buggy b in _buggy.Values)
@@ -87,7 +77,7 @@ namespace Server.Game
 
                 else if (type == GameObjectType.Monster)
                 {
-                    Monster monster = gameObject as Monster;
+                    MonsterSpawner monster = gameObject as MonsterSpawner;
                     _monsters.Add(gameObject.Id, monster);
                     monster.Room = this;
                 }
@@ -134,23 +124,23 @@ namespace Server.Game
                     }
                 }
 
-                else if (type == GameObjectType.Monster)
-                {
-                    Monster monster = null;
-                    if (_monsters.Remove(objectId, out monster) == false)
-                        return;
+                //else if (type == GameObjectType.Monster)
+                //{
+                //    Monster monster = null;
+                //    if (_monsters.Remove(objectId, out monster) == false)
+                //        return;
 
-                    monster.Room = null;
-                }
+                //    monster.Room = null;
+                //}
 
-                else if (type == GameObjectType.Buggy)
-                {
-                    Buggy buggy = null;
-                    if (_buggy.Remove(objectId, out buggy) == false)
-                        return;
+                //else if (type == GameObjectType.Buggy)
+                //{
+                //    Buggy buggy = null;
+                //    if (_buggy.Remove(objectId, out buggy) == false)
+                //        return;
 
-                    buggy.Room = null;
-                }
+                //    buggy.Room = null;
+                //}
 
                 // 타인한테 정보 전송
                 {
