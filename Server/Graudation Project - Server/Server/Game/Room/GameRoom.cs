@@ -18,11 +18,11 @@ namespace Server.Game
         public void Init(int mapId)
         {
             // 근거리 몬스터 스포너
-            //MonsterSpawner monster = ObjectManager.Instance.Add<MonsterSpawner>();
-            //monster.PosInfo.PosX = 2261;
-            //monster.PosInfo.PosY = 110;
-            //monster.PosInfo.PosZ = 3476;
-            //EnterGame(monster);
+            MonsterSpawner monster = ObjectManager.Instance.Add<MonsterSpawner>();
+            monster.Info.PosInfo.PosX = 2261;
+            monster.Info.PosInfo.PosY = 110;
+            monster.Info.PosInfo.PosZ = 3476;
+            EnterGame(monster);
         }
 
         public void Update()
