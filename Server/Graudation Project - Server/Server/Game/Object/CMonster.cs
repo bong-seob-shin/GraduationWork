@@ -9,16 +9,15 @@ namespace Server.Game
     {
         public ClientSession Session { get; set; }
 
-        int _nextTick = 0;
-
         public CMonster()
         {
             ObjectType = GameObjectType.Cmonster;
         }
 
-        //public override void Update()
-        //{
-        //}
+        public override void Update()
+        {
+
+        }
 
         //void BroadcastMove()
         //{

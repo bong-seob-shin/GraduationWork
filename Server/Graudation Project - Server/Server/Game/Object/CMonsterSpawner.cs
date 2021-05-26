@@ -40,8 +40,7 @@ namespace Server.Game
             this.Info.PosInfo.PosX = rand_x;
             this.Info.PosInfo.PosY = rand_y;
             this.Info.PosInfo.PosZ = rand_z;
-
-
+           
             Vector3 pos = new Vector3(rand_x, rand_y, rand_z);
 
             list.Add(pos);

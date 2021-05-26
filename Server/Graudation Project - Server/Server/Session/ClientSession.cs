@@ -15,7 +15,8 @@ namespace Server
 	public class ClientSession : PacketSession
 	{
 		public Player MyPlayer { get; set; }
-		public CMonsterSpawner Monster_Spawn { get; set; }
+		public CMonster ClosedMonster { get; set; }
+
 		public int SessionId { get; set; }
 
 		public void Send(IMessage packet)

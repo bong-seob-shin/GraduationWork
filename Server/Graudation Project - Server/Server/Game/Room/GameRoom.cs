@@ -35,25 +35,6 @@ namespace Server.Game
                 {
                     CMonseter_spawn.Update();
                 }
-
-                //if (create_monster_tick > Environment.TickCount64)
-                //    return;
-                //create_monster_tick = Environment.TickCount + 3000;
-
-                //for (int i = 0; i < list.Count; ++i)
-                //{
-                //    CMonster Cmonster = ObjectManager.Instance.Add<CMonster>();
-                //    Cmonster.Info.PosInfo.PosX = list[i].X;
-                //    Cmonster.Info.PosInfo.PosX = list[i].Y;
-                //    Cmonster.Info.PosInfo.PosX = list[i].Z;
-                //    EnterGame(Cmonster);
-                //}
-
-                foreach (CMonster CMonseter in _cmonsters.Values)
-                {
-                    CMonseter.Update();
-                }
-
             }
         }
 
@@ -188,6 +169,30 @@ namespace Server.Game
                 Broadcast(resMovePacket);
             }
         }
+
+        public void HandleMonster(Player player, CMonster monster, C_Monster monsterPacket)
+        {
+            if (player == null)
+                return;
+
+            lock (_lock)
+            {
+                // 일단 서버에서 좌표 이동
+                PositionInfo movePosInofo = monsterPacket.PosInfo;
+                ObjectInfo info = monster.Info;
+
+                // 다른 플레이어한테도 알려준다
+                S_Monster resMovePacket = new S_Monster();
+                resMovePacket.ObjectId = monster.Info.ObjectId;
+                resMovePacket.PosInfo = monsterPacket.PosInfo;
+
+                Console.WriteLine(resMovePacket.PosInfo);
+
+
+                Broadcast(resMovePacket);
+            }
+        }
+
 
         public Player FindPlayer(Func<GameObject, bool> condition)
         {
