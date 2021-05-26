@@ -73,6 +73,8 @@ public class Player : AnimationObj
     private float invincibilityTime = 0.0f;
     public Image hitImage;
 
+
+    private IKLeftHandGrab ikLeftHandGrab;
     private enum PlayerState
     {
         Idle,
@@ -121,7 +123,7 @@ public class Player : AnimationObj
         myCam.gameObject.GetComponent<CameraMove>().enabled = true; //갑자기 생긴 버그 때문에 고치기위해서 카메라무브 스크립트를 게임 시작하면 켜줌
         weaponGunAnim = currentWeapon.GetComponent<Animation>();
         myGun.bulletText.text = "Bullet  " +myGun. bulletCount.ToString() + " / " + myGun.maxBulletCount.ToString();
-        
+        ikLeftHandGrab = GetComponent<IKLeftHandGrab>();
         isPlayer = true;
     }
 
@@ -468,6 +470,10 @@ public class Player : AnimationObj
                 if (onInteractKey)
                 {
                     ib.InteractObjs();
+                    //버튼ik관련코드
+                    ib.setIKLeft(ikLeftHandGrab);
+                    ikLeftHandGrab.leftHandPos = ib.transform;
+                    ikLeftHandGrab.isGrabed = true;
                     Debug.Log("불렸음");
                     _interactCoolDown = 1.0f;
                     onInteractKey = false;
