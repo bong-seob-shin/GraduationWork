@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8202321298508954371
 RectTransform:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bullet  20 / 20
+  m_text: Bullet  15 / 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f5272d9d2d04e348b011ca3bb71465a, type: 2}
   m_sharedMaterial: {fileID: -8364211198418745388, guid: 4f5272d9d2d04e348b011ca3bb71465a, type: 2}

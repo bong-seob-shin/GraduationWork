@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.18076, g: 162.51416, b: 215.03311, a: 1}
+  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6860,6 +6860,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: bulletText
+      value: 
+      objectReference: {fileID: 875327396}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
 --- !u!1001 &680705496
@@ -8938,11 +8942,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1254294369044d40bdc606332724d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upButton: {fileID: 1700610767}
+  downButton: {fileID: 1413701937}
   interactiveObjAnims:
   - {fileID: 1202068711}
   - {fileID: 991710587}
   anotherLift: {fileID: 2007324696}
-  isAcivate: 0
+  isActivate: 0
 --- !u!65 &861143281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12870,6 +12876,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1103782077813285850, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
   m_PrefabInstance: {fileID: 679096637}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1123382443 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+  m_PrefabInstance: {fileID: 679096637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1123382444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12942,6 +12953,26 @@ PrefabInstance:
     - target: {fileID: 1421109403, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421109404, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
+      propertyPath: interactiveObjAnims.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421109404, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
+      propertyPath: interactiveObjAnims.Array.data[2]
+      value: 
+      objectReference: {fileID: 1375148147}
+    - target: {fileID: 1421109404, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
+      propertyPath: liftAnim
+      value: 
+      objectReference: {fileID: 1375148147}
+    - target: {fileID: 1421109404, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
+      propertyPath: liftTrigger
+      value: 
+      objectReference: {fileID: 861143280}
+    - target: {fileID: 1421109404, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1793754480, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
       propertyPath: m_Size.y
@@ -13086,6 +13117,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1793754479, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
     - {fileID: 1799684200, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
+    - {fileID: 1421109404, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
 --- !u!4 &1123825674 stripped
 Transform:
@@ -15943,17 +15975,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1413701933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36121258400cce44a8557e3aba745606, type: 3}
+  m_Script: {fileID: 11500000, guid: c5a471a4f0b759448ae199d56674f73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 1
+  isOn: 0
   isSwitch: 0
   interactiveObjAnims:
   - {fileID: 1335710743}
   - {fileID: 1758899742}
   ikPosition: {fileID: 0}
   _ikLeftHandGrab: {fileID: 0}
-  isAnimsPlay: 0
+  liftTrigger: {fileID: 2007324696}
+  liftAnims:
+  - {fileID: 1375148147}
+  - {fileID: 1202068711}
+  - {fileID: 991710587}
+  downButton: {fileID: 1488486622}
+  upButton: {fileID: 1376329382}
+  isUpbutton: 0
 --- !u!65 &1413701938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18093,6 +18132,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5204771455083424303, guid: 32d8e7be29d6fdd4e9a23fa647c48640, type: 3}
   m_PrefabInstance: {fileID: 1700397328}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1700610761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1688155932944656607, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
+  m_PrefabInstance: {fileID: 1123825673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1700610767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700610761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a471a4f0b759448ae199d56674f73c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isSwitch: 0
+  interactiveObjAnims:
+  - {fileID: 1202068711}
+  - {fileID: 991710587}
+  ikPosition: {fileID: 0}
+  _ikLeftHandGrab: {fileID: 0}
+  liftTrigger: {fileID: 861143280}
+  liftAnims:
+  - {fileID: 1375148147}
+  - {fileID: 1783471956}
+  - {fileID: 1758899742}
+  downButton: {fileID: 1488486622}
+  upButton: {fileID: 1376329382}
+  isUpbutton: 1
 --- !u!1001 &1701248214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21080,11 +21151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1254294369044d40bdc606332724d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upButton: {fileID: 1700610767}
+  downButton: {fileID: 1413701937}
   interactiveObjAnims:
   - {fileID: 1335710743}
   - {fileID: 1758899742}
   anotherLift: {fileID: 861143280}
-  isAcivate: 1
+  isActivate: 1
 --- !u!65 &2007324697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23541,6 +23614,10 @@ PrefabInstance:
       propertyPath: targetDir
       value: 
       objectReference: {fileID: 911819929}
+    - target: {fileID: 2703951739659783987, guid: ce8a77752c4bc584ba8ae7031ef315ed, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1123382443}
     - target: {fileID: 2703951739659783998, guid: ce8a77752c4bc584ba8ae7031ef315ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
