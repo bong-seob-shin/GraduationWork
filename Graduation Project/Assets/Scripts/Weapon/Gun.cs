@@ -35,8 +35,12 @@ public class Gun : MonoBehaviour
     UIManager _uiManager;
 
     private Player _player;
-
+    
+    public GameObject gunMag;
+    public GameObject cloneMag;
     private CameraMove retroCameraMove;
+
+    private float reloadTime = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +55,7 @@ public class Gun : MonoBehaviour
     {
         GunFireRateCalc();
 
-        if (isShoot)
+        if (isShoot && reloadTime<=0)
         {
             if (currentFireRate <= 0 &&bulletCount>0)
             {
@@ -71,6 +75,11 @@ public class Gun : MonoBehaviour
         if (currentFireRate > 0)
         {
             currentFireRate -= Time.deltaTime;
+        }
+
+        if (reloadTime > 0f)
+        {
+            reloadTime -= Time.deltaTime;
         }
     }
 
@@ -135,5 +144,17 @@ public class Gun : MonoBehaviour
     public void Reload()
     {
         bulletCount = maxBulletCount;
+        reloadTime = 2.0f;
+        gunMag.GetComponent<Rigidbody>().isKinematic = false;
+        gunMag.transform.parent = null;
+        gunAnim.Play("GunReload");
+    }
+
+    public void GenerateGunMag()
+    {
+        var go =  Instantiate(cloneMag, this.transform);
+        go.SetActive(true);
+        Destroy(gunMag);
+        gunMag = go;
     }
 }

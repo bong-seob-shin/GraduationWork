@@ -63,7 +63,8 @@ public class Player : AnimationObj
     private Transform _playerSpineTransform;
     private Vector3 _spineDir = new Vector3(0,0,0);
 
-    
+
+
     [HideInInspector]public Camera myCam;
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
@@ -305,7 +306,7 @@ public class Player : AnimationObj
 
                 currentWeapon.SetActive(true);
                 _gunGrab.isGrabed = true;
-                weaponGunAnim.Play("GunEject");
+                //weaponGunAnim.Play("GunEject");
                 myGun.currentFireRate = 1.0f;
                 _uiManager.centerPoint.SetActive(true);
 
