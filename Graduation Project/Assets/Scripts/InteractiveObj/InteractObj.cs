@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractObj : MonoBehaviour
 {
     
-    [SerializeField]protected bool isOn =false;
+    public bool isOn =false;
     [SerializeField] protected bool isSwitch = false;
     public Animation[] interactiveObjAnims;
 

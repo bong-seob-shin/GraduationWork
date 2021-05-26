@@ -444,6 +444,7 @@ public class Player : AnimationObj
             CarController car = _hitInfo.transform.GetComponent<CarController>();
             InteractiveButton ib = _hitInfo.transform.GetComponent<InteractiveButton>();
             InteractiveDoubleButton idb = _hitInfo.transform.GetComponent<InteractiveDoubleButton>();
+            InteractiveLiftButton ilb = _hitInfo.transform.GetComponent<InteractiveLiftButton>();
             if ( car != null && rideCarID<=0 )
             {
                 if (onInteractKey)
@@ -489,6 +490,21 @@ public class Player : AnimationObj
                 if (onInteractKey)
                 {
                     idb.InteractObjs();
+                    Debug.Log("불렸음");
+                    _interactCoolDown = 1.0f;
+                    onInteractKey = false;
+                }
+                else
+                {
+                    interactText.text = "Interact Key 'F'";
+                    Debug.Log(_hitInfo.transform.name);
+                }
+            }
+            if (ilb != null )
+            {
+                if (onInteractKey)
+                {
+                    ilb.InteractObjs();
                     Debug.Log("불렸음");
                     _interactCoolDown = 1.0f;
                     onInteractKey = false;

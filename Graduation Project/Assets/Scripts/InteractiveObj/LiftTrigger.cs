@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class LiftTrigger : MonoBehaviour
 {
+
+   public InteractiveLiftButton upButton;
+   public InteractiveLiftButton downButton;
+
    public Animation[] interactiveObjAnims;
 
    public LiftTrigger anotherLift;
 
-   public bool isAcivate = false;
+   public bool isActivate = false;
    private void Update()
    {
       
@@ -17,9 +21,10 @@ public class LiftTrigger : MonoBehaviour
 
    private void OnTriggerEnter(Collider other)
    {
+      
       if (other.CompareTag("floor"))
       {
-         if (isAcivate)
+         if (isActivate)
          {
             for (int i = 0; i < interactiveObjAnims.Length; i++)
             {
@@ -30,14 +35,15 @@ public class LiftTrigger : MonoBehaviour
                interactiveObjAnims[i].Play();
             }
 
-            anotherLift.isAcivate = true;
-            isAcivate = false;
+            upButton.isOn = true;
+            anotherLift.isActivate = true;
+            isActivate = false;
          }
       }
 
       if (other.CompareTag("ceiling"))
       {
-         if (isAcivate)
+         if (isActivate)
          {
             for (int i = 0; i < interactiveObjAnims.Length; i++)
             {
@@ -47,11 +53,14 @@ public class LiftTrigger : MonoBehaviour
                interactiveObjAnims[i][animName].speed = 1f;
                interactiveObjAnims[i].Play();
             }
-
-            anotherLift.isAcivate = true;
-            isAcivate = false;
+            
+            downButton.isOn = false;
+            anotherLift.isActivate = true;
+            isActivate = false;
          }
       }
 
    }
+
+  
 }

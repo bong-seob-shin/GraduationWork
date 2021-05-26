@@ -6,10 +6,7 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class InteractiveButton : InteractObj
 {
-
-
-
-
+    
     public bool isAnimsPlay = false;
 
    
@@ -21,6 +18,8 @@ public class InteractiveButton : InteractObj
             {
                 interactiveObjAnims[i].Play();
             }
+
+           
 
             isSwitch = false;
         }
@@ -62,6 +61,8 @@ public class InteractiveButton : InteractObj
                 interactiveObjAnims[i][animName].speed = 1f;
             }
 
+          
+
             isOn = !isOn;
             isSwitch = true;
 
@@ -78,6 +79,8 @@ public class InteractiveButton : InteractObj
                 interactiveObjAnims[i][animName].normalizedTime= 1f;
                 interactiveObjAnims[i][animName].speed = -1f;
             }
+
+         
 
             isOn = !isOn;
             isSwitch = true;
