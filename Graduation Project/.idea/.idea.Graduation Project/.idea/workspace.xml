@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractObj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveDoubleButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveDoubleButton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Compass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractiveObj/FloorTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -57,10 +62,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/MovingFloor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveDoubleButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/LiftTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RandomSpawner.cs" />
@@ -89,6 +91,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveDoubleButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/FloorTrigger.cs" />
       </list>
     </option>
   </component>
@@ -203,6 +209,7 @@
       <workItem from="1621566276639" duration="2844000" />
       <workItem from="1621569348237" duration="217000" />
       <workItem from="1621769864635" duration="13616000" />
+      <workItem from="1622012533061" duration="2010000" />
     </task>
     <servers />
   </component>

@@ -7,14 +7,13 @@ using UnityEngine.Rendering.HighDefinition;
 public class InteractiveButton : InteractObj
 {
 
-    public Animation[] interactiveObjAnims;
     
 
    
     
 
    
-    private void Update()
+    protected override void Update()
     {
         if (isSwitch)
         {

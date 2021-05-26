@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class InteractiveDoubleButton : InteractObj
 {
-    public Animation[] interactiveObjAnims;
 
     public InteractiveDoubleButton pairButton;
 
     public bool isFirstButton = false;
-    private void Update()
+    protected override void Update()
     {
         if (isSwitch)
         {

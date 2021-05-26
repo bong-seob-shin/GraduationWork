@@ -34,6 +34,7 @@
           </e>
           <e p="InteractiveObj" t="Include">
             <e p="CarController.cs" t="Include" />
+            <e p="FloorTrigger.cs" t="Include" />
             <e p="InteractiveButton.cs" t="Include" />
             <e p="InteractiveDoubleButton.cs" t="Include" />
             <e p="InteractObj.cs" t="Include" />
