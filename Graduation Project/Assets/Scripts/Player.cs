@@ -306,7 +306,7 @@ public class Player : AnimationObj
 
                 currentWeapon.SetActive(true);
                 _gunGrab.isGrabed = true;
-                //weaponGunAnim.Play("GunEject");
+                weaponGunAnim.Play("GunEject");
                 myGun.currentFireRate = 1.0f;
                 _uiManager.centerPoint.SetActive(true);
 
