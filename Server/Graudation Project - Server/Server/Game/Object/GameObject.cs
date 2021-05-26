@@ -1,4 +1,5 @@
 ﻿using Google.Protobuf.Protocol;
+using System.Numerics;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,6 +26,21 @@ namespace Server.Game
 			Info.PosInfo = PosInfo;
 			Info.StatInfo = StatInfo;
 		}
+
+
+        public Vector3 CellPos 
+        {
+            get 
+            {
+                return new Vector3(PosInfo.PosX, PosInfo.PosY, PosInfo.PosZ);
+            }
+            set 
+            {
+                PosInfo.PosX = value.X;
+                PosInfo.PosY = value.Y;
+                PosInfo.PosZ = value.Z;
+            }
+        }
 
 
         public int Level

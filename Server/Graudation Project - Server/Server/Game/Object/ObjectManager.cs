@@ -30,10 +30,10 @@ namespace Server.Game
 					_players.Add(gameObject.Id, gameObject as Player);
 				}
 
-     //           if (gameObject.ObjectType == GameObjectType.Cmonsterspawner)
-     //           {
-					//_cmonsterspawn.Add(gameObject.Id, gameObject as CMonsterSpawner);
-     //           }
+                //if (gameObject.ObjectType == GameObjectType.Cmonster)
+                //{
+                //    _cmonsterspawn.Add(gameObject.Id, gameObject as CMonster);
+                //}
 
             }
 

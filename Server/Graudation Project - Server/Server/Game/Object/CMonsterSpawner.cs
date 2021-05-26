@@ -1,15 +1,19 @@
 ﻿using Google.Protobuf.Protocol;
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Text;
 
 namespace Server.Game
 {
+
     public class CMonsterSpawner : GameObject
     {
+        public List<Vector3> list = new List<Vector3>();
+
         public static float rand_x;
         public static float rand_y;
-        public static float rand_z;
+        public static float rand_z;        
 
         int _nextTick = 0;
 
@@ -33,15 +37,15 @@ namespace Server.Game
             rand_y = (f * 300f) + 110f;
             rand_z = (f * 500f) + 3100f;
 
-            // MonsterSpawner.PosInfo.PosX는 몬스터 스포너의 위치이고
-            // MonsterSpwaner.PosInfo.SpineX는 몬스터 스포너 안에서 랜덤으로 몬스터를 생성해줄 위치이다.
-            this.Info.PosInfo.SpineX = rand_x;
-            this.Info.PosInfo.SpineY = rand_y;
-            this.Info.PosInfo.SpineZ = rand_z;
+            this.Info.PosInfo.PosX = rand_x;
+            this.Info.PosInfo.PosY = rand_y;
+            this.Info.PosInfo.PosZ = rand_z;
 
-            Console.WriteLine(this.Info.PosInfo.SpineX);
 
-            
+            Vector3 pos = new Vector3(rand_x, rand_y, rand_z);
+
+            list.Add(pos);
+
             BroadcastMove();
         }
 

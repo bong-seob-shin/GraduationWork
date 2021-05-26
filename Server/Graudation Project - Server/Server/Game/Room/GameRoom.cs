@@ -2,6 +2,7 @@
 using Google.Protobuf.Protocol;
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Text;
 
 namespace Server.Game
@@ -13,16 +14,17 @@ namespace Server.Game
 
         Dictionary<int, Player> _players = new Dictionary<int, Player>();
         Dictionary<int, CMonsterSpawner> _cmonsterspawn = new Dictionary<int, CMonsterSpawner>();
+        Dictionary<int, CMonster> _cmonsters = new Dictionary<int, CMonster>();
         Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
 
         public void Init(int mapId)
         {
             // 근거리 몬스터 스포너
             CMonsterSpawner CMonster_spawn = ObjectManager.Instance.Add<CMonsterSpawner>();
-            CMonster_spawn.Info.PosInfo.PosX = 2261;
-            CMonster_spawn.Info.PosInfo.PosY = 110;
-            CMonster_spawn.Info.PosInfo.PosZ = 3476;
-            EnterGame(CMonster_spawn);         
+            CMonster_spawn.Info.PosInfo.SpineX = 2261;
+            CMonster_spawn.Info.PosInfo.SpineY = 110;
+            CMonster_spawn.Info.PosInfo.SpineZ = 3476;
+            EnterGame(CMonster_spawn);
         }
 
         public void Update()
@@ -33,6 +35,25 @@ namespace Server.Game
                 {
                     CMonseter_spawn.Update();
                 }
+
+                //if (create_monster_tick > Environment.TickCount64)
+                //    return;
+                //create_monster_tick = Environment.TickCount + 3000;
+
+                //for (int i = 0; i < list.Count; ++i)
+                //{
+                //    CMonster Cmonster = ObjectManager.Instance.Add<CMonster>();
+                //    Cmonster.Info.PosInfo.PosX = list[i].X;
+                //    Cmonster.Info.PosInfo.PosX = list[i].Y;
+                //    Cmonster.Info.PosInfo.PosX = list[i].Z;
+                //    EnterGame(Cmonster);
+                //}
+
+                foreach (CMonster CMonseter in _cmonsters.Values)
+                {
+                    CMonseter.Update();
+                }
+
             }
         }
 
@@ -68,8 +89,8 @@ namespace Server.Game
                         foreach (CMonsterSpawner cms in _cmonsterspawn.Values)                        
                             spawnPacket.Objects.Add(cms.Info);
 
-                        //foreach (CMonster cm in _cmonsters.Values)
-                        //    spawnPacket.Objects.Add(cm.Info);
+                        foreach (CMonster cm in _cmonsters.Values)
+                            spawnPacket.Objects.Add(cm.Info);
 
                         foreach (Buggy b in _buggy.Values)
                             spawnPacket.Objects.Add(b.Info);
@@ -85,12 +106,12 @@ namespace Server.Game
                     CMonsterspawn.Room = this;
                 }
 
-                //else if (type == GameObjectType.Cmonster)
-                //{
-                //    CMonster CMonster = gameObject as CMonster;
-                //    _cmonsters.Add(gameObject.Id, CMonster);
-                //    CMonster.Room = this;
-                //}
+                else if (type == GameObjectType.Cmonster)
+                {
+                    CMonster CMonster = gameObject as CMonster;
+                    _cmonsters.Add(gameObject.Id, CMonster);
+                    CMonster.Room = this;
+                }
 
 
                 else if (type == GameObjectType.Buggy)
