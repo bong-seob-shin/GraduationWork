@@ -471,9 +471,9 @@ public class Player : AnimationObj
                 {
                     ib.InteractObjs();
                     //버튼ik관련코드
-                    ib.setIKLeft(ikLeftHandGrab);
-                    ikLeftHandGrab.leftHandPos = ib.transform;
-                    ikLeftHandGrab.isGrabed = true;
+                    //ib.setIKLeft(ikLeftHandGrab);
+                    //ikLeftHandGrab.leftHandPos = ib.transform;
+                    //ikLeftHandGrab.isGrabed = true;
                     Debug.Log("불렸음");
                     _interactCoolDown = 1.0f;
                     onInteractKey = false;
