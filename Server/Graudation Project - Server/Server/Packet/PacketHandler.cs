@@ -24,23 +24,4 @@ class PacketHandler
 
 		room.HandleMove(player, movePacket);
 	}
-
-    public static void C_MonsterHandler(PacketSession session, IMessage packet)
-    {
-        //C_Monster monsterPacket = packet as C_Monster;
-        //ClientSession clientSession = session as ClientSession;
-
-        //CMonster cmonster = new CMonster();
-
-        //Player player = clientSession.MyPlayer;
-        //if (player == null)
-        //    return;
-
-        //GameRoom room = player.Room;
-        //if (room == null)
-        //    return;
-
-        //room.HandleMonster(player, cmonster, monsterPacket);
-    }
-
 }

@@ -47,14 +47,13 @@ namespace Google.Protobuf.Protocol {
             "CgVjYXJJZBgOIAEoBRIRCgljYXJ1c2VySWQYDyABKAUiZQoIU3RhdEluZm8S",
             "DQoFbGV2ZWwYASABKAUSCgoCaHAYAiABKAUSDQoFbWF4SHAYAyABKAUSDgoG",
             "YXR0YWNrGAQgASgFEg0KBXNwZWVkGAUgASgCEhAKCHRvdGFsRXhwGAYgASgF",
-            "Kn0KBU1zZ0lkEhAKDFNfRU5URVJfR0FNRRAAEhAKDFNfTEVBVkVfR0FNRRAB",
+            "Kl8KBU1zZ0lkEhAKDFNfRU5URVJfR0FNRRAAEhAKDFNfTEVBVkVfR0FNRRAB",
             "EgsKB1NfU1BBV04QAhINCglTX0RFU1BBV04QAxIKCgZDX01PVkUQBBIKCgZT",
-            "X01PVkUQBRINCglDX01PTlNURVIQBhINCglTX01PTlNURVIQByozCgVTdGF0",
-            "ZRIICgRJRExFEAASCgoGTU9WSU5HEAESCgoGQVRUQUNLEAISCAoEREVBRBAD",
-            "KncKDkdhbWVPYmplY3RUeXBlEggKBE5PTkUQABIKCgZQTEFZRVIQARITCg9D",
-            "TU9OU1RFUlNQQVdORVIQAhITCg9STU9OU1RFUlNQQVdORVIQAxIMCghDTU9O",
-            "U1RFUhAEEgwKCFJNT05TVEVSEAUSCQoFQlVHR1kQBkIbqgIYR29vZ2xlLlBy",
-            "b3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
+            "X01PVkUQBSozCgVTdGF0ZRIICgRJRExFEAASCgoGTU9WSU5HEAESCgoGQVRU",
+            "QUNLEAISCAoEREVBRBADKncKDkdhbWVPYmplY3RUeXBlEggKBE5PTkUQABIK",
+            "CgZQTEFZRVIQARITCg9DTU9OU1RFUlNQQVdORVIQAhITCg9STU9OU1RFUlNQ",
+            "QVdORVIQAxIMCghDTU9OU1RFUhAEEgwKCFJNT05TVEVSEAUSCQoFQlVHR1kQ",
+            "BkIbqgIYR29vZ2xlLlByb3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.State), typeof(global::Google.Protobuf.Protocol.GameObjectType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,8 +82,6 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("S_DESPAWN")] SDespawn = 3,
     [pbr::OriginalName("C_MOVE")] CMove = 4,
     [pbr::OriginalName("S_MOVE")] SMove = 5,
-    [pbr::OriginalName("C_MONSTER")] CMonster = 6,
-    [pbr::OriginalName("S_MONSTER")] SMonster = 7,
   }
 
   public enum State {

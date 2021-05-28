@@ -11,8 +11,6 @@ enum MsgId {
   S_DESPAWN = 3;
   C_MOVE = 4;
   S_MOVE = 5;
-  C_MONSTER = 6;
-  S_MONSTER = 7;
 }
 
 enum State{

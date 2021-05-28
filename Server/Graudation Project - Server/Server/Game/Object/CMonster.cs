@@ -8,39 +8,27 @@ namespace Server.Game
 {
     public class CMonster : CMonsterSpawner
     {
-
-        enum MonsterState 
-        {
-            NONE = 1,
-            IDLE,
-            MOVE,  
-        }
-
-        MonsterState m_state;
-
-        int _nextTick = 0;
-
         Player _target;
 
         public CMonster()
         {
             ObjectType = GameObjectType.Cmonster;
 
-            m_state = MonsterState.IDLE;
+            State = State.Idle;
         }
 
         public override void Update()
         {
-            switch (m_state)
-            {
-                case MonsterState.NONE:
-                    break;
 
-                case MonsterState.IDLE:
+            Console.WriteLine(State);
+
+            switch (State)
+            {
+                case State.Idle:
                     FindClosedPlayer();
                     break;
 
-                case MonsterState.MOVE:
+                case State.Moving:
                     UpdateMoving();
                     break;
             }
@@ -56,10 +44,6 @@ namespace Server.Game
             Player target = Room.FindPlayer(p =>
             {
                 float dist = DistanceToPoint(p.CellPos, CellPos);
-                // 거리가 너무 먼 놈은 계산하지 마
-                if (dist > 200f)
-                    m_state = MonsterState.NONE;
-
                 return dist <= 30f;
             });
 
@@ -71,7 +55,7 @@ namespace Server.Game
 
             Console.WriteLine("거리30안에 있는 target" + _target);
 
-            m_state = MonsterState.MOVE;
+            State = State.Moving;
         }
 
         int _movingTick = 0;
@@ -85,7 +69,7 @@ namespace Server.Game
             if (_target == null || _target.Room != Room) 
             {
                 _target = null;
-                m_state = MonsterState.IDLE;
+                State = State.Idle;
                 BroadcastMove();
                 return;
             }
@@ -96,7 +80,7 @@ namespace Server.Game
             if (dist > 50f)
             {
                 _target = null;
-                m_state = MonsterState.IDLE;
+                State = State.Idle;
                 BroadcastMove();
                 return;
             }

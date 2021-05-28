@@ -27,7 +27,6 @@ namespace Server.Game
 			Info.StatInfo = StatInfo;
 		}
 
-
         public Vector3 CellPos 
         {
             get 
@@ -42,6 +41,17 @@ namespace Server.Game
             }
         }
 
+        public State State 
+        {
+            get
+            {
+                return PosInfo.State;
+            }
+            set 
+            {
+                PosInfo.State = value;
+            }       
+        }
 
         public int Level
         {
