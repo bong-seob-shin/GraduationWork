@@ -15,7 +15,6 @@ namespace Server
 	public class ClientSession : PacketSession
 	{
 		public Player MyPlayer { get; set; }
-		public CMonster ClosedMonster { get; set; }
 
 		public int SessionId { get; set; }
 
@@ -57,7 +56,6 @@ namespace Server
 
                 MyPlayer.Session = this;
 			}				
-
 			RoomManager.Instance.Find(1).EnterGame(MyPlayer);
 
 		}

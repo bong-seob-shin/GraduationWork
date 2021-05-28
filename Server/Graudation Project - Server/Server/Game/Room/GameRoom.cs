@@ -25,6 +25,13 @@ namespace Server.Game
             CMonster_spawn.Info.PosInfo.SpineY = 110;
             CMonster_spawn.Info.PosInfo.SpineZ = 3476;
             EnterGame(CMonster_spawn);
+
+            CMonster CMonster = ObjectManager.Instance.Add<CMonster>();
+            //CMonster.Info.PosInfo.PosX = 2250.626f;
+            //CMonster.Info.PosInfo.PosY = 109.9921f;
+            //CMonster.Info.PosInfo.PosZ = 3365.626f;
+            CMonster.CellPos = new Vector3(2250f, 110f, 3365f);
+            EnterGame(CMonster);
         }
 
         public void Update()
@@ -34,6 +41,11 @@ namespace Server.Game
                 foreach (CMonsterSpawner CMonseter_spawn in _cmonsterspawn.Values)
                 {
                     CMonseter_spawn.Update();
+                }
+
+                foreach (CMonster CMonster in _cmonsters.Values)
+                {
+                    CMonster.Update();
                 }
             }
         }
@@ -160,7 +172,10 @@ namespace Server.Game
                 // 일단 서버에서 좌표 이동
                 PositionInfo movePosInofo = movePacket.PosInfo;
                 ObjectInfo info = player.Info;
-                
+
+                // 실시간으로 플레이어 좌표를 CellPos에 받아와서 몬스터와의 거리를 Check할 예정
+                player.CellPos = new Vector3(movePacket.PosInfo.PosX, movePacket.PosInfo.PosY, movePacket.PosInfo.PosZ);
+
                 // 다른 플레이어한테도 알려준다
                 S_Move resMovePacket = new S_Move();
                 resMovePacket.ObjectId = player.Info.ObjectId;
@@ -170,28 +185,25 @@ namespace Server.Game
             }
         }
 
-        public void HandleMonster(Player player, CMonster monster, C_Monster monsterPacket)
-        {
-            if (player == null)
-                return;
+        //public void HandleMonster(Player player, CMonster monster, C_Monster monsterPacket)
+        //{
+        //    if (player == null)
+        //        return;
 
-            lock (_lock)
-            {
-                // 일단 서버에서 좌표 이동
-                PositionInfo movePosInofo = monsterPacket.PosInfo;
-                ObjectInfo info = monster.Info;
+        //    lock (_lock)
+        //    {
+        //        // 일단 서버에서 좌표 이동
+        //        PositionInfo movePosInofo = monsterPacket.PosInfo;
+        //        ObjectInfo info = monster.Info;
 
-                // 다른 플레이어한테도 알려준다
-                S_Monster resMovePacket = new S_Monster();
-                resMovePacket.ObjectId = monster.Info.ObjectId;
-                resMovePacket.PosInfo = monsterPacket.PosInfo;
+        //        // 다른 플레이어한테도 알려준다
+        //        S_Monster resMovePacket = new S_Monster();
+        //        resMovePacket.ObjectId = monster.Info.ObjectId;
+        //        resMovePacket.PosInfo = monsterPacket.PosInfo;
 
-                Console.WriteLine(resMovePacket.PosInfo);
-
-
-                Broadcast(resMovePacket);
-            }
-        }
+        //        Broadcast(resMovePacket);
+        //    }
+        //}
 
 
         public Player FindPlayer(Func<GameObject, bool> condition)
