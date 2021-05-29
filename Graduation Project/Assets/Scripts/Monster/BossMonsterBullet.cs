@@ -6,11 +6,16 @@ using UnityEngine;
 public class BossMonsterBullet : ObjManager
 {
     public int damage = 30;
-    public float speed = 10.0f;
+     
 
     [SerializeField] private Vector3 target;
     private Vector3 dir;
-    
+
+    private void Start()
+    {
+        speed = 10.0f;
+    }
+
     private void Update()
     {
         transform.position += dir * Time.deltaTime * speed;

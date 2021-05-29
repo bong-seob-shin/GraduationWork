@@ -64,7 +64,6 @@ public class BossMonster : MonsterManager
     
     // 보스 상태
     public bool isOperate;
-    public bool isDead;
     public int phase = 0;
     
     //     블럭이 위에서부터 하나씩 떼어짐 - 단계별로
