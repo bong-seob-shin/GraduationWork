@@ -12,6 +12,10 @@ namespace Server.Game
         object _lock = new object();
         public int RoomId { get; set; }
 
+        public int attacker { get; set; }
+        public bool m_damaged { get; set; }
+        public int test = 100;
+
         Dictionary<int, Player> _players = new Dictionary<int, Player>();
         Dictionary<int, CMonsterSpawner> _cmonsterspawn = new Dictionary<int, CMonsterSpawner>();
         Dictionary<int, CMonster> _cmonsters = new Dictionary<int, CMonster>();
@@ -30,7 +34,7 @@ namespace Server.Game
             //CMonster.Info.PosInfo.PosX = 2250.626f;
             //CMonster.Info.PosInfo.PosY = 109.9921f;
             //CMonster.Info.PosInfo.PosZ = 3365.626f;
-            CMonster.CellPos = new Vector3(2250f, 110f, 3365f);
+            CMonster.CellPos = new Vector3(2240f, 110f, 3460f);
             EnterGame(CMonster);
         }
 
@@ -192,17 +196,22 @@ namespace Server.Game
 
             lock (_lock)
             {
-                // 일단 서버에서 좌표 이동
-
                 AttackInfo attackInfo = attackPacket.AttackInfo;
                 ObjectInfo info = player.Info;
+
+                // 플레이어가 몬스터를 Hit하는 순간
+                if (attackInfo.IsHit)
+                {
+                    attacker = info.ObjectId;
+                    m_damaged = true;
+                    Console.WriteLine("m_damaged : " + m_damaged);
+                    Console.WriteLine("attacker : " + attacker);
+                }
 
                 // 다른 플레이어한테도 알려준다
                 S_Attack resMovePacket = new S_Attack();
                 resMovePacket.ObjectId = player.Info.ObjectId;
                 resMovePacket.AttackInfo = attackPacket.AttackInfo;
-
-                Console.WriteLine(resMovePacket);
 
                 Broadcast(resMovePacket);
             }

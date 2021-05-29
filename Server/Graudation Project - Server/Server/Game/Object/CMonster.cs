@@ -15,6 +15,11 @@ namespace Server.Game
             ObjectType = GameObjectType.Cmonster;
 
             State = State.Idle;
+
+            StatInfo.MaxHp = 400;
+            StatInfo.Hp = 400;
+            //MaxHP_TESTING = 400;
+            //HP_TESTING = 400;
         }
 
         public override void Update()
@@ -29,6 +34,8 @@ namespace Server.Game
                     UpdateMoving();
                     break;
             }
+
+            OnDamaged();
         }
 
         int _checkPlayerTick = 0;
@@ -43,7 +50,6 @@ namespace Server.Game
                 float dist = DistanceToPoint(p.CellPos, CellPos);
                 return dist <= 30f;
             });
-
 
             if (target == null)
                 return;
@@ -87,13 +93,10 @@ namespace Server.Game
             }
         }
 
-
-
         private float DistanceToPoint(Vector3 a, Vector3 b)
         {
             return (float)Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2) + Math.Pow(a.Z - b.Z, 2));
         }
-
 
         void BroadcastMove()
         {
@@ -102,6 +105,8 @@ namespace Server.Game
             movePacket.PosInfo = PosInfo;
             Room.Broadcast(movePacket);
         }
+
+
     }
 
    

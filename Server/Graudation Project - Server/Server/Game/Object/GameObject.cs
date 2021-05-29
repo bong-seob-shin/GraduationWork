@@ -3,12 +3,15 @@ using System.Numerics;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Server.Game
 {
 	public class GameObject
 	{
-		public GameObjectType ObjectType { get; protected set; } = GameObjectType.None;
+        object _lock = new object();
+
+        public GameObjectType ObjectType { get; protected set; } = GameObjectType.None;
 		public int Id
 		{
 			get { return Info.ObjectId; }
@@ -19,11 +22,13 @@ namespace Server.Game
 
 		public ObjectInfo Info { get; set; } = new ObjectInfo();
 		public PositionInfo PosInfo { get; private set; } = new PositionInfo();
-		public StatInfo StatInfo { get; private set; } = new StatInfo();
+        public AttackInfo AttackInfo { get; private set; } = new AttackInfo();
+        public StatInfo StatInfo { get; private set; } = new StatInfo();
 
 		public GameObject()
 		{
 			Info.PosInfo = PosInfo;
+            Info.AttackInfo = AttackInfo;
 			Info.StatInfo = StatInfo;
 		}
 
@@ -52,6 +57,66 @@ namespace Server.Game
                 PosInfo.State = value;
             }       
         }
+
+        public bool IsShoot
+        {
+            get { return AttackInfo.IsShoot; }
+            set
+            {
+                AttackInfo.IsShoot = value;
+            }
+        }
+
+        public bool IsEquiq
+        {
+            get { return AttackInfo.IsEquiq; }
+
+            set
+            {
+                AttackInfo.IsEquiq = value;
+            }
+        }
+
+        public bool IsHit
+        {
+            get { return AttackInfo.IsHit; }
+
+            set
+            {
+                AttackInfo.IsHit = value;
+            }
+        }
+
+        public bool IsDead
+        {
+            get { return AttackInfo.IsDead; }
+
+            set
+            {
+                AttackInfo.IsDead = value;
+            }
+        }
+
+
+        //public int MaxHP_TESTING
+        //{
+        //    get { return AttackInfo.MaxHP; }
+
+        //    set
+        //    {
+        //        AttackInfo.MaxHP = value;
+        //    }
+        //}
+
+        //public int HP_TESTING
+        //{
+        //    get { return AttackInfo.HP; }
+
+        //    set
+        //    {
+        //        AttackInfo.HP = value;
+        //    }
+        //}
 
         public int Level
         {
@@ -130,5 +195,16 @@ namespace Server.Game
 
 		}
 
+        public virtual void OnDamaged()
+        {
+            //lock (_lock)
+            //{
+            //    if (Room.m_damaged)
+            //    {
+            //        StatInfo.Hp -= 80;
+            //        Console.WriteLine(this.StatInfo.Hp);
+            //    }
+            //}
+        }
 	}
 }
