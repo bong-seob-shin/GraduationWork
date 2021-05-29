@@ -24,4 +24,20 @@ class PacketHandler
 
 		room.HandleMove(player, movePacket);
 	}
+
+	public static void C_AttackHandler(PacketSession session, IMessage packet)
+	{
+		C_Attack attackPacket = packet as C_Attack;
+		ClientSession clientSession = session as ClientSession;
+
+		Player player = clientSession.MyPlayer;
+		if (player == null)
+			return;
+
+		GameRoom room = player.Room;
+		if (room == null)
+			return;
+
+		room.HandleAttack(player, attackPacket);
+	}
 }

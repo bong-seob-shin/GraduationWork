@@ -185,26 +185,28 @@ namespace Server.Game
             }
         }
 
-        //public void HandleMonster(Player player, CMonster monster, C_Monster monsterPacket)
-        //{
-        //    if (player == null)
-        //        return;
+        public void HandleAttack(Player player, C_Attack attackPacket)
+        {
+            if (player == null)
+                return;
 
-        //    lock (_lock)
-        //    {
-        //        // 일단 서버에서 좌표 이동
-        //        PositionInfo movePosInofo = monsterPacket.PosInfo;
-        //        ObjectInfo info = monster.Info;
+            lock (_lock)
+            {
+                // 일단 서버에서 좌표 이동
 
-        //        // 다른 플레이어한테도 알려준다
-        //        S_Monster resMovePacket = new S_Monster();
-        //        resMovePacket.ObjectId = monster.Info.ObjectId;
-        //        resMovePacket.PosInfo = monsterPacket.PosInfo;
+                AttackInfo attackInfo = attackPacket.AttackInfo;
+                ObjectInfo info = player.Info;
 
-        //        Broadcast(resMovePacket);
-        //    }
-        //}
+                // 다른 플레이어한테도 알려준다
+                S_Attack resMovePacket = new S_Attack();
+                resMovePacket.ObjectId = player.Info.ObjectId;
+                resMovePacket.AttackInfo = attackPacket.AttackInfo;
 
+                Console.WriteLine(resMovePacket);
+
+                Broadcast(resMovePacket);
+            }
+        }
 
         public Player FindPlayer(Func<GameObject, bool> condition)
         {

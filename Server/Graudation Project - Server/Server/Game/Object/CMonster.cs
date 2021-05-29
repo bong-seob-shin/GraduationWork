@@ -19,9 +19,6 @@ namespace Server.Game
 
         public override void Update()
         {
-
-            Console.WriteLine(State);
-
             switch (State)
             {
                 case State.Idle:
@@ -52,8 +49,6 @@ namespace Server.Game
                 return;
 
             _target = target;
-
-            Console.WriteLine("거리30안에 있는 target" + _target);
 
             State = State.Moving;
         }
@@ -106,7 +101,6 @@ namespace Server.Game
             movePacket.ObjectId = Id;
             movePacket.PosInfo = PosInfo;
             Room.Broadcast(movePacket);
-            Console.WriteLine("target : " + _target);
         }
     }
 

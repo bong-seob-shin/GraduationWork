@@ -11,6 +11,8 @@ enum MsgId {
   S_DESPAWN = 3;
   C_MOVE = 4;
   S_MOVE = 5;
+  C_ATTACK = 6;
+  S_ATTACK = 7;
 }
 
 enum State{
@@ -54,13 +56,22 @@ message S_Move {
   PositionInfo posInfo = 2;
 }
 
-message C_Monster {
-  PositionInfo posInfo = 2;
+message C_Attack {
+  AttackInfo attackInfo = 1; 
 }
 
-message S_Monster {
-  int32 objectId = 1;
-  PositionInfo posInfo = 2; 
+message S_Attack {
+   int32 objectId = 1;
+   AttackInfo attackInfo = 2;
+}
+
+message AttackInfo {
+  bool IsShoot = 1;
+  bool IsEquiq = 2;
+  bool IsHit = 3;
+  bool IsDead = 4;  
+  int32 MaxHP = 5;
+  int32 HP = 6;
 }
 
 message PlayerInfo {
@@ -88,10 +99,8 @@ message PositionInfo {
   float spineZ = 9;
   State state = 10;
   bool isJump = 11;
-  bool IsShoot = 12;
-  bool IsEquiq = 13;
-  int32 carId = 14;
-  int32 caruserId = 15;
+  int32 carId = 12;
+  int32 caruserId = 13;
 }
 
 message StatInfo {
