@@ -23,7 +23,12 @@ public class BossMonster : MonsterManager
     
     // 보스 총알
     public GameObject bossBullet;
+    
+    // 전깃줄
     public GameObject electricWire;
+    
+    // 면 벽
+    public GameObject planesWall;
     
     // 몬스터 소환 위치
     public Transform leftArmMonsterSpawnPoint;
@@ -33,8 +38,10 @@ public class BossMonster : MonsterManager
     public Transform leftArmShootPoint;
     public Transform rightArmShootPoint;
     
-    // 전깃줄 발사 위치
+    // 전깃줄 , 벽 공격 발사 위치
     public Transform electricWirePoint;
+    public Transform planeWallPoint;
+    
     
     // 소환할 몬스터 프리팹
     public GameObject[] enemyPrefabs;
@@ -51,6 +58,7 @@ public class BossMonster : MonsterManager
     
     // 레이저 공격 타겟
     public Transform laserTarget;
+    public Transform wallTarget;
     
     // 공격 텀
     public float attackTime;
@@ -124,19 +132,23 @@ public class BossMonster : MonsterManager
             if (!isDead)
             {
                 CalcPhase();
-                currentAttackTime -= Time.deltaTime;
-                if (currentAttackTime <= 0.0f)
+
+                // 몬스터 소환만 하는 패턴
+                if (phase == 1)
                 {
-                    
-                    // 몬스터 소환만 하는 패턴
-                    if (phase == 1)
+                    currentAttackTime -= Time.deltaTime;
+                    if (currentAttackTime <= 0.0f)
                     {
+                        phaseFourthPattern();
                         //phaseFirstPattern();
-                        
-                        //test
-                        phaseThirdPattern();
+                        currentAttackTime = attackTime;
                     }
-                    if (phase == 2)
+                }
+
+                if (phase == 2)
+                {
+                    currentAttackTime -= Time.deltaTime;
+                    if (currentAttackTime <= 0.0f)
                     {
                         randomPattern = Random.Range(0, 2);
                         if (randomPattern == 0)
@@ -148,9 +160,15 @@ public class BossMonster : MonsterManager
                         {
                             phaseSecondPattern();
                         }
-                        
+
+                        currentAttackTime = attackTime;
                     }
-                    if (phase == 3)
+                }
+
+                if (phase == 3)
+                {
+                    currentAttackTime -= Time.deltaTime;
+                    if (currentAttackTime <= 0.0f)
                     {
                         randomPattern = Random.Range(0, 3);
                         if (randomPattern == 0)
@@ -167,17 +185,41 @@ public class BossMonster : MonsterManager
                         {
                             phaseThirdPattern();
                         }
-                    }
 
-                    if (phase == 4)
+                        currentAttackTime = attackTime;
+                    }
+                }
+
+                if (phase == 4)
+                {
+                    currentAttackTime -= Time.deltaTime;
+                    if (currentAttackTime <= 0.0f)
                     {
-                        
-                    }
+                        randomPattern = Random.Range(0, 3);
+                        if (randomPattern == 0)
+                        {
+                            phaseFirstPattern();
+                        }
 
-                    currentAttackTime = attackTime;
+                        if (randomPattern == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+
+                        if (randomPattern == 2)
+                        {
+                            phaseThirdPattern();
+                        }
+
+                        if (randomPattern == 3)
+                        {
+                            phaseFourthPattern();
+                        }
+
+                        currentAttackTime = attackTime;
+                    }
                 }
             }
-            
             //hp가 0% 이하일 때 죽이자.
             if (isDead)
             {
@@ -208,8 +250,6 @@ public class BossMonster : MonsterManager
             
         leftBullet.SetTarget(tPos.position);
         rightBullet.SetTarget(tPos.position);
-         
-        currentAttackTime = attackTime;
     }
 
     private void phaseThirdPattern()
@@ -217,6 +257,13 @@ public class BossMonster : MonsterManager
         Laser laser = Instantiate(electricWire, electricWirePoint.transform.position,  electricWirePoint.transform.rotation).GetComponent<Laser>();
 
         laser.target = laserTarget.position;
+    }
+
+    private void phaseFourthPattern()
+    {
+        PlanePattern pp = Instantiate(planesWall, planeWallPoint.transform.position, planeWallPoint.rotation).GetComponent<PlanePattern>();
+
+        pp.target = wallTarget.position;
     }
 
     private void DetectTarget()

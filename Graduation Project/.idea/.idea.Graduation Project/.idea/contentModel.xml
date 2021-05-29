@@ -61,8 +61,11 @@
             <e p="ClosedMonster.cs" t="Include" />
             <e p="ClosedMonsterAttackCol.cs" t="Include" />
             <e p="CMRandomSpawner.cs" t="Include" />
+            <e p="Core.cs" t="Include" />
             <e p="MonsterBullet.cs" t="Include" />
             <e p="MonsterManager.cs" t="Include" />
+            <e p="Plane.cs" t="Include" />
+            <e p="PlanePattern.cs" t="Include" />
             <e p="Portal.cs" t="Include" />
             <e p="RangedMonster.cs" t="Include" />
             <e p="RMRandomSpawner.cs" t="Include" />
