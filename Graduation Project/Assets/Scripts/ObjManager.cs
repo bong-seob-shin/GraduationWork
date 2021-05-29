@@ -29,7 +29,7 @@ public class ObjManager : MonoBehaviour
    public virtual void hit(int damage)
    {
       HP -= damage;
-      Debug.Log(transform.name + ":" + HP);
+      // Debug.Log(transform.name + ":" + HP);
    }
 
    protected virtual void Dead()

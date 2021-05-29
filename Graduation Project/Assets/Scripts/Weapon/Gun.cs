@@ -108,6 +108,7 @@ public class Gun : MonoBehaviour
                 Destroy(markP, 1f);
                 ClosedMonster monster = hit.transform.GetComponent<ClosedMonster>();
                 RangedMonster Rmonster = hit.transform.GetComponent<RangedMonster>();
+                BossMonster bossMonster = hit.transform.GetComponent<BossMonster>();
                 if (monster != null)
                 {
                     monster.hit(damage);
@@ -118,6 +119,11 @@ public class Gun : MonoBehaviour
                 {
                     Rmonster.hit(damage);
                     Rmonster.isHit = true;
+                }
+
+                if (bossMonster != null)
+                {
+                    bossMonster.hit(damage);
                 }
             }
             retroCameraMove.HorizontalRetro();

@@ -20,10 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +46,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/NoneControllObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoneAnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/IKSnap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/DebugDrawLine.cs" />
@@ -79,7 +82,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OhterPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveDoubleButton.cs" />
@@ -91,7 +93,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveLiftButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/LiftTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonsterBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
       </list>
     </option>
@@ -212,6 +216,9 @@
       <workItem from="1622039858511" duration="1926000" />
       <workItem from="1622126852172" duration="587000" />
       <workItem from="1622132242793" duration="8183000" />
+      <workItem from="1622208064835" duration="49000" />
+      <workItem from="1622220189749" duration="44000" />
+      <workItem from="1622220322677" duration="10872000" />
     </task>
     <servers />
   </component>
@@ -236,6 +243,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="704" y="344" key="#Notifications" timestamp="1622220203544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="704" y="344" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622220203544" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1622138563143">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -245,9 +256,10 @@
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620662691900" />
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1621777952146" />
-    <state x="694" y="141" width="1096" height="1027" key="dock-window-1" timestamp="1618302181257">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1628" y="0" width="1480" height="1027" key="dock-window-1" timestamp="1622232367375">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1628" y="0" width="1480" height="1027" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622232367375" />
     <state x="694" y="141" width="1096" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618302181257" />
     <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@1920.0.1080.1880" timestamp="1613660564667" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1619799538874">

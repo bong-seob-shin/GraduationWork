@@ -55,6 +55,7 @@
           </e>
           <e p="Monster" t="Include">
             <e p="BossMonster.cs" t="Include" />
+            <e p="BossMonsterBullet.cs" t="Include" />
             <e p="ClosedMonster.cs" t="Include" />
             <e p="ClosedMonsterAttackCol.cs" t="Include" />
             <e p="CMRandomSpawner.cs" t="Include" />
