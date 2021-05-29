@@ -230,7 +230,6 @@ public class BossMonster : MonsterManager
 
     private void CalcPhase()
     {
-        Debug.Log(phase);
         float hpPer = (float)((float)this.HP / (float)this.MaxHP * (float)100.0f);
         // hp가 80% 이상 100% 이하일 때  = 1페이즈  ----> first_face 분리 후 제거
         if (hpPer <= 100.0f && hpPer >= 80.0f)
