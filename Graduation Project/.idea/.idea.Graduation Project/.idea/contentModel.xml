@@ -20,14 +20,18 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AnimationObj.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
-          <e p="Compass.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ManageTerrain.cs" t="Include" />
             <e p="SplitTerrain.cs" t="Include" />
+          </e>
+          <e p="Framework" t="Include">
+            <e p="AnimationObj.cs" t="Include" />
+            <e p="NoneAnimationObj.cs" t="Include" />
+            <e p="NoneControlObj.cs" t="Include" />
+            <e p="ObjManager.cs" t="Include" />
           </e>
           <e p="IK" t="Include">
             <e p="IKGrab.cs" t="Include" />
@@ -40,12 +44,9 @@
             <e p="InteractiveDoubleButton.cs" t="Include" />
             <e p="InteractiveLiftButton.cs" t="Include" />
             <e p="InteractObj.cs" t="Include" />
+            <e p="Laser.cs" t="Include" />
             <e p="LiftTrigger.cs" t="Include" />
             <e p="MovingFloor.cs" t="Include" />
-          </e>
-          <e p="Laser.cs" t="Include" />
-          <e p="Managers" t="Include">
-            <e p="UIManager.cs" t="Include" />
           </e>
           <e p="MeshSlice" t="Include">
             <e p="CameraController.cs" t="Include" />
@@ -66,10 +67,10 @@
             <e p="RangedMonster.cs" t="Include" />
             <e p="RMRandomSpawner.cs" t="Include" />
           </e>
-          <e p="NoneAnimationObj.cs" t="Include" />
-          <e p="NoneControlObj.cs" t="Include" />
-          <e p="ObjManager.cs" t="Include" />
-          <e p="OhterPlayer.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="OhterPlayer.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+          </e>
           <e p="Player State" t="Include">
             <e p="IState.cs" t="Include" />
             <e p="StateIdle.cs" t="Include" />
@@ -78,8 +79,11 @@
             <e p="StateRun.cs" t="Include" />
             <e p="StateWalk.cs" t="Include" />
           </e>
-          <e p="Player.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="Compass.cs" t="Include" />
+            <e p="UIManager.cs" t="Include" />
+          </e>
           <e p="Weapon" t="Include">
             <e p="DebugDrawLine.cs" t="Include" />
             <e p="Gun.cs" t="Include" />

@@ -5,7 +5,7 @@ using UnityEngine;
 public class StateJump : IState
 {
     Player player = Player.Instance;
-
+    UIManager uiManager = UIManager.instance;
     public void OperateEnter()
     {
 
@@ -16,6 +16,7 @@ public class StateJump : IState
             //player.playerRb.velocity = player.transform.up * player.jumpForce;
             player.playerRb.AddForce(Vector3.up*player.jumpForce);
             player.isJump = false;
+            uiManager.crossHairSize = 320.0f;
         }
       
 
