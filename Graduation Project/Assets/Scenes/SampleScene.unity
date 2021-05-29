@@ -19241,6 +19241,7 @@ GameObject:
   - component: {fileID: 1741835115}
   - component: {fileID: 1741835116}
   - component: {fileID: 1741835117}
+  - component: {fileID: 1741835118}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -19256,7 +19257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741835114}
   m_LocalRotation: {x: -0, y: 0.58945954, z: -0, w: 0.8077979}
-  m_LocalPosition: {x: 1400.8784, y: 223.71, z: 4905.1504}
+  m_LocalPosition: {x: 1403.7, y: 228.59, z: 4905.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19303,8 +19304,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 6.17, y: 5, z: 0}
-  - {x: -8.77, y: 5, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 1, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -19312,8 +19313,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.014286041
+        value: 0.26451683
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -19368,11 +19369,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741835114}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 15.940002, y: 1, z: 1.0000001}
-  m_Center: {x: -1.3000003, y: 5.35, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1741835118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741835114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1224b41fd3e89cd47a3a25d55955983b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1749705102
 PrefabInstance:
   m_ObjectHideFlags: 0

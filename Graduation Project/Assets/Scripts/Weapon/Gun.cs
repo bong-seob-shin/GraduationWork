@@ -127,7 +127,7 @@ public class Gun : MonoBehaviour
                 }
             }
             retroCameraMove.HorizontalRetro();
-
+            retroCameraMove.VerticalRetro();
             if (_uiManager.crossHairSize < 300.0f)
             {
                 _uiManager.crossHairSize += 2400.0f * Time.deltaTime;
