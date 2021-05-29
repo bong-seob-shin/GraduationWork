@@ -33,6 +33,9 @@ public class BossMonster : MonsterManager
     public Transform leftArmShootPoint;
     public Transform rightArmShootPoint;
     
+    // 전깃줄 발사 위치
+    public Transform electricWirePoint;
+    
     // 소환할 몬스터 프리팹
     public GameObject[] enemyPrefabs;
     public GameObject portalPrefab;
@@ -49,14 +52,18 @@ public class BossMonster : MonsterManager
     private Transform leftArmTarget;
     private Transform rightArmTarget;
 
-    // 공격 텀
+    // 투사체 공격 텀
     public float attackTime;
     public float currentAttackTime;
+    
+    // 전깃줄 공격 텀
+    public float wireAttackTime;
+    public float currentWireAttackTime;
 
+    public Vector3 offset;
+    
     // 보스 상태
     public bool isOperate;
-    public bool isDead;
-    public bool targetDetect;
     public int phase = 0;
     
     //     블럭이 위에서부터 하나씩 떼어짐 - 단계별로
@@ -85,7 +92,6 @@ public class BossMonster : MonsterManager
     {
         isOperate = false; // 플레이어를 찾아내면 isOperate
         isDead = false; // 처음이니까 안죽어있을거고
-        targetDetect = false;
 
         this.MaxHP = 1000;
         this.HP = MaxHP;
@@ -95,7 +101,9 @@ public class BossMonster : MonsterManager
         
         // 몬스터 투사체 공격 시간
         currentAttackTime = attackTime;
-
+        
+        // 전깃줄 공격 시간
+        currentWireAttackTime = wireAttackTime;
 
     }
 
@@ -126,7 +134,8 @@ public class BossMonster : MonsterManager
                 // 몬스터 소환만 하는 패턴
                 if (phase == 1)
                 {
-                    phaseFirstPattern();
+                    phaseThirdPattern();
+                    //phaseFirstPattern();
                 }
 
                 if (phase == 2)
@@ -134,6 +143,10 @@ public class BossMonster : MonsterManager
                     phaseSecondPattern();
                 }
 
+                if (phase == 3)
+                {
+                    phaseThirdPattern();
+                }
 
             }
             
@@ -172,35 +185,31 @@ public class BossMonster : MonsterManager
     private void phaseSecondPattern()
     {
         DetectTarget();
+        
         currentAttackTime -= Time.deltaTime;
-
         if (currentAttackTime <= 0.0f)
         {
-            // 날아갈 위치
-            Vector3 movePos = Target.transform.position;
-            Rigidbody = Instantiate(bossBullet, leftArmShootPoint.transform.position, leftArmShootPoint.transform.rotation).GetComponent<Rigidbody>();
-            Rigidbody rightBullet = Instantiate(bossBullet, rightArmShootPoint.transform.position, rightArmShootPoint.transform.rotation).GetComponent<Rigidbody>();
+            Transform tPos = Target.transform;
+            BossMonsterBullet leftBullet = Instantiate(bossBullet, leftArmShootPoint.transform.position, leftArmShootPoint.transform.rotation).GetComponent<BossMonsterBullet>();
+            BossMonsterBullet rightBullet = Instantiate(bossBullet, rightArmShootPoint.transform.position, rightArmShootPoint.transform.rotation).GetComponent<BossMonsterBullet>();
             
-            StartCoroutine(MoveTo(leftBullet, movePos));
+            leftBullet.SetTarget(tPos.position);
+            rightBullet.SetTarget(tPos.position);
+         
             currentAttackTime = attackTime;
         }
     }
 
-    IEnumerator MoveTo(GameObject a, Vector3 toPos)
+    private void phaseThirdPattern()
     {
-        float count = 0;
-        Vector3 wasPos = a.transform.position;
-        while (true)
+        currentWireAttackTime -= Time.deltaTime;
+        if (currentWireAttackTime <= 0.0f)
         {
-            count += Time.deltaTime;
-            a.transform.position = Vector3.Lerp(wasPos, toPos, count);
-
-            if (count >= 1)
-            {
-                a.transform.position = toPos;
-                break;
-            }
-            yield return null;
+            Instantiate(electricWire, electricWirePoint.transform.position,  Quaternion.Euler(electricWirePoint.transform.rotation.x + offset.x,electricWirePoint.transform.rotation.y + offset.y + 65.0f,90.0f + offset.z));
+            
+            
+            
+            currentWireAttackTime = wireAttackTime;
         }
     }
 
@@ -221,7 +230,6 @@ public class BossMonster : MonsterManager
 
     private void CalcPhase()
     {
-        Debug.Log(phase);
         float hpPer = (float)((float)this.HP / (float)this.MaxHP * (float)100.0f);
         // hp가 80% 이상 100% 이하일 때  = 1페이즈  ----> first_face 분리 후 제거
         if (hpPer <= 100.0f && hpPer >= 80.0f)
@@ -232,19 +240,28 @@ public class BossMonster : MonsterManager
         if (hpPer < 80.0f && hpPer >= 50.0f)
         {
             phase = 2;
-            DestroyParts(first_face , 2.0f);
+            if (first_face != null)
+            {
+                DestroyParts(first_face, 2.0f);
+            }
         }
         // hp가 30% 이상 50% 미만일 때 = 3페이즈    ---->  third_face 분리 후 제거  투사체 공격하는 패턴
         if (hpPer < 50.0f && hpPer >= 30.0f)
         {
             phase = 3;
-            DestroyParts(second_face ,2.0f);
+            if (second_face != null)
+            {
+                DestroyParts(second_face, 2.0f);
+            }
         }
         // hp가 0% 초과 30% 미만일 때 = 4페이즈(광폭화)  ----> 0프로 이하되면 죽음   2,3 패턴 둘다
         if (hpPer < 30.0f && hpPer > 0.0f)
         {
             phase = 4;
-            DestroyParts(third_face, 2.0f);
+            if (third_face != null)
+            {
+                DestroyParts(third_face, 2.0f);
+            }
         }
         // hp가 0이하일 때 ----> 죽자.
         if (hpPer <= 0.0f)
@@ -259,9 +276,7 @@ public class BossMonster : MonsterManager
         parts.AddComponent<Rigidbody>();
         Rigidbody partsRb = parts.GetComponent<Rigidbody>();
         partsRb.useGravity = true;
-        partsRb.AddForce(parts.transform.forward * 0.5f , ForceMode.Impulse);
-        partsRb.AddForce(transform.up * 2f , ForceMode.Impulse);
-        
+
         float timer = time;
         timer -= Time.deltaTime;
         if (timer <= 0.0f)

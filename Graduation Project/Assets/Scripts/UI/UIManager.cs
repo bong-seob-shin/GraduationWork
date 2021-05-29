@@ -97,6 +97,9 @@ public class UIManager : MonoBehaviour
         crossHair.sizeDelta = new Vector2(crossHairSize , crossHairSize);
     }
 
+
+    
+
     public void QuitGame()
     {
         Debug.Log("꺼짐");

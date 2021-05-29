@@ -11,6 +11,7 @@ TagManager:
   - CSpawnPoint
   - RSpawnPoint
   - Trap
+  - Cave
   layers:
   - Default
   - TransparentFX

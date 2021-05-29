@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\qoreh\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\qoreh\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Graduation Project.-1441082320.00" t="ExcludeRecursive" />
-    <e p="C:\Users\qoreh\OneDrive\바탕 화면\GraduationWork\Graduation Project" t="IncludeRecursive">
+    <e p="C:\Users\bong1\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\bong1\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Graduation Project.-1971131616.00" t="ExcludeRecursive" />
+    <e p="C:\Users\bong1\OneDrive\바탕 화면\졸업작품\GraduationWork\Graduation Project" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -20,14 +20,18 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AnimationObj.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
-          <e p="Compass.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ManageTerrain.cs" t="Include" />
             <e p="SplitTerrain.cs" t="Include" />
+          </e>
+          <e p="Framework" t="Include">
+            <e p="AnimationObj.cs" t="Include" />
+            <e p="NoneAnimationObj.cs" t="Include" />
+            <e p="NoneControlObj.cs" t="Include" />
+            <e p="ObjManager.cs" t="Include" />
           </e>
           <e p="IK" t="Include">
             <e p="IKGrab.cs" t="Include" />
@@ -40,11 +44,9 @@
             <e p="InteractiveDoubleButton.cs" t="Include" />
             <e p="InteractiveLiftButton.cs" t="Include" />
             <e p="InteractObj.cs" t="Include" />
+            <e p="Laser.cs" t="Include" />
             <e p="LiftTrigger.cs" t="Include" />
             <e p="MovingFloor.cs" t="Include" />
-          </e>
-          <e p="Managers" t="Include">
-            <e p="UIManager.cs" t="Include" />
           </e>
           <e p="MeshSlice" t="Include">
             <e p="CameraController.cs" t="Include" />
@@ -65,10 +67,10 @@
             <e p="RangedMonster.cs" t="Include" />
             <e p="RMRandomSpawner.cs" t="Include" />
           </e>
-          <e p="NoneAnimationObj.cs" t="Include" />
-          <e p="NoneControlObj.cs" t="Include" />
-          <e p="ObjManager.cs" t="Include" />
-          <e p="OhterPlayer.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="OhterPlayer.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+          </e>
           <e p="Player State" t="Include">
             <e p="IState.cs" t="Include" />
             <e p="StateIdle.cs" t="Include" />
@@ -77,8 +79,11 @@
             <e p="StateRun.cs" t="Include" />
             <e p="StateWalk.cs" t="Include" />
           </e>
-          <e p="Player.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="Compass.cs" t="Include" />
+            <e p="UIManager.cs" t="Include" />
+          </e>
           <e p="Weapon" t="Include">
             <e p="DebugDrawLine.cs" t="Include" />
             <e p="Gun.cs" t="Include" />

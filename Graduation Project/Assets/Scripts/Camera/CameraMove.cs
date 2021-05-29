@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class CameraMove : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class CameraMove : MonoBehaviour
     private Rigidbody camRg;
     private UIManager _uiManager;
     public float retroForce;
+    
+    private bool isVerticalRetroOn = false;
+    public int verticalRetroForce;
+    
     private void Awake()
     {
         playeranim = GetComponentInParent<Animator>();
@@ -65,18 +70,32 @@ public class CameraMove : MonoBehaviour
     {
         float _xRotation = Input.GetAxisRaw("Mouse Y");
         float _cameraRotationX = _xRotation * _player.sensitivity;
-        _currentCameraRotationX -= _cameraRotationX;
+        float testZ = 0;
 
+        if (isVerticalRetroOn)
+        {
+            Random rand = new Random();
+            testZ = ((rand.Next(0, verticalRetroForce) - verticalRetroForce/2.0f))/(verticalRetroForce/retroForce);
+            isVerticalRetroOn = false;
+        }
+        
+        _currentCameraRotationX -= _cameraRotationX;
         
         _currentCameraRotationX = Mathf.Clamp(_currentCameraRotationX, -_cameraRotationLimit, _cameraRotationLimit);
         
-        transform.localEulerAngles = new Vector3(_currentCameraRotationX,0f,0f);
+        transform.localEulerAngles = new Vector3(_currentCameraRotationX,testZ,0f);
     }
 
 
     public void HorizontalRetro()
     {
         _currentCameraRotationX -= retroForce;
+       
+    }
+
+    public void VerticalRetro()
+    {
+        isVerticalRetroOn = true;
     }
     private void CharacterRotation()
     {

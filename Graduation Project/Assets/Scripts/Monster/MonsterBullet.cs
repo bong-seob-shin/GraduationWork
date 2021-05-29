@@ -18,5 +18,10 @@ public class MonsterBullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if (other.CompareTag("Cave"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
