@@ -1,12 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laser : MonoBehaviour
+public class Laser : ObjManager
 {
+    public int damage = 30;
+    
     private LineRenderer _lineRenderer;
 
     private BoxCollider _boxCollider;
+
+    public Vector3 target;
+    
+    private float rightDist = 0;
+    private float leftDist = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +29,11 @@ public class Laser : MonoBehaviour
         RaycastHit rightHitInfo;
         RaycastHit leftHitInfo;
 
-        float rightDist =0;
-        float leftDist =0;
-
         float rightX = 0;
         float LeftX = 0;
-        
 
+        transform.position = Vector3.MoveTowards(transform.position, target, 5.0f * Time.deltaTime);
+        
         if (Physics.Raycast(transform.position, transform.right, out rightHitInfo, 50.0f))
         {
             if (rightHitInfo.transform.CompareTag("Cave"))
@@ -50,8 +56,18 @@ public class Laser : MonoBehaviour
         }
         
         _boxCollider.size = new Vector3(leftDist+rightDist,1,1);
-        
-        
-        
+
+        if (transform.position == target)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<Player>().hit(damage);
+        }
     }
 }

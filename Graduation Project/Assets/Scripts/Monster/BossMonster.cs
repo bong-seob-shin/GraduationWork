@@ -40,31 +40,31 @@ public class BossMonster : MonsterManager
     public GameObject[] enemyPrefabs;
     public GameObject portalPrefab;
     
-    // 몬스터 소환 텀
-    public float MonsterCreateTime;
-    public float currentMonsterCreateTime;
     
-    // 플레이어 배열
+    // 플레이어
     public GameObject Target;
     public Collider[] TargetsColls;
     
     // 랜덤으로 Targets[]에서 뽑아서 최종 타겟이 될거임.
     private Transform leftArmTarget;
     private Transform rightArmTarget;
-
-    // 투사체 공격 텀
+    
+    // 레이저 공격 타겟
+    public Transform laserTarget;
+    
+    // 공격 텀
     public float attackTime;
     public float currentAttackTime;
     
-    // 전깃줄 공격 텀
-    public float wireAttackTime;
-    public float currentWireAttackTime;
 
     public Vector3 offset;
     
     // 보스 상태
     public bool isOperate;
     public int phase = 0;
+    
+    // 보스 랜덤 패턴
+    public int randomPattern;
     
     //     블럭이 위에서부터 하나씩 떼어짐 - 단계별로
     //     떼질때마다 아래칸에 눈이 생김 - 색은 변하던 말던 
@@ -96,14 +96,8 @@ public class BossMonster : MonsterManager
         this.MaxHP = 1000;
         this.HP = MaxHP;
         
-        // 몬스터 소환 시간
-        currentMonsterCreateTime = MonsterCreateTime;
-        
-        // 몬스터 투사체 공격 시간
+        // 몬스터 공격 시간
         currentAttackTime = attackTime;
-        
-        // 전깃줄 공격 시간
-        currentWireAttackTime = wireAttackTime;
 
     }
 
@@ -130,24 +124,58 @@ public class BossMonster : MonsterManager
             if (!isDead)
             {
                 CalcPhase();
-                
-                // 몬스터 소환만 하는 패턴
-                if (phase == 1)
+                currentAttackTime -= Time.deltaTime;
+                if (currentAttackTime <= 0.0f)
                 {
-                    phaseThirdPattern();
-                    //phaseFirstPattern();
-                }
+                    
+                    // 몬스터 소환만 하는 패턴
+                    if (phase == 1)
+                    {
+                        //phaseFirstPattern();
+                        
+                        //test
+                        phaseThirdPattern();
+                    }
+                    if (phase == 2)
+                    {
+                        randomPattern = Random.Range(0, 2);
+                        if (randomPattern == 0)
+                        {
+                            phaseFirstPattern();
+                        }
 
-                if (phase == 2)
-                {
-                    phaseSecondPattern();
-                }
+                        if (randomPattern == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+                        
+                    }
+                    if (phase == 3)
+                    {
+                        randomPattern = Random.Range(0, 3);
+                        if (randomPattern == 0)
+                        {
+                            phaseFirstPattern();
+                        }
 
-                if (phase == 3)
-                {
-                    phaseThirdPattern();
-                }
+                        if (randomPattern == 1)
+                        {
+                            phaseSecondPattern();
+                        }
 
+                        if (randomPattern == 2)
+                        {
+                            phaseThirdPattern();
+                        }
+                    }
+
+                    if (phase == 4)
+                    {
+                        
+                    }
+
+                    currentAttackTime = attackTime;
+                }
             }
             
             //hp가 0% 이하일 때 죽이자.
@@ -158,59 +186,37 @@ public class BossMonster : MonsterManager
         }
     }
 
-    // 얘는 다리가 쏠꺼야 
-    private void ElectricWire()
-    {
-        
-    }
-
     private void phaseFirstPattern()
     {
-        currentMonsterCreateTime -= Time.deltaTime;
-        if (currentMonsterCreateTime <= 0.0f)
-        {
-            int randomEnemy = Random.Range(0,enemyPrefabs.Length);
-            // 왼쪽 팔이 소환할 놈들
-            Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
-            Instantiate(enemyPrefabs[randomEnemy], leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
+        int randomEnemy = Random.Range(0,enemyPrefabs.Length);
+        // 왼쪽 팔이 소환할 놈들
+        Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
+        Instantiate(enemyPrefabs[randomEnemy], leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
             
-            // 오른쪽 팔이 소환할 놈들
-            Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
-            Instantiate(enemyPrefabs[randomEnemy], rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
-
-            currentMonsterCreateTime = MonsterCreateTime;
-        }
+        // 오른쪽 팔이 소환할 놈들
+        Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
+        Instantiate(enemyPrefabs[randomEnemy], rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
     }
 
     private void phaseSecondPattern()
     {
         DetectTarget();
         
-        currentAttackTime -= Time.deltaTime;
-        if (currentAttackTime <= 0.0f)
-        {
-            Transform tPos = Target.transform;
-            BossMonsterBullet leftBullet = Instantiate(bossBullet, leftArmShootPoint.transform.position, leftArmShootPoint.transform.rotation).GetComponent<BossMonsterBullet>();
-            BossMonsterBullet rightBullet = Instantiate(bossBullet, rightArmShootPoint.transform.position, rightArmShootPoint.transform.rotation).GetComponent<BossMonsterBullet>();
+        Transform tPos = Target.transform;
+        BossMonsterBullet leftBullet = Instantiate(bossBullet, leftArmShootPoint.transform.position, leftArmShootPoint.transform.rotation).GetComponent<BossMonsterBullet>();
+        BossMonsterBullet rightBullet = Instantiate(bossBullet, rightArmShootPoint.transform.position, rightArmShootPoint.transform.rotation).GetComponent<BossMonsterBullet>();
             
-            leftBullet.SetTarget(tPos.position);
-            rightBullet.SetTarget(tPos.position);
+        leftBullet.SetTarget(tPos.position);
+        rightBullet.SetTarget(tPos.position);
          
-            currentAttackTime = attackTime;
-        }
+        currentAttackTime = attackTime;
     }
 
     private void phaseThirdPattern()
     {
-        currentWireAttackTime -= Time.deltaTime;
-        if (currentWireAttackTime <= 0.0f)
-        {
-            Instantiate(electricWire, electricWirePoint.transform.position,  Quaternion.Euler(electricWirePoint.transform.rotation.x + offset.x,electricWirePoint.transform.rotation.y + offset.y + 65.0f,90.0f + offset.z));
-            
-            
-            
-            currentWireAttackTime = wireAttackTime;
-        }
+        Laser laser = Instantiate(electricWire, electricWirePoint.transform.position,  electricWirePoint.transform.rotation).GetComponent<Laser>();
+
+        laser.target = laserTarget.position;
     }
 
     private void DetectTarget()
@@ -240,28 +246,19 @@ public class BossMonster : MonsterManager
         if (hpPer < 80.0f && hpPer >= 50.0f)
         {
             phase = 2;
-            if (first_face != null)
-            {
-                DestroyParts(first_face, 2.0f);
-            }
+            DestroyParts(first_face, 2.0f);
         }
         // hp가 30% 이상 50% 미만일 때 = 3페이즈    ---->  third_face 분리 후 제거  투사체 공격하는 패턴
         if (hpPer < 50.0f && hpPer >= 30.0f)
         {
             phase = 3;
-            if (second_face != null)
-            {
-                DestroyParts(second_face, 2.0f);
-            }
+            DestroyParts(second_face, 2.0f);
         }
         // hp가 0% 초과 30% 미만일 때 = 4페이즈(광폭화)  ----> 0프로 이하되면 죽음   2,3 패턴 둘다
         if (hpPer < 30.0f && hpPer > 0.0f)
         {
             phase = 4;
-            if (third_face != null)
-            {
-                DestroyParts(third_face, 2.0f);
-            }
+            DestroyParts(third_face, 2.0f);
         }
         // hp가 0이하일 때 ----> 죽자.
         if (hpPer <= 0.0f)
@@ -274,14 +271,13 @@ public class BossMonster : MonsterManager
     {
         parts.transform.parent = null;
         parts.AddComponent<Rigidbody>();
-        Rigidbody partsRb = parts.GetComponent<Rigidbody>();
-        partsRb.useGravity = true;
-
+   
         float timer = time;
         timer -= Time.deltaTime;
         if (timer <= 0.0f)
         {
-            Destroy(parts);
+            Destroy(parts.gameObject);
+            timer = 2.0f;
         }
     }
 }
