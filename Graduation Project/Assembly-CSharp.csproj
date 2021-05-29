@@ -87,6 +87,7 @@
      <Compile Include="Assets\Scripts\Monster\MonsterManager.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\MovingFloor.cs" />
      <Compile Include="Assets\Scripts\Monster\RMRandomSpawner.cs" />
+     <Compile Include="Assets\Scripts\Monster\BossMonsterBullet.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterBullet.cs" />
      <Compile Include="Assets\Scripts\AnimationObj.cs" />
      <Compile Include="Assets\Scripts\IK\IKGrab.cs" />
@@ -94,7 +95,6 @@
      <Compile Include="Assets\Scripts\OhterPlayer.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\InteractiveDoubleButton.cs" />
      <Compile Include="Assets\Scripts\Player State\StateIdle.cs" />
-     <Compile Include="Assets\Scripts\Monster\BossMonsterBullet.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
