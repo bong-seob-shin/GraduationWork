@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 131.19772, g: 162.48279, b: 214.93106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -766,6 +766,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2710230269053170021, guid: 288423bccd5e5c644a7da57918488882, type: 3}
   m_PrefabInstance: {fileID: 71696657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &73732588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 73732589}
+  - component: {fileID: 73732592}
+  - component: {fileID: 73732591}
+  - component: {fileID: 73732590}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (29)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &73732589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73732588}
+  m_LocalRotation: {x: 0.000000062075266, y: 0.7071069, z: -0.00000025084915, w: 0.7071067}
+  m_LocalPosition: {x: 1350.236, y: 225.513, z: 4941.235}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &73732590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73732588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.47, y: 1, z: 4.58}
+  m_Center: {x: -2.07, y: -0.64, z: 1.29}
+--- !u!23 &73732591
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73732588}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &73732592
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73732588}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &78922080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1444,6 +1539,101 @@ Transform:
   m_Father: {fileID: 614095893}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &129762497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129762498}
+  - component: {fileID: 129762501}
+  - component: {fileID: 129762500}
+  - component: {fileID: 129762499}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (56)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &129762498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129762497}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1398.571, y: 226.012, z: 4910.562}
+  m_LocalScale: {x: 0.25996336, y: 0.3, z: 0.15023695}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 56
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &129762499
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129762497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.34, y: 1, z: 6.62}
+  m_Center: {x: -0.06, y: -0.64, z: 1.27}
+--- !u!23 &129762500
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129762497}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &129762501
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129762497}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &171040514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1768,6 +1958,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3610802879979027839, guid: 43876361dd151cc43a1b2bb6e36b8dd3, type: 3}
   m_PrefabInstance: {fileID: 796184324}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &222796111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222796112}
+  - component: {fileID: 222796115}
+  - component: {fileID: 222796114}
+  - component: {fileID: 222796113}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (35)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &222796112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222796111}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1307.46, y: 225.68, z: 4907.14}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &222796113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222796111}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.92, y: 1, z: 10.28}
+  m_Center: {x: -0.62, y: -0.64, z: -0.15}
+--- !u!23 &222796114
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222796111}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &222796115
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222796111}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &245969918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2037,6 +2322,196 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!1 &263429663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 263429664}
+  - component: {fileID: 263429667}
+  - component: {fileID: 263429666}
+  - component: {fileID: 263429665}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (54)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &263429664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263429663}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1401.37, y: 225.85, z: 4908.15}
+  m_LocalScale: {x: 0.17103979, y: 0.3, z: 0.121356264}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 54
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &263429665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263429663}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.91, y: 1, z: 9.99}
+  m_Center: {x: -2.13, y: -0.64, z: 0.34}
+--- !u!23 &263429666
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263429663}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &263429667
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263429663}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &264231041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264231042}
+  - component: {fileID: 264231045}
+  - component: {fileID: 264231044}
+  - component: {fileID: 264231043}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (31)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &264231042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264231041}
+  m_LocalRotation: {x: 0.000000101786206, y: 0.8120559, z: -0.00000023752519, w: 0.5835798}
+  m_LocalPosition: {x: 1301.06, y: 225.78, z: 4915.14}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 108.595, z: 0}
+--- !u!65 &264231043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264231041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.54, y: 1, z: 9.98}
+  m_Center: {x: 1.16, y: -0.64, z: 0.46}
+--- !u!23 &264231044
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264231041}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &264231045
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264231041}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &267664330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2952,40 +3427,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 805401029344601563, guid: f0ad7bb70ac2c074f8c536b45043738e, type: 3}
   m_PrefabInstance: {fileID: 4900032388013523151}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &334490975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1115540835787216453, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-  m_PrefabInstance: {fileID: 679096637}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &334490979
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334490975}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &334490980
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334490975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1939577, y: 0.22135665, z: 1.7231686}
-  m_Center: {x: -0.06764826, y: -0.0039060628, z: -0.86451083}
 --- !u!1001 &357776377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3215,6 +3656,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5554059201245884946, guid: 7b2172f053d3b744684835d9697e3ef9, type: 3}
   m_PrefabInstance: {fileID: 386493660}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &394923550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394923551}
+  - component: {fileID: 394923554}
+  - component: {fileID: 394923553}
+  - component: {fileID: 394923552}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (39)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &394923551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394923550}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1332.23, y: 225.903, z: 4893.87}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &394923552
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394923550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.65, y: 1, z: 5.92}
+  m_Center: {x: 0.2, y: -0.64, z: -1.71}
+--- !u!23 &394923553
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394923550}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &394923554
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394923550}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &439296910
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4935,10 +5471,42 @@ Transform:
   - {fileID: 1723789106}
   - {fileID: 1118852260}
   - {fileID: 2126491711}
+  - {fileID: 677259325}
+  - {fileID: 805658599}
+  - {fileID: 1971970969}
+  - {fileID: 1367900730}
+  - {fileID: 73732589}
+  - {fileID: 2032595750}
+  - {fileID: 264231042}
+  - {fileID: 1576916556}
+  - {fileID: 2015797136}
+  - {fileID: 1016083599}
+  - {fileID: 222796112}
+  - {fileID: 578620767}
+  - {fileID: 1218999636}
+  - {fileID: 1969057996}
+  - {fileID: 394923551}
+  - {fileID: 770248621}
+  - {fileID: 1132693506}
+  - {fileID: 1803497595}
+  - {fileID: 1267838236}
+  - {fileID: 1850807001}
+  - {fileID: 1400216090}
+  - {fileID: 1337470056}
+  - {fileID: 1320594647}
+  - {fileID: 1458158282}
+  - {fileID: 1493303351}
+  - {fileID: 1525099806}
+  - {fileID: 1223061550}
+  - {fileID: 2070134529}
+  - {fileID: 1892361457}
+  - {fileID: 263429664}
+  - {fileID: 1502336336}
+  - {fileID: 129762498}
   m_Father: {fileID: 1442150709}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &570577697
+--- !u!1 &578620766
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4946,37 +5514,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 570577701}
-  - component: {fileID: 570577700}
-  - component: {fileID: 570577699}
-  - component: {fileID: 570577698}
+  - component: {fileID: 578620767}
+  - component: {fileID: 578620770}
+  - component: {fileID: 578620769}
+  - component: {fileID: 578620768}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Disgusting Oil  (36)
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &570577698
+--- !u!4 &578620767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578620766}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1309, y: 225.78, z: 4901.26}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &578620768
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570577697}
+  m_GameObject: {fileID: 578620766}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &570577699
+  m_Size: {x: 6.92, y: 1, z: 10.28}
+  m_Center: {x: -0.62, y: -0.64, z: -0.15}
+--- !u!23 &578620769
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570577697}
+  m_GameObject: {fileID: 578620766}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -4989,7 +5571,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 012d56cc02ffd6d49b394c95227b3aa9, type: 2}
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5011,28 +5593,14 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &570577700
+--- !u!33 &578620770
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570577697}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &570577701
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570577697}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1399.44, y: 227.36, z: 4905.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 578620766}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &581661168
 GameObject:
   m_ObjectHideFlags: 0
@@ -7022,6 +7590,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &677259324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 677259325}
+  - component: {fileID: 677259328}
+  - component: {fileID: 677259327}
+  - component: {fileID: 677259326}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (25)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &677259325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677259324}
+  m_LocalRotation: {x: 0.000000062075266, y: 0.7071069, z: -0.00000025084915, w: 0.7071067}
+  m_LocalPosition: {x: 1351.208, y: 225.611, z: 4929.292}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &677259326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677259324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.12, y: 1, z: 7.57}
+  m_Center: {x: 1.02, y: -0.43, z: 0}
+--- !u!23 &677259327
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677259324}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &677259328
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677259324}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &679096637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7029,18 +7692,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 138101847, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 138101847, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 138101847, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.72
-      objectReference: {fileID: 0}
     - target: {fileID: 325071219, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7049,18 +7700,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 325071219, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 256707524873784428, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: verticalRetroForce
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: interactText
-      value: 
-      objectReference: {fileID: 1677717573}
     - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: hitImage
       value: 
@@ -7069,6 +7708,10 @@ PrefabInstance:
       propertyPath: hpText
       value: 
       objectReference: {fileID: 664634584}
+    - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1677717573}
     - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: cheatPos
       value: 
@@ -7117,98 +7760,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1103782077813285850, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115540835787216453, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319683389131562470, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212757873428080717, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: bulletText
       value: 
       objectReference: {fileID: 875327396}
-    - target: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: gunMag
-      value: 
-      objectReference: {fileID: 334490975}
-    - target: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: cloneMag
-      value: 
-      objectReference: {fileID: 992474204}
-    - target: {fileID: 6212757873428080719, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212757873428080719, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_PlayAutomatically
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212757873428080719, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_Animations.Array.data[2]
-      value: 
-      objectReference: {fileID: 7400000, guid: 5cf1c3e4ae17ec640aadb0cda1c2a576, type: 2}
-    - target: {fileID: 6212757873428080719, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5507101
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.47396064
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.48731536
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.48435894
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.175
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.116
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.268
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -110.86046
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 372.0838
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -287.03458
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
 --- !u!1001 &680705496
@@ -8364,6 +8923,101 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2703951739659783998, guid: ce8a77752c4bc584ba8ae7031ef315ed, type: 3}
   m_PrefabInstance: {fileID: 2703951739211546475}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &770248620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770248621}
+  - component: {fileID: 770248624}
+  - component: {fileID: 770248623}
+  - component: {fileID: 770248622}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (40)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770248621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770248620}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1340.5, y: 225.82, z: 4895.91}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &770248622
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770248620}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.65, y: 1, z: 5.65}
+  m_Center: {x: 0.2, y: -0.64, z: -3.76}
+--- !u!23 &770248623
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770248620}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &770248624
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770248620}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &771925975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8928,6 +9582,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isConvex: 1
   sliceSound: {fileID: 0}
+--- !u!1 &805658598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 805658599}
+  - component: {fileID: 805658602}
+  - component: {fileID: 805658601}
+  - component: {fileID: 805658600}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (26)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &805658599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805658598}
+  m_LocalRotation: {x: 0.000000062075266, y: 0.7071069, z: -0.00000025084915, w: 0.7071067}
+  m_LocalPosition: {x: 1352.8, y: 225.611, z: 4935.26}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &805658600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805658598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.12, y: 1, z: 7.57}
+  m_Center: {x: 1.02, y: -0.64, z: 0.65}
+--- !u!23 &805658601
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805658598}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &805658602
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805658598}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &807718008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10711,40 +11460,6 @@ Animation:
   m_CorrespondingSourceObject: {fileID: 1964564343, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
   m_PrefabInstance: {fileID: 1123825673}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &992474204 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b158c774a313565489799a5858f460e4, type: 3}
-  m_PrefabInstance: {fileID: 1475114656}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &992474206
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992474204}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1939577, y: 0.22135665, z: 1.7231686}
-  m_Center: {x: -0.06764826, y: -0.0039060628, z: -0.86451083}
---- !u!54 &992474207
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992474204}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1000875064
 GameObject:
   m_ObjectHideFlags: 0
@@ -10840,6 +11555,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.57, y: 1, z: 7.25}
   m_Center: {x: 1.12, y: -0.42, z: -1.11}
+--- !u!1 &1016083598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1016083599}
+  - component: {fileID: 1016083602}
+  - component: {fileID: 1016083601}
+  - component: {fileID: 1016083600}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (34)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1016083599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016083598}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1299.61, y: 225.93, z: 4905.34}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1016083600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016083598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.92, y: 1, z: 10.28}
+  m_Center: {x: -0.62, y: -0.64, z: -0.15}
+--- !u!23 &1016083601
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016083598}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1016083602
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016083598}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1021089492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13250,30 +14060,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5204771455083424303, guid: 32d8e7be29d6fdd4e9a23fa647c48640, type: 3}
   m_PrefabInstance: {fileID: 1121682107}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1123382437 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1103782077813285850, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-  m_PrefabInstance: {fileID: 679096637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1123382443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
   m_PrefabInstance: {fileID: 679096637}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1123382444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1123382437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e9a7075d5b36d43b953d9f864d8db3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftHandPos: {fileID: 0}
-  isGrabed: 0
 --- !u!1001 &1123825673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13998,6 +14789,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 825247178673432969, guid: f202293875fad4e46a8115217ba37f55, type: 3}
   m_PrefabInstance: {fileID: 1131514866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1132693505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132693506}
+  - component: {fileID: 1132693509}
+  - component: {fileID: 1132693508}
+  - component: {fileID: 1132693507}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (41)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1132693506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132693505}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1341.98, y: 225.82, z: 4892.23}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1132693507
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132693505}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.65, y: 1, z: 5.65}
+  m_Center: {x: 0.2, y: -0.64, z: -2.65}
+--- !u!23 &1132693508
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132693505}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1132693509
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132693505}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1140149007
 GameObject:
   m_ObjectHideFlags: 0
@@ -14207,6 +15093,196 @@ Animation:
   m_CorrespondingSourceObject: {fileID: 862274778, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
   m_PrefabInstance: {fileID: 1123825673}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218999635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218999636}
+  - component: {fileID: 1218999639}
+  - component: {fileID: 1218999638}
+  - component: {fileID: 1218999637}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (37)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1218999636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218999635}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1323.913, y: 225.757, z: 4899.775}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1218999637
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218999635}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.09, y: 1, z: 9.17}
+  m_Center: {x: 0.2, y: -0.64, z: 0.43}
+--- !u!23 &1218999638
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218999635}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1218999639
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218999635}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1223061549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223061550}
+  - component: {fileID: 1223061553}
+  - component: {fileID: 1223061552}
+  - component: {fileID: 1223061551}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (51)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1223061550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223061549}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1390.13, y: 225.756, z: 4902.39}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.24168776}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1223061551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223061549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.47, y: 1, z: 6.97}
+  m_Center: {x: 0.25, y: -0.64, z: 0.17}
+--- !u!23 &1223061552
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223061549}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1223061553
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223061549}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1226696311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14627,6 +15703,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3610802879979027839, guid: 43876361dd151cc43a1b2bb6e36b8dd3, type: 3}
   m_PrefabInstance: {fileID: 1128883009}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1267838235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267838236}
+  - component: {fileID: 1267838239}
+  - component: {fileID: 1267838238}
+  - component: {fileID: 1267838237}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (43)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1267838236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267838235}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1349.05, y: 225.721, z: 4899.62}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1267838237
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267838235}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.65, y: 1, z: 7.33}
+  m_Center: {x: 0.2, y: -0.64, z: 0.19}
+--- !u!23 &1267838238
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267838235}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1267838239
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267838235}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1269916297
 GameObject:
   m_ObjectHideFlags: 0
@@ -15669,6 +16840,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.13, y: 1, z: 7.63}
   m_Center: {x: 0.65, y: -0.44, z: 0.67}
+--- !u!1 &1320594646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320594647}
+  - component: {fileID: 1320594650}
+  - component: {fileID: 1320594649}
+  - component: {fileID: 1320594648}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (47)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1320594647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320594646}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1366.26, y: 225.65, z: 4896.63}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1320594648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320594646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.21, y: 1, z: 7.33}
+  m_Center: {x: 1.67, y: -0.64, z: -0.1}
+--- !u!23 &1320594649
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320594646}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1320594650
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320594646}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1321322278
 GameObject:
   m_ObjectHideFlags: 0
@@ -15734,6 +17000,101 @@ Transform:
   m_Father: {fileID: 1526149022}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1337470055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337470056}
+  - component: {fileID: 1337470059}
+  - component: {fileID: 1337470058}
+  - component: {fileID: 1337470057}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (46)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1337470056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337470055}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1354.87, y: 225.793, z: 4896.44}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1337470057
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337470055}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.21, y: 1, z: 7.33}
+  m_Center: {x: 0.75, y: -0.64, z: 0.87}
+--- !u!23 &1337470058
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337470055}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1337470059
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337470055}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1345430009
 GameObject:
   m_ObjectHideFlags: 0
@@ -16036,6 +17397,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2710230269053170021, guid: 288423bccd5e5c644a7da57918488882, type: 3}
   m_PrefabInstance: {fileID: 1366374117}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1367900729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1367900730}
+  - component: {fileID: 1367900733}
+  - component: {fileID: 1367900732}
+  - component: {fileID: 1367900731}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (28)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1367900730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367900729}
+  m_LocalRotation: {x: 0.000000062075266, y: 0.7071069, z: -0.00000025084915, w: 0.7071067}
+  m_LocalPosition: {x: 1354.32, y: 225.647, z: 4947.61}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1367900731
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367900729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.69, y: 1, z: 9.52}
+  m_Center: {x: 1.02, y: -0.64, z: 0.18}
+--- !u!23 &1367900732
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367900729}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1367900733
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367900729}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1368793917
 GameObject:
   m_ObjectHideFlags: 0
@@ -16281,6 +17737,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8534871, y: 0.90983206, z: 0.8937936}
   m_Center: {x: 0.000030517578, y: -0.00012207031, z: 0}
+--- !u!1 &1400216089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400216090}
+  - component: {fileID: 1400216093}
+  - component: {fileID: 1400216092}
+  - component: {fileID: 1400216091}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (45)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1400216090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400216089}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1359.948, y: 225.534, z: 4898.184}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1400216091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400216089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.21, y: 1, z: 7.33}
+  m_Center: {x: -1.7, y: -0.64, z: -1.84}
+--- !u!23 &1400216092
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400216089}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1400216093
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400216089}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1400888909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16937,6 +18488,101 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!1 &1458158281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458158282}
+  - component: {fileID: 1458158285}
+  - component: {fileID: 1458158284}
+  - component: {fileID: 1458158283}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (48)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1458158282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458158281}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1377.372, y: 225.633, z: 4901.54}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.24168776}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1458158283
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458158281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.23, y: 1, z: 9.02}
+  m_Center: {x: 1.73, y: -0.64, z: 0.11}
+--- !u!23 &1458158284
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458158281}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1458158285
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458158281}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1469033240
 GameObject:
   m_ObjectHideFlags: 0
@@ -17144,83 +18790,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8682409917337085366, guid: 4f8f697ad21e27248a8c2ea410e562a2, type: 3}
   m_PrefabInstance: {fileID: 1471665179}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1475114656
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1949400358}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.224
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.891
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: cb4c0b0dec2b65942921037a17a34d52, type: 2}
-    - target: {fileID: 919132149155446097, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_Name
-      value: Rifle mag Clone
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b158c774a313565489799a5858f460e4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b158c774a313565489799a5858f460e4, type: 3}
 --- !u!1001 &1478889438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17386,6 +18955,101 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!1 &1493303350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1493303351}
+  - component: {fileID: 1493303354}
+  - component: {fileID: 1493303353}
+  - component: {fileID: 1493303352}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (49)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1493303351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493303350}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1380.18, y: 225.68, z: 4898.55}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.24168776}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1493303352
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493303350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.47, y: 1, z: 6.97}
+  m_Center: {x: 0.62, y: -0.64, z: -0.65}
+--- !u!23 &1493303353
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493303350}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1493303354
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493303350}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1493379077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17448,6 +19112,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8138154857905289076, guid: d62889a1904e6944c83c2e240b0ed1d0, type: 3}
   m_PrefabInstance: {fileID: 1493379077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1502336335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1502336336}
+  - component: {fileID: 1502336339}
+  - component: {fileID: 1502336338}
+  - component: {fileID: 1502336337}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (55)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1502336336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502336335}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1410.968, y: 225.74, z: 4903.453}
+  m_LocalScale: {x: 0.25996336, y: 0.3, z: 0.37999076}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 55
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1502336337
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502336335}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.84, y: 1, z: 5.05}
+  m_Center: {x: -0.86, y: -0.64, z: 0.34}
+--- !u!23 &1502336338
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502336335}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1502336339
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502336335}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!224 &1506182115 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2201024888373645801, guid: 8a7e427848305864a8b6f388898aabcd, type: 3}
@@ -17645,6 +19404,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 825247178673432969, guid: f202293875fad4e46a8115217ba37f55, type: 3}
   m_PrefabInstance: {fileID: 1478889438}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1525099805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1525099806}
+  - component: {fileID: 1525099809}
+  - component: {fileID: 1525099808}
+  - component: {fileID: 1525099807}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (50)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1525099806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525099805}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1384.198, y: 225.742, z: 4897.522}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.24168776}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1525099807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525099805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.47, y: 1, z: 6.97}
+  m_Center: {x: 0.25, y: -0.64, z: 0.17}
+--- !u!23 &1525099808
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525099805}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1525099809
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525099805}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1526149021
 GameObject:
   m_ObjectHideFlags: 0
@@ -17958,6 +19812,101 @@ Transform:
   m_Father: {fileID: 2005697462}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -128.943, y: -90, z: -90}
+--- !u!1 &1576916555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1576916556}
+  - component: {fileID: 1576916559}
+  - component: {fileID: 1576916558}
+  - component: {fileID: 1576916557}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (32)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1576916556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576916555}
+  m_LocalRotation: {x: 0.000000062075266, y: 0.7071069, z: -0.00000025084915, w: 0.7071067}
+  m_LocalPosition: {x: 1294.21, y: 225.78, z: 4911.26}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1576916557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576916555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.92, y: 1, z: 9.03}
+  m_Center: {x: -0.97, y: -0.64, z: 0.08}
+--- !u!23 &1576916558
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576916555}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1576916559
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576916555}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1599006389
 GameObject:
   m_ObjectHideFlags: 0
@@ -19709,6 +21658,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5554059201245884946, guid: 7b2172f053d3b744684835d9697e3ef9, type: 3}
   m_PrefabInstance: {fileID: 1795883193}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1803497594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803497595}
+  - component: {fileID: 1803497598}
+  - component: {fileID: 1803497597}
+  - component: {fileID: 1803497596}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (42)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1803497595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803497594}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1348.5, y: 225.82, z: 4892.05}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1803497596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803497594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.65, y: 1, z: 5.65}
+  m_Center: {x: 0.2, y: -0.64, z: -2.65}
+--- !u!23 &1803497597
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803497594}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1803497598
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803497594}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1811608956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4909460331606638486, guid: f0ad7bb70ac2c074f8c536b45043738e, type: 3}
@@ -19880,9 +21924,11 @@ MonoBehaviour:
   dirZ: 0
   MaxHP: 0
   HP: 0
+  armor: 0
   nav: {fileID: 0}
   isDead: 0
   rigid: {fileID: 0}
+  isSpwan: 0
   first_face: {fileID: 1380407255}
   second_face: {fileID: 2005697461}
   third_face: {fileID: 464511857}
@@ -19934,11 +21980,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.49, y: 9.29, z: 3.17}
   m_Center: {x: 0, y: 4.28, z: 0}
---- !u!4 &1844274652 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 138101847, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-  m_PrefabInstance: {fileID: 679096637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1848331051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20001,6 +22042,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5204771455083424303, guid: 32d8e7be29d6fdd4e9a23fa647c48640, type: 3}
   m_PrefabInstance: {fileID: 1848331051}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1850807000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850807001}
+  - component: {fileID: 1850807004}
+  - component: {fileID: 1850807003}
+  - component: {fileID: 1850807002}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (44)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1850807001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850807000}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1353.48, y: 225.82, z: 4897.15}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1850807002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850807000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.21, y: 1, z: 7.33}
+  m_Center: {x: -1.7, y: -0.64, z: -1.84}
+--- !u!23 &1850807003
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850807000}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1850807004
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850807000}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1851388772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21016,6 +23152,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.96717066, y: 1.2897829, z: 1.4010694}
   m_Center: {x: 0.000061035156, y: -0.00012207031, z: 0.000061035156}
+--- !u!1 &1892361456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892361457}
+  - component: {fileID: 1892361460}
+  - component: {fileID: 1892361459}
+  - component: {fileID: 1892361458}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (53)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1892361457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892361456}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1400.7, y: 225.94, z: 4905.1}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.24168776}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1892361458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892361456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.91, y: 1, z: 10.68}
+  m_Center: {x: 1.21, y: -0.64, z: 0.23}
+--- !u!23 &1892361459
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892361456}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1892361460
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892361456}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1894530589
 GameObject:
   m_ObjectHideFlags: 0
@@ -21477,11 +23708,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.82, y: 1, z: 8.9}
   m_Center: {x: -0.001953125, y: -0.49, z: 0}
---- !u!4 &1949400358 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6733997387418792695, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-  m_PrefabInstance: {fileID: 679096637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1964271467
 GameObject:
   m_ObjectHideFlags: 0
@@ -21542,6 +23768,196 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1969057995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969057996}
+  - component: {fileID: 1969057999}
+  - component: {fileID: 1969057998}
+  - component: {fileID: 1969057997}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (38)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1969057996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969057995}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1321.63, y: 225.757, z: 4893.53}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &1969057997
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969057995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.09, y: 1, z: 9.17}
+  m_Center: {x: 0.2, y: -0.64, z: 0.43}
+--- !u!23 &1969057998
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969057995}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1969057999
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969057995}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1971970968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971970969}
+  - component: {fileID: 1971970972}
+  - component: {fileID: 1971970971}
+  - component: {fileID: 1971970970}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (27)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1971970969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971970968}
+  m_LocalRotation: {x: 0.000000062075266, y: 0.7071069, z: -0.00000025084915, w: 0.7071067}
+  m_LocalPosition: {x: 1356.33, y: 225.48, z: 4941.8}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1971970970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971970968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.12, y: 1, z: 7.57}
+  m_Center: {x: 1.02, y: -0.64, z: 0.65}
+--- !u!23 &1971970971
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971970968}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1971970972
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971970968}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1978173470
 GameObject:
   m_ObjectHideFlags: 0
@@ -21885,6 +24301,101 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &2015797135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015797136}
+  - component: {fileID: 2015797139}
+  - component: {fileID: 2015797138}
+  - component: {fileID: 2015797137}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (33)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2015797136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015797135}
+  m_LocalRotation: {x: 0.023729643, y: 0.7067086, z: -0.023729846, w: 0.70670843}
+  m_LocalPosition: {x: 1301.254, y: 225.625, z: 4911.26}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 3.846, y: 90, z: 0}
+--- !u!65 &2015797137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015797135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.92, y: 1, z: 9.03}
+  m_Center: {x: 0.19, y: -0.74, z: 0.11}
+--- !u!23 &2015797138
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015797135}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2015797139
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015797135}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2017400382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22081,6 +24592,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319538869499258285, guid: ba2f6cc1f0dd99f4da0a31b94dc623bc, type: 3}
   m_PrefabInstance: {fileID: 247484845}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2032595749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032595750}
+  - component: {fileID: 2032595753}
+  - component: {fileID: 2032595752}
+  - component: {fileID: 2032595751}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (30)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2032595750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032595749}
+  m_LocalRotation: {x: 0.000000062075266, y: 0.7071069, z: -0.00000025084915, w: 0.7071067}
+  m_LocalPosition: {x: 1294.44, y: 225.66, z: 4916.21}
+  m_LocalScale: {x: 0.18340679, y: 0.3, z: 0.19145101}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &2032595751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032595749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.92, y: 1, z: 8.57}
+  m_Center: {x: 1.16, y: -0.64, z: 1.37}
+--- !u!23 &2032595752
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032595749}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2032595753
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032595749}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2035111233
 GameObject:
   m_ObjectHideFlags: 0
@@ -22813,6 +25419,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.19, y: 1, z: 5.45}
   m_Center: {x: -0.04, y: -0.23, z: 0}
+--- !u!1 &2070134528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2070134529}
+  - component: {fileID: 2070134532}
+  - component: {fileID: 2070134531}
+  - component: {fileID: 2070134530}
+  m_Layer: 0
+  m_Name: Disgusting Oil  (52)
+  m_TagString: Trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2070134529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070134528}
+  m_LocalRotation: {x: 0.000000115331524, y: 0.8443979, z: -0.0000002312515, w: 0.5357164}
+  m_LocalPosition: {x: 1394.92, y: 225.756, z: 4905.074}
+  m_LocalScale: {x: 0.23991442, y: 0.3, z: 0.24168776}
+  m_Children: []
+  m_Father: {fileID: 567509537}
+  m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: 115.215, z: 0}
+--- !u!65 &2070134530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070134528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.47, y: 1, z: 6.97}
+  m_Center: {x: 0.25, y: -0.64, z: 0.17}
+--- !u!23 &2070134531
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070134528}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd321b74ac6df434eb601aec04f7d0e6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2070134532
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070134528}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2071623009
 GameObject:
   m_ObjectHideFlags: 0
@@ -23459,20 +26160,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &19268356666409501
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797036921589176487}
-  m_LocalRotation: {x: -0.5384924, y: -0.5649578, z: -0.03540642, w: 0.62417555}
-  m_LocalPosition: {x: -2.5562205, y: 0.4006939, z: 1.3887393}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1844274652}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -50.183, y: -102.461, z: 49.302}
 --- !u!1001 &325385524211307301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23701,24 +26388,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3767369242881140256}
   m_Mesh: {fileID: -8971355165230693711, guid: d76ac320811574547b14aafc92f3d26f, type: 3}
---- !u!1 &797036921589176487
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 19268356666409501}
-  - component: {fileID: 4029507679571332536}
-  - component: {fileID: 1157241122039150962}
-  m_Layer: 0
-  m_Name: Rifle mag
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!65 &811793159550485056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23836,47 +26505,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5270237890560165756, guid: 8ed5fbf7b43ad92408d414704a29b364, type: 3}
   m_PrefabInstance: {fileID: 904901239727898369}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &1157241122039150962
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797036921589176487}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: cb4c0b0dec2b65942921037a17a34d52, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1185755734042982704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24978,14 +27606,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &4029507679571332536
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797036921589176487}
-  m_Mesh: {fileID: 3316673072242070420, guid: b158c774a313565489799a5858f460e4, type: 3}
 --- !u!1001 &4222959105622814429
 PrefabInstance:
   m_ObjectHideFlags: 0
