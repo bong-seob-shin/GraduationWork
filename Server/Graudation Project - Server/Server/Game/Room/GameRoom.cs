@@ -31,9 +31,6 @@ namespace Server.Game
             EnterGame(CMonster_spawn);
 
             CMonster CMonster = ObjectManager.Instance.Add<CMonster>();
-            //CMonster.Info.PosInfo.PosX = 2250.626f;
-            //CMonster.Info.PosInfo.PosY = 109.9921f;
-            //CMonster.Info.PosInfo.PosZ = 3365.626f;
             CMonster.CellPos = new Vector3(2240f, 110f, 3460f);
             EnterGame(CMonster);
         }
@@ -202,10 +199,10 @@ namespace Server.Game
                 // 플레이어가 몬스터를 Hit하는 순간
                 if (attackInfo.IsHit)
                 {
+
                     attacker = info.ObjectId;
                     m_damaged = true;
-                    Console.WriteLine("m_damaged : " + m_damaged);
-                    Console.WriteLine("attacker : " + attacker);
+
                 }
 
                 // 다른 플레이어한테도 알려준다
@@ -214,6 +211,31 @@ namespace Server.Game
                 resMovePacket.AttackInfo = attackPacket.AttackInfo;
 
                 Broadcast(resMovePacket);
+            }
+        }
+
+        public void HandleHp(Player player, C_ChangeHp hpPacket)
+        {
+            if (player == null)
+                return;
+
+            lock (_lock)
+            {
+                S_ChangeHp resHpPacket = new S_ChangeHp();
+
+                CMonster cm = new CMonster();
+
+                if (_cmonsters.TryGetValue(hpPacket.ObjectId, out cm))
+                {
+                    cm.StatInfo.Hp -= 80;
+                    resHpPacket.StatInfo = cm.StatInfo;
+                }
+
+                resHpPacket.ObjectId = hpPacket.ObjectId;
+
+                Console.WriteLine(resHpPacket.StatInfo.Hp);
+
+                Broadcast(resHpPacket);
             }
         }
 

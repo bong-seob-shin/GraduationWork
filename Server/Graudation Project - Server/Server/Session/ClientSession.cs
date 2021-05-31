@@ -15,7 +15,7 @@ namespace Server
 	public class ClientSession : PacketSession
 	{
 		public Player MyPlayer { get; set; }
-
+		public CMonster CMonster { get; set; }
 		public int SessionId { get; set; }
 
 		public void Send(IMessage packet)
