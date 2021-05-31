@@ -8,10 +8,10 @@ using UnityEngine.VFX;
 public class Gun : MonoBehaviour
 {
 
-    private const float FireRate = 0.2f;
-    public int damage = 80;
-    public float range = 100f;
-
+    private const float FireRate = 0.1f;
+    public float damage = 30;
+    public float range = 300f;
+    public float penetration = 50;
     public Camera fpsCam;
 
     public Animation gunAnim;
@@ -20,8 +20,8 @@ public class Gun : MonoBehaviour
 
     public float currentFireRate = FireRate;
 
-    public int maxBulletCount = 20;
-    public int bulletCount = 20;
+    public int maxBulletCount = 40;
+    public int bulletCount = 40;
 
     public bool isShoot =false;
 
@@ -112,24 +112,24 @@ public class Gun : MonoBehaviour
                 Core planeCore = hit.transform.GetComponent<Core>();
                 if (monster != null)
                 {
-                    monster.hit(damage);
+                    monster.hit(damage,penetration);
                     monster.isHit = true;
                 }
 
                 if (Rmonster != null)
                 {
-                    Rmonster.hit(damage);
+                    Rmonster.hit(damage,penetration);
                     Rmonster.isHit = true;
                 }
 
                 if (bossMonster != null)
                 {
-                    bossMonster.hit(damage);
+                    bossMonster.hit(damage,penetration);
                 }
 
                 if (planeCore != null)
                 {
-                    planeCore.hit(damage);
+                    planeCore.hit(damage,penetration);
                 }
             }
             retroCameraMove.HorizontalRetro();

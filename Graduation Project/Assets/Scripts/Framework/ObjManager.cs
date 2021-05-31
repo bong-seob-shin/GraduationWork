@@ -13,8 +13,8 @@ public class ObjManager : MonoBehaviour
    public float dirZ;
 
    public int MaxHP;
-   public int HP;
-   
+   public float HP;
+   public int armor;
    protected virtual void Move() 
    {
       
@@ -26,8 +26,12 @@ public class ObjManager : MonoBehaviour
    }
    
    //피격 함수
-   public virtual void hit(int damage)
+   public virtual void hit(float damage, float penetration)
    {
+      if (armor - penetration > 70)
+      {
+         damage = damage * 0.1f;
+      }
       HP -= damage;
       // Debug.Log(transform.name + ":" + HP);
    }

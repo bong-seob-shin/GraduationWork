@@ -202,7 +202,7 @@ public class Player : AnimationObj
             }
         }
 
-        hpText.text = "HP  " + HP.ToString() +" / "+MaxHP.ToString();
+        hpText.text = "HP  " + ((int)HP).ToString() +" / "+((int)MaxHP).ToString();
         Debug.DrawRay(transform.position, Vector3.down*(_capsuleCollider.bounds.extents.y/5.0f), Color.blue);
 
         if (invincibilityTime > 0)
@@ -403,7 +403,7 @@ public class Player : AnimationObj
         //playerRb.position += _velocity * Time.deltaTime;
     }
 
-    public override void hit(int damage)
+    public void hit(int damage)
     {
         if (invincibilityTime <= 0)
         {
