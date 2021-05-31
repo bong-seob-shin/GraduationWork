@@ -47,6 +47,7 @@ public class ClosedMonster : MonsterManager
 
         this.MaxHP = 300;
         this.HP = MaxHP;
+        this.armor = 50;
     }
 
     // Update is called once per frame

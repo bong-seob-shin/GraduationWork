@@ -26,14 +26,31 @@ public class ObjManager : MonoBehaviour
    }
    
    //피격 함수
-   public virtual void hit(float damage, float penetration)
+   public virtual void hit(float _damage, float penetration)
    {
-      if (armor - penetration > 70)
+      if (armor - penetration >= 70)
       {
-         damage = damage * 0.1f;
+         _damage = _damage * 0.1f;
       }
-      HP -= damage;
-      // Debug.Log(transform.name + ":" + HP);
+      else if (armor - penetration >= 50)
+      {
+
+         _damage = _damage * 0.3f;
+      }
+      else if (armor - penetration >= 30)
+      {
+         _damage = _damage * 0.5f;
+      }
+      else if (armor - penetration >= 10)
+      {
+         _damage = _damage * 0.7f;
+      }
+      else
+      {
+         _damage = _damage * 1f;
+      }
+
+      HP -= _damage;
    }
 
    protected virtual void Dead()

@@ -47,8 +47,9 @@ public class RangedMonster : MonsterManager
         // 플레이어 타겟 잡는 곳
         targetOn = false;
 
-        this.MaxHP = 300;
+        this.MaxHP = 150;
         this.HP = this.MaxHP;
+        this.armor = 30;
     }
 
     // Update is called once per frame

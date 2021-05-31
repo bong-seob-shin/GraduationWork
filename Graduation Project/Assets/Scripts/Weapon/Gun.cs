@@ -9,7 +9,7 @@ public class Gun : MonoBehaviour
 {
 
     private const float FireRate = 0.1f;
-    public float damage = 30;
+    private float damage = 30;
     public float range = 300f;
     public float penetration = 50;
     public Camera fpsCam;

@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 
 public class BossMonster : MonsterManager
 {
+    public static ArrayList spawnMonsters = new ArrayList();
+    
     public GameObject first_face;
     public GameObject second_face;
     public GameObject third_face;
@@ -101,9 +103,9 @@ public class BossMonster : MonsterManager
         isOperate = false; // 플레이어를 찾아내면 isOperate
         isDead = false; // 처음이니까 안죽어있을거고
 
-        this.MaxHP = 1000;
+        this.MaxHP = 3000;
         this.HP = MaxHP;
-        
+        this.armor = 100;
         // 몬스터 공격 시간
         currentAttackTime = attackTime;
 
@@ -232,12 +234,12 @@ public class BossMonster : MonsterManager
     {
         int randomEnemy = Random.Range(0,enemyPrefabs.Length);
         // 왼쪽 팔이 소환할 놈들
-        Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
-        Instantiate(enemyPrefabs[randomEnemy], leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
+        spawnMonsters.Add(Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation));
+        spawnMonsters.Add(Instantiate(enemyPrefabs[randomEnemy], leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation));
             
         // 오른쪽 팔이 소환할 놈들
-        Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
-        Instantiate(enemyPrefabs[randomEnemy], rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
+        spawnMonsters.Add(Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation));
+        spawnMonsters.Add(Instantiate(enemyPrefabs[randomEnemy], rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation));
     }
 
     private void phaseSecondPattern()
@@ -283,7 +285,7 @@ public class BossMonster : MonsterManager
 
     private void CalcPhase()
     {
-        float hpPer = (float)((float)this.HP / (float)this.MaxHP * (float)100.0f);
+        float hpPer = ((float)((float)this.HP / (float)this.MaxHP) * 100.0f);
         // hp가 80% 이상 100% 이하일 때  = 1페이즈  ----> first_face 분리 후 제거
         if (hpPer <= 100.0f && hpPer >= 80.0f)
         {
@@ -317,8 +319,11 @@ public class BossMonster : MonsterManager
     private void DestroyParts(GameObject parts , float time)
     {
         parts.transform.parent = null;
-        parts.AddComponent<Rigidbody>();
-   
+        if (parts.GetComponent<Rigidbody>() == null)
+        {
+            parts.AddComponent<Rigidbody>();
+        }
+
         float timer = time;
         timer -= Time.deltaTime;
         if (timer <= 0.0f)
