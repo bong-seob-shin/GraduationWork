@@ -240,8 +240,8 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - Color_BA8E1A40: {r: 0, g: 0.1383863, b: 4.9996486, a: 1}
-    - Color_D55DF917: {r: 0.5096485, g: 18.449276, b: 19.468573, a: 1}
-    - Vector2_8D55143B: {r: 0.53, g: 0.74, b: 0, a: 0}
+    - Color_D55DF917: {r: 1.170865, g: 42.385315, b: 44.727043, a: 1}
+    - Vector2_8D55143B: {r: 0.6, g: 0.74, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

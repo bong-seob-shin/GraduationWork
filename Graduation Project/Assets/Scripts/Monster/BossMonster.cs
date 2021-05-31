@@ -141,8 +141,8 @@ public class BossMonster : MonsterManager
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
-                        //phaseFourthPattern();
-                        phaseFirstPattern();
+                        phaseFourthPattern();
+                        //phaseFirstPattern();
                         currentAttackTime = attackTime;
                     }
                 }
