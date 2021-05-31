@@ -20,6 +20,7 @@ namespace Server.Game
         Dictionary<int, CMonsterSpawner> _cmonsterspawn = new Dictionary<int, CMonsterSpawner>();
         Dictionary<int, CMonster> _cmonsters = new Dictionary<int, CMonster>();
         Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
+        Dictionary<int, Boss1> _boss1 = new Dictionary<int, Boss1>();
 
         public void Init(int mapId)
         {
@@ -33,6 +34,10 @@ namespace Server.Game
             CMonster CMonster = ObjectManager.Instance.Add<CMonster>();
             CMonster.CellPos = new Vector3(2240f, 110f, 3460f);
             EnterGame(CMonster);
+
+            Boss1 boss1 = ObjectManager.Instance.Add<Boss1>();
+            boss1.CellPos = new Vector3(1412.6f, 225.914f, 4909.44f);
+            EnterGame(boss1);
         }
 
         public void Update()
@@ -47,6 +52,11 @@ namespace Server.Game
                 foreach (CMonster CMonster in _cmonsters.Values)
                 {
                     CMonster.Update();
+                }
+
+                foreach (Boss1 boss1 in _boss1.Values)
+                {
+                    boss1.Update();
                 }
             }
         }
@@ -89,6 +99,9 @@ namespace Server.Game
                         foreach (Buggy b in _buggy.Values)
                             spawnPacket.Objects.Add(b.Info);
 
+                        foreach (Boss1 b in _boss1.Values)
+                            spawnPacket.Objects.Add(b.Info);
+
                         player.Session.Send(spawnPacket);
                     }
                 }
@@ -107,7 +120,6 @@ namespace Server.Game
                     CMonster.Room = this;
                 }
 
-
                 else if (type == GameObjectType.Buggy)
                 {
                     Buggy buggy = gameObject as Buggy;
@@ -115,6 +127,12 @@ namespace Server.Game
                     buggy.Room = this;
                 }
 
+                else if (type == GameObjectType.Bossone)
+                {
+                    Boss1 boss1 = gameObject as Boss1;
+                    _boss1.Add(gameObject.Id, boss1);
+                    boss1.Room = this;
+                }
 
                 // 타인한테 새로운 신입에 대한 정보 보내기
                 {
@@ -196,14 +214,6 @@ namespace Server.Game
                 AttackInfo attackInfo = attackPacket.AttackInfo;
                 ObjectInfo info = player.Info;
 
-                // 플레이어가 몬스터를 Hit하는 순간
-                if (attackInfo.IsHit)
-                {
-
-                    attacker = info.ObjectId;
-                    m_damaged = true;
-
-                }
 
                 // 다른 플레이어한테도 알려준다
                 S_Attack resMovePacket = new S_Attack();
@@ -238,6 +248,12 @@ namespace Server.Game
                 Broadcast(resHpPacket);
             }
         }
+
+        //public void HandleBossOne(Player player, C_BossOne bossPacket)
+        //{
+        //    C_BossOne resBossPacket = new C_BossOne();
+        //    resBossPacket.ObjectId
+        //}
 
         public Player FindPlayer(Func<GameObject, bool> condition)
         {

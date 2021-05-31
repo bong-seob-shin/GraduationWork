@@ -118,6 +118,30 @@ namespace Server.Game
         //    }
         //}
 
+        public Pattern Pattern
+        {
+            get
+            {
+                return StatInfo.Pattern;
+            }
+            set
+            {
+                StatInfo.Pattern = value;
+            }
+        }
+
+        public int RandWall 
+        {
+            get 
+            {
+                return StatInfo.Randwall;
+            }
+            set 
+            {
+                StatInfo.Randwall = value;
+            }
+        }
+
         public int Level
         {
             get

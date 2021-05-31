@@ -15,6 +15,8 @@ enum MsgId {
   S_ATTACK = 7;
   C_CHANGE_HP = 8;
   S_CHANGE_HP = 9;
+  C_BOSS_ONE = 10;
+  S_BOSS_ONE = 11;
 }
 
 enum State{
@@ -22,6 +24,14 @@ enum State{
   MOVING = 1;
   ATTACK = 2;
   DEAD = 3;
+}
+
+enum Pattern{
+  NO = 0;
+  ONE = 1;
+  TWO = 2;
+  THREE = 3;
+  FOUR = 4;
 }
 
 enum GameObjectType {
@@ -32,6 +42,7 @@ enum GameObjectType {
   CMONSTER = 4;
   RMONSTER = 5;
   BUGGY = 6;
+  BOSSONE = 7;
 }
 
 message S_EnterGame {
@@ -75,6 +86,17 @@ message C_ChangeHp {
 message S_ChangeHp {
   int32 objectId = 1;
   StatInfo statInfo = 2;
+}
+
+message C_BossOne {
+  int32 objectId = 1;
+  StatInfo statInfo = 2;
+}
+
+message S_BossOne {
+  int32 objectId = 1;
+  StatInfo statInfo = 2;  
+  
 }
 
 message AttackInfo {
@@ -123,4 +145,6 @@ message StatInfo {
   int32 attack = 4;
   float speed = 5;
   int32 totalExp = 6;
+  Pattern pattern = 7;
+  int32 randwall = 8;
 }
