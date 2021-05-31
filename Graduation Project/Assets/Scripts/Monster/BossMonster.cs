@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 public class BossMonster : MonsterManager
 {
-    public static ArrayList spawnMonsters = new ArrayList();
+    
     
     public GameObject first_face;
     public GameObject second_face;
@@ -234,12 +234,12 @@ public class BossMonster : MonsterManager
     {
         int randomEnemy = Random.Range(0,enemyPrefabs.Length);
         // 왼쪽 팔이 소환할 놈들
-        spawnMonsters.Add(Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation));
-        spawnMonsters.Add(Instantiate(enemyPrefabs[randomEnemy], leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation));
+        Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
+        Instantiate(enemyPrefabs[randomEnemy], leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
             
         // 오른쪽 팔이 소환할 놈들
-        spawnMonsters.Add(Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation));
-        spawnMonsters.Add(Instantiate(enemyPrefabs[randomEnemy], rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation));
+        Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
+        Instantiate(enemyPrefabs[randomEnemy], rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
     }
 
     private void phaseSecondPattern()

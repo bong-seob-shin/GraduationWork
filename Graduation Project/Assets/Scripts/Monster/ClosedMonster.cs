@@ -29,6 +29,7 @@ public class ClosedMonster : MonsterManager
     private Transform target;
     private bool targetOn;
 
+    
     public BoxCollider attackCol;
 
     private void Awake()

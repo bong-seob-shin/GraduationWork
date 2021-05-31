@@ -21,12 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Framework/ObjManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ObjManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshSlicer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonsterAttackCol.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/SliceController.cs" />
@@ -91,10 +87,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Framework/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Framework/ObjManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
       </list>
     </option>
@@ -222,7 +219,7 @@
       <workItem from="1622282369422" duration="10164000" />
       <workItem from="1622299419731" duration="4971000" />
       <workItem from="1622313065876" duration="5281000" />
-      <workItem from="1622464372825" duration="2220000" />
+      <workItem from="1622464372825" duration="2985000" />
     </task>
     <servers />
   </component>

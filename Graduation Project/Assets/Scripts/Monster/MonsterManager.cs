@@ -9,7 +9,8 @@ public class MonsterManager : ObjManager
     public NavMeshAgent nav;
     [HideInInspector]public bool isDead = false;
     public Rigidbody rigid;
-    
+    public bool isSpwan;
+
     protected override void Dead()
     {
         isDead = true;
