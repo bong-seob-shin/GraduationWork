@@ -17,6 +17,7 @@ namespace Server.Game
             ObjectType = GameObjectType.Bossone;
 
             State = State.Idle;
+            Pattern = Pattern.No;
 
             StatInfo.MaxHp = 3000;
             StatInfo.Hp = 3000;
@@ -24,12 +25,22 @@ namespace Server.Game
 
         public override void Update()
         {
+            Random rand = new Random();
+
             FindClosedPlayer();
             if (check)
             {
-                Console.WriteLine("Start");
-
+                switch (Pattern) 
+                {
+                    case Pattern.One:
+                        RandWall = rand.Next(1, 12);
+                        Console.WriteLine(RandWall);
+                        BroadcastBoss();
+                        break;
+                }
             }
+            else if(!check)
+                Pattern = Pattern.No;
         }
 
         int _checkPlayerTick = 0;
@@ -43,48 +54,16 @@ namespace Server.Game
             {
                 float dist = DistanceToPoint(p.CellPos, CellPos);
                 Console.WriteLine(dist);
-                return dist <= 15f;
+                return dist <= 10f;
             });
 
             if (target == null)
                 return;
 
             _target = target;
-            check = true;
-        }
 
-        int _movingTick = 0;
-        private void UpdateMoving()
-        {
-            if (_movingTick > Environment.TickCount64)
-                return;
-            _movingTick = Environment.TickCount + 200;
-
-            // 타켓이 있는지 확인
-            if (_target == null || _target.Room != Room)
-            {
-                _target = null;
-                State = State.Idle;
-                BroadcastMove();
-                return;
-            }
-
-            // 타켓과 몬스터와의 일정 거리가 넘어가면 IDLE 상태로 변경
-            Vector3 dir = _target.CellPos - CellPos;
-            float dist = DistanceToPoint(_target.CellPos, CellPos);
-            if (dist > 50f)
-            {
-                _target = null;
-                State = State.Idle;
-                BroadcastMove();
-                return;
-            }
-
-            // 위의 상황이 모두 아니라면 이제 몬스터가 움직여도 되는 상황
-            {
-                CellPos = CellPos - new Vector3(0.1f, 0f, 0f);
-                BroadcastMove();
-            }
+            Pattern = Pattern.One;
+            BroadcastBoss();
         }
 
         private float DistanceToPoint(Vector3 a, Vector3 b)
@@ -92,12 +71,12 @@ namespace Server.Game
             return (float)Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2) + Math.Pow(a.Z - b.Z, 2));
         }
 
-        void BroadcastMove()
+        void BroadcastBoss()
         {
-            S_Move movePacket = new S_Move();
-            movePacket.ObjectId = Id;
-            movePacket.PosInfo = PosInfo;
-            Room.Broadcast(movePacket);
+            S_BossOne bossPkacet = new S_BossOne();
+            bossPkacet.ObjectId = Id;
+            bossPkacet.StatInfo = StatInfo;
+            Room.Broadcast(bossPkacet);
         }
     }
 }

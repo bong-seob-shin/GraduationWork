@@ -58,7 +58,18 @@ class PacketHandler
         room.HandleHp(player, hpPacket);
     }
 	public static void C_BossOneHandler(PacketSession session, IMessage packet)
-	{ 
-	
+	{
+		//C_BossOne bossPacket = packet as C_BossOne;
+		//ClientSession clientSession = session as ClientSession;
+
+		//Player player = clientSession.MyPlayer;
+		//if (player == null)
+		//	return;
+
+		//GameRoom room = player.Room;
+		//if (room == null)
+		//	return;
+
+		//room.HandleBossOne(player, bossPacket);
 	}
 }

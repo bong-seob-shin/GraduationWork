@@ -53,20 +53,21 @@ namespace Google.Protobuf.Protocol {
             "BGRpcloYBSABKAISDAoEcm90WRgGIAEoAhIOCgZzcGluZVgYByABKAISDgoG",
             "c3BpbmVZGAggASgCEg4KBnNwaW5lWhgJIAEoAhIeCgVzdGF0ZRgKIAEoDjIP",
             "LlByb3RvY29sLlN0YXRlEg4KBmlzSnVtcBgLIAEoCBINCgVjYXJJZBgMIAEo",
-            "BRIRCgljYXJ1c2VySWQYDSABKAUiiQEKCFN0YXRJbmZvEg0KBWxldmVsGAEg",
+            "BRIRCgljYXJ1c2VySWQYDSABKAUimwEKCFN0YXRJbmZvEg0KBWxldmVsGAEg",
             "ASgFEgoKAmhwGAIgASgFEg0KBW1heEhwGAMgASgFEg4KBmF0dGFjaxgEIAEo",
             "BRINCgVzcGVlZBgFIAEoAhIQCgh0b3RhbEV4cBgGIAEoBRIiCgdwYXR0ZXJu",
-            "GAcgASgOMhEuUHJvdG9jb2wuUGF0dGVybiq9AQoFTXNnSWQSEAoMU19FTlRF",
-            "Ul9HQU1FEAASEAoMU19MRUFWRV9HQU1FEAESCwoHU19TUEFXThACEg0KCVNf",
-            "REVTUEFXThADEgoKBkNfTU9WRRAEEgoKBlNfTU9WRRAFEgwKCENfQVRUQUNL",
-            "EAYSDAoIU19BVFRBQ0sQBxIPCgtDX0NIQU5HRV9IUBAIEg8KC1NfQ0hBTkdF",
-            "X0hQEAkSDgoKQ19CT1NTX09ORRAKEg4KClNfQk9TU19PTkUQCyozCgVTdGF0",
-            "ZRIICgRJRExFEAASCgoGTU9WSU5HEAESCgoGQVRUQUNLEAISCAoEREVBRBAD",
-            "KjAKB1BhdHRlcm4SBwoDT05FEAASBwoDVFdPEAESCQoFVEhSRUUQAhIICgRG",
-            "T1VSEAMqhAEKDkdhbWVPYmplY3RUeXBlEggKBE5PTkUQABIKCgZQTEFZRVIQ",
-            "ARITCg9DTU9OU1RFUlNQQVdORVIQAhITCg9STU9OU1RFUlNQQVdORVIQAxIM",
-            "CghDTU9OU1RFUhAEEgwKCFJNT05TVEVSEAUSCQoFQlVHR1kQBhILCgdCT1NT",
-            "T05FEAdCG6oCGEdvb2dsZS5Qcm90b2J1Zi5Qcm90b2NvbGIGcHJvdG8z"));
+            "GAcgASgOMhEuUHJvdG9jb2wuUGF0dGVybhIQCghyYW5kd2FsbBgIIAEoBSq9",
+            "AQoFTXNnSWQSEAoMU19FTlRFUl9HQU1FEAASEAoMU19MRUFWRV9HQU1FEAES",
+            "CwoHU19TUEFXThACEg0KCVNfREVTUEFXThADEgoKBkNfTU9WRRAEEgoKBlNf",
+            "TU9WRRAFEgwKCENfQVRUQUNLEAYSDAoIU19BVFRBQ0sQBxIPCgtDX0NIQU5H",
+            "RV9IUBAIEg8KC1NfQ0hBTkdFX0hQEAkSDgoKQ19CT1NTX09ORRAKEg4KClNf",
+            "Qk9TU19PTkUQCyozCgVTdGF0ZRIICgRJRExFEAASCgoGTU9WSU5HEAESCgoG",
+            "QVRUQUNLEAISCAoEREVBRBADKjgKB1BhdHRlcm4SBgoCTk8QABIHCgNPTkUQ",
+            "ARIHCgNUV08QAhIJCgVUSFJFRRADEggKBEZPVVIQBCqEAQoOR2FtZU9iamVj",
+            "dFR5cGUSCAoETk9ORRAAEgoKBlBMQVlFUhABEhMKD0NNT05TVEVSU1BBV05F",
+            "UhACEhMKD1JNT05TVEVSU1BBV05FUhADEgwKCENNT05TVEVSEAQSDAoIUk1P",
+            "TlNURVIQBRIJCgVCVUdHWRAGEgsKB0JPU1NPTkUQB0IbqgIYR29vZ2xlLlBy",
+            "b3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.State), typeof(global::Google.Protobuf.Protocol.Pattern), typeof(global::Google.Protobuf.Protocol.GameObjectType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +87,7 @@ namespace Google.Protobuf.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PlayerInfo), global::Google.Protobuf.Protocol.PlayerInfo.Parser, new[]{ "PlayerId", "Name", "PosInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ObjectInfo), global::Google.Protobuf.Protocol.ObjectInfo.Parser, new[]{ "ObjectId", "Name", "PosInfo", "AttackInfo", "StatInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PositionInfo), global::Google.Protobuf.Protocol.PositionInfo.Parser, new[]{ "PosX", "PosY", "PosZ", "DirX", "DirZ", "RotY", "SpineX", "SpineY", "SpineZ", "State", "IsJump", "CarId", "CaruserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.StatInfo), global::Google.Protobuf.Protocol.StatInfo.Parser, new[]{ "Level", "Hp", "MaxHp", "Attack", "Speed", "TotalExp", "Pattern" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.StatInfo), global::Google.Protobuf.Protocol.StatInfo.Parser, new[]{ "Level", "Hp", "MaxHp", "Attack", "Speed", "TotalExp", "Pattern", "Randwall" }, null, null, null, null)
           }));
     }
     #endregion
@@ -116,10 +117,11 @@ namespace Google.Protobuf.Protocol {
   }
 
   public enum Pattern {
-    [pbr::OriginalName("ONE")] One = 0,
-    [pbr::OriginalName("TWO")] Two = 1,
-    [pbr::OriginalName("THREE")] Three = 2,
-    [pbr::OriginalName("FOUR")] Four = 3,
+    [pbr::OriginalName("NO")] No = 0,
+    [pbr::OriginalName("ONE")] One = 1,
+    [pbr::OriginalName("TWO")] Two = 2,
+    [pbr::OriginalName("THREE")] Three = 3,
+    [pbr::OriginalName("FOUR")] Four = 4,
   }
 
   public enum GameObjectType {
@@ -3079,6 +3081,7 @@ namespace Google.Protobuf.Protocol {
       speed_ = other.speed_;
       totalExp_ = other.totalExp_;
       pattern_ = other.pattern_;
+      randwall_ = other.randwall_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3155,12 +3158,23 @@ namespace Google.Protobuf.Protocol {
 
     /// <summary>Field number for the "pattern" field.</summary>
     public const int PatternFieldNumber = 7;
-    private global::Google.Protobuf.Protocol.Pattern pattern_ = global::Google.Protobuf.Protocol.Pattern.One;
+    private global::Google.Protobuf.Protocol.Pattern pattern_ = global::Google.Protobuf.Protocol.Pattern.No;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.Protocol.Pattern Pattern {
       get { return pattern_; }
       set {
         pattern_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "randwall" field.</summary>
+    public const int RandwallFieldNumber = 8;
+    private int randwall_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Randwall {
+      get { return randwall_; }
+      set {
+        randwall_ = value;
       }
     }
 
@@ -3184,6 +3198,7 @@ namespace Google.Protobuf.Protocol {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Speed, other.Speed)) return false;
       if (TotalExp != other.TotalExp) return false;
       if (Pattern != other.Pattern) return false;
+      if (Randwall != other.Randwall) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3196,7 +3211,8 @@ namespace Google.Protobuf.Protocol {
       if (Attack != 0) hash ^= Attack.GetHashCode();
       if (Speed != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Speed);
       if (TotalExp != 0) hash ^= TotalExp.GetHashCode();
-      if (Pattern != global::Google.Protobuf.Protocol.Pattern.One) hash ^= Pattern.GetHashCode();
+      if (Pattern != global::Google.Protobuf.Protocol.Pattern.No) hash ^= Pattern.GetHashCode();
+      if (Randwall != 0) hash ^= Randwall.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3234,9 +3250,13 @@ namespace Google.Protobuf.Protocol {
         output.WriteRawTag(48);
         output.WriteInt32(TotalExp);
       }
-      if (Pattern != global::Google.Protobuf.Protocol.Pattern.One) {
+      if (Pattern != global::Google.Protobuf.Protocol.Pattern.No) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Pattern);
+      }
+      if (Randwall != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(Randwall);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3264,8 +3284,11 @@ namespace Google.Protobuf.Protocol {
       if (TotalExp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalExp);
       }
-      if (Pattern != global::Google.Protobuf.Protocol.Pattern.One) {
+      if (Pattern != global::Google.Protobuf.Protocol.Pattern.No) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Pattern);
+      }
+      if (Randwall != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Randwall);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3296,8 +3319,11 @@ namespace Google.Protobuf.Protocol {
       if (other.TotalExp != 0) {
         TotalExp = other.TotalExp;
       }
-      if (other.Pattern != global::Google.Protobuf.Protocol.Pattern.One) {
+      if (other.Pattern != global::Google.Protobuf.Protocol.Pattern.No) {
         Pattern = other.Pattern;
+      }
+      if (other.Randwall != 0) {
+        Randwall = other.Randwall;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3336,6 +3362,10 @@ namespace Google.Protobuf.Protocol {
           }
           case 56: {
             Pattern = (global::Google.Protobuf.Protocol.Pattern) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            Randwall = input.ReadInt32();
             break;
           }
         }

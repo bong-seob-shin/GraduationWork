@@ -214,14 +214,6 @@ namespace Server.Game
                 AttackInfo attackInfo = attackPacket.AttackInfo;
                 ObjectInfo info = player.Info;
 
-                // 플레이어가 몬스터를 Hit하는 순간
-                if (attackInfo.IsHit)
-                {
-
-                    attacker = info.ObjectId;
-                    m_damaged = true;
-
-                }
 
                 // 다른 플레이어한테도 알려준다
                 S_Attack resMovePacket = new S_Attack();
@@ -256,6 +248,12 @@ namespace Server.Game
                 Broadcast(resHpPacket);
             }
         }
+
+        //public void HandleBossOne(Player player, C_BossOne bossPacket)
+        //{
+        //    C_BossOne resBossPacket = new C_BossOne();
+        //    resBossPacket.ObjectId
+        //}
 
         public Player FindPlayer(Func<GameObject, bool> condition)
         {
