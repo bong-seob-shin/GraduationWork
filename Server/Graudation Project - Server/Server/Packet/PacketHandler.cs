@@ -28,9 +28,6 @@ class PacketHandler
 	public static void C_AttackHandler(PacketSession session, IMessage packet)
 	{
 		C_Attack attackPacket = packet as C_Attack;
-
-        Console.WriteLine(attackPacket.AttackInfo.IsHit);
-
 		ClientSession clientSession = session as ClientSession;
 
 		Player player = clientSession.MyPlayer;
@@ -60,4 +57,8 @@ class PacketHandler
 
         room.HandleHp(player, hpPacket);
     }
+	public static void C_BossOneHandler(PacketSession session, IMessage packet)
+	{ 
+	
+	}
 }

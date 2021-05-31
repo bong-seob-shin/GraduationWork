@@ -6,36 +6,30 @@ using System.Text;
 
 namespace Server.Game
 {
-    public class CMonster : CMonsterSpawner
+    class Boss1 : GameObject
     {
         Player _target;
 
-        public CMonster()
+        bool check;
+
+        public Boss1()
         {
-            ObjectType = GameObjectType.Cmonster;
+            ObjectType = GameObjectType.Bossone;
 
             State = State.Idle;
 
-            StatInfo.MaxHp = 400;
-            StatInfo.Hp = 400;
-            //MaxHP_TESTING = 400;
-            //HP_TESTING = 400;
+            StatInfo.MaxHp = 3000;
+            StatInfo.Hp = 3000;
         }
 
         public override void Update()
         {
-            switch (State)
+            FindClosedPlayer();
+            if (check)
             {
-                case State.Idle:
-                    FindClosedPlayer();
-                    break;
+                Console.WriteLine("Start");
 
-                case State.Moving:
-                    UpdateMoving();
-                    break;
             }
-
-            OnDamaged();
         }
 
         int _checkPlayerTick = 0;
@@ -48,15 +42,15 @@ namespace Server.Game
             Player target = Room.FindPlayer(p =>
             {
                 float dist = DistanceToPoint(p.CellPos, CellPos);
-                return dist <= 30f;
+                Console.WriteLine(dist);
+                return dist <= 15f;
             });
 
             if (target == null)
                 return;
 
             _target = target;
-
-            State = State.Moving;
+            check = true;
         }
 
         int _movingTick = 0;
@@ -67,7 +61,7 @@ namespace Server.Game
             _movingTick = Environment.TickCount + 200;
 
             // 타켓이 있는지 확인
-            if (_target == null || _target.Room != Room) 
+            if (_target == null || _target.Room != Room)
             {
                 _target = null;
                 State = State.Idle;
@@ -85,7 +79,7 @@ namespace Server.Game
                 BroadcastMove();
                 return;
             }
-            
+
             // 위의 상황이 모두 아니라면 이제 몬스터가 움직여도 되는 상황
             {
                 CellPos = CellPos - new Vector3(0.1f, 0f, 0f);
@@ -105,5 +99,6 @@ namespace Server.Game
             movePacket.PosInfo = PosInfo;
             Room.Broadcast(movePacket);
         }
-    }   
+    }
 }
+
