@@ -20,7 +20,6 @@ public class PlanePattern : ObjManager
     void Start()
     {
         coreRandPos = Random.Range(0, corePoints.Length);
-        Debug.Log(coreRandPos);
         corePosition = corePoints[coreRandPos].transform.position;
         Instantiate(core, corePosition, Quaternion.identity).transform.parent = corePoints[coreRandPos].transform.parent.transform;
     }

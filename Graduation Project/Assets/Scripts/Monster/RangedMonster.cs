@@ -23,7 +23,7 @@ public class RangedMonster : MonsterManager
     public bool isHit = false;
     private bool isAttack = false;
 
-    private float timer;
+    private float timer = 2.0f;
 
     public GameObject projectile;
 
@@ -100,12 +100,14 @@ public class RangedMonster : MonsterManager
         
         if (isDead)
         {
-            timer += Time.deltaTime;
-            if (timer >= 2.0)
+            timer -= Time.deltaTime;
+            if (timer <= 0.0)
             {
                 Destroy(this.gameObject);
                 Destroy(HeadPart);
+                timer = 2.0f;
             }
+
         }
     }
     

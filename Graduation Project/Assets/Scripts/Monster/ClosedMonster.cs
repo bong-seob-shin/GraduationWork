@@ -20,7 +20,7 @@ public class ClosedMonster : MonsterManager
     public bool isHit = false;
     private bool isAttack = false;
 
-    private float timer;
+    private float timer = 2.0f;
     
     public float attackTerm;
     private float currentAttackTerm;
@@ -28,10 +28,9 @@ public class ClosedMonster : MonsterManager
     public Collider[] colls;
     private Transform target;
     private bool targetOn;
-
     
     public BoxCollider attackCol;
-
+    
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -49,6 +48,8 @@ public class ClosedMonster : MonsterManager
         this.MaxHP = 300;
         this.HP = MaxHP;
         this.armor = 50;
+
+        bm = GetComponent<BossMonster>();
     }
 
     // Update is called once per frame
@@ -110,10 +111,11 @@ public class ClosedMonster : MonsterManager
 
         if (isDead)
         {
-            timer += Time.deltaTime;
-            if (timer >= 2.0)
+            timer -= Time.deltaTime;
+            if (timer <= 0.0f)
             {
                 Destroy(this.gameObject);
+                timer = 2.0f;
             }
         }
     }

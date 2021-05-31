@@ -12,6 +12,7 @@ TagManager:
   - RSpawnPoint
   - Trap
   - Cave
+  - Boss1SummonsMonster
   layers:
   - Default
   - TransparentFX

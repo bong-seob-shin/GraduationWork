@@ -2,14 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 using Random = UnityEngine.Random;
 
 public class BossMonster : MonsterManager
 {
-    
-    
     public GameObject first_face;
     public GameObject second_face;
     public GameObject third_face;
@@ -68,6 +67,8 @@ public class BossMonster : MonsterManager
     
 
     public Vector3 offset;
+
+
     
     // 보스 상태
     public bool isOperate;
@@ -76,6 +77,9 @@ public class BossMonster : MonsterManager
     // 보스 랜덤 패턴
     public int randomPattern;
     
+    // 2021.06.01 수정  - 몬스터 최대 개수 제한두기
+    public int monsterCount = 0;
+
     //     블럭이 위에서부터 하나씩 떼어짐 - 단계별로
     //     떼질때마다 아래칸에 눈이 생김 - 색은 변하던 말던 
     //
@@ -108,12 +112,11 @@ public class BossMonster : MonsterManager
         this.armor = 100;
         // 몬스터 공격 시간
         currentAttackTime = attackTime;
-
+        
     }
 
     void Update()
     {
-        
         // 보스가 활성화 되지 않았을 때 ? --> 플레이어를 발견하면 isOperate를 True로 바꿔주어서 활성화시킨다.
         if (!isOperate)
         {
@@ -141,8 +144,8 @@ public class BossMonster : MonsterManager
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
-                        phaseFourthPattern();
-                        //phaseFirstPattern();
+                        //phaseFourthPattern();
+                        phaseFirstPattern();
                         currentAttackTime = attackTime;
                     }
                 }
@@ -232,14 +235,24 @@ public class BossMonster : MonsterManager
 
     private void phaseFirstPattern()
     {
-        int randomEnemy = Random.Range(0,enemyPrefabs.Length);
-        // 왼쪽 팔이 소환할 놈들
-        Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
-        Instantiate(enemyPrefabs[randomEnemy], leftArmMonsterSpawnPoint.transform.position,leftArmMonsterSpawnPoint.transform.rotation);
-            
-        // 오른쪽 팔이 소환할 놈들
-        Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
-        Instantiate(enemyPrefabs[randomEnemy], rightArmMonsterSpawnPoint.transform.position,rightArmMonsterSpawnPoint.transform.rotation);
+        if (monsterCount <= 4)
+        {
+            // 왼쪽 팔이 소환할 놈들
+            Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,
+                leftArmMonsterSpawnPoint.transform.rotation);
+            ClosedMonster leftMonster = Instantiate(enemyPrefabs[0], leftArmMonsterSpawnPoint.transform.position,
+                leftArmMonsterSpawnPoint.transform.rotation).GetComponent<ClosedMonster>();
+            leftMonster.gameObject.transform.tag = "Boss1SummonsMonster";
+            monsterCount++;
+
+            // 오른쪽 팔이 소환할 놈들
+            Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,
+                rightArmMonsterSpawnPoint.transform.rotation);
+            RangedMonster rightMonster = Instantiate(enemyPrefabs[1], rightArmMonsterSpawnPoint.transform.position,
+                rightArmMonsterSpawnPoint.transform.rotation).GetComponent<RangedMonster>();
+            rightMonster.gameObject.transform.tag = "Boss1SummonsMonster";
+            monsterCount++;
+        }
     }
 
     private void phaseSecondPattern()
@@ -281,7 +294,6 @@ public class BossMonster : MonsterManager
             }
         }
     }
-
 
     private void CalcPhase()
     {
