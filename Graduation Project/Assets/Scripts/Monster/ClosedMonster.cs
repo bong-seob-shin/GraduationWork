@@ -49,7 +49,7 @@ public class ClosedMonster : MonsterManager
         this.HP = MaxHP;
         this.armor = 50;
 
-        bm = GetComponent<BossMonster>();
+        //bm = GetComponent<BossMonster>();
     }
 
     // Update is called once per frame
