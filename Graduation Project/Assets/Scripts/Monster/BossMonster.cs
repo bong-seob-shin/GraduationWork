@@ -78,8 +78,6 @@ public class BossMonster : MonsterManager
     // 보스 랜덤 패턴
     public int randomPattern;
     
-    // 2021.06.01 수정  - 몬스터 최대 개수 제한두기
-    public int monsterCount = 0;
 
     //     블럭이 위에서부터 하나씩 떼어짐 - 단계별로
     //     떼질때마다 아래칸에 눈이 생김 - 색은 변하던 말던 
@@ -259,9 +257,6 @@ public class BossMonster : MonsterManager
             ClosedMonster leftMonster = Instantiate(enemyPrefabs[0], leftArmMonsterSpawnPoint.transform.position,
                 leftArmMonsterSpawnPoint.transform.rotation).GetComponent<ClosedMonster>();
             spawnList.Add(leftMonster);
-            
-            leftMonster.gameObject.transform.tag = "Boss1SummonsMonster";
-            monsterCount++;
 
             // 오른쪽 팔이 소환할 놈들
             Instantiate(portalPrefab, rightArmMonsterSpawnPoint.transform.position,
@@ -269,10 +264,7 @@ public class BossMonster : MonsterManager
             RangedMonster rightMonster = Instantiate(enemyPrefabs[1], rightArmMonsterSpawnPoint.transform.position,
                 rightArmMonsterSpawnPoint.transform.rotation).GetComponent<RangedMonster>();
             spawnList.Add(rightMonster);
-
-            rightMonster.gameObject.transform.tag = "Boss1SummonsMonster";
-            monsterCount++;
-            Debug.Log("list count"+spawnList.Count);
+  
         }
     }
 
