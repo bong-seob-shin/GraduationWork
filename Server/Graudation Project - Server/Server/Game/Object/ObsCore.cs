@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Server.Game
 {
-    public class CoreObstacle : GameObject
+    public class ObsCore : GameObject
     {
-        public CoreObstacle()
+        public ObsCore()
         {
             StatInfo.MaxHp = 80;
             StatInfo.Hp = 80;

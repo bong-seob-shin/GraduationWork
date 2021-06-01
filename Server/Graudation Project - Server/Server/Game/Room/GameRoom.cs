@@ -35,6 +35,11 @@ namespace Server.Game
             CMonster.CellPos = new Vector3(2240f, 110f, 3460f);
             EnterGame(CMonster);
 
+            CMonster CMonster1 = ObjectManager.Instance.Add<CMonster>();
+            CMonster1.CellPos = new Vector3(2230f, 110f, 3450f);
+            EnterGame(CMonster1);
+
+
             Boss1 boss1 = ObjectManager.Instance.Add<Boss1>();
             boss1.CellPos = new Vector3(1412.6f, 225.914f, 4909.44f);
             EnterGame(boss1);
@@ -44,10 +49,10 @@ namespace Server.Game
         {
             lock (_lock)
             {
-                foreach (CMonsterSpawner CMonseter_spawn in _cmonsterspawn.Values)
-                {
-                    CMonseter_spawn.Update();
-                }
+                //foreach (CMonsterSpawner CMonseter_spawn in _cmonsterspawn.Values)
+                //{
+                //    CMonseter_spawn.Update();
+                //}
 
                 foreach (CMonster CMonster in _cmonsters.Values)
                 {

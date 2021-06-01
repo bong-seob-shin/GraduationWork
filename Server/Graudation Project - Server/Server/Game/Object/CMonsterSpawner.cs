@@ -11,9 +11,9 @@ namespace Server.Game
     {
         public List<Vector3> list = new List<Vector3>();
 
-        public static float rand_x;
-        public static float rand_y;
-        public static float rand_z;        
+        private float rand_x;
+        private float rand_y;
+        private float rand_z;        
 
         int _nextTick = 0;
 

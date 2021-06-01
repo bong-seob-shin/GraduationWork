@@ -46,7 +46,7 @@ namespace Server.Game
             Player target = Room.FindPlayer(p =>
             {
                 float dist = DistanceToPoint(p.CellPos, CellPos);
-                Console.WriteLine(dist);
+                //Console.WriteLine(dist);
                 return dist <= 10f;
             });
 
@@ -70,6 +70,8 @@ namespace Server.Game
             StatInfo.Speed = 1;
             int r = rand.Next(1, 12);
             RandWall = r;
+
+            // 이 시기에 생성할 수 있도록 하자..
             BroadcastBoss();
         }
 

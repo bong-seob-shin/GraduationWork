@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Server.Game.Object
+namespace Server.Game
 {
-    class ObsWall
+    public class ObsWall : GameObject
     {
+        public ObsWall()
+        {
+            StatInfo.MaxHp = 80;
+            StatInfo.Hp = 80;
+        }
     }
 }
