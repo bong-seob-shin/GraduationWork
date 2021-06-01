@@ -104,8 +104,10 @@ public class ClosedMonster : MonsterManager
             {
                 livedparts.SetActive(false);
                 deadparts.SetActive(true);
+               
                 Dead();
                 
+
             }
         }
 

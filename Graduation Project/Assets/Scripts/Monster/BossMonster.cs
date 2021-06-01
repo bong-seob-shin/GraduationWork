@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
+using Object = System.Object;
 using Random = UnityEngine.Random;
 
 public class BossMonster : MonsterManager
@@ -69,7 +70,7 @@ public class BossMonster : MonsterManager
     public Vector3 offset;
 
 
-    
+    public List<MonsterManager> spawnList = new List<MonsterManager>();
     // 보스 상태
     public bool isOperate;
     public int phase = 0;
@@ -117,6 +118,7 @@ public class BossMonster : MonsterManager
 
     void Update()
     {
+        CheckSpawnMonsterDead();
         // 보스가 활성화 되지 않았을 때 ? --> 플레이어를 발견하면 isOperate를 True로 바꿔주어서 활성화시킨다.
         if (!isOperate)
         {
@@ -233,15 +235,31 @@ public class BossMonster : MonsterManager
         }
     }
 
+    private void CheckSpawnMonsterDead()
+    {
+        
+       for(int i = spawnList.Count-1; i>=0; i--)
+        {
+            if (spawnList[i].isDead)
+            {
+                Debug.Log("dead");
+                spawnList.Remove(spawnList[i]);
+
+            }
+        }
+    }
+
     private void phaseFirstPattern()
     {
-        if (monsterCount <= 4)
+        if (spawnList.Count <= 4)
         {
             // 왼쪽 팔이 소환할 놈들
             Instantiate(portalPrefab, leftArmMonsterSpawnPoint.transform.position,
                 leftArmMonsterSpawnPoint.transform.rotation);
             ClosedMonster leftMonster = Instantiate(enemyPrefabs[0], leftArmMonsterSpawnPoint.transform.position,
                 leftArmMonsterSpawnPoint.transform.rotation).GetComponent<ClosedMonster>();
+            spawnList.Add(leftMonster);
+            
             leftMonster.gameObject.transform.tag = "Boss1SummonsMonster";
             monsterCount++;
 
@@ -250,8 +268,11 @@ public class BossMonster : MonsterManager
                 rightArmMonsterSpawnPoint.transform.rotation);
             RangedMonster rightMonster = Instantiate(enemyPrefabs[1], rightArmMonsterSpawnPoint.transform.position,
                 rightArmMonsterSpawnPoint.transform.rotation).GetComponent<RangedMonster>();
+            spawnList.Add(rightMonster);
+
             rightMonster.gameObject.transform.tag = "Boss1SummonsMonster";
             monsterCount++;
+            Debug.Log("list count"+spawnList.Count);
         }
     }
 

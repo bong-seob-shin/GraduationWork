@@ -94,7 +94,9 @@ public class RangedMonster : MonsterManager
             {
                 HeadPart.transform.parent = null;
                 HeadPart.AddComponent<Rigidbody>();
+                
                 Dead();
+                
             }
         }
         

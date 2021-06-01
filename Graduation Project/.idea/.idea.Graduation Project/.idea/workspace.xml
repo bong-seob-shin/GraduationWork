@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,13 +88,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Framework/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/Laser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/PlanePattern.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Framework/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
       </list>
     </option>
   </component>
@@ -224,7 +225,8 @@
       <workItem from="1622476044695" duration="12000" />
       <workItem from="1622476153778" duration="1373000" />
       <workItem from="1622480465615" duration="16000000" />
-      <workItem from="1622532168616" duration="328000" />
+      <workItem from="1622532168616" duration="389000" />
+      <workItem from="1622536053333" duration="2686000" />
     </task>
     <servers />
   </component>
