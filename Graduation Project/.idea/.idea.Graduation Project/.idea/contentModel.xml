@@ -86,6 +86,7 @@
           <e p="UI" t="Include">
             <e p="Compass.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
+            <e p="UIPrefab.cs" t="Include" />
           </e>
           <e p="Weapon" t="Include">
             <e p="DebugDrawLine.cs" t="Include" />

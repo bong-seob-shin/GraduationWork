@@ -126,6 +126,7 @@ public class Player : AnimationObj
         myGun.bulletText.text = "Bullet  " +myGun. bulletCount.ToString() + " / " + myGun.maxBulletCount.ToString();
         ikLeftHandGrab = GetComponent<IKLeftHandGrab>();
         isPlayer = true;
+        cheatPos =  GameObject.FindWithTag("deongunTransform").GetComponent<Transform>();
     }
 
     public static Player Instance
@@ -452,6 +453,8 @@ public class Player : AnimationObj
                 {
                     if (car.usingUserId < 0)
                     {
+                        interactText.text = " ";
+
                         CenterUI.SetActive(false);
                         _capsuleCollider.enabled = false;
                         playerRb.isKinematic = true;

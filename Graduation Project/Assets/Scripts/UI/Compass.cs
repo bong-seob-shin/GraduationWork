@@ -9,6 +9,12 @@ public class Compass : MonoBehaviour
     public Transform playerTransform;
     public Transform targetDir;
 
+
+    private void Start()
+    {
+        targetDir = GameObject.FindWithTag("deongunTransform").GetComponent<Transform>();
+    }
+
     // Update is called once per frame
     void Update()
     {
