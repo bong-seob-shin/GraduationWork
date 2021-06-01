@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = System.Random;
 
 public class ClosedMonster : MonsterManager
 {
@@ -31,6 +33,17 @@ public class ClosedMonster : MonsterManager
     
     public BoxCollider attackCol;
     
+    // 패트롤
+    public float range = 10.0f;
+    
+    public float patrolTime = 3.0f;
+    private float currentPatrolTime;
+    private float minX, maxX, minZ, maxZ;
+
+    private Vector3 moveSpot;
+
+    private bool isPatrol;
+    
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -38,16 +51,24 @@ public class ClosedMonster : MonsterManager
         nav = GetComponent<NavMeshAgent>();
 
         monsterStartPos = transform.position;
+        
 
         nav.enabled = true;
         
         // 플레이어 타겟 잡는 곳
         targetOn = false;
         currentAttackTerm = attackTerm;
+        
+        // 패트롤
+        isPatrol = true;
 
         this.MaxHP = 300;
         this.HP = MaxHP;
         this.armor = 50;
+        
+        GetPatrolRange();
+        moveSpot = GetNewPosition();
+        currentPatrolTime = patrolTime;
 
         //bm = GetComponent<BossMonster>();
     }
@@ -100,6 +121,12 @@ public class ClosedMonster : MonsterManager
                     }
                 }
             }
+
+            if (!targetOn)
+            {
+                WatchYourStep();
+                GetToStepping();
+            }
             if (this.HP <= 0)
             {
                 livedparts.SetActive(false);
@@ -121,7 +148,44 @@ public class ClosedMonster : MonsterManager
             }
         }
     }
+    
 
+    private void GetPatrolRange()
+    {
+        minX = monsterStartPos.x - range;
+        maxX = monsterStartPos.x + range;
+        minZ = monsterStartPos.z - range;
+        maxZ = monsterStartPos.z + range;
+    }
+
+    Vector3 GetNewPosition()
+    {
+        float randomX = UnityEngine.Random.Range(minX, maxX);
+        float randomZ = UnityEngine.Random.Range(minZ, maxZ);
+
+        Vector3 newPosition = new Vector3(randomX, transform.position.y, randomZ);
+        return newPosition;
+    }
+
+    private void GetToStepping()
+    {
+        nav.SetDestination(moveSpot);
+        anim.SetBool("Walking", true);
+        currentPatrolTime -= Time.deltaTime;
+        if (currentPatrolTime <= 0.0f || Vector3.Distance(transform.position, moveSpot) <= 0.2f)
+        {
+            moveSpot = GetNewPosition();
+            currentPatrolTime = patrolTime;
+        }
+    }
+
+    private void WatchYourStep()
+    {
+        Vector3 targetDirection = moveSpot - transform.position;
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, 0.3f, 0f);
+        transform.rotation = Quaternion.LookRotation(newDirection);
+    }
+    
     private void TraceTarget()
     {
         // 플레이어와의 거리가 20보다 가까울 때 

@@ -17,7 +17,7 @@ public class MonsterManager : ObjManager
         rigid.velocity = Vector3.zero;
         //anim.SetTrigger("Dead");
     }
-
+    
     // Update is called once per frame
     void Update()
     {
