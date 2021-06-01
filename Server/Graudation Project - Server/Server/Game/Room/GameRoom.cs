@@ -98,7 +98,6 @@ namespace Server.Game
 
                         foreach (Buggy b in _buggy.Values)
                             spawnPacket.Objects.Add(b.Info);
-
                         foreach (Boss1 b in _boss1.Values)
                             spawnPacket.Objects.Add(b.Info);
 
@@ -231,29 +230,26 @@ namespace Server.Game
 
             lock (_lock)
             {
-                S_ChangeHp resHpPacket = new S_ChangeHp();
-
                 CMonster cm = new CMonster();
 
                 if (_cmonsters.TryGetValue(hpPacket.ObjectId, out cm))
                 {
+                    S_ChangeHp resHpPacket = new S_ChangeHp();
+
                     cm.StatInfo.Hp -= 80;
                     resHpPacket.StatInfo = cm.StatInfo;
+                    resHpPacket.ObjectId = hpPacket.ObjectId;
+                    Broadcast(resHpPacket);
                 }
-
-                resHpPacket.ObjectId = hpPacket.ObjectId;
-
-                Console.WriteLine(resHpPacket.StatInfo.Hp);
-
-                Broadcast(resHpPacket);
             }
         }
 
-        //public void HandleBossOne(Player player, C_BossOne bossPacket)
-        //{
-        //    C_BossOne resBossPacket = new C_BossOne();
-        //    resBossPacket.ObjectId
-        //}
+        public void HandleBossOne(Player player, C_BossOne bossPacket)
+        { 
+
+        }
+
+        
 
         public Player FindPlayer(Func<GameObject, bool> condition)
         {

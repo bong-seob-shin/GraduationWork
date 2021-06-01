@@ -25,22 +25,15 @@ namespace Server.Game
 
         public override void Update()
         {
-            Random rand = new Random();
-
-            FindClosedPlayer();
-            if (check)
+            switch (Pattern)
             {
-                switch (Pattern) 
-                {
-                    case Pattern.One:
-                        RandWall = rand.Next(1, 12);
-                        Console.WriteLine(RandWall);
-                        BroadcastBoss();
-                        break;
-                }
+                case Pattern.No:
+                    FindClosedPlayer();
+                    break;
+                case Pattern.One:
+                    RandNum();
+                    break;
             }
-            else if(!check)
-                Pattern = Pattern.No;
         }
 
         int _checkPlayerTick = 0;
@@ -63,6 +56,20 @@ namespace Server.Game
             _target = target;
 
             Pattern = Pattern.One;
+            BroadcastBoss();
+        }
+
+        int _RandWallTick = 0;
+        private void RandNum()
+        {
+            if (_RandWallTick > Environment.TickCount64)
+                return;
+            _RandWallTick = Environment.TickCount + 3000;
+
+            Random rand = new Random();
+            StatInfo.Speed = 1;
+            int r = rand.Next(1, 12);
+            RandWall = r;
             BroadcastBoss();
         }
 
