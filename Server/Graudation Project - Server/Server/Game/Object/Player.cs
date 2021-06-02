@@ -12,6 +12,9 @@ namespace Server.Game
         public Player()
         {
             ObjectType = GameObjectType.Player;
+
+            StatInfo.MaxHp = 100;
+            StatInfo.Hp = 100;
         }
     }
 }
