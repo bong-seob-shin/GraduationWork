@@ -106,7 +106,7 @@ public class BossMonster : MonsterManager
         isOperate = false; // 플레이어를 찾아내면 isOperate
         isDead = false; // 처음이니까 안죽어있을거고
 
-        this.MaxHP = 3000;
+        this.MaxHP = 1500;
         this.HP = MaxHP;
         this.armor = 100;
         // 몬스터 공격 시간
@@ -207,7 +207,7 @@ public class BossMonster : MonsterManager
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
-                        randomPattern = Random.Range(0, 3);
+                        randomPattern = Random.Range(0, 4);
                         if (randomPattern == 0)
                         {
                             phaseFirstPattern();
@@ -327,19 +327,19 @@ public class BossMonster : MonsterManager
         if (hpPer < 80.0f && hpPer >= 50.0f)
         {
             phase = 2;
-            DestroyParts(first_face, 2.0f);
+            //DestroyParts(first_face, 2.0f);
         }
         // hp가 30% 이상 50% 미만일 때 = 3페이즈    ---->  third_face 분리 후 제거  투사체 공격하는 패턴
         if (hpPer < 50.0f && hpPer >= 30.0f)
         {
             phase = 3;
-            DestroyParts(second_face, 2.0f);
+            //DestroyParts(second_face, 2.0f);
         }
         // hp가 0% 초과 30% 미만일 때 = 4페이즈(광폭화)  ----> 0프로 이하되면 죽음   2,3 패턴 둘다
         if (hpPer < 30.0f && hpPer > 0.0f)
         {
             phase = 4;
-            DestroyParts(third_face, 2.0f);
+            //DestroyParts(third_face, 2.0f);
         }
         // hp가 0이하일 때 ----> 죽자.
         if (hpPer <= 0.0f)

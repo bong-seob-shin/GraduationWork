@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="" />
+    <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,6 +237,7 @@
       <workItem from="1622644836022" duration="21000" />
       <workItem from="1622644884240" duration="8000" />
       <workItem from="1622644960238" duration="1511000" />
+      <workItem from="1622656342899" duration="326000" />
     </task>
     <servers />
   </component>
