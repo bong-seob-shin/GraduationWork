@@ -14579,42 +14579,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 689094505, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1008102117, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1008102117, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1129453991, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1129453991, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1129453991, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2060536779, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 301.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 2060536780, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
-      propertyPath: m_text
-      value: 'Sensitivity : 15. 00
-
-
-
-'
-      objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1391.3998
