@@ -46,7 +46,6 @@ namespace Server.Game
             Player target = Room.FindPlayer(p =>
             {
                 float dist = DistanceToPoint(p.CellPos, CellPos);
-                //Console.WriteLine(dist);
                 return dist <= 10f;
             });
 

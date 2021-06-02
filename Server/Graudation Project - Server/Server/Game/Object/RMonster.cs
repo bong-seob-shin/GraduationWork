@@ -21,27 +21,13 @@ namespace Server.Game
 
             StatInfo.MaxHp = 400;
             StatInfo.Hp = 400;
-            //MaxHP_TESTING = 400;
-            //HP_TESTING = 400;
         }
 
         public override void Update()
         {
-            CoolAttack();
             RandomPos();
+            Attack();
         }
-
-        int _attackTick = 0;
-        private void CoolAttack()
-        {
-            if (_attackTick > Environment.TickCount64)
-                return;
-            _attackTick = Environment.TickCount + 5000;
-
-            State = State.Attack;
-            BroadcastMove();
-        }
-
 
         int _randTick = 0;
         private void RandomPos()
@@ -71,6 +57,18 @@ namespace Server.Game
             BroadcastMove();
         }
 
+        int _attackTick = 0;
+        private void Attack()
+        {
+            if (_attackTick > Environment.TickCount64)
+                return;
+            _attackTick = Environment.TickCount + 2000;
+
+            State = State.Attack;
+            BroadcastMove();
+        }
+
+
         private float DistanceToPoint(Vector3 a, Vector3 b)
         {
             return (float)Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2) + Math.Pow(a.Z - b.Z, 2));
@@ -83,6 +81,5 @@ namespace Server.Game
             movePacket.PosInfo = PosInfo;
             Room.Broadcast(movePacket);
         }
-
     }
 }
