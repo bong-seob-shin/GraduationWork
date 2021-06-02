@@ -141,6 +141,8 @@ public class BossMonster : MonsterManager
                 // 몬스터 소환만 하는 패턴
                 if (phase == 1)
                 {
+                    attackTime = 10;
+
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
@@ -152,6 +154,7 @@ public class BossMonster : MonsterManager
 
                 if (phase == 2)
                 {
+                    attackTime = 8;
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
@@ -172,6 +175,8 @@ public class BossMonster : MonsterManager
 
                 if (phase == 3)
                 {
+                    attackTime = 6;
+
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
@@ -197,6 +202,8 @@ public class BossMonster : MonsterManager
 
                 if (phase == 4)
                 {
+                    attackTime = 4;
+
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
