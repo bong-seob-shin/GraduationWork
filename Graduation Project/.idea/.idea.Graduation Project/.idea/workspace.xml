@@ -20,11 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Boss1 Electric Arm.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Boss1 Electric Arm.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/PlanesTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/PlanesTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss1 Body.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss1 Body.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss1 Electric Arm.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss1 Electric Arm.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss1 Head.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss1 Head.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss1 Range Arm.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss1 Range Arm.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Dungeons/Dungeon1/Materials/Dungeon1 Hallway Wall_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Dungeons/Dungeon1/Materials/Dungeon1 Hallway Wall_BaseColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Dungeons/Dungeon1/Materials/Dungeon1 Wood Door_BaseColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Dungeons/Dungeon1/Materials/Dungeon1 Wood Door_BaseColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Boss1 Electric Arm.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Boss1 Electric Arm.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Boss1 Range Arm.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Boss1 Range Arm.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +49,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Plane.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Plane.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,7 +93,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonsterBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Laser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/Laser.cs" />
@@ -94,6 +107,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/PlanePattern.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
       </list>
     </option>
   </component>
@@ -237,6 +251,9 @@
       <workItem from="1622633825268" duration="4658000" />
       <workItem from="1622638550529" duration="603000" />
       <workItem from="1622639441153" duration="1786000" />
+      <workItem from="1622644836022" duration="21000" />
+      <workItem from="1622644884240" duration="8000" />
+      <workItem from="1622644960238" duration="316000" />
     </task>
     <servers />
   </component>

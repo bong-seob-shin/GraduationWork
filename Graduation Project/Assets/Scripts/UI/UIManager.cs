@@ -18,6 +18,9 @@ public class UIManager : MonoBehaviour
     public GameObject gameUI;
     [SerializeField]private bool isMenuOn = false;
 
+
+    public TextMeshProUGUI sensitivityText;
+    public Slider sensitivitySlider;
     //public SliceController mySController;
     
     
@@ -94,6 +97,8 @@ public class UIManager : MonoBehaviour
             if(centerPoint.activeSelf) centerPoint.SetActive(false);
         }
 
+        _player.sensitivity = sensitivitySlider.value;
+        sensitivityText.text = "Sensitivity : "+ (Math.Truncate(sensitivitySlider.value)).ToString();
         crossHair.sizeDelta = new Vector2(crossHairSize , crossHairSize);
     }
 
