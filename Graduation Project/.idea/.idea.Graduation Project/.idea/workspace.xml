@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Boss1 Electric Arm.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Boss1 Electric Arm.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/PlanesTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/PlanesTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" afterDir="false" />
-    </list>
+    <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +230,7 @@
       <workItem from="1622633629612" duration="9000" />
       <workItem from="1622633825268" duration="4658000" />
       <workItem from="1622638550529" duration="603000" />
-      <workItem from="1622639441153" duration="1786000" />
+      <workItem from="1622639441153" duration="1802000" />
     </task>
     <servers />
   </component>
