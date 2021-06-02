@@ -33,6 +33,18 @@ public class RangedMonster : MonsterManager
     private bool targetOn;
 
     public GameObject HeadPart;
+    
+    // 패트롤
+    public float range = 10.0f;
+    
+    public float patrolTime = 3.0f;
+    private float currentPatrolTime;
+    private float minX, maxX, minZ, maxZ;
+
+    private Vector3 moveSpot;
+
+    private bool isPatrol;
+    
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -50,6 +62,10 @@ public class RangedMonster : MonsterManager
         this.MaxHP = 150;
         this.HP = this.MaxHP;
         this.armor = 30;
+        
+        GetPatrolRange();
+        moveSpot = GetNewPosition();
+        currentPatrolTime = patrolTime;
     }
 
     // Update is called once per frame
@@ -90,6 +106,13 @@ public class RangedMonster : MonsterManager
                 }
             }
             
+            
+            if (!targetOn)
+            {
+                WatchYourStep();
+                GetToStepping();
+            }
+            
             if (this.HP <= 0)
             {
                 HeadPart.transform.parent = null;
@@ -112,7 +135,40 @@ public class RangedMonster : MonsterManager
 
         }
     }
-    
+    private void GetPatrolRange()
+    {
+        minX = monsterStartPos.x - range;
+        maxX = monsterStartPos.x + range;
+        minZ = monsterStartPos.z - range;
+        maxZ = monsterStartPos.z + range;
+    }
+
+    Vector3 GetNewPosition()
+    {
+        float randomX = UnityEngine.Random.Range(minX, maxX);
+        float randomZ = UnityEngine.Random.Range(minZ, maxZ);
+
+        Vector3 newPosition = new Vector3(randomX, transform.position.y, randomZ);
+        return newPosition;
+    }
+
+    private void GetToStepping()
+    {
+        nav.SetDestination(moveSpot);
+        currentPatrolTime -= Time.deltaTime;
+        if (currentPatrolTime <= 0.0f || Vector3.Distance(transform.position, moveSpot) <= 0.2f)
+        {
+            moveSpot = GetNewPosition();
+            currentPatrolTime = patrolTime;
+        }
+    }
+
+    private void WatchYourStep()
+    {
+        Vector3 targetDirection = moveSpot - transform.position;
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, 0.3f, 0f);
+        transform.rotation = Quaternion.LookRotation(newDirection);
+    }
     private void TraceTarget()
     {
         // 플레이어와의 거리가 20보다 가까울 때 

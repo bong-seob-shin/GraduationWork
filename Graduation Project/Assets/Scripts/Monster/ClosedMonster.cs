@@ -19,7 +19,6 @@ public class ClosedMonster : MonsterManager
     private Vector3 monsterStartPos;
 
     // 상태값
-    public bool isHit = false;
     private bool isAttack = false;
 
     private float timer = 2.0f;
@@ -78,7 +77,7 @@ public class ClosedMonster : MonsterManager
     {
         if (isHit)
         {
-            StopTrace();
+            //StopTrace();
             Rigidity();
         }
         if (!isDead)
@@ -126,6 +125,10 @@ public class ClosedMonster : MonsterManager
             {
                 WatchYourStep();
                 GetToStepping();
+                if (isHit)
+                {
+                    target = this.shootMeTarget;
+                }
             }
             if (this.HP <= 0)
             {
@@ -215,6 +218,7 @@ public class ClosedMonster : MonsterManager
 
     public void Rigidity()
     {
+        nav.Stop();
         anim.SetTrigger("Hit");
         isHit = false;
     }
