@@ -9,8 +9,7 @@ public class MonsterManager : ObjManager
     public NavMeshAgent nav;
     [HideInInspector]public bool isDead = false;
     public Rigidbody rigid;
-
-    public Transform shootMeTarget;
+    
     public bool isHit = false;
     
     protected override void Dead()
@@ -20,11 +19,7 @@ public class MonsterManager : ObjManager
         rigid.velocity = Vector3.zero;
         //anim.SetTrigger("Dead");
     }
-
-    public virtual void HitSetTarget(Transform hitPos)
-    {
-        shootMeTarget = hitPos;
-    }
+    
     
     // Update is called once per frame
     void Update()

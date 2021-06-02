@@ -28,8 +28,8 @@ public class RangedMonster : MonsterManager
 
     private Vector3 bulletStartPos;
 
-    private Transform target;
-    private bool targetOn;
+    public Transform target;
+    public bool targetOn;
 
     public GameObject HeadPart;
     
@@ -43,6 +43,11 @@ public class RangedMonster : MonsterManager
     private Vector3 moveSpot;
 
     private bool isPatrol;
+    
+    // 맞았을 때 타이머
+    private float currentAgroTime;
+    private float agroTime = 5.0f;
+    public bool agroOn = false;
     
     private void Awake()
     {
@@ -65,6 +70,8 @@ public class RangedMonster : MonsterManager
         GetPatrolRange();
         moveSpot = GetNewPosition();
         currentPatrolTime = patrolTime;
+        
+        currentAgroTime = agroTime;
     }
 
     // Update is called once per frame
@@ -85,16 +92,34 @@ public class RangedMonster : MonsterManager
 
             if (targetOn)
             {
-                if (Vector3.Distance(target.position, transform.position) <= 20)
+                TraceTarget();
+                if (agroOn)
                 {
-                    TraceTarget();
+                    currentAgroTime -= Time.deltaTime;
+                    if (currentAgroTime <= 0.0f && Vector3.Distance(target.position, transform.position) > 20)
+                    {
+                        StopTrace();
+                        currentAgroTime = agroTime;
+                        agroOn = false;
+                        targetOn = false;
+                    }
                 }
+                else
+                {
+                    if (Vector3.Distance(target.position, transform.position) > 20)
+                    {
+                        StopTrace();
+                    }
+                }
+                // if (Vector3.Distance(target.position, transform.position) <= 20
+                //     &&  Vector3.Distance(target.position , transform.position) >= 3.0f)
+                // {
+                //     attackCol.gameObject.SetActive(false);
+                //     TraceTarget();
+                //     isAttack = false;
+                // }
+                //
 
-                if (Vector3.Distance(target.position, transform.position) > 20)
-                {
-                    StopTrace();
-                    targetOn = false;
-                }
 
                 if (Vector3.Distance(target.position, transform.position) <= 10.0f)
                 {
@@ -104,8 +129,8 @@ public class RangedMonster : MonsterManager
                     }
                 }
             }
-            
-            
+
+
             if (!targetOn)
             {
                 WatchYourStep();

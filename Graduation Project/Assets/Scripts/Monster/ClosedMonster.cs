@@ -27,8 +27,8 @@ public class ClosedMonster : MonsterManager
     private float currentAttackTerm;
     private float motionDelay = 1.0f;
     public Collider[] colls;
-    private Transform target;
-    private bool targetOn;
+    public Transform target;
+    public bool targetOn;
     
     public BoxCollider attackCol;
     
@@ -43,6 +43,11 @@ public class ClosedMonster : MonsterManager
 
     private bool isPatrol;
     
+    // 맞았을 때 타이머
+    private float currentAgroTime;
+    private float agroTime = 5.0f;
+    public bool agroOn = false;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -69,6 +74,7 @@ public class ClosedMonster : MonsterManager
         moveSpot = GetNewPosition();
         currentPatrolTime = patrolTime;
 
+        currentAgroTime = agroTime;
         //bm = GetComponent<BossMonster>();
     }
 
@@ -79,6 +85,7 @@ public class ClosedMonster : MonsterManager
         {
             //StopTrace();
             Rigidity();
+            agroOn = true;
         }
         if (!isDead)
         {
@@ -93,23 +100,39 @@ public class ClosedMonster : MonsterManager
                     break;
                 }
             }
-    
+            
             if (targetOn)
             {
+                TraceTarget();
+                if (agroOn)
+                {
+                    currentAgroTime -= Time.deltaTime;
+                    if (currentAgroTime <= 0.0f && Vector3.Distance(target.position, transform.position) > 20)
+                    {
+                        StopTrace();
+                        currentAgroTime = agroTime;
+                        agroOn = false;
+                        targetOn = false;
+                    }
+                }
+                else
+                {
+                    if (Vector3.Distance(target.position, transform.position) > 20)
+                    {
+                        StopTrace();
+                    }
+                }
+                // if (Vector3.Distance(target.position, transform.position) <= 20
+                //     &&  Vector3.Distance(target.position , transform.position) >= 3.0f)
+                // {
+                //     attackCol.gameObject.SetActive(false);
+                //     TraceTarget();
+                //     isAttack = false;
+                // }
+                //
+              
+                
                 currentAttackTerm -= Time.deltaTime;
-                if (Vector3.Distance(target.position, transform.position) <= 20
-                    &&  Vector3.Distance(target.position , transform.position) >= 3.0f)
-                {
-                    attackCol.gameObject.SetActive(false);
-                    TraceTarget();
-                    isAttack = false;
-                }
-                
-                if (Vector3.Distance(target.position, transform.position) > 20)
-                {
-                    StopTrace();
-                }
-                
                 if (Vector3.Distance(target.position, transform.position) <= 3.0f)
                 {
                     nav.Stop();
@@ -125,11 +148,8 @@ public class ClosedMonster : MonsterManager
             {
                 WatchYourStep();
                 GetToStepping();
-                if (isHit)
-                {
-                    target = this.shootMeTarget;
-                }
             }
+
             if (this.HP <= 0)
             {
                 livedparts.SetActive(false);
@@ -201,10 +221,12 @@ public class ClosedMonster : MonsterManager
     private void StopTrace()
     {
         nav.SetDestination(monsterStartPos);
+        transform.LookAt(monsterStartPos);
         if (Vector3.Distance(monsterStartPos, transform.position) <= 1.0f)
         {
             anim.SetBool("Walking", false);
             nav.Stop();
+            targetOn = false;
         }
     }
 
