@@ -19,8 +19,13 @@ namespace Server.Game
         Dictionary<int, Player> _players = new Dictionary<int, Player>();
         Dictionary<int, CMonsterSpawner> _cmonsterspawn = new Dictionary<int, CMonsterSpawner>();
         Dictionary<int, CMonster> _cmonsters = new Dictionary<int, CMonster>();
+        Dictionary<int, RMonster> _rmonsters = new Dictionary<int, RMonster>();
+
         Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
         Dictionary<int, Boss1> _boss1 = new Dictionary<int, Boss1>();
+
+        public List<Vector3> CMonster_pos = new List<Vector3>();
+        public List<Vector3> RMonster_pos = new List<Vector3>();
 
         public void Init(int mapId)
         {
@@ -31,13 +36,23 @@ namespace Server.Game
             CMonster_spawn.Info.PosInfo.SpineZ = 3476;
             EnterGame(CMonster_spawn);
 
-            CMonster CMonster = ObjectManager.Instance.Add<CMonster>();
-            CMonster.CellPos = new Vector3(2240f, 110f, 3460f);
-            EnterGame(CMonster);
+            InitCMosPos();
+            InitRMosPos();
 
-            CMonster CMonster1 = ObjectManager.Instance.Add<CMonster>();
-            CMonster1.CellPos = new Vector3(2230f, 110f, 3450f);
-            EnterGame(CMonster1);
+            for (int i = 0; i < CMonster_pos.Count; ++i)
+            {
+                CMonster CMonster = ObjectManager.Instance.Add<CMonster>();
+                CMonster.CellPos = CMonster_pos[i];
+                EnterGame(CMonster);
+            }
+
+            for (int i = 0; i < RMonster_pos.Count; ++i) 
+            {
+                RMonster RMonster = ObjectManager.Instance.Add<RMonster>();
+                RMonster.CellPos = RMonster_pos[i];
+                EnterGame(RMonster);
+            }
+
 
 
             Boss1 boss1 = ObjectManager.Instance.Add<Boss1>();
@@ -57,6 +72,12 @@ namespace Server.Game
                 foreach (CMonster CMonster in _cmonsters.Values)
                 {
                     CMonster.Update();
+                }
+
+
+                foreach (RMonster RMonster in _rmonsters.Values)
+                {
+                    RMonster.Update();
                 }
 
                 foreach (Boss1 boss1 in _boss1.Values)
@@ -101,10 +122,16 @@ namespace Server.Game
                         foreach (CMonster cm in _cmonsters.Values)
                             spawnPacket.Objects.Add(cm.Info);
 
+                        foreach (RMonster rm in _rmonsters.Values)
+                            spawnPacket.Objects.Add(rm.Info);
+
                         foreach (Buggy b in _buggy.Values)
                             spawnPacket.Objects.Add(b.Info);
+                        
                         foreach (Boss1 b in _boss1.Values)
                             spawnPacket.Objects.Add(b.Info);
+
+
 
                         player.Session.Send(spawnPacket);
                     }
@@ -122,6 +149,13 @@ namespace Server.Game
                     CMonster CMonster = gameObject as CMonster;
                     _cmonsters.Add(gameObject.Id, CMonster);
                     CMonster.Room = this;
+                }
+
+                else if (type == GameObjectType.Rmonster)
+                {
+                    RMonster RMonster = gameObject as RMonster;
+                    _rmonsters.Add(gameObject.Id, RMonster);
+                    RMonster.Room = this;
                 }
 
                 else if (type == GameObjectType.Buggy)
@@ -236,6 +270,7 @@ namespace Server.Game
             lock (_lock)
             {
                 CMonster cm = new CMonster();
+                RMonster rm = new RMonster();
 
                 if (_cmonsters.TryGetValue(hpPacket.ObjectId, out cm))
                 {
@@ -246,6 +281,19 @@ namespace Server.Game
                     resHpPacket.ObjectId = hpPacket.ObjectId;
                     Broadcast(resHpPacket);
                 }
+
+                if (_rmonsters.TryGetValue(hpPacket.ObjectId, out rm))
+                {
+                    S_ChangeHp resHpPacket = new S_ChangeHp();
+
+                    rm.StatInfo.Hp -= 80;
+                    resHpPacket.StatInfo = rm.StatInfo;
+                    resHpPacket.ObjectId = hpPacket.ObjectId;
+                    Broadcast(resHpPacket);
+                }
+
+
+
             }
         }
 
@@ -276,6 +324,17 @@ namespace Server.Game
                     p.Session.Send(packet);
                 }
             }
+        }
+
+        public void InitCMosPos()
+        {
+            CMonster_pos.Add(new Vector3(2230f, 110f, 3450f));
+            CMonster_pos.Add(new Vector3(2240f, 110f, 3460f));
+        }
+
+        public void InitRMosPos()
+        {
+            RMonster_pos.Add(new Vector3(2235f, 110f, 3455f));
         }
     }
 }

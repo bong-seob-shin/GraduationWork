@@ -27,7 +27,6 @@ namespace Server.Game
 
         public override void Update()
         {
-            //Console.WriteLine("CellPos" + CellPos);
             RandomPos();
         }
 
@@ -71,6 +70,7 @@ namespace Server.Game
             movePacket.PosInfo = PosInfo;
             Room.Broadcast(movePacket);
         }
+
     }
 }
 

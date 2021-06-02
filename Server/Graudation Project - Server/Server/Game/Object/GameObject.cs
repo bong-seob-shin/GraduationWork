@@ -77,6 +77,15 @@ namespace Server.Game
             }
         }
 
+        public bool IsReload
+        {
+            get { return AttackInfo.IsReload; }
+            set
+            {
+                AttackInfo.IsReload = value;
+            }
+        }
+
         public bool IsHit
         {
             get { return AttackInfo.IsHit; }

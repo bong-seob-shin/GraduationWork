@@ -40,34 +40,34 @@ namespace Google.Protobuf.Protocol {
             "bC5TdGF0SW5mbyJDCglDX0Jvc3NPbmUSEAoIb2JqZWN0SWQYASABKAUSJAoI",
             "c3RhdEluZm8YAiABKAsyEi5Qcm90b2NvbC5TdGF0SW5mbyJDCglTX0Jvc3NP",
             "bmUSEAoIb2JqZWN0SWQYASABKAUSJAoIc3RhdEluZm8YAiABKAsyEi5Qcm90",
-            "b2NvbC5TdGF0SW5mbyJoCgpBdHRhY2tJbmZvEg8KB0lzU2hvb3QYASABKAgS",
-            "DwoHSXNFcXVpcRgCIAEoCBINCgVJc0hpdBgDIAEoCBIOCgZJc0RlYWQYBCAB",
-            "KAgSDQoFTWF4SFAYBSABKAUSCgoCSFAYBiABKAUiVQoKUGxheWVySW5mbxIQ",
-            "CghwbGF5ZXJJZBgBIAEoBRIMCgRuYW1lGAIgASgJEicKB3Bvc0luZm8YAyAB",
-            "KAsyFi5Qcm90b2NvbC5Qb3NpdGlvbkluZm8ipQEKCk9iamVjdEluZm8SEAoI",
-            "b2JqZWN0SWQYASABKAUSDAoEbmFtZRgCIAEoCRInCgdwb3NJbmZvGAMgASgL",
-            "MhYuUHJvdG9jb2wuUG9zaXRpb25JbmZvEigKCmF0dGFja0luZm8YBCABKAsy",
-            "FC5Qcm90b2NvbC5BdHRhY2tJbmZvEiQKCHN0YXRJbmZvGAUgASgLMhIuUHJv",
-            "dG9jb2wuU3RhdEluZm8i5AEKDFBvc2l0aW9uSW5mbxIMCgRwb3NYGAEgASgC",
-            "EgwKBHBvc1kYAiABKAISDAoEcG9zWhgDIAEoAhIMCgRkaXJYGAQgASgCEgwK",
-            "BGRpcloYBSABKAISDAoEcm90WRgGIAEoAhIOCgZzcGluZVgYByABKAISDgoG",
-            "c3BpbmVZGAggASgCEg4KBnNwaW5lWhgJIAEoAhIeCgVzdGF0ZRgKIAEoDjIP",
-            "LlByb3RvY29sLlN0YXRlEg4KBmlzSnVtcBgLIAEoCBINCgVjYXJJZBgMIAEo",
-            "BRIRCgljYXJ1c2VySWQYDSABKAUimwEKCFN0YXRJbmZvEg0KBWxldmVsGAEg",
-            "ASgFEgoKAmhwGAIgASgFEg0KBW1heEhwGAMgASgFEg4KBmF0dGFjaxgEIAEo",
-            "BRINCgVzcGVlZBgFIAEoAhIQCgh0b3RhbEV4cBgGIAEoBRIiCgdwYXR0ZXJu",
-            "GAcgASgOMhEuUHJvdG9jb2wuUGF0dGVybhIQCghyYW5kd2FsbBgIIAEoBSq9",
-            "AQoFTXNnSWQSEAoMU19FTlRFUl9HQU1FEAASEAoMU19MRUFWRV9HQU1FEAES",
-            "CwoHU19TUEFXThACEg0KCVNfREVTUEFXThADEgoKBkNfTU9WRRAEEgoKBlNf",
-            "TU9WRRAFEgwKCENfQVRUQUNLEAYSDAoIU19BVFRBQ0sQBxIPCgtDX0NIQU5H",
-            "RV9IUBAIEg8KC1NfQ0hBTkdFX0hQEAkSDgoKQ19CT1NTX09ORRAKEg4KClNf",
-            "Qk9TU19PTkUQCyozCgVTdGF0ZRIICgRJRExFEAASCgoGTU9WSU5HEAESCgoG",
-            "QVRUQUNLEAISCAoEREVBRBADKjgKB1BhdHRlcm4SBgoCTk8QABIHCgNPTkUQ",
-            "ARIHCgNUV08QAhIJCgVUSFJFRRADEggKBEZPVVIQBCqEAQoOR2FtZU9iamVj",
-            "dFR5cGUSCAoETk9ORRAAEgoKBlBMQVlFUhABEhMKD0NNT05TVEVSU1BBV05F",
-            "UhACEhMKD1JNT05TVEVSU1BBV05FUhADEgwKCENNT05TVEVSEAQSDAoIUk1P",
-            "TlNURVIQBRIJCgVCVUdHWRAGEgsKB0JPU1NPTkUQB0IbqgIYR29vZ2xlLlBy",
-            "b3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
+            "b2NvbC5TdGF0SW5mbyJ6CgpBdHRhY2tJbmZvEg8KB0lzU2hvb3QYASABKAgS",
+            "DwoHSXNFcXVpcRgCIAEoCBINCgVJc0hpdBgDIAEoCBIQCghJc1JlbG9hZBgE",
+            "IAEoCBIOCgZJc0RlYWQYBSABKAgSDQoFTWF4SFAYBiABKAUSCgoCSFAYByAB",
+            "KAUiVQoKUGxheWVySW5mbxIQCghwbGF5ZXJJZBgBIAEoBRIMCgRuYW1lGAIg",
+            "ASgJEicKB3Bvc0luZm8YAyABKAsyFi5Qcm90b2NvbC5Qb3NpdGlvbkluZm8i",
+            "pQEKCk9iamVjdEluZm8SEAoIb2JqZWN0SWQYASABKAUSDAoEbmFtZRgCIAEo",
+            "CRInCgdwb3NJbmZvGAMgASgLMhYuUHJvdG9jb2wuUG9zaXRpb25JbmZvEigK",
+            "CmF0dGFja0luZm8YBCABKAsyFC5Qcm90b2NvbC5BdHRhY2tJbmZvEiQKCHN0",
+            "YXRJbmZvGAUgASgLMhIuUHJvdG9jb2wuU3RhdEluZm8i5AEKDFBvc2l0aW9u",
+            "SW5mbxIMCgRwb3NYGAEgASgCEgwKBHBvc1kYAiABKAISDAoEcG9zWhgDIAEo",
+            "AhIMCgRkaXJYGAQgASgCEgwKBGRpcloYBSABKAISDAoEcm90WRgGIAEoAhIO",
+            "CgZzcGluZVgYByABKAISDgoGc3BpbmVZGAggASgCEg4KBnNwaW5lWhgJIAEo",
+            "AhIeCgVzdGF0ZRgKIAEoDjIPLlByb3RvY29sLlN0YXRlEg4KBmlzSnVtcBgL",
+            "IAEoCBINCgVjYXJJZBgMIAEoBRIRCgljYXJ1c2VySWQYDSABKAUimwEKCFN0",
+            "YXRJbmZvEg0KBWxldmVsGAEgASgFEgoKAmhwGAIgASgFEg0KBW1heEhwGAMg",
+            "ASgFEg4KBmF0dGFjaxgEIAEoBRINCgVzcGVlZBgFIAEoAhIQCgh0b3RhbEV4",
+            "cBgGIAEoBRIiCgdwYXR0ZXJuGAcgASgOMhEuUHJvdG9jb2wuUGF0dGVybhIQ",
+            "CghyYW5kd2FsbBgIIAEoBSq9AQoFTXNnSWQSEAoMU19FTlRFUl9HQU1FEAAS",
+            "EAoMU19MRUFWRV9HQU1FEAESCwoHU19TUEFXThACEg0KCVNfREVTUEFXThAD",
+            "EgoKBkNfTU9WRRAEEgoKBlNfTU9WRRAFEgwKCENfQVRUQUNLEAYSDAoIU19B",
+            "VFRBQ0sQBxIPCgtDX0NIQU5HRV9IUBAIEg8KC1NfQ0hBTkdFX0hQEAkSDgoK",
+            "Q19CT1NTX09ORRAKEg4KClNfQk9TU19PTkUQCyozCgVTdGF0ZRIICgRJRExF",
+            "EAASCgoGTU9WSU5HEAESCgoGQVRUQUNLEAISCAoEREVBRBADKjgKB1BhdHRl",
+            "cm4SBgoCTk8QABIHCgNPTkUQARIHCgNUV08QAhIJCgVUSFJFRRADEggKBEZP",
+            "VVIQBCqEAQoOR2FtZU9iamVjdFR5cGUSCAoETk9ORRAAEgoKBlBMQVlFUhAB",
+            "EhMKD0NNT05TVEVSU1BBV05FUhACEhMKD1JNT05TVEVSU1BBV05FUhADEgwK",
+            "CENNT05TVEVSEAQSDAoIUk1PTlNURVIQBRIJCgVCVUdHWRAGEgsKB0JPU1NP",
+            "TkUQB0IbqgIYR29vZ2xlLlByb3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.State), typeof(global::Google.Protobuf.Protocol.Pattern), typeof(global::Google.Protobuf.Protocol.GameObjectType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace Google.Protobuf.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_ChangeHp), global::Google.Protobuf.Protocol.S_ChangeHp.Parser, new[]{ "ObjectId", "StatInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_BossOne), global::Google.Protobuf.Protocol.C_BossOne.Parser, new[]{ "ObjectId", "StatInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_BossOne), global::Google.Protobuf.Protocol.S_BossOne.Parser, new[]{ "ObjectId", "StatInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.AttackInfo), global::Google.Protobuf.Protocol.AttackInfo.Parser, new[]{ "IsShoot", "IsEquiq", "IsHit", "IsDead", "MaxHP", "HP" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.AttackInfo), global::Google.Protobuf.Protocol.AttackInfo.Parser, new[]{ "IsShoot", "IsEquiq", "IsHit", "IsReload", "IsDead", "MaxHP", "HP" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PlayerInfo), global::Google.Protobuf.Protocol.PlayerInfo.Parser, new[]{ "PlayerId", "Name", "PosInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ObjectInfo), global::Google.Protobuf.Protocol.ObjectInfo.Parser, new[]{ "ObjectId", "Name", "PosInfo", "AttackInfo", "StatInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PositionInfo), global::Google.Protobuf.Protocol.PositionInfo.Parser, new[]{ "PosX", "PosY", "PosZ", "DirX", "DirZ", "RotY", "SpineX", "SpineY", "SpineZ", "State", "IsJump", "CarId", "CaruserId" }, null, null, null, null),
@@ -1893,6 +1893,7 @@ namespace Google.Protobuf.Protocol {
       isShoot_ = other.isShoot_;
       isEquiq_ = other.isEquiq_;
       isHit_ = other.isHit_;
+      isReload_ = other.isReload_;
       isDead_ = other.isDead_;
       maxHP_ = other.maxHP_;
       hP_ = other.hP_;
@@ -1937,8 +1938,19 @@ namespace Google.Protobuf.Protocol {
       }
     }
 
+    /// <summary>Field number for the "IsReload" field.</summary>
+    public const int IsReloadFieldNumber = 4;
+    private bool isReload_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsReload {
+      get { return isReload_; }
+      set {
+        isReload_ = value;
+      }
+    }
+
     /// <summary>Field number for the "IsDead" field.</summary>
-    public const int IsDeadFieldNumber = 4;
+    public const int IsDeadFieldNumber = 5;
     private bool isDead_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsDead {
@@ -1949,7 +1961,7 @@ namespace Google.Protobuf.Protocol {
     }
 
     /// <summary>Field number for the "MaxHP" field.</summary>
-    public const int MaxHPFieldNumber = 5;
+    public const int MaxHPFieldNumber = 6;
     private int maxHP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxHP {
@@ -1960,7 +1972,7 @@ namespace Google.Protobuf.Protocol {
     }
 
     /// <summary>Field number for the "HP" field.</summary>
-    public const int HPFieldNumber = 6;
+    public const int HPFieldNumber = 7;
     private int hP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int HP {
@@ -1986,6 +1998,7 @@ namespace Google.Protobuf.Protocol {
       if (IsShoot != other.IsShoot) return false;
       if (IsEquiq != other.IsEquiq) return false;
       if (IsHit != other.IsHit) return false;
+      if (IsReload != other.IsReload) return false;
       if (IsDead != other.IsDead) return false;
       if (MaxHP != other.MaxHP) return false;
       if (HP != other.HP) return false;
@@ -1998,6 +2011,7 @@ namespace Google.Protobuf.Protocol {
       if (IsShoot != false) hash ^= IsShoot.GetHashCode();
       if (IsEquiq != false) hash ^= IsEquiq.GetHashCode();
       if (IsHit != false) hash ^= IsHit.GetHashCode();
+      if (IsReload != false) hash ^= IsReload.GetHashCode();
       if (IsDead != false) hash ^= IsDead.GetHashCode();
       if (MaxHP != 0) hash ^= MaxHP.GetHashCode();
       if (HP != 0) hash ^= HP.GetHashCode();
@@ -2026,16 +2040,20 @@ namespace Google.Protobuf.Protocol {
         output.WriteRawTag(24);
         output.WriteBool(IsHit);
       }
-      if (IsDead != false) {
+      if (IsReload != false) {
         output.WriteRawTag(32);
+        output.WriteBool(IsReload);
+      }
+      if (IsDead != false) {
+        output.WriteRawTag(40);
         output.WriteBool(IsDead);
       }
       if (MaxHP != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteInt32(MaxHP);
       }
       if (HP != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteInt32(HP);
       }
       if (_unknownFields != null) {
@@ -2053,6 +2071,9 @@ namespace Google.Protobuf.Protocol {
         size += 1 + 1;
       }
       if (IsHit != false) {
+        size += 1 + 1;
+      }
+      if (IsReload != false) {
         size += 1 + 1;
       }
       if (IsDead != false) {
@@ -2083,6 +2104,9 @@ namespace Google.Protobuf.Protocol {
       }
       if (other.IsHit != false) {
         IsHit = other.IsHit;
+      }
+      if (other.IsReload != false) {
+        IsReload = other.IsReload;
       }
       if (other.IsDead != false) {
         IsDead = other.IsDead;
@@ -2117,14 +2141,18 @@ namespace Google.Protobuf.Protocol {
             break;
           }
           case 32: {
-            IsDead = input.ReadBool();
+            IsReload = input.ReadBool();
             break;
           }
           case 40: {
-            MaxHP = input.ReadInt32();
+            IsDead = input.ReadBool();
             break;
           }
           case 48: {
+            MaxHP = input.ReadInt32();
+            break;
+          }
+          case 56: {
             HP = input.ReadInt32();
             break;
           }

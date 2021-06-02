@@ -103,9 +103,10 @@ message AttackInfo {
   bool IsShoot = 1;
   bool IsEquiq = 2;
   bool IsHit = 3;
-  bool IsDead = 4;  
-  int32 MaxHP = 5;
-  int32 HP = 6;
+  bool IsReload = 4;
+  bool IsDead = 5;  
+  int32 MaxHP = 6;
+  int32 HP = 7;
 }
 
 message PlayerInfo {

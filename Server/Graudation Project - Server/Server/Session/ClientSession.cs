@@ -45,14 +45,22 @@ namespace Server
 				Random rand = new Random();
 				int num = rand.Next(0, 5);
 
+
+                // 던전 외부
+                MyPlayer.Info.PosInfo.PosX = 1436 + num;
+                MyPlayer.Info.PosInfo.PosY = 263;
+                MyPlayer.Info.PosInfo.PosZ = 4935 + num;
+
+
+                // 던전 내부
                 //MyPlayer.Info.PosInfo.PosX = 1394 + num;
                 //MyPlayer.Info.PosInfo.PosY = 226;
                 //MyPlayer.Info.PosInfo.PosZ = 4903 + num;
 
-
-                MyPlayer.Info.PosInfo.PosX = 2259 + num;
-                MyPlayer.Info.PosInfo.PosY = 110;
-                MyPlayer.Info.PosInfo.PosZ = 3473 + num;
+                // 마을 앞
+                //MyPlayer.Info.PosInfo.PosX = 2259 + num;
+                //MyPlayer.Info.PosInfo.PosY = 110;
+                //MyPlayer.Info.PosInfo.PosZ = 3473 + num;
 
                 //MyPlayer.Info.PosInfo.DirX = 0;
                 //MyPlayer.Info.PosInfo.DirZ = 0;
