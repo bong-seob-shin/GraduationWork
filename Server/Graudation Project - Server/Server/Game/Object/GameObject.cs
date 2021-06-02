@@ -46,6 +46,20 @@ namespace Server.Game
             }
         }
 
+        //public Vector3 TestTarget
+        //{
+        //    get 
+        //    {
+        //        return new Vector3(PosInfo.SpineX, PosInfo.SpineY, PosInfo.SpineZ);
+        //    }
+        //    set 
+        //    {
+        //        PosInfo.SpineX = value.X;
+        //        PosInfo.SpineY = value.Y;
+        //        PosInfo.SpineZ = value.Z;
+        //    }
+        //}
+
         public State State 
         {
             get

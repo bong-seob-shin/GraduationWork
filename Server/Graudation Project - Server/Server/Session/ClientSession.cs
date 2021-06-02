@@ -9,12 +9,13 @@ using System.Net;
 using Google.Protobuf.Protocol;
 using Google.Protobuf;
 using Server.Game;
+using System.Numerics;
 
 namespace Server
 {
 	public class ClientSession : PacketSession
 	{
-		public Player MyPlayer { get; set; }
+        public Player MyPlayer { get; set; }
 		public CMonster CMonster { get; set; }
 		public int SessionId { get; set; }
 
@@ -45,12 +46,15 @@ namespace Server
 				Random rand = new Random();
 				int num = rand.Next(0, 5);
 
+                // 던전 광장 앞
+                MyPlayer.Info.PosInfo.PosX = 1370 + num;
+                MyPlayer.Info.PosInfo.PosY = 226;
+                MyPlayer.Info.PosInfo.PosZ = 4930 + num;
 
                 // 던전 외부
-                MyPlayer.Info.PosInfo.PosX = 1436 + num;
-                MyPlayer.Info.PosInfo.PosY = 263;
-                MyPlayer.Info.PosInfo.PosZ = 4935 + num;
-
+                //MyPlayer.Info.PosInfo.PosX = 1436 + num;
+                //MyPlayer.Info.PosInfo.PosY = 263;
+                //MyPlayer.Info.PosInfo.PosZ = 4935 + num;
 
                 // 던전 내부
                 //MyPlayer.Info.PosInfo.PosX = 1394 + num;
@@ -58,9 +62,9 @@ namespace Server
                 //MyPlayer.Info.PosInfo.PosZ = 4903 + num;
 
                 // 마을 앞
-                //MyPlayer.Info.PosInfo.PosX = 2259 + num;
+                //MyPlayer.Info.PosInfo.PosX = 2235 + num;
                 //MyPlayer.Info.PosInfo.PosY = 110;
-                //MyPlayer.Info.PosInfo.PosZ = 3473 + num;
+                //MyPlayer.Info.PosInfo.PosZ = 3455 + num;
 
                 //MyPlayer.Info.PosInfo.DirX = 0;
                 //MyPlayer.Info.PosInfo.DirZ = 0;

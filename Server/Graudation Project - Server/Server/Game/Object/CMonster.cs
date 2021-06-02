@@ -8,6 +8,8 @@ namespace Server.Game
 {
     public class CMonster : CMonsterSpawner
     {
+        public ClientSession Session { get; set; }
+
         Player _target;
 
         private float rand_x;
@@ -21,8 +23,6 @@ namespace Server.Game
 
             StatInfo.MaxHp = 400;
             StatInfo.Hp = 400;
-            //MaxHP_TESTING = 400;
-            //HP_TESTING = 400;
         }
 
         public override void Update()
@@ -45,7 +45,7 @@ namespace Server.Game
             minX = CellPos.X - range;
             maxX = CellPos.X + range;
             minZ = CellPos.Z - range;
-            maxZ = CellPos.Z - range;
+            maxZ = CellPos.Z + range;
 
             float f = (float)rand.NextDouble();
 
