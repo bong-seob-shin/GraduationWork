@@ -271,6 +271,7 @@ namespace Server.Game
             {
                 CMonster cm = new CMonster();
                 RMonster rm = new RMonster();
+                Player p = new Player();
 
                 if (_cmonsters.TryGetValue(hpPacket.ObjectId, out cm))
                 {
@@ -292,6 +293,17 @@ namespace Server.Game
                     Broadcast(resHpPacket);
                 }
 
+                if (_players.TryGetValue(hpPacket.ObjectId, out p))
+                {
+                    S_ChangeHp resHpPacket = new S_ChangeHp();
+
+                    p.StatInfo.Hp -= 20;
+                    resHpPacket.StatInfo = p.StatInfo;
+                    resHpPacket.ObjectId = hpPacket.ObjectId;
+                    Broadcast(resHpPacket);
+
+                    Console.WriteLine(resHpPacket.StatInfo.Hp);
+                }
 
 
             }
