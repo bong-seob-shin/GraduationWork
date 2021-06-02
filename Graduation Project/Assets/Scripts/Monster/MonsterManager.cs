@@ -21,9 +21,9 @@ public class MonsterManager : ObjManager
         //anim.SetTrigger("Dead");
     }
 
-    public virtual void HitSetTarget(Vector3 hitPos)
+    public virtual void HitSetTarget(Transform hitPos)
     {
-        shootMeTarget.position = hitPos;
+        shootMeTarget = hitPos;
     }
     
     // Update is called once per frame

@@ -20,7 +20,6 @@ public class RangedMonster : MonsterManager
     public Collider[] colls;
     
     // 상태값
-    public bool isHit = false;
     private bool isAttack = false;
 
     private float timer = 2.0f;

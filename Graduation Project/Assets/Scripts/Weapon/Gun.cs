@@ -113,14 +113,14 @@ public class Gun : MonoBehaviour
                 if (monster != null)
                 {
                     monster.hit(damage,penetration);
-                    monster.HitSetTarget(transform.position);
+                    monster.HitSetTarget(transform.parent);
                     monster.isHit = true;
                 }
 
                 if (Rmonster != null)
                 {
                     Rmonster.hit(damage,penetration);
-                    Rmonster.HitSetTarget(transform.position);
+                    Rmonster.HitSetTarget(transform.parent);
                     Rmonster.isHit = true;
                 }
 
