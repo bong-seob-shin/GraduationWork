@@ -225,7 +225,6 @@ public class ClosedMonster : MonsterManager
         if (Vector3.Distance(monsterStartPos, transform.position) <= 1.0f)
         {
             anim.SetBool("Walking", false);
-            nav.Stop();
             targetOn = false;
         }
     }

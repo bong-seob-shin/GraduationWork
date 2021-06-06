@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5626812188858286421}
   - component: {fileID: 7634310099412743583}
   - component: {fileID: 3302940529074342752}
+  - component: {fileID: 8873522134143761680}
   m_Layer: 0
   m_Name: Boss1 Core
   m_TagString: Untagged
@@ -101,3 +102,16 @@ MonoBehaviour:
   MaxHP: 0
   HP: 0
   armor: 0
+--- !u!65 &8873522134143761680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282815595972645962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.351738, y: 0.4057907, z: 1.3517383}
+  m_Center: {x: 0, y: 0, z: 0.00000002980233}

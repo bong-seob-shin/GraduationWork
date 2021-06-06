@@ -212,7 +212,7 @@ public class RangedMonster : MonsterManager
         nav.SetDestination(monsterStartPos);
         if (Vector3.Distance(monsterStartPos , transform.position) <= 0.1f)
         {
-            nav.Stop();
+            targetOn = false;
         }
     }
     

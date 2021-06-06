@@ -20,14 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Materials/M_Boss1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Materials/M_Boss1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/Boss1 Core.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/Boss1 Core.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/Boss1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/Boss1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/PlanesTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss/PlanesTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/CloseMonster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/CloseMonster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshSlicer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshSlicer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shader/Building Shader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Building Shader.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,15 +43,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Plane.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Plane.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/ClosedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RangedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/MovingFloor.cs" />
@@ -57,7 +61,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/CMRandomSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshSlicer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonsterAttackCol.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/SliceController.cs" />
@@ -91,13 +94,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPrefab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/PlanePattern.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/ClosedMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/RangedMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshSlicer.cs" />
       </list>
     </option>
   </component>
@@ -111,6 +116,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -247,6 +253,8 @@
       <workItem from="1622656342899" duration="326000" />
       <workItem from="1622656699089" duration="1099000" />
       <workItem from="1622968751462" duration="4212000" />
+      <workItem from="1622973416348" duration="21000" />
+      <workItem from="1622974336568" duration="3514000" />
     </task>
     <servers />
   </component>
@@ -299,10 +307,10 @@
     </state>
     <state x="604" y="148" width="930" height="1026" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622279470012" />
     <state x="694" y="141" width="1096" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618302181257" />
-    <state x="2453" y="0" width="554" height="1887" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@1920.0.1080.1880" timestamp="1613660564667" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1619799538874">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1622977077280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622977077280" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1619799538874" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621566684613">
       <screen x="0" y="0" width="1920" height="1040" />

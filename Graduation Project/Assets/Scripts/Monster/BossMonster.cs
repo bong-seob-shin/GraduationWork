@@ -107,7 +107,7 @@ public class BossMonster : MonsterManager
         isOperate = false; // 플레이어를 찾아내면 isOperate
         isDead = false; // 처음이니까 안죽어있을거고
 
-        this.MaxHP = 150;
+        this.MaxHP = 300;
         this.HP = MaxHP;
         this.armor = 100;
         // 몬스터 공격 시간
@@ -151,8 +151,8 @@ public class BossMonster : MonsterManager
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
-                        //phaseFourthPattern();
-                        phaseFirstPattern();
+                        phaseFourthPattern();
+                        //phaseFirstPattern();
                         currentAttackTime = attackTime;
                     }
                 }
@@ -201,6 +201,24 @@ public class BossMonster : MonsterManager
                         {
                             phaseThirdPattern();
                         }
+                        
+                        int pattern2 = Random.Range(0, 3);
+
+                        pattern2 = (pattern2 + randomPattern) % 3;
+                        if (pattern2 == 0)
+                        {
+                            phaseFirstPattern();
+                        }
+
+                        if (pattern2 == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+
+                        if (pattern2 == 2)
+                        {
+                            phaseThirdPattern();
+                        }
 
                         currentAttackTime = attackTime;
                     }
@@ -234,7 +252,28 @@ public class BossMonster : MonsterManager
                             
                             phaseFourthPattern();
                         }
+                        
+                        int pattern2 = Random.Range(0, 4);
 
+                        pattern2 = (pattern2 + randomPattern) % 4;
+                        if (pattern2 == 0)
+                        {
+                            phaseFirstPattern();
+                        }
+
+                        if (pattern2 == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+
+                        if (pattern2 == 2)
+                        {
+                            phaseThirdPattern();
+                        }
+                        if (pattern2 == 3)
+                        {
+                            phaseFourthPattern();
+                        }
                         currentAttackTime = attackTime;
                     }
                 }

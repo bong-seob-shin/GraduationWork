@@ -246,8 +246,15 @@ public static class MeshSlicer {
 		sliceMeshCollider.sharedMesh = sliceMesh;
 		sliceMeshCollider.convex = true;
 		sliceMeshCollider.material = obj.GetComponent<Collider>().material;
-		slice.GetComponent<Rigidbody>().velocity = obj.GetComponent<Rigidbody>().velocity;
-
+		// Rigidbody rb = slice.AddComponent<Rigidbody>();
+		//slice.GetComponent<Rigidbody>().velocity = obj.GetComponent<Rigidbody>().velocity;
+		slice.GetComponent<Rigidbody>().AddForce(slice.transform.forward * 10.0f , ForceMode.Impulse);
+		slice.GetComponent<Rigidbody>().AddForce(slice.transform.up * 1.0f , ForceMode.Impulse);
+		slice.GetComponent<Rigidbody>().isKinematic = false;
+		slice.transform.position -= new Vector3(0.0f, 0.0f, -0.1f);
+		// rb.AddForce(slice.transform.forward * 10.0f , ForceMode.Impulse);
+		// rb.AddForce(slice.transform.up * 1.0f , ForceMode.Impulse);
+		
 		for (int i = 0; i < slice.transform.childCount; i++)
 		{
 			slice.transform.GetChild(i).gameObject.SetActive(false);

@@ -10,8 +10,9 @@ public class Core : ObjManager
     {
         _parent = transform.parent;
         transform.parent = null;
-        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        transform.localScale = new Vector3(1f, 4.5f, 1f);
         transform.parent = _parent.parent;
+        transform.localRotation = Quaternion.Euler(-90, 0 ,0);
         MaxHP = 80;
         HP = MaxHP;
     }
