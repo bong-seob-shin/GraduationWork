@@ -76,8 +76,10 @@ public class BossMonster : MonsterManager
     
     // 보스 랜덤 패턴
     public int randomPattern;
-    
 
+    public Material _headMat;
+    public float headRot;
+    public float eyeIntensity =0;
     //     블럭이 위에서부터 하나씩 떼어짐 - 단계별로
     //     떼질때마다 아래칸에 눈이 생김 - 색은 변하던 말던 
     //
@@ -105,16 +107,19 @@ public class BossMonster : MonsterManager
         isOperate = false; // 플레이어를 찾아내면 isOperate
         isDead = false; // 처음이니까 안죽어있을거고
 
-        this.MaxHP = 1500;
+        this.MaxHP = 150;
         this.HP = MaxHP;
         this.armor = 100;
         // 몬스터 공격 시간
         currentAttackTime = attackTime;
-        
+        eyeIntensity = 0;
+        _headMat.SetColor("Color_561C20F3", Color.white*eyeIntensity);
+
     }
 
     void Update()
     {
+
         CheckSpawnMonsterDead();
         // 보스가 활성화 되지 않았을 때 ? --> 플레이어를 발견하면 isOperate를 True로 바꿔주어서 활성화시킨다.
         if (!isOperate)
@@ -140,6 +145,7 @@ public class BossMonster : MonsterManager
                 // 몬스터 소환만 하는 패턴
                 if (phase == 1)
                 {
+
                     attackTime = 10;
 
                     currentAttackTime -= Time.deltaTime;
@@ -153,6 +159,7 @@ public class BossMonster : MonsterManager
 
                 if (phase == 2)
                 {
+                   
                     attackTime = 8;
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
@@ -224,6 +231,7 @@ public class BossMonster : MonsterManager
 
                         if (randomPattern == 3)
                         {
+                            
                             phaseFourthPattern();
                         }
 
@@ -239,6 +247,7 @@ public class BossMonster : MonsterManager
         }
     }
 
+    
     private void CheckSpawnMonsterDead()
     {
         
@@ -325,12 +334,21 @@ public class BossMonster : MonsterManager
         // hp가 50% 이상 80% 미만일 때 = 2페이즈   ----> second_face 분리 후 제거  몬스터 소환만 하는 패턴
         if (hpPer < 80.0f && hpPer >= 50.0f)
         {
+            eyeIntensity = 50000;
+            _headMat.SetColor("Color_561C20F3", Color.white*eyeIntensity);
+
             phase = 2;
             //DestroyParts(first_face, 2.0f);
         }
         // hp가 30% 이상 50% 미만일 때 = 3페이즈    ---->  third_face 분리 후 제거  투사체 공격하는 패턴
         if (hpPer < 50.0f && hpPer >= 30.0f)
         {
+            if (headRot < 180)
+            {
+                first_face.transform.Rotate(new Vector3(0, 10, 0),Space.World);
+                headRot += 10;
+            }
+
             phase = 3;
             //DestroyParts(second_face, 2.0f);
         }
