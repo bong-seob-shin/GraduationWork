@@ -80,6 +80,8 @@ public class BossMonster : MonsterManager
     public Material _headMat;
     public float headRot;
     public float eyeIntensity =0;
+
+    public float dead_timer = 0;
     //     블럭이 위에서부터 하나씩 떼어짐 - 단계별로
     //     떼질때마다 아래칸에 눈이 생김 - 색은 변하던 말던 
     //
@@ -281,7 +283,11 @@ public class BossMonster : MonsterManager
             //hp가 0% 이하일 때 죽이자.
             if (isDead)
             {
-                Destroy(this.gameObject);
+                dead_timer += Time.deltaTime;
+                if (dead_timer >= 3.0f)
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
     }
@@ -377,7 +383,7 @@ public class BossMonster : MonsterManager
             _headMat.SetColor("Color_561C20F3", Color.white*eyeIntensity);
 
             phase = 2;
-            //DestroyParts(first_face, 2.0f);
+            
         }
         // hp가 30% 이상 50% 미만일 때 = 3페이즈    ---->  third_face 분리 후 제거  투사체 공격하는 패턴
         if (hpPer < 50.0f && hpPer >= 30.0f)
@@ -389,35 +395,60 @@ public class BossMonster : MonsterManager
             }
 
             phase = 3;
-            //DestroyParts(second_face, 2.0f);
+            
         }
         // hp가 0% 초과 30% 미만일 때 = 4페이즈(광폭화)  ----> 0프로 이하되면 죽음   2,3 패턴 둘다
         if (hpPer < 30.0f && hpPer > 0.0f)
         {
+            first_face.transform.Rotate(new Vector3(0, 30, 0),Space.World);
             phase = 4;
-            //DestroyParts(third_face, 2.0f);
         }
         // hp가 0이하일 때 ----> 죽자.
         if (hpPer <= 0.0f)
         {
             isDead = true;
+
+            this.GetComponent<BoxCollider>().enabled = false;
+            
+            DestroyParts(first_face, 2.0f); 
+            DestroyParts(second_face, 2.0f);
+            DestroyParts(third_face, 2.0f);
+
+            if (fourth_face.GetComponent<BoxCollider>() == null)
+            {
+                fourth_face.AddComponent<BoxCollider>();
+            }
+            else
+            {
+                fourth_face.GetComponent<BoxCollider>().size = fourth_face.transform.localScale;
+            }
         }
     }
 
     private void DestroyParts(GameObject parts , float time)
     {
-        parts.transform.parent = null;
+        parts.transform.parent = this.transform;
         if (parts.GetComponent<Rigidbody>() == null)
         {
             parts.AddComponent<Rigidbody>();
+            Rigidbody rb = parts.GetComponent<Rigidbody>();
+            rb.GetComponent<Rigidbody>().AddForce(parts.transform.forward * -20.0f, ForceMode.Impulse);
+            rb.GetComponent<Rigidbody>().AddForce(parts.transform.up * 50.0f , ForceMode.Impulse);
+        }
+        else
+        {
+            Rigidbody rb = parts.GetComponent<Rigidbody>();
+            rb.GetComponent<Rigidbody>().AddForce(parts.transform.forward * -20.0f, ForceMode.Impulse);
+            rb.GetComponent<Rigidbody>().AddForce(parts.transform.up * 50.0f , ForceMode.Impulse);
         }
 
-        float timer = time;
-        timer -= Time.deltaTime;
-        if (timer <= 0.0f)
+        if (parts.GetComponent<BoxCollider>() == null)
         {
-            Destroy(parts.gameObject);
-            timer = 2.0f;
+            parts.AddComponent<BoxCollider>();
+        }
+        else
+        {
+            parts.GetComponent<BoxCollider>().size = parts.transform.localScale;
         }
     }
 }
