@@ -36,6 +36,19 @@ namespace Server
 			_listener.Init(endPoint, () => { return SessionManager.Instance.Generate(); });
 			Console.WriteLine("Listening...");
 
+			// 원격 접속위함
+			//string host = Dns.GetHostName();
+			//IPHostEntry ipHost = Dns.GetHostEntry(host);
+			//IPAddress ipAddr = ipHost.AddressList[0];
+			//IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
+
+			//IPAddress ServerIp = IPAddress.Parse("192.168.0.17");
+			//IPEndPoint ep = new IPEndPoint(ServerIp, 7777);
+
+			//_listener.Init(ep, () => { return SessionManager.Instance.Generate(); });
+			//Console.WriteLine("Listening...");
+
+			// --원래 주석인 놈--
 			//FlushRoom();
 			//JobTimer.Instance.Push(FlushRoom);
 

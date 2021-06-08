@@ -294,15 +294,13 @@ namespace Server.Game
                 {
                     S_ChangeHp resHpPacket = new S_ChangeHp();
 
-                    p.StatInfo.Hp -= 20;
+                    p.StatInfo.Hp -= 10;
                     resHpPacket.StatInfo = p.StatInfo;
                     resHpPacket.ObjectId = hpPacket.ObjectId;
                     Broadcast(resHpPacket);
 
                     Console.WriteLine(resHpPacket.StatInfo.Hp);
                 }
-
-
             }
         }
 
@@ -337,46 +335,45 @@ namespace Server.Game
 
         public void InitCMosPos()
         {
-
-            //CMonster_pos.Add(new Vector3(2230f, 1100f, 3450f));
-            //CMonster_pos.Add(new Vector3(2240f, 110f, 3460f));
-
-            CMonster_pos.Add(new Vector3(1379.603f, 225.955f, 4927.907f));
-            CMonster_pos.Add(new Vector3(1375.874f, 225.9664f, 4936.51f));
-            CMonster_pos.Add(new Vector3(1379.292f, 225.7642f, 4937.684f));
-            CMonster_pos.Add(new Vector3(1381.721f, 226.0201f, 4927.731f));
-            CMonster_pos.Add(new Vector3(1378.797f, 225.7046f, 4947.362f));
-            CMonster_pos.Add(new Vector3(1383.534f, 227.9f, 4922.81f));
             CMonster_pos.Add(new Vector3(1367.629f, 225.8263f, 4916.181f));
-            CMonster_pos.Add(new Vector3(1334.967f, 225.819f, 4917.107f));
-            CMonster_pos.Add(new Vector3(1322.452f, 225.8191f, 4919.089f));
-            CMonster_pos.Add(new Vector3(1311.953f, 225.8191f, 4923.274f));
-            CMonster_pos.Add(new Vector3(1305.114f, 225.8191f, 4923.394f));
-            CMonster_pos.Add(new Vector3(1321.666f, 225.8191f, 4923.547f));
-            CMonster_pos.Add(new Vector3(1322.427f, 225.8869f, 4895.235f));
-            CMonster_pos.Add(new Vector3(1321.666f, 225.8191f, 4923.547f));
-            CMonster_pos.Add(new Vector3(1333.071f, 225.7859f, 4897.628f));
-            CMonster_pos.Add(new Vector3(1355.344f, 225.7682f, 4891.913f));
-            CMonster_pos.Add(new Vector3(1366.68f, 225.7855f, 4894.526f));
+            CMonster_pos.Add(new Vector3(1375.874f, 225.9664f, 4936.51f));
+            CMonster_pos.Add(new Vector3(1378.797f, 225.7046f, 4947.362f));
+            CMonster_pos.Add(new Vector3(1379.603f, 225.955f, 4927.907f));
+            CMonster_pos.Add(new Vector3(1373.603f, 225.955f, 4927.907f));
+            CMonster_pos.Add(new Vector3(1381.721f, 226.0201f, 4927.731f));
+            CMonster_pos.Add(new Vector3(1383.534f, 227.9f, 4922.81f));
+
+            //CMonster_pos.Add(new Vector3(1383.534f, 227.9f, 4922.81f));
+            //CMonster_pos.Add(new Vector3(1334.967f, 225.819f, 4917.107f));
+            //CMonster_pos.Add(new Vector3(1322.452f, 225.8191f, 4919.089f));
+            //CMonster_pos.Add(new Vector3(1311.953f, 225.8191f, 4923.274f));
+            //CMonster_pos.Add(new Vector3(1305.114f, 225.8191f, 4923.394f));
+            //CMonster_pos.Add(new Vector3(1321.666f, 225.8191f, 4923.547f));
+            //CMonster_pos.Add(new Vector3(1322.427f, 225.8869f, 4895.235f));
+            //CMonster_pos.Add(new Vector3(1321.666f, 225.8191f, 4923.547f));
+            //CMonster_pos.Add(new Vector3(1333.071f, 225.7859f, 4897.628f));
+            //CMonster_pos.Add(new Vector3(1355.344f, 225.7682f, 4891.913f));
+            //CMonster_pos.Add(new Vector3(1366.68f, 225.7855f, 4894.526f));
         }
 
         public void InitRMosPos()
         {
-            RMonster_pos.Add(new Vector3(1351.342f, 225.7424f, 4932.287f));
-            RMonster_pos.Add(new Vector3(1354.841f, 225.7495f, 4940.246f));
-            RMonster_pos.Add(new Vector3(1352.508f, 225.8775f, 4936.074f));
-            RMonster_pos.Add(new Vector3(1351.052f, 225.8932f, 4927.855f));
-            RMonster_pos.Add(new Vector3(1355.406f, 225.8946f, 4946.48f));
             RMonster_pos.Add(new Vector3(1351.418f, 225.7309f, 4943.882f));
-            RMonster_pos.Add(new Vector3(1329.277f, 225.8191f, 4949.434f));
-            RMonster_pos.Add(new Vector3(1339.585f, 225.819f, 4913.517f));
-            RMonster_pos.Add(new Vector3(1336.227f, 225.819f, 4913.339f));
-            RMonster_pos.Add(new Vector3(1320.332f, 225.8191f, 4913.95f));
-            RMonster_pos.Add(new Vector3(1302.683f, 225.8191f, 4927.36f));
-            RMonster_pos.Add(new Vector3(1335.822f, 225.8977f, 4892.334f));
-            RMonster_pos.Add(new Vector3(1348.545f, 225.9144f, 4896.864f));
-            RMonster_pos.Add(new Vector3(1349.079f, 225.9183f, 4892.653f));
-            RMonster_pos.Add(new Vector3(1364.575f, 225.7416f, 4898.844f));
+            RMonster_pos.Add(new Vector3(1355.406f, 225.8946f, 4946.48f));
+            RMonster_pos.Add(new Vector3(1351.052f, 225.8932f, 4927.855f));
+            RMonster_pos.Add(new Vector3(1352.508f, 225.8775f, 4936.074f));
+            RMonster_pos.Add(new Vector3(1354.841f, 225.7495f, 4940.246f));
+            RMonster_pos.Add(new Vector3(1351.342f, 225.7424f, 4932.287f));
+
+            //RMonster_pos.Add(new Vector3(1329.277f, 225.8191f, 4949.434f));
+            //RMonster_pos.Add(new Vector3(1339.585f, 225.819f, 4913.517f));
+            //RMonster_pos.Add(new Vector3(1336.227f, 225.819f, 4913.339f));
+            //RMonster_pos.Add(new Vector3(1320.332f, 225.8191f, 4913.95f));
+            //RMonster_pos.Add(new Vector3(1302.683f, 225.8191f, 4927.36f));
+            //RMonster_pos.Add(new Vector3(1335.822f, 225.8977f, 4892.334f));
+            //RMonster_pos.Add(new Vector3(1348.545f, 225.9144f, 4896.864f));
+            //RMonster_pos.Add(new Vector3(1349.079f, 225.9183f, 4892.653f));
+            //RMonster_pos.Add(new Vector3(1364.575f, 225.7416f, 4898.844f));
         }
     }
 }
