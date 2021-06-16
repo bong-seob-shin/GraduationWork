@@ -34,6 +34,7 @@
             <e p="ObjManager.cs" t="Include" />
           </e>
           <e p="IK" t="Include">
+            <e p="IKCCD.cs" t="Include" />
             <e p="IKGrab.cs" t="Include" />
             <e p="IKLeftHandGrab.cs" t="Include" />
           </e>
