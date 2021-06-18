@@ -5,65 +5,48 @@ using UnityEngine;
 
 public class IKCCD : MonoBehaviour
 {
-    public Transform leftHandPos;
-    public Transform RightHandPos;
-    public Transform LeftFootPos;
-    public Transform RightFootPos;
-
+    
     public Vector3 offset;
     
     public bool isGrabed = false;
-
-    public Transform lefthandbone;
+    public Transform targetPos;
     
+    public Transform endEffector;
+    public Transform parentBone;
     private Animator _anim;
+
+    public int iterCount =0;
+    
+    public List<Transform> _boneList = new List<Transform>();
     // Start is called before the first frame update
     void Start()
     {
         _anim = GetComponent<Animator>();
-        lefthandbone = _anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
+        endEffector = _anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
+
+        Transform currentBone = endEffector;
+
+        while (currentBone != parentBone)
+        {
+            _boneList.Add(currentBone);
+            currentBone = currentBone.parent;
+        }
     }
 
     // Update is called once per frame
 
     private void LateUpdate()
-    {       
-       
+    {
 
-        lefthandbone.position = lefthandbone.position+offset;
+        while (iterCount < 10 && (targetPos.position - endEffector.position).sqrMagnitude > 0.1f)
+        {
+
+            
+            iterCount++;
+        }
+        //endEffector.position = endEffector.position+offset;
         //bone받아서 계산하기
     }
 
-    // private void OnAnimatorIK(int layerIndex)
-    // {
-    //
-    //     if (isGrabed)
-    //     {
-    //         _anim.SetIKPosition(AvatarIKGoal.LeftHand,leftHandPos.position);
-    //         _anim.SetIKPositionWeight(AvatarIKGoal.LeftHand,1f);
-    //         
-    //         _anim.SetIKRotation(AvatarIKGoal.LeftHand, leftHandPos.rotation);
-    //         _anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1f);
-    //         
-    //         _anim.SetIKPosition(AvatarIKGoal.LeftFoot,LeftFootPos.position);
-    //         _anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot,1f);
-    //         
-    //         _anim.SetIKRotation(AvatarIKGoal.LeftFoot, LeftFootPos.rotation);
-    //         _anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, 1f);
-    //         
-    //         _anim.SetIKPosition(AvatarIKGoal.RightHand,RightHandPos.position);
-    //         _anim.SetIKPositionWeight(AvatarIKGoal.RightHand,1f);
-    //
-    //         _anim.SetIKRotation(AvatarIKGoal.RightHand, RightHandPos.rotation);
-    //         _anim.SetIKRotationWeight(AvatarIKGoal.RightHand, 1f);
-    //         
-    //         _anim.SetIKPosition(AvatarIKGoal.RightFoot,RightFootPos.position);
-    //         _anim.SetIKPositionWeight(AvatarIKGoal.RightFoot,1f);
-    //
-    //         _anim.SetIKRotation(AvatarIKGoal.RightFoot, RightFootPos.rotation);
-    //         _anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, 1f);
-    //     }
-    //     
-    //    
-    // }
+   
 }
