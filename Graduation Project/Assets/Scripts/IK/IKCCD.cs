@@ -15,6 +15,7 @@ public class IKCCD : MonoBehaviour
     public Transform parentBone;
     private Animator _anim;
 
+    
     public int iterCount =0;
     
     public List<Transform> _boneList = new List<Transform>();
@@ -22,8 +23,8 @@ public class IKCCD : MonoBehaviour
     void Start()
     {
         _anim = GetComponent<Animator>();
-        endEffector = _anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
-
+       // endEffector = _anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
+       
         Transform currentBone = endEffector;
 
         while (currentBone != parentBone)
@@ -31,6 +32,7 @@ public class IKCCD : MonoBehaviour
             _boneList.Add(currentBone);
             currentBone = currentBone.parent;
         }
+        _boneList.Add(currentBone);
     }
 
     // Update is called once per frame
@@ -38,15 +40,24 @@ public class IKCCD : MonoBehaviour
     private void LateUpdate()
     {
 
-        while (iterCount < 10 && (targetPos.position - endEffector.position).sqrMagnitude > 0.1f)
-        {
+        RotateBone(endEffector.parent);
 
-            
-            iterCount++;
-        }
+        // while (iterCount < 10 && (targetPos.position - endEffector.position).sqrMagnitude > 0.1f)
+        // {
+        //
+        //     
+        //     iterCount++;
+        // }
         //endEffector.position = endEffector.position+offset;
         //bone받아서 계산하기
     }
 
-   
+    void RotateBone(Transform bone)
+    {
+        Vector3 boneToTarget = targetPos.position -  bone.position;
+        Vector3 boneToEnd = endEffector.position - bone.position;
+        
+        bone.rotation = endEffector.parent.rotation*Quaternion.FromToRotation(boneToEnd, boneToTarget);
+
+    }
 }
