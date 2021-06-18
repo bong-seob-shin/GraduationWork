@@ -33,15 +33,7 @@ public class InteractiveButton : InteractObj
             }
         }
 
-        if (!isAnimsPlay)
-        {
-        
-            if (_ikLeftHandGrab != null)
-            {
-                _ikLeftHandGrab.isGrabed = false;
-                _ikLeftHandGrab = null;
-            }
-        }
+      
 
 
     }

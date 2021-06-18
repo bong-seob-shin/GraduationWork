@@ -11,7 +11,6 @@ public class InteractObj : MonoBehaviour
 
     public Transform ikPosition;
 
-    [SerializeField]protected IKLeftHandGrab _ikLeftHandGrab = null;
     
     // Start is called before the first frame update
     protected virtual void Start()
@@ -29,9 +28,6 @@ public class InteractObj : MonoBehaviour
     {
         
     }
-
-    public void setIKLeft(IKLeftHandGrab ikl)
-    {
-        _ikLeftHandGrab = ikl;
-    }
+    
+   
 }

@@ -6,24 +6,26 @@ using UnityEngine;
 public class IKCCD : MonoBehaviour
 {
     
-    public Vector3 offset;
+
     
     public bool isGrabed = false;
     public Transform targetPos;
     
     public Transform endEffector;
     public Transform parentBone;
-    private Animator _anim;
 
-    
-    public int iterCount =0;
+
+    public int maxIterCount = 10;
+
+    [Range(0,1)]
+    public float weight = 0;
     
     public List<Transform> _boneList = new List<Transform>();
     // Start is called before the first frame update
     void Start()
     {
-        _anim = GetComponent<Animator>();
-       // endEffector = _anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
+    
+     
        
         Transform currentBone = endEffector;
 
@@ -40,24 +42,56 @@ public class IKCCD : MonoBehaviour
     private void LateUpdate()
     {
 
-        RotateBone(endEffector.parent);
 
-        // while (iterCount < 10 && (targetPos.position - endEffector.position).sqrMagnitude > 0.1f)
-        // {
-        //
-        //     
-        //     iterCount++;
-        // }
-        //endEffector.position = endEffector.position+offset;
+        IKCCDSolution();
+   
         //bone받아서 계산하기
     }
 
-    void RotateBone(Transform bone)
+    void IKCCDSolution()
     {
-        Vector3 boneToTarget = targetPos.position -  bone.position;
-        Vector3 boneToEnd = endEffector.position - bone.position;
+        Vector3 effectorPos = _boneList[0].position;
         
-        bone.rotation = endEffector.parent.rotation*Quaternion.FromToRotation(boneToEnd, boneToTarget);
+        Vector3 target = Vector3.Lerp(effectorPos, targetPos.position, weight);
+
+        float sqrDistance;
+
+
+        int iterCount =0;
+        do
+        {
+            for (int i = 0; i < _boneList.Count - 2; i++)
+            {
+                for (int j = 1; j < i + 3 && j < _boneList.Count; j++)
+                {
+                    RotateBone(_boneList[0], _boneList[j],target);
+
+                    sqrDistance = (_boneList[0].position - target).sqrMagnitude;
+
+                    if (sqrDistance <= 0.01f)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            sqrDistance = (_boneList[0].position - target).sqrMagnitude;
+            iterCount++;
+        } while (iterCount <= maxIterCount && sqrDistance > 0.01f);
+    }
+    
+    void RotateBone(Transform effector, Transform bone, Vector3 targetPos)
+    {
+        Vector3 endEffectorPos = effector.position;
+        Vector3 boneToTarget = targetPos -  bone.position;
+        Vector3 boneToEnd = endEffectorPos - bone.position;
+        Quaternion boneRotation = bone.rotation;
+       
+
+        Quaternion fromToRotation = Quaternion.FromToRotation(boneToEnd, boneToTarget);
+        Quaternion newRot = fromToRotation * boneRotation;
+
+        bone.rotation = newRot;
 
     }
 }
