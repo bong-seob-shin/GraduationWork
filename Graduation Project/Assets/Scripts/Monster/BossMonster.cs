@@ -68,6 +68,8 @@ public class BossMonster : MonsterManager
 
     public Vector3 offset;
 
+    private IEnumerator coroutine; //코루틴할당을 위한 변수
+    
 
     public List<MonsterManager> spawnList = new List<MonsterManager>();
     // 보스 상태
@@ -117,6 +119,8 @@ public class BossMonster : MonsterManager
         eyeIntensity = 0;
         _headMat.SetColor("Color_561C20F3", Color.white*eyeIntensity);
 
+
+        coroutine = WaitPattern();//코루틴할당
     }
 
     void Update()
@@ -203,7 +207,8 @@ public class BossMonster : MonsterManager
                         {
                             phaseThirdPattern();
                         }
-                        
+
+                        StartCoroutine(coroutine);
                         int pattern2 = Random.Range(0, 3);
 
                         pattern2 = (pattern2 + randomPattern) % 3;
@@ -223,6 +228,7 @@ public class BossMonster : MonsterManager
                         }
 
                         currentAttackTime = attackTime;
+                        StopCoroutine(coroutine);
                     }
                 }
 
@@ -254,7 +260,8 @@ public class BossMonster : MonsterManager
                             
                             phaseFourthPattern();
                         }
-                        
+                        StartCoroutine(coroutine);
+
                         int pattern2 = Random.Range(0, 4);
 
                         pattern2 = (pattern2 + randomPattern) % 4;
@@ -277,7 +284,10 @@ public class BossMonster : MonsterManager
                             phaseFourthPattern();
                         }
                         currentAttackTime = attackTime;
+                        StopCoroutine(coroutine);
+
                     }
+                    
                 }
             }
             //hp가 0% 이하일 때 죽이자.
@@ -307,6 +317,14 @@ public class BossMonster : MonsterManager
         }
     }
 
+
+    IEnumerator WaitPattern()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1.5f);
+        }
+    }
     private void phaseFirstPattern()
     {
         if (spawnList.Count <= 4)
