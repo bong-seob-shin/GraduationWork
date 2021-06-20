@@ -22,8 +22,6 @@ public class StateWalk : IState
                player.dirZ -= 0.02f;
             }
 
-            player.anim.SetFloat("MoveDirZ", player.dirZ);
-            player.anim.SetFloat("MoveDirX", player.dirX);
          }
 
          if (player.s_keyPress)
@@ -38,8 +36,7 @@ public class StateWalk : IState
                player.dirZ += 0.02f;
             }
 
-            player.anim.SetFloat("MoveDirZ", player.dirZ);
-            player.anim.SetFloat("MoveDirX", player.dirX);
+      
          }
 
          if (player.a_keyPress)
@@ -54,8 +51,7 @@ public class StateWalk : IState
                player.dirX += 0.02f;
             }
 
-            player.anim.SetFloat("MoveDirZ", player.dirZ);
-            player.anim.SetFloat("MoveDirX", player.dirX);
+     
 
          }
 
@@ -71,10 +67,11 @@ public class StateWalk : IState
                player.dirX -= 0.02f;
             }
 
-            player.anim.SetFloat("MoveDirZ", player.dirZ);
-            player.anim.SetFloat("MoveDirX", player.dirX);
+       
          }
       }
+      player.anim.SetFloat("MoveDirZ", player.dirZ);
+      player.anim.SetFloat("MoveDirX", player.dirX);
    }
 
    public void OperateUpdate()

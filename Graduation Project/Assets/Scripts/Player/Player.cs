@@ -104,6 +104,8 @@ public class Player : AnimationObj
     public Transform cheatPos;
 
     private UIManager _uiManager;
+
+    public bool isJumping = false;
     private void Awake()
     {
         
@@ -286,7 +288,10 @@ public class Player : AnimationObj
 
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    _stateMachine.SetState(_stateDic[PlayerState.Run]);
+                    if (!isJumping)
+                    {
+                        _stateMachine.SetState(_stateDic[PlayerState.Run]);
+                    }
 
                 }
             }
@@ -415,7 +420,7 @@ public class Player : AnimationObj
         vel.z = Mathf.Clamp(vel.z, -7.0f, 7.0f);
 
         oldPos = currentPos;
-       // Debug.Log(vel);
+       Debug.Log(vel.y);
 
     }
 
@@ -438,7 +443,16 @@ public class Player : AnimationObj
     }
     private void IsGround()
     {
+        
         isGround = Physics.Raycast(transform.position, Vector3.down, _capsuleCollider.bounds.extents.y/5.0f);
+        if ( vel.y>0.0f)
+        {
+            isJumping = true;
+        }
+        if(isGround)
+        {
+            isJumping = false;
+        }
         isJump = true;
         if (isGround && !isJump)
         {

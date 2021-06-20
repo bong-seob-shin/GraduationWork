@@ -9,7 +9,7 @@ public class StateRun : IState
     UIManager uiManager = UIManager.instance;
     public void OperateEnter()
     {
-        if (player.isGround)
+        //if (player.isGround)
         {
             if (player.w_keyPress)
             {
@@ -22,8 +22,7 @@ public class StateRun : IState
                     player.dirZ = 1f;
                 }
 
-                player.anim.SetFloat("MoveDirZ", player.dirZ);
-                player.anim.SetFloat("MoveDirX", player.dirX);
+              
 
             }
 
@@ -38,8 +37,6 @@ public class StateRun : IState
                     player.dirZ = -1f;
                 }
 
-                player.anim.SetFloat("MoveDirZ", player.dirZ);
-                player.anim.SetFloat("MoveDirX", player.dirX);
 
             }
 
@@ -54,8 +51,7 @@ public class StateRun : IState
                     player.dirX = -1f;
                 }
 
-                player.anim.SetFloat("MoveDirZ", player.dirZ);
-                player.anim.SetFloat("MoveDirX", player.dirX);
+               
 
             }
 
@@ -69,13 +65,13 @@ public class StateRun : IState
                 {
                     player.dirX = 1f;
                 }
-
-                player.anim.SetFloat("MoveDirZ", player.dirZ);
-                player.anim.SetFloat("MoveDirX", player.dirX);
+                
             }
-
+       
             player.applySpeed = player.runSpeed;
         }
+        player.anim.SetFloat("MoveDirZ", player.dirZ);
+        player.anim.SetFloat("MoveDirX", player.dirX);
     }
 
     public void OperateUpdate()

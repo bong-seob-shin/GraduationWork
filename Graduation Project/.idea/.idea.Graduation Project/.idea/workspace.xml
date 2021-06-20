@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,10 +89,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IK/IKCCD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
       </list>
     </option>
@@ -250,7 +252,7 @@
       <workItem from="1623835518085" duration="595000" />
       <workItem from="1623851071902" duration="4962000" />
       <workItem from="1624011673054" duration="8347000" />
-      <workItem from="1624183477090" duration="15615000" />
+      <workItem from="1624183477090" duration="19773000" />
     </task>
     <servers />
   </component>
@@ -308,14 +310,14 @@
     </state>
     <state x="604" y="148" width="930" height="1026" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622279470012" />
     <state x="694" y="141" width="1096" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618302181257" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1624207347422">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1624211489752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622977077280" />
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1624207347422" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1621566684613">
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1624211489752" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1624210102240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1621566684613" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1624210102240" />
   </component>
 </project>
