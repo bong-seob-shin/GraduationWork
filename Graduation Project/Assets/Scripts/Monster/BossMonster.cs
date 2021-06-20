@@ -68,7 +68,6 @@ public class BossMonster : MonsterManager
 
     public Vector3 offset;
 
-    private IEnumerator coroutine; //코루틴할당을 위한 변수
     
 
     public List<MonsterManager> spawnList = new List<MonsterManager>();
@@ -120,7 +119,6 @@ public class BossMonster : MonsterManager
         _headMat.SetColor("Color_561C20F3", Color.white*eyeIntensity);
 
 
-        coroutine = WaitPattern();//코루틴할당
     }
 
     void Update()
@@ -187,104 +185,102 @@ public class BossMonster : MonsterManager
 
                 if (phase == 3)
                 {
+                    List<int> randList = new List<int>(){0,1,2};
                     attackTime = 6;
 
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
-                        randomPattern = Random.Range(0, 3);
-                        if (randomPattern == 0)
+                        randomPattern = Random.Range(0, randList.Count);
+                        if (randList[randomPattern] == 0)
                         {
                             phaseFirstPattern();
                         }
 
-                        if (randomPattern == 1)
+                        if (randList[randomPattern] == 1)
                         {
                             phaseSecondPattern();
                         }
 
-                        if (randomPattern == 2)
+                        if (randList[randomPattern] == 2)
                         {
                             phaseThirdPattern();
                         }
+                        randList.RemoveAt(randomPattern);
 
-                        StartCoroutine(coroutine);
-                        int pattern2 = Random.Range(0, 3);
+                        int pattern2 = Random.Range(0, randList.Count);
 
-                        pattern2 = (pattern2 + randomPattern) % 3;
-                        if (pattern2 == 0)
+                        if (randList[pattern2] == 0)
                         {
                             phaseFirstPattern();
                         }
 
-                        if (pattern2 == 1)
+                        if (randList[pattern2] == 1)
                         {
                             phaseSecondPattern();
                         }
 
-                        if (pattern2 == 2)
+                        if (randList[pattern2] == 2)
                         {
                             phaseThirdPattern();
                         }
 
                         currentAttackTime = attackTime;
-                        StopCoroutine(coroutine);
                     }
                 }
 
                 if (phase == 4)
                 {
                     attackTime = 4;
+                    List<int> randList = new List<int>(){0,1,2,3};
 
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
-                        randomPattern = Random.Range(0, 4);
-                        if (randomPattern == 0)
+                        randomPattern = Random.Range(0, randList.Count);
+                        if (randList[randomPattern] == 0)
                         {
                             phaseFirstPattern();
                         }
 
-                        if (randomPattern == 1)
+                        if (randList[randomPattern] == 1)
                         {
                             phaseSecondPattern();
                         }
 
-                        if (randomPattern == 2)
+                        if (randList[randomPattern] == 2)
                         {
                             phaseThirdPattern();
                         }
 
-                        if (randomPattern == 3)
+                        if (randList[randomPattern] == 3)
                         {
                             
                             phaseFourthPattern();
                         }
-                        StartCoroutine(coroutine);
+                        randList.RemoveAt(randomPattern);
 
-                        int pattern2 = Random.Range(0, 4);
+                        int pattern2 = Random.Range(0, randList.Count);
 
-                        pattern2 = (pattern2 + randomPattern) % 4;
-                        if (pattern2 == 0)
+                        if (randList[pattern2] == 0)
                         {
                             phaseFirstPattern();
                         }
 
-                        if (pattern2 == 1)
+                        if (randList[pattern2] == 1)
                         {
                             phaseSecondPattern();
                         }
 
-                        if (pattern2 == 2)
+                        if (randList[pattern2] == 2)
                         {
                             phaseThirdPattern();
                         }
-                        if (pattern2 == 3)
+                        if (randList[pattern2] == 3)
                         {
                             phaseFourthPattern();
                         }
                         currentAttackTime = attackTime;
-                        StopCoroutine(coroutine);
 
                     }
                     

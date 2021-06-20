@@ -420,7 +420,7 @@ public class Player : AnimationObj
         vel.z = Mathf.Clamp(vel.z, -7.0f, 7.0f);
 
         oldPos = currentPos;
-       Debug.Log(vel.y);
+      //Debug.Log(vel.y);
 
     }
 
