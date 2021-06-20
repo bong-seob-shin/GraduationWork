@@ -50,7 +50,7 @@ public class IKCCD : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (!object.ReferenceEquals(targetPos, null))//null연산에 사용되는데 비용이 적게듬
+        if (targetPos !=null)//null연산에 사용되는데 비용이 적게듬
         {
             float dist = (standardPos.position - targetPos.position).sqrMagnitude;
 

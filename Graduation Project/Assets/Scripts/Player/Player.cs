@@ -470,10 +470,10 @@ public class Player : AnimationObj
 
             if (ib != null )
             {
+
                 if (onInteractKey)
                 {
                     ib.InteractObjs();
-                    leftHandIKCCD.targetPos = ib.transform;
                     Debug.Log("불렸음");
                     _interactCoolDown = 1.0f;
                     onInteractKey = false;
@@ -481,6 +481,8 @@ public class Player : AnimationObj
                 else
                 {
                     interactText.text = "Interact Key 'F'";
+                    leftHandIKCCD.targetPos = ib.transform;
+
                     Debug.Log(_hitInfo.transform.name);
                 }
             }
