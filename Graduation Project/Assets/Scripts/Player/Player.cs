@@ -65,7 +65,8 @@ public class Player : AnimationObj
 
 
 
-    [HideInInspector]public Camera myCam;
+    public Camera myCam;
+    public Camera SubCam;
     
     [SerializeField] private Vector3 _neckOffset = new Vector3(0, 0, 0);
 
@@ -119,7 +120,6 @@ public class Player : AnimationObj
         playerRb = gameObject.GetComponent<Rigidbody>();
         _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
         _gunGrab = GetComponentInChildren<IKGunGrab>();
-        myCam = GetComponentInChildren<Camera>();
         myCam.gameObject.GetComponent<CameraMove>().enabled = true; //갑자기 생긴 버그 때문에 고치기위해서 카메라무브 스크립트를 게임 시작하면 켜줌
         weaponGunAnim = currentWeapon.GetComponent<Animation>();
         myGun.bulletText.text = "Bullet  " +myGun. bulletCount.ToString() + " / " + myGun.maxBulletCount.ToString();
@@ -538,11 +538,18 @@ public class Player : AnimationObj
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Trap"))
         {
             hit(10);
         }
+
+       
     }
 }

@@ -8,7 +8,6 @@ public class IKCCD : MonoBehaviour
     
 
     
-    public bool isGrabed = false;
     public Transform targetPos;
     
     public Transform endEffector;
@@ -21,6 +20,11 @@ public class IKCCD : MonoBehaviour
     public float weight = 0;
     
     public List<Transform> _boneList = new List<Transform>();
+
+    public Transform standardPos;
+    public float armDistance;
+
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -35,16 +39,28 @@ public class IKCCD : MonoBehaviour
             currentBone = currentBone.parent;
         }
         _boneList.Add(currentBone);
+
+        standardPos = _boneList[_boneList.Count - 1];
+        armDistance = (standardPos.position - endEffector.position).sqrMagnitude;
+
+
     }
 
     // Update is called once per frame
 
     private void LateUpdate()
     {
+        float dist = (standardPos.position - targetPos.position).sqrMagnitude;
+     
+        
+        if (dist < armDistance)
+        {
+         
 
+            IKCCDSolution();
+        }
+      
 
-        IKCCDSolution();
-   
         //bone받아서 계산하기
     }
 
