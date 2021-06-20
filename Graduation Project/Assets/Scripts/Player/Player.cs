@@ -410,8 +410,10 @@ public class Player : AnimationObj
 
         Vector3 distance = currentPos - oldPos;
         vel = distance / Time.deltaTime;
-        
-        
+
+        vel.x = Mathf.Clamp(vel.x, -7.0f, 7.0f);
+        vel.z = Mathf.Clamp(vel.z, -7.0f, 7.0f);
+
         oldPos = currentPos;
         Debug.Log(vel);
 

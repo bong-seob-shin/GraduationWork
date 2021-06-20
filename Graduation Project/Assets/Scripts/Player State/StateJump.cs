@@ -13,8 +13,8 @@ public class StateJump : IState
         {
             player.anim.SetTrigger("Jump");
             //player.playerRb.velocity = player.transform.up * player.jumpForce;
-            
-            player.playerRb.AddForce(Vector3.up*player.jumpForce+player.vel,ForceMode.VelocityChange);
+            player.playerRb.velocity = Vector3.zero;
+            player.playerRb.AddForce(Vector3.up*player.jumpForce+player.vel/2.0f,ForceMode.VelocityChange);
             player.isJump = false;
             uiManager.crossHairSize = 320.0f;
 
