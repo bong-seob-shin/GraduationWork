@@ -50,16 +50,19 @@ public class IKCCD : MonoBehaviour
 
     private void LateUpdate()
     {
-        float dist = (standardPos.position - targetPos.position).sqrMagnitude;
-     
-        
-        if (dist < armDistance)
+        if (!object.ReferenceEquals(targetPos, null))//null연산에 사용되는데 비용이 적게듬
         {
-         
+            float dist = (standardPos.position - targetPos.position).sqrMagnitude;
 
-            IKCCDSolution();
+
+            if (dist < armDistance)
+            {
+
+
+                IKCCDSolution();
+            }
         }
-      
+
 
         //bone받아서 계산하기
     }

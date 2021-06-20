@@ -64,7 +64,7 @@ public class Player : AnimationObj
     private Vector3 _spineDir = new Vector3(0,0,0);
 
 
-
+    public IKCCD leftHandIKCCD;
     public Camera myCam;
     public Camera SubCam;
     
@@ -473,10 +473,7 @@ public class Player : AnimationObj
                 if (onInteractKey)
                 {
                     ib.InteractObjs();
-                    //버튼ik관련코드
-                    //ib.setIKLeft(ikLeftHandGrab);
-                    //ikLeftHandGrab.leftHandPos = ib.transform;
-                    //ikLeftHandGrab.isGrabed = true;
+                    leftHandIKCCD.targetPos = ib.transform;
                     Debug.Log("불렸음");
                     _interactCoolDown = 1.0f;
                     onInteractKey = false;
@@ -540,7 +537,14 @@ public class Player : AnimationObj
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Lever"))
+        {
+            myCam.gameObject.SetActive(false);
+
+
+            SubCam.gameObject.SetActive(true);
+            
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -549,7 +553,14 @@ public class Player : AnimationObj
         {
             hit(10);
         }
+    }
 
-       
+    private void OnTriggerExit(Collider other)
+    {
+        myCam.gameObject.SetActive(true);
+
+
+        SubCam.gameObject.SetActive(false);
+        
     }
 }

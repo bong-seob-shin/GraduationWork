@@ -24,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GP.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/IK/IKCCD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IK/IKCCD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +252,7 @@
       <workItem from="1623835518085" duration="595000" />
       <workItem from="1623851071902" duration="4962000" />
       <workItem from="1624011673054" duration="8347000" />
-      <workItem from="1624183477090" duration="5375000" />
+      <workItem from="1624183477090" duration="6373000" />
     </task>
     <servers />
   </component>
