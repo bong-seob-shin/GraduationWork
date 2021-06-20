@@ -76,6 +76,8 @@ public class Player : AnimationObj
     public Image hitImage;
 
 
+    private Vector3 oldPos;
+    [HideInInspector]public Vector3 vel;
     private enum PlayerState
     {
         Idle,
@@ -143,6 +145,7 @@ public class Player : AnimationObj
     // Start is called before the first frame update
     void Start()
     {
+        oldPos = transform.position; //속도를 구하기위해 위치받기
         
         //상태를 생성함 -> 새로운 상태가 생기면 추가하면됨
         IState idle = new StateIdle();
@@ -237,6 +240,7 @@ public class Player : AnimationObj
             IsGround();
             
             CharacterRotation();
+            
             Move();
             _stateMachine.ExecuteUpdate();
         }
@@ -265,7 +269,8 @@ public class Player : AnimationObj
         a_keyPress = false;
         s_keyPress = false;
         d_keyPress = false;
-
+    
+        
         w_keyPress = Input.GetKey(KeyCode.W);
         a_keyPress = Input.GetKey(KeyCode.A);
         s_keyPress = Input.GetKey(KeyCode.S);
@@ -397,9 +402,19 @@ public class Player : AnimationObj
 
         Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *applySpeed;
 
+        vel = Vector3.zero;
+        //playerRb.velocity = _velocity;
+        Vector3 currentPos = transform.position;
         //playerRb.MovePosition(transform.position + _velocity * Time.deltaTime);
         playerRb.position += _velocity * Time.deltaTime;
-        //playerRb.position += _velocity * Time.deltaTime;
+
+        Vector3 distance = currentPos - oldPos;
+        vel = distance / Time.deltaTime;
+        
+        
+        oldPos = currentPos;
+        Debug.Log(vel);
+
     }
 
     public void hit(int damage)

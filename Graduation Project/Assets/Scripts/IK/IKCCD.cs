@@ -21,7 +21,7 @@ public class IKCCD : MonoBehaviour
     
     public List<Transform> _boneList = new List<Transform>();
 
-    public Transform standardPos;
+    private Transform standardPos;
     public float armDistance;
 
    

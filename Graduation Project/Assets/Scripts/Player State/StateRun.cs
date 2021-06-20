@@ -9,65 +9,73 @@ public class StateRun : IState
     UIManager uiManager = UIManager.instance;
     public void OperateEnter()
     {
-        if (player.w_keyPress)
+        if (player.isGround)
         {
-            if (player.dirZ < 1f)
+            if (player.w_keyPress)
             {
-                player.dirZ += 0.04f;
-            }
-            else
-            {
-                player.dirZ = 1f;
+                if (player.dirZ < 1f)
+                {
+                    player.dirZ += 0.04f;
+                }
+                else
+                {
+                    player.dirZ = 1f;
+                }
+
+                player.anim.SetFloat("MoveDirZ", player.dirZ);
+                player.anim.SetFloat("MoveDirX", player.dirX);
+
             }
 
-            player.anim.SetFloat("MoveDirZ" , player.dirZ);
-            player.anim.SetFloat("MoveDirX" , player.dirX);
+            if (player.s_keyPress)
+            {
+                if (player.dirZ > -1f)
+                {
+                    player.dirZ -= 0.04f;
+                }
+                else
+                {
+                    player.dirZ = -1f;
+                }
 
-        }
-        if (player.s_keyPress)
-        {
-            if (player.dirZ > -1f)
-            {
-                player.dirZ -= 0.04f;
-            }
-            else
-            {
-                player.dirZ = -1f;
-            }
-            player.anim.SetFloat("MoveDirZ" , player.dirZ);
-            player.anim.SetFloat("MoveDirX" , player.dirX);
+                player.anim.SetFloat("MoveDirZ", player.dirZ);
+                player.anim.SetFloat("MoveDirX", player.dirX);
 
-        }
-        if (player.a_keyPress)
-        {
-            if (player.dirX > -1f)
-            {
-                player.dirX -= 0.04f;
             }
-            else
-            {
-                player.dirX = -1f;
-            }
-            player.anim.SetFloat("MoveDirZ" , player.dirZ);
-            player.anim.SetFloat("MoveDirX" , player.dirX);
 
-        }
-        if (player.d_keyPress)
-        {
-            if (player.dirX < 1f)
+            if (player.a_keyPress)
             {
-                player.dirX += 0.04f;
+                if (player.dirX > -1f)
+                {
+                    player.dirX -= 0.04f;
+                }
+                else
+                {
+                    player.dirX = -1f;
+                }
+
+                player.anim.SetFloat("MoveDirZ", player.dirZ);
+                player.anim.SetFloat("MoveDirX", player.dirX);
+
             }
-            else
+
+            if (player.d_keyPress)
             {
-                player.dirX = 1f;
+                if (player.dirX < 1f)
+                {
+                    player.dirX += 0.04f;
+                }
+                else
+                {
+                    player.dirX = 1f;
+                }
+
+                player.anim.SetFloat("MoveDirZ", player.dirZ);
+                player.anim.SetFloat("MoveDirX", player.dirX);
             }
-         
-            player.anim.SetFloat("MoveDirZ" , player.dirZ);
-            player.anim.SetFloat("MoveDirX" , player.dirX);
+
+            player.applySpeed = player.runSpeed;
         }
-        player.applySpeed = player.runSpeed;
-        
     }
 
     public void OperateUpdate()
