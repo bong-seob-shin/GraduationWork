@@ -14927,6 +14927,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 112370846, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 325071219, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -14934,6 +14938,18 @@ PrefabInstance:
     - target: {fileID: 325071219, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269427880, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444685631, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1619426997, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 256707525176383579, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: leftHandIKCCD
@@ -14990,6 +15006,14 @@ PrefabInstance:
     - target: {fileID: 1103782077813285850, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: loadTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212757873428080718, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
+      propertyPath: generations
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 509058840, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}

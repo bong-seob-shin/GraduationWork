@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plane : MonoBehaviour
+public class Boss1Plane : MonoBehaviour
 {
     public int damage = 30;
     private void OnTriggerEnter(Collider other)

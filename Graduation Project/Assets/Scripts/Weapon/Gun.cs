@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
@@ -42,6 +43,15 @@ public class Gun : MonoBehaviour
 
     private float reloadTime = 0f;
     // Start is called before the first frame update
+    
+
+    
+    /// <summary>
+    /// mesh slice
+    public Material insideMaterial;
+    public float loadTime;
+    public int generations;
+    /// </summary>
     void Start()
     {
         gunAnim = GetComponent<Animation>();
@@ -67,9 +77,8 @@ public class Gun : MonoBehaviour
         {
             bulletText.text = "Bullet  " + bulletCount.ToString() + " / " + maxBulletCount.ToString();
         }
-
     }
-
+    
     private void GunFireRateCalc()
     {
         if (currentFireRate > 0)
@@ -98,8 +107,6 @@ public class Gun : MonoBehaviour
             int layerMask = (-1) - (1 << LayerMask.NameToLayer("PlayerCamera"));  // Everything에서 Player 레이어만 제외하고 충돌 체크함
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,layerMask))
             {
-                
-
                 GameObject mark =  Instantiate(bulletMark, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 GameObject markP =  Instantiate(markParticle, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 mark.transform.LookAt(hit.point+hit.normal);
@@ -135,6 +142,13 @@ public class Gun : MonoBehaviour
                 {
                     planeCore.hit(damage,penetration);
                 }
+                
+                if (hit.transform.gameObject.tag == "Sliceable")
+                {
+                    insideMaterial = hit.transform.GetComponent<MeshRenderer>().materials.ElementAt(0);
+                    StartCoroutine(ShatterObject(hit.transform.gameObject, hit.point, generations));
+                }
+                
             }
             retroCameraMove.HorizontalRetro();
             retroCameraMove.VerticalRetro();
@@ -147,6 +161,33 @@ public class Gun : MonoBehaviour
         }
         currentFireRate = FireRate;
         
+    }
+    private IEnumerator ShatterObject(GameObject obj,Vector3 hitpoint,int gen)
+    {
+        yield return new WaitForSeconds(Random.Range(loadTime, loadTime * 2));
+        
+        GameObject[] pieces = MeshManipulation.MeshCut.Cut(obj, /*obj.GetComponent<Collider>().bounds.center*/ hitpoint, GetAngle(obj,gen), insideMaterial);
+
+        foreach (GameObject piece in pieces)
+        {
+            piece.AddComponent<Rigidbody>().ResetCenterOfMass();
+            piece.AddComponent<MeshCollider>().convex = true;
+
+            piece.GetComponent<Rigidbody>().AddForce(transform.forward * 2.0f , ForceMode.Impulse);
+            piece.transform.tag = "Sliceable";
+            if (gen > 0)
+                StartCoroutine(ShatterObject(piece, hitpoint, gen - 1));
+
+            piece.AddComponent<MeshDestroy>();
+        }
+        Destroy(obj);
+    }
+
+    private Vector3 GetAngle(GameObject obj , int gen)
+    {
+        Quaternion q = Quaternion.Euler(Random.Range(-40, 40), Random.Range(-40, 40), Random.Range(-40, 40));
+        Vector3[] faces = {obj.transform.forward, obj.transform.right, obj.transform.up};
+        return q * faces[gen % 3];
     }
     
     private void OnDrawGizmos()
