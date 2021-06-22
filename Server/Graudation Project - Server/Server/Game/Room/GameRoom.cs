@@ -36,6 +36,15 @@ namespace Server.Game
             //CMonster_spawn.Info.PosInfo.SpineZ = 3476;
             //EnterGame(CMonster_spawn);
 
+            Buggy buggy = ObjectManager.Instance.Add<Buggy>();
+            buggy.CellPos = new Vector3(2240.4f, 110.8f, 3450.24f);
+            EnterGame(buggy);
+
+            Buggy buggy1 = ObjectManager.Instance.Add<Buggy>();
+            buggy1.CellPos = new Vector3(2230.4f, 110.8f, 3460.24f);
+            EnterGame(buggy1);
+
+
             InitCMosPos();
             InitRMosPos();
 
@@ -236,6 +245,21 @@ namespace Server.Game
                 resMovePacket.PosInfo = movePacket.PosInfo;
 
                 Broadcast(resMovePacket);
+            }
+        }
+
+        public void HandleCar(Player player, C_Car carPacket) 
+        {
+            if (player == null)
+                return;
+
+            lock (_lock) 
+            {
+                S_Car resCarPacket = new S_Car();
+                resCarPacket.CarId = carPacket.CarId;
+                resCarPacket.CarplayerId = carPacket.CarplayerId;
+
+                Broadcast(resCarPacket);
             }
         }
 

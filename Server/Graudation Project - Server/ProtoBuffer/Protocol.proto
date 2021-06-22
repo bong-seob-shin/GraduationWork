@@ -17,6 +17,8 @@ enum MsgId {
   S_CHANGE_HP = 9;
   C_BOSS_ONE = 10;
   S_BOSS_ONE = 11;
+  C_CAR = 12;
+  S_CAR = 13;
 }
 
 enum State{
@@ -97,6 +99,20 @@ message S_BossOne {
   int32 objectId = 1;
   StatInfo statInfo = 2;  
   
+}
+
+message C_Car {
+  int32 carId = 1;
+  int32 carplayerId = 2;
+  float dirX = 3;
+  float dirZ = 4;
+}
+
+message S_Car {
+  int32 carId = 1;
+  int32 carplayerId = 2;
+  float dirX = 3;
+  float dirZ = 4;
 }
 
 message AttackInfo {

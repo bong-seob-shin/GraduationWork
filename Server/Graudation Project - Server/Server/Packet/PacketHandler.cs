@@ -58,8 +58,27 @@ class PacketHandler
         room.HandleHp(player, hpPacket);
     }
 
+	public static void C_CarHandler(PacketSession session, IMessage packet)
+	{
+		C_Car carPacket = packet as C_Car;
+		ClientSession clientSession = session as ClientSession;
+
+		Player player = clientSession.MyPlayer;
+		if (player == null)
+			return;
+
+		GameRoom room = player.Room;
+		if (room == null)
+			return;
+
+		room.HandleCar(player, carPacket);
+	}
+
 	public static void C_BossOneHandler(PacketSession session, IMessage packet)
 	{
 
-    }	
+    }
+
+	
+
 }
