@@ -102,17 +102,11 @@ message S_BossOne {
 }
 
 message C_Car {
-  int32 carId = 1;
-  int32 carplayerId = 2;
-  float dirX = 3;
-  float dirZ = 4;
+  CarInfo carInfo = 1;
 }
 
 message S_Car {
-  int32 carId = 1;
-  int32 carplayerId = 2;
-  float dirX = 3;
-  float dirZ = 4;
+  CarInfo carInfo = 1;
 }
 
 message AttackInfo {
@@ -137,6 +131,7 @@ message ObjectInfo {
   PositionInfo posInfo = 3;
   AttackInfo attackInfo = 4;
   StatInfo statInfo = 5;
+  CarInfo carInfo = 6;
 }
 
 message PositionInfo {
@@ -164,4 +159,15 @@ message StatInfo {
   int32 totalExp = 6;
   Pattern pattern = 7;
   int32 randwall = 8;
+}
+
+message CarInfo {
+  int32 carId = 1;
+  int32 carplayerId = 2;
+  float carX = 3;
+  float carY = 4;
+  float carZ = 5;
+  float dirX = 6;
+  float dirZ = 7;
+  bool isRide = 8;
 }

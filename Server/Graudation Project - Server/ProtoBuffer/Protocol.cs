@@ -40,38 +40,41 @@ namespace Google.Protobuf.Protocol {
             "bC5TdGF0SW5mbyJDCglDX0Jvc3NPbmUSEAoIb2JqZWN0SWQYASABKAUSJAoI",
             "c3RhdEluZm8YAiABKAsyEi5Qcm90b2NvbC5TdGF0SW5mbyJDCglTX0Jvc3NP",
             "bmUSEAoIb2JqZWN0SWQYASABKAUSJAoIc3RhdEluZm8YAiABKAsyEi5Qcm90",
-            "b2NvbC5TdGF0SW5mbyJHCgVDX0NhchINCgVjYXJJZBgBIAEoBRITCgtjYXJw",
-            "bGF5ZXJJZBgCIAEoBRIMCgRkaXJYGAMgASgCEgwKBGRpcloYBCABKAIiRwoF",
-            "U19DYXISDQoFY2FySWQYASABKAUSEwoLY2FycGxheWVySWQYAiABKAUSDAoE",
-            "ZGlyWBgDIAEoAhIMCgRkaXJaGAQgASgCInoKCkF0dGFja0luZm8SDwoHSXNT",
-            "aG9vdBgBIAEoCBIPCgdJc0VxdWlxGAIgASgIEg0KBUlzSGl0GAMgASgIEhAK",
-            "CElzUmVsb2FkGAQgASgIEg4KBklzRGVhZBgFIAEoCBINCgVNYXhIUBgGIAEo",
-            "BRIKCgJIUBgHIAEoBSJVCgpQbGF5ZXJJbmZvEhAKCHBsYXllcklkGAEgASgF",
-            "EgwKBG5hbWUYAiABKAkSJwoHcG9zSW5mbxgDIAEoCzIWLlByb3RvY29sLlBv",
-            "c2l0aW9uSW5mbyKlAQoKT2JqZWN0SW5mbxIQCghvYmplY3RJZBgBIAEoBRIM",
-            "CgRuYW1lGAIgASgJEicKB3Bvc0luZm8YAyABKAsyFi5Qcm90b2NvbC5Qb3Np",
-            "dGlvbkluZm8SKAoKYXR0YWNrSW5mbxgEIAEoCzIULlByb3RvY29sLkF0dGFj",
-            "a0luZm8SJAoIc3RhdEluZm8YBSABKAsyEi5Qcm90b2NvbC5TdGF0SW5mbyLk",
-            "AQoMUG9zaXRpb25JbmZvEgwKBHBvc1gYASABKAISDAoEcG9zWRgCIAEoAhIM",
-            "CgRwb3NaGAMgASgCEgwKBGRpclgYBCABKAISDAoEZGlyWhgFIAEoAhIMCgRy",
-            "b3RZGAYgASgCEg4KBnNwaW5lWBgHIAEoAhIOCgZzcGluZVkYCCABKAISDgoG",
-            "c3BpbmVaGAkgASgCEh4KBXN0YXRlGAogASgOMg8uUHJvdG9jb2wuU3RhdGUS",
-            "DgoGaXNKdW1wGAsgASgIEg0KBWNhcklkGAwgASgFEhEKCWNhcnVzZXJJZBgN",
-            "IAEoBSKbAQoIU3RhdEluZm8SDQoFbGV2ZWwYASABKAUSCgoCaHAYAiABKAUS",
-            "DQoFbWF4SHAYAyABKAUSDgoGYXR0YWNrGAQgASgFEg0KBXNwZWVkGAUgASgC",
-            "EhAKCHRvdGFsRXhwGAYgASgFEiIKB3BhdHRlcm4YByABKA4yES5Qcm90b2Nv",
-            "bC5QYXR0ZXJuEhAKCHJhbmR3YWxsGAggASgFKtMBCgVNc2dJZBIQCgxTX0VO",
-            "VEVSX0dBTUUQABIQCgxTX0xFQVZFX0dBTUUQARILCgdTX1NQQVdOEAISDQoJ",
-            "U19ERVNQQVdOEAMSCgoGQ19NT1ZFEAQSCgoGU19NT1ZFEAUSDAoIQ19BVFRB",
-            "Q0sQBhIMCghTX0FUVEFDSxAHEg8KC0NfQ0hBTkdFX0hQEAgSDwoLU19DSEFO",
-            "R0VfSFAQCRIOCgpDX0JPU1NfT05FEAoSDgoKU19CT1NTX09ORRALEgkKBUNf",
-            "Q0FSEAwSCQoFU19DQVIQDSozCgVTdGF0ZRIICgRJRExFEAASCgoGTU9WSU5H",
-            "EAESCgoGQVRUQUNLEAISCAoEREVBRBADKjgKB1BhdHRlcm4SBgoCTk8QABIH",
-            "CgNPTkUQARIHCgNUV08QAhIJCgVUSFJFRRADEggKBEZPVVIQBCqEAQoOR2Ft",
-            "ZU9iamVjdFR5cGUSCAoETk9ORRAAEgoKBlBMQVlFUhABEhMKD0NNT05TVEVS",
-            "U1BBV05FUhACEhMKD1JNT05TVEVSU1BBV05FUhADEgwKCENNT05TVEVSEAQS",
-            "DAoIUk1PTlNURVIQBRIJCgVCVUdHWRAGEgsKB0JPU1NPTkUQB0IbqgIYR29v",
-            "Z2xlLlByb3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
+            "b2NvbC5TdGF0SW5mbyIrCgVDX0NhchIiCgdjYXJJbmZvGAEgASgLMhEuUHJv",
+            "dG9jb2wuQ2FySW5mbyIrCgVTX0NhchIiCgdjYXJJbmZvGAEgASgLMhEuUHJv",
+            "dG9jb2wuQ2FySW5mbyJ6CgpBdHRhY2tJbmZvEg8KB0lzU2hvb3QYASABKAgS",
+            "DwoHSXNFcXVpcRgCIAEoCBINCgVJc0hpdBgDIAEoCBIQCghJc1JlbG9hZBgE",
+            "IAEoCBIOCgZJc0RlYWQYBSABKAgSDQoFTWF4SFAYBiABKAUSCgoCSFAYByAB",
+            "KAUiVQoKUGxheWVySW5mbxIQCghwbGF5ZXJJZBgBIAEoBRIMCgRuYW1lGAIg",
+            "ASgJEicKB3Bvc0luZm8YAyABKAsyFi5Qcm90b2NvbC5Qb3NpdGlvbkluZm8i",
+            "yQEKCk9iamVjdEluZm8SEAoIb2JqZWN0SWQYASABKAUSDAoEbmFtZRgCIAEo",
+            "CRInCgdwb3NJbmZvGAMgASgLMhYuUHJvdG9jb2wuUG9zaXRpb25JbmZvEigK",
+            "CmF0dGFja0luZm8YBCABKAsyFC5Qcm90b2NvbC5BdHRhY2tJbmZvEiQKCHN0",
+            "YXRJbmZvGAUgASgLMhIuUHJvdG9jb2wuU3RhdEluZm8SIgoHY2FySW5mbxgG",
+            "IAEoCzIRLlByb3RvY29sLkNhckluZm8i5AEKDFBvc2l0aW9uSW5mbxIMCgRw",
+            "b3NYGAEgASgCEgwKBHBvc1kYAiABKAISDAoEcG9zWhgDIAEoAhIMCgRkaXJY",
+            "GAQgASgCEgwKBGRpcloYBSABKAISDAoEcm90WRgGIAEoAhIOCgZzcGluZVgY",
+            "ByABKAISDgoGc3BpbmVZGAggASgCEg4KBnNwaW5lWhgJIAEoAhIeCgVzdGF0",
+            "ZRgKIAEoDjIPLlByb3RvY29sLlN0YXRlEg4KBmlzSnVtcBgLIAEoCBINCgVj",
+            "YXJJZBgMIAEoBRIRCgljYXJ1c2VySWQYDSABKAUimwEKCFN0YXRJbmZvEg0K",
+            "BWxldmVsGAEgASgFEgoKAmhwGAIgASgFEg0KBW1heEhwGAMgASgFEg4KBmF0",
+            "dGFjaxgEIAEoBRINCgVzcGVlZBgFIAEoAhIQCgh0b3RhbEV4cBgGIAEoBRIi",
+            "CgdwYXR0ZXJuGAcgASgOMhEuUHJvdG9jb2wuUGF0dGVybhIQCghyYW5kd2Fs",
+            "bBgIIAEoBSKDAQoHQ2FySW5mbxINCgVjYXJJZBgBIAEoBRITCgtjYXJwbGF5",
+            "ZXJJZBgCIAEoBRIMCgRjYXJYGAMgASgCEgwKBGNhclkYBCABKAISDAoEY2Fy",
+            "WhgFIAEoAhIMCgRkaXJYGAYgASgCEgwKBGRpcloYByABKAISDgoGaXNSaWRl",
+            "GAggASgIKtMBCgVNc2dJZBIQCgxTX0VOVEVSX0dBTUUQABIQCgxTX0xFQVZF",
+            "X0dBTUUQARILCgdTX1NQQVdOEAISDQoJU19ERVNQQVdOEAMSCgoGQ19NT1ZF",
+            "EAQSCgoGU19NT1ZFEAUSDAoIQ19BVFRBQ0sQBhIMCghTX0FUVEFDSxAHEg8K",
+            "C0NfQ0hBTkdFX0hQEAgSDwoLU19DSEFOR0VfSFAQCRIOCgpDX0JPU1NfT05F",
+            "EAoSDgoKU19CT1NTX09ORRALEgkKBUNfQ0FSEAwSCQoFU19DQVIQDSozCgVT",
+            "dGF0ZRIICgRJRExFEAASCgoGTU9WSU5HEAESCgoGQVRUQUNLEAISCAoEREVB",
+            "RBADKjgKB1BhdHRlcm4SBgoCTk8QABIHCgNPTkUQARIHCgNUV08QAhIJCgVU",
+            "SFJFRRADEggKBEZPVVIQBCqEAQoOR2FtZU9iamVjdFR5cGUSCAoETk9ORRAA",
+            "EgoKBlBMQVlFUhABEhMKD0NNT05TVEVSU1BBV05FUhACEhMKD1JNT05TVEVS",
+            "U1BBV05FUhADEgwKCENNT05TVEVSEAQSDAoIUk1PTlNURVIQBRIJCgVCVUdH",
+            "WRAGEgsKB0JPU1NPTkUQB0IbqgIYR29vZ2xlLlByb3RvYnVmLlByb3RvY29s",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.State), typeof(global::Google.Protobuf.Protocol.Pattern), typeof(global::Google.Protobuf.Protocol.GameObjectType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,13 +90,14 @@ namespace Google.Protobuf.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_ChangeHp), global::Google.Protobuf.Protocol.S_ChangeHp.Parser, new[]{ "ObjectId", "StatInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_BossOne), global::Google.Protobuf.Protocol.C_BossOne.Parser, new[]{ "ObjectId", "StatInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_BossOne), global::Google.Protobuf.Protocol.S_BossOne.Parser, new[]{ "ObjectId", "StatInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_Car), global::Google.Protobuf.Protocol.C_Car.Parser, new[]{ "CarId", "CarplayerId", "DirX", "DirZ" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_Car), global::Google.Protobuf.Protocol.S_Car.Parser, new[]{ "CarId", "CarplayerId", "DirX", "DirZ" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_Car), global::Google.Protobuf.Protocol.C_Car.Parser, new[]{ "CarInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_Car), global::Google.Protobuf.Protocol.S_Car.Parser, new[]{ "CarInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.AttackInfo), global::Google.Protobuf.Protocol.AttackInfo.Parser, new[]{ "IsShoot", "IsEquiq", "IsHit", "IsReload", "IsDead", "MaxHP", "HP" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PlayerInfo), global::Google.Protobuf.Protocol.PlayerInfo.Parser, new[]{ "PlayerId", "Name", "PosInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ObjectInfo), global::Google.Protobuf.Protocol.ObjectInfo.Parser, new[]{ "ObjectId", "Name", "PosInfo", "AttackInfo", "StatInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ObjectInfo), global::Google.Protobuf.Protocol.ObjectInfo.Parser, new[]{ "ObjectId", "Name", "PosInfo", "AttackInfo", "StatInfo", "CarInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PositionInfo), global::Google.Protobuf.Protocol.PositionInfo.Parser, new[]{ "PosX", "PosY", "PosZ", "DirX", "DirZ", "RotY", "SpineX", "SpineY", "SpineZ", "State", "IsJump", "CarId", "CaruserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.StatInfo), global::Google.Protobuf.Protocol.StatInfo.Parser, new[]{ "Level", "Hp", "MaxHp", "Attack", "Speed", "TotalExp", "Pattern", "Randwall" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.StatInfo), global::Google.Protobuf.Protocol.StatInfo.Parser, new[]{ "Level", "Hp", "MaxHp", "Attack", "Speed", "TotalExp", "Pattern", "Randwall" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.CarInfo), global::Google.Protobuf.Protocol.CarInfo.Parser, new[]{ "CarId", "CarplayerId", "CarX", "CarY", "CarZ", "DirX", "DirZ", "IsRide" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1898,10 +1902,7 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public C_Car(C_Car other) : this() {
-      carId_ = other.carId_;
-      carplayerId_ = other.carplayerId_;
-      dirX_ = other.dirX_;
-      dirZ_ = other.dirZ_;
+      carInfo_ = other.carInfo_ != null ? other.carInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1910,47 +1911,14 @@ namespace Google.Protobuf.Protocol {
       return new C_Car(this);
     }
 
-    /// <summary>Field number for the "carId" field.</summary>
-    public const int CarIdFieldNumber = 1;
-    private int carId_;
+    /// <summary>Field number for the "carInfo" field.</summary>
+    public const int CarInfoFieldNumber = 1;
+    private global::Google.Protobuf.Protocol.CarInfo carInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CarId {
-      get { return carId_; }
+    public global::Google.Protobuf.Protocol.CarInfo CarInfo {
+      get { return carInfo_; }
       set {
-        carId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "carplayerId" field.</summary>
-    public const int CarplayerIdFieldNumber = 2;
-    private int carplayerId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CarplayerId {
-      get { return carplayerId_; }
-      set {
-        carplayerId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dirX" field.</summary>
-    public const int DirXFieldNumber = 3;
-    private float dirX_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float DirX {
-      get { return dirX_; }
-      set {
-        dirX_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dirZ" field.</summary>
-    public const int DirZFieldNumber = 4;
-    private float dirZ_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float DirZ {
-      get { return dirZ_; }
-      set {
-        dirZ_ = value;
+        carInfo_ = value;
       }
     }
 
@@ -1967,20 +1935,14 @@ namespace Google.Protobuf.Protocol {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CarId != other.CarId) return false;
-      if (CarplayerId != other.CarplayerId) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DirX, other.DirX)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DirZ, other.DirZ)) return false;
+      if (!object.Equals(CarInfo, other.CarInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (CarId != 0) hash ^= CarId.GetHashCode();
-      if (CarplayerId != 0) hash ^= CarplayerId.GetHashCode();
-      if (DirX != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DirX);
-      if (DirZ != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DirZ);
+      if (carInfo_ != null) hash ^= CarInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1994,21 +1956,9 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (CarId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CarId);
-      }
-      if (CarplayerId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(CarplayerId);
-      }
-      if (DirX != 0F) {
-        output.WriteRawTag(29);
-        output.WriteFloat(DirX);
-      }
-      if (DirZ != 0F) {
-        output.WriteRawTag(37);
-        output.WriteFloat(DirZ);
+      if (carInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CarInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2018,17 +1968,8 @@ namespace Google.Protobuf.Protocol {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (CarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CarId);
-      }
-      if (CarplayerId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CarplayerId);
-      }
-      if (DirX != 0F) {
-        size += 1 + 4;
-      }
-      if (DirZ != 0F) {
-        size += 1 + 4;
+      if (carInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CarInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2041,17 +1982,11 @@ namespace Google.Protobuf.Protocol {
       if (other == null) {
         return;
       }
-      if (other.CarId != 0) {
-        CarId = other.CarId;
-      }
-      if (other.CarplayerId != 0) {
-        CarplayerId = other.CarplayerId;
-      }
-      if (other.DirX != 0F) {
-        DirX = other.DirX;
-      }
-      if (other.DirZ != 0F) {
-        DirZ = other.DirZ;
+      if (other.carInfo_ != null) {
+        if (carInfo_ == null) {
+          CarInfo = new global::Google.Protobuf.Protocol.CarInfo();
+        }
+        CarInfo.MergeFrom(other.CarInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2064,20 +1999,11 @@ namespace Google.Protobuf.Protocol {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            CarId = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            CarplayerId = input.ReadInt32();
-            break;
-          }
-          case 29: {
-            DirX = input.ReadFloat();
-            break;
-          }
-          case 37: {
-            DirZ = input.ReadFloat();
+          case 10: {
+            if (carInfo_ == null) {
+              CarInfo = new global::Google.Protobuf.Protocol.CarInfo();
+            }
+            input.ReadMessage(CarInfo);
             break;
           }
         }
@@ -2111,10 +2037,7 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public S_Car(S_Car other) : this() {
-      carId_ = other.carId_;
-      carplayerId_ = other.carplayerId_;
-      dirX_ = other.dirX_;
-      dirZ_ = other.dirZ_;
+      carInfo_ = other.carInfo_ != null ? other.carInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2123,47 +2046,14 @@ namespace Google.Protobuf.Protocol {
       return new S_Car(this);
     }
 
-    /// <summary>Field number for the "carId" field.</summary>
-    public const int CarIdFieldNumber = 1;
-    private int carId_;
+    /// <summary>Field number for the "carInfo" field.</summary>
+    public const int CarInfoFieldNumber = 1;
+    private global::Google.Protobuf.Protocol.CarInfo carInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CarId {
-      get { return carId_; }
+    public global::Google.Protobuf.Protocol.CarInfo CarInfo {
+      get { return carInfo_; }
       set {
-        carId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "carplayerId" field.</summary>
-    public const int CarplayerIdFieldNumber = 2;
-    private int carplayerId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CarplayerId {
-      get { return carplayerId_; }
-      set {
-        carplayerId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dirX" field.</summary>
-    public const int DirXFieldNumber = 3;
-    private float dirX_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float DirX {
-      get { return dirX_; }
-      set {
-        dirX_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dirZ" field.</summary>
-    public const int DirZFieldNumber = 4;
-    private float dirZ_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float DirZ {
-      get { return dirZ_; }
-      set {
-        dirZ_ = value;
+        carInfo_ = value;
       }
     }
 
@@ -2180,20 +2070,14 @@ namespace Google.Protobuf.Protocol {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CarId != other.CarId) return false;
-      if (CarplayerId != other.CarplayerId) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DirX, other.DirX)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DirZ, other.DirZ)) return false;
+      if (!object.Equals(CarInfo, other.CarInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (CarId != 0) hash ^= CarId.GetHashCode();
-      if (CarplayerId != 0) hash ^= CarplayerId.GetHashCode();
-      if (DirX != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DirX);
-      if (DirZ != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DirZ);
+      if (carInfo_ != null) hash ^= CarInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2207,21 +2091,9 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (CarId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CarId);
-      }
-      if (CarplayerId != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(CarplayerId);
-      }
-      if (DirX != 0F) {
-        output.WriteRawTag(29);
-        output.WriteFloat(DirX);
-      }
-      if (DirZ != 0F) {
-        output.WriteRawTag(37);
-        output.WriteFloat(DirZ);
+      if (carInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CarInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2231,17 +2103,8 @@ namespace Google.Protobuf.Protocol {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (CarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CarId);
-      }
-      if (CarplayerId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CarplayerId);
-      }
-      if (DirX != 0F) {
-        size += 1 + 4;
-      }
-      if (DirZ != 0F) {
-        size += 1 + 4;
+      if (carInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CarInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2254,17 +2117,11 @@ namespace Google.Protobuf.Protocol {
       if (other == null) {
         return;
       }
-      if (other.CarId != 0) {
-        CarId = other.CarId;
-      }
-      if (other.CarplayerId != 0) {
-        CarplayerId = other.CarplayerId;
-      }
-      if (other.DirX != 0F) {
-        DirX = other.DirX;
-      }
-      if (other.DirZ != 0F) {
-        DirZ = other.DirZ;
+      if (other.carInfo_ != null) {
+        if (carInfo_ == null) {
+          CarInfo = new global::Google.Protobuf.Protocol.CarInfo();
+        }
+        CarInfo.MergeFrom(other.CarInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2277,20 +2134,11 @@ namespace Google.Protobuf.Protocol {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            CarId = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            CarplayerId = input.ReadInt32();
-            break;
-          }
-          case 29: {
-            DirX = input.ReadFloat();
-            break;
-          }
-          case 37: {
-            DirZ = input.ReadFloat();
+          case 10: {
+            if (carInfo_ == null) {
+              CarInfo = new global::Google.Protobuf.Protocol.CarInfo();
+            }
+            input.ReadMessage(CarInfo);
             break;
           }
         }
@@ -2817,6 +2665,7 @@ namespace Google.Protobuf.Protocol {
       posInfo_ = other.posInfo_ != null ? other.posInfo_.Clone() : null;
       attackInfo_ = other.attackInfo_ != null ? other.attackInfo_.Clone() : null;
       statInfo_ = other.statInfo_ != null ? other.statInfo_.Clone() : null;
+      carInfo_ = other.carInfo_ != null ? other.carInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2880,6 +2729,17 @@ namespace Google.Protobuf.Protocol {
       }
     }
 
+    /// <summary>Field number for the "carInfo" field.</summary>
+    public const int CarInfoFieldNumber = 6;
+    private global::Google.Protobuf.Protocol.CarInfo carInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.Protocol.CarInfo CarInfo {
+      get { return carInfo_; }
+      set {
+        carInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ObjectInfo);
@@ -2898,6 +2758,7 @@ namespace Google.Protobuf.Protocol {
       if (!object.Equals(PosInfo, other.PosInfo)) return false;
       if (!object.Equals(AttackInfo, other.AttackInfo)) return false;
       if (!object.Equals(StatInfo, other.StatInfo)) return false;
+      if (!object.Equals(CarInfo, other.CarInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2909,6 +2770,7 @@ namespace Google.Protobuf.Protocol {
       if (posInfo_ != null) hash ^= PosInfo.GetHashCode();
       if (attackInfo_ != null) hash ^= AttackInfo.GetHashCode();
       if (statInfo_ != null) hash ^= StatInfo.GetHashCode();
+      if (carInfo_ != null) hash ^= CarInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2942,6 +2804,10 @@ namespace Google.Protobuf.Protocol {
         output.WriteRawTag(42);
         output.WriteMessage(StatInfo);
       }
+      if (carInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CarInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2964,6 +2830,9 @@ namespace Google.Protobuf.Protocol {
       }
       if (statInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StatInfo);
+      }
+      if (carInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CarInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2999,6 +2868,12 @@ namespace Google.Protobuf.Protocol {
           StatInfo = new global::Google.Protobuf.Protocol.StatInfo();
         }
         StatInfo.MergeFrom(other.StatInfo);
+      }
+      if (other.carInfo_ != null) {
+        if (carInfo_ == null) {
+          CarInfo = new global::Google.Protobuf.Protocol.CarInfo();
+        }
+        CarInfo.MergeFrom(other.CarInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3038,6 +2913,13 @@ namespace Google.Protobuf.Protocol {
               StatInfo = new global::Google.Protobuf.Protocol.StatInfo();
             }
             input.ReadMessage(StatInfo);
+            break;
+          }
+          case 50: {
+            if (carInfo_ == null) {
+              CarInfo = new global::Google.Protobuf.Protocol.CarInfo();
+            }
+            input.ReadMessage(CarInfo);
             break;
           }
         }
@@ -3828,6 +3710,331 @@ namespace Google.Protobuf.Protocol {
           }
           case 64: {
             Randwall = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CarInfo : pb::IMessage<CarInfo> {
+    private static readonly pb::MessageParser<CarInfo> _parser = new pb::MessageParser<CarInfo>(() => new CarInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CarInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Protobuf.Protocol.ProtocolReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CarInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CarInfo(CarInfo other) : this() {
+      carId_ = other.carId_;
+      carplayerId_ = other.carplayerId_;
+      carX_ = other.carX_;
+      carY_ = other.carY_;
+      carZ_ = other.carZ_;
+      dirX_ = other.dirX_;
+      dirZ_ = other.dirZ_;
+      isRide_ = other.isRide_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CarInfo Clone() {
+      return new CarInfo(this);
+    }
+
+    /// <summary>Field number for the "carId" field.</summary>
+    public const int CarIdFieldNumber = 1;
+    private int carId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CarId {
+      get { return carId_; }
+      set {
+        carId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "carplayerId" field.</summary>
+    public const int CarplayerIdFieldNumber = 2;
+    private int carplayerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CarplayerId {
+      get { return carplayerId_; }
+      set {
+        carplayerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "carX" field.</summary>
+    public const int CarXFieldNumber = 3;
+    private float carX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float CarX {
+      get { return carX_; }
+      set {
+        carX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "carY" field.</summary>
+    public const int CarYFieldNumber = 4;
+    private float carY_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float CarY {
+      get { return carY_; }
+      set {
+        carY_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "carZ" field.</summary>
+    public const int CarZFieldNumber = 5;
+    private float carZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float CarZ {
+      get { return carZ_; }
+      set {
+        carZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dirX" field.</summary>
+    public const int DirXFieldNumber = 6;
+    private float dirX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float DirX {
+      get { return dirX_; }
+      set {
+        dirX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dirZ" field.</summary>
+    public const int DirZFieldNumber = 7;
+    private float dirZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float DirZ {
+      get { return dirZ_; }
+      set {
+        dirZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "isRide" field.</summary>
+    public const int IsRideFieldNumber = 8;
+    private bool isRide_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsRide {
+      get { return isRide_; }
+      set {
+        isRide_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CarInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CarInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CarId != other.CarId) return false;
+      if (CarplayerId != other.CarplayerId) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(CarX, other.CarX)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(CarY, other.CarY)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(CarZ, other.CarZ)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DirX, other.DirX)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DirZ, other.DirZ)) return false;
+      if (IsRide != other.IsRide) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CarId != 0) hash ^= CarId.GetHashCode();
+      if (CarplayerId != 0) hash ^= CarplayerId.GetHashCode();
+      if (CarX != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(CarX);
+      if (CarY != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(CarY);
+      if (CarZ != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(CarZ);
+      if (DirX != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DirX);
+      if (DirZ != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DirZ);
+      if (IsRide != false) hash ^= IsRide.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (CarId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CarId);
+      }
+      if (CarplayerId != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(CarplayerId);
+      }
+      if (CarX != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(CarX);
+      }
+      if (CarY != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(CarY);
+      }
+      if (CarZ != 0F) {
+        output.WriteRawTag(45);
+        output.WriteFloat(CarZ);
+      }
+      if (DirX != 0F) {
+        output.WriteRawTag(53);
+        output.WriteFloat(DirX);
+      }
+      if (DirZ != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(DirZ);
+      }
+      if (IsRide != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(IsRide);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (CarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CarId);
+      }
+      if (CarplayerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CarplayerId);
+      }
+      if (CarX != 0F) {
+        size += 1 + 4;
+      }
+      if (CarY != 0F) {
+        size += 1 + 4;
+      }
+      if (CarZ != 0F) {
+        size += 1 + 4;
+      }
+      if (DirX != 0F) {
+        size += 1 + 4;
+      }
+      if (DirZ != 0F) {
+        size += 1 + 4;
+      }
+      if (IsRide != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CarInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CarId != 0) {
+        CarId = other.CarId;
+      }
+      if (other.CarplayerId != 0) {
+        CarplayerId = other.CarplayerId;
+      }
+      if (other.CarX != 0F) {
+        CarX = other.CarX;
+      }
+      if (other.CarY != 0F) {
+        CarY = other.CarY;
+      }
+      if (other.CarZ != 0F) {
+        CarZ = other.CarZ;
+      }
+      if (other.DirX != 0F) {
+        DirX = other.DirX;
+      }
+      if (other.DirZ != 0F) {
+        DirZ = other.DirZ;
+      }
+      if (other.IsRide != false) {
+        IsRide = other.IsRide;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            CarId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            CarplayerId = input.ReadInt32();
+            break;
+          }
+          case 29: {
+            CarX = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            CarY = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            CarZ = input.ReadFloat();
+            break;
+          }
+          case 53: {
+            DirX = input.ReadFloat();
+            break;
+          }
+          case 61: {
+            DirZ = input.ReadFloat();
+            break;
+          }
+          case 64: {
+            IsRide = input.ReadBool();
             break;
           }
         }

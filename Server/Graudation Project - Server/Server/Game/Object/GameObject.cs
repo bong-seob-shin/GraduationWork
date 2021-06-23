@@ -24,13 +24,85 @@ namespace Server.Game
 		public PositionInfo PosInfo { get; private set; } = new PositionInfo();
         public AttackInfo AttackInfo { get; private set; } = new AttackInfo();
         public StatInfo StatInfo { get; private set; } = new StatInfo();
+        public CarInfo carInfo { get; private set; } = new CarInfo();
+
 
 		public GameObject()
 		{
 			Info.PosInfo = PosInfo;
             Info.AttackInfo = AttackInfo;
 			Info.StatInfo = StatInfo;
+            Info.CarInfo = carInfo;
 		}
+
+        public int carId_test
+        {
+            get { return carInfo.CarId; }
+
+            set
+            {
+                carInfo.CarId = value;
+            }
+        }
+
+        public int carplayerId_test
+        {
+            get { return carInfo.CarplayerId; }
+
+            set
+            {
+                carInfo.CarplayerId = value;
+            }
+        }
+
+        public float carDirX
+        {
+            get
+            {
+                return carInfo.DirX;
+            }
+            set
+            {
+                carInfo.DirX = value;
+            }
+        }
+
+        public float carDirZ
+        {
+            get
+            {
+                return carInfo.DirZ;
+            }
+            set
+            {
+                carInfo.DirZ = value;
+            }
+        }
+
+        public Vector3 CarPos
+        {
+            get
+            {
+                return new Vector3(carInfo.CarX, carInfo.CarY, carInfo.CarZ);
+            }
+
+            set
+            {
+                carInfo.CarX = value.X;
+                carInfo.CarY = value.Y;
+                carInfo.CarZ = value.Z;
+            }
+        }
+
+        public bool IsRide
+        {
+            get { return carInfo.IsRide; }
+            set
+            {
+                carInfo.IsRide = value;
+            }
+        }
+
 
         public Vector3 CellPos 
         {
@@ -45,20 +117,6 @@ namespace Server.Game
                 PosInfo.PosZ = value.Z;
             }
         }
-
-        //public Vector3 TestTarget
-        //{
-        //    get 
-        //    {
-        //        return new Vector3(PosInfo.SpineX, PosInfo.SpineY, PosInfo.SpineZ);
-        //    }
-        //    set 
-        //    {
-        //        PosInfo.SpineX = value.X;
-        //        PosInfo.SpineY = value.Y;
-        //        PosInfo.SpineZ = value.Z;
-        //    }
-        //}
 
         public State State 
         {

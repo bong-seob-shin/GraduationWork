@@ -255,11 +255,27 @@ namespace Server.Game
 
             lock (_lock) 
             {
-                S_Car resCarPacket = new S_Car();
-                resCarPacket.CarId = carPacket.CarId;
-                resCarPacket.CarplayerId = carPacket.CarplayerId;
 
-                Broadcast(resCarPacket);
+                Buggy buggy = new Buggy();
+
+                if (_buggy.TryGetValue(carPacket.CarInfo.CarId, out buggy))
+                {
+                    S_Car resCarPacket = new S_Car();
+                    buggy.carInfo.CarId = carPacket.CarInfo.CarId;
+                    buggy.carInfo.CarplayerId = carPacket.CarInfo.CarplayerId;
+                    buggy.carInfo.CarX = carPacket.CarInfo.CarX;
+                    buggy.carInfo.CarY = carPacket.CarInfo.CarY;
+                    buggy.carInfo.CarZ = carPacket.CarInfo.CarZ;
+                    buggy.carInfo.DirX = carPacket.CarInfo.DirX;
+                    buggy.carInfo.DirZ = carPacket.CarInfo.DirZ;
+                    buggy.carInfo.IsRide = carPacket.CarInfo.IsRide;
+
+                    resCarPacket.CarInfo = buggy.carInfo;
+                    
+                    Console.WriteLine(resCarPacket);
+
+                    Broadcast(resCarPacket);
+                }
             }
         }
 
@@ -272,7 +288,6 @@ namespace Server.Game
             {
                 AttackInfo attackInfo = attackPacket.AttackInfo;
                 ObjectInfo info = player.Info;
-
 
                 // 다른 플레이어한테도 알려준다
                 S_Attack resMovePacket = new S_Attack();
