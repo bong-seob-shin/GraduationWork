@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Monster\Core.cs" />
      <Compile Include="Assets\Scripts\Monster\ClosedMonsterAttackCol.cs" />
      <Compile Include="Assets\Scripts\Player State\StateJump.cs" />
+     <Compile Include="Assets\Scripts\MeshSlice\MeshCut.cs" />
      <Compile Include="Assets\Scripts\UI\UIManager.cs" />
      <Compile Include="Assets\Scripts\UI\Compass.cs" />
      <Compile Include="Assets\Scripts\Framework\NoneAnimationObj.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Scripts\Player State\StateRun.cs" />
      <Compile Include="Assets\Scripts\Monster\BossMonster.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\Scripts\MeshSlice\Shatter.cs" />
      <Compile Include="Assets\Scripts\Monster\RangedMonster.cs" />
      <Compile Include="Assets\Scripts\Weapon\Gun.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterManager.cs" />
@@ -95,12 +97,10 @@
      <Compile Include="Assets\Scripts\InteractiveObj\InteractObj.cs" />
      <Compile Include="Assets\Scripts\UI\UIPrefab.cs" />
      <Compile Include="Assets\Scripts\Player\OhterPlayer.cs" />
+     <Compile Include="Assets\Scripts\MeshSlice\Mesh_Maker.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\Laser.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\InteractiveDoubleButton.cs" />
      <Compile Include="Assets\Scripts\Player State\StateIdle.cs" />
-     <Compile Include="Assets\Scripts\MeshSlice\MeshCut.cs" />
-     <Compile Include="Assets\Scripts\MeshSlice\Shatter.cs" />
-     <Compile Include="Assets\Scripts\MeshSlice\Mesh_Maker.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

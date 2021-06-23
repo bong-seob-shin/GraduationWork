@@ -24,7 +24,6 @@ public class IKCCD : MonoBehaviour
     private Transform standardPos;
     public float armDistance;
 
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -43,18 +42,21 @@ public class IKCCD : MonoBehaviour
         standardPos = _boneList[_boneList.Count - 1];
         armDistance = (standardPos.position - endEffector.position).sqrMagnitude;
 
-
+       
+     
     }
 
     // Update is called once per frame
 
     private void LateUpdate()
     {
+                
+        
         if (targetPos !=null)//null연산에 사용되는데 비용이 적게듬
         {
             float dist = (standardPos.position - targetPos.position).sqrMagnitude;
 
-
+           
             if (dist < armDistance)
             {
 
@@ -73,6 +75,7 @@ public class IKCCD : MonoBehaviour
         
         Vector3 target = Vector3.Lerp(effectorPos, targetPos.position, weight);
 
+        
         float sqrDistance;
 
 
@@ -83,7 +86,7 @@ public class IKCCD : MonoBehaviour
             {
                 for (int j = 1; j < i + 3 && j < _boneList.Count; j++)
                 {
-                    RotateBone(_boneList[0], _boneList[j],target);
+                    RotateBone(_boneList[0], _boneList[j],target, _boneList[j].parent, _boneList[j].GetChild(0));
 
                     sqrDistance = (_boneList[0].position - target).sqrMagnitude;
 
@@ -99,18 +102,26 @@ public class IKCCD : MonoBehaviour
         } while (iterCount <= maxIterCount && sqrDistance > 0.01f);
     }
     
-    void RotateBone(Transform effector, Transform bone, Vector3 targetPos)
+    void RotateBone(Transform effector, Transform bone, Vector3 targetPos, Transform boneParent, Transform boneChild)
     {
         Vector3 endEffectorPos = effector.position;
         Vector3 boneToTarget = targetPos -  bone.position;
         Vector3 boneToEnd = endEffectorPos - bone.position;
         Quaternion boneRotation = bone.rotation;
-       
 
+        Vector3 ParentToBone = bone.position - boneParent.position;
+        Vector3 ChildToBone =  boneChild.position-bone.position;
+
+        float limitAngle = Vector3.Angle(ParentToBone, ChildToBone);
         Quaternion fromToRotation = Quaternion.FromToRotation(boneToEnd, boneToTarget);
         Quaternion newRot = fromToRotation * boneRotation;
 
+        
+        Debug.Log(bone.name+"out range"+limitAngle);
+       
         bone.rotation = newRot;
+
+       
 
     }
 }
