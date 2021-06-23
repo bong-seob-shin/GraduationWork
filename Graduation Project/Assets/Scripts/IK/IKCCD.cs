@@ -20,7 +20,7 @@ public class IKCCD : MonoBehaviour
     public float weight = 0;
     
     public List<Transform> _boneList = new List<Transform>();
-
+    public List<float> _boneRotationLimit = new List<float>();
     private Transform standardPos;
     public float armDistance;
 
@@ -32,12 +32,12 @@ public class IKCCD : MonoBehaviour
        
         Transform currentBone = endEffector;
 
-        while (currentBone != parentBone)
-        {
-            _boneList.Add(currentBone);
-            currentBone = currentBone.parent;
-        }
-        _boneList.Add(currentBone);
+        // while (currentBone != parentBone)
+        // {
+        //     _boneList.Add(currentBone);
+        //     currentBone = currentBone.parent;
+        // }
+        // _boneList.Add(currentBone);
 
         standardPos = _boneList[_boneList.Count - 1];
         armDistance = (standardPos.position - endEffector.position).sqrMagnitude;
@@ -86,7 +86,7 @@ public class IKCCD : MonoBehaviour
             {
                 for (int j = 1; j < i + 3 && j < _boneList.Count; j++)
                 {
-                    RotateBone(_boneList[0], _boneList[j],target);
+                    RotateBone(_boneList[0], _boneList[j],target, _boneRotationLimit[j]);
 
                     sqrDistance = (_boneList[0].position - target).sqrMagnitude;
 
@@ -102,40 +102,33 @@ public class IKCCD : MonoBehaviour
         } while (iterCount <= maxIterCount && sqrDistance > 0.01f);
     }
     
-    void RotateBone(Transform effector, Transform bone, Vector3 targetPos)
+    void RotateBone(Transform effector, Transform bone, Vector3 targetPos, float boneAxis)
     {
         Vector3 endEffectorPos = effector.position;
         Vector3 boneToTarget = targetPos -  bone.position;
         Vector3 boneToEnd = endEffectorPos - bone.position;
         Quaternion boneRotation = bone.rotation;
 
-    
-
+        
+        
+        
         Quaternion fromToRotation = Quaternion.FromToRotation(boneToEnd, boneToTarget);
 
-        Quaternion newRot = fromToRotation * boneRotation;
+        Vector3 eulerFTR = fromToRotation.eulerAngles;
+        
+        eulerFTR = new Vector3(Mathf.Clamp(eulerFTR.x,-boneAxis,boneAxis),Mathf.Clamp(eulerFTR.y,-boneAxis,boneAxis),
+            Mathf.Clamp(eulerFTR.z,-boneAxis,boneAxis));
+        
+        //Quaternion newRot = fromToRotation * boneRotation;
+        Quaternion newRot = Quaternion.Euler(eulerFTR) * boneRotation;
 
-
+        
         bone.rotation = newRot;
 
-        Vector3 lqEuler = bone.rotation.eulerAngles;
+       
 
-        if (lqEuler.x > 180f)
-            lqEuler.x -= 360f;
-        lqEuler.y = Mathf.Clamp(lqEuler.x, -90, 90);
 
-        if (lqEuler.y > 180f)
-            lqEuler.y -= 360f;
 
-        lqEuler.y = Mathf.Clamp(lqEuler.y, -90, 90);
-
-        if (lqEuler.z > 180f)
-            lqEuler.z -= 360f;
-        lqEuler.y = Mathf.Clamp(lqEuler.z, -90, 90);
-
-        bone.transform.localEulerAngles = lqEuler;
-
-           
 
     }
 }
