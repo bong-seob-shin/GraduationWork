@@ -18,6 +18,8 @@ public class CarController : NoneAnimationObj
     [SerializeField]
     private float _motorForce = 1000;
 
+    public GameObject playerSit;
+    public GameObject otherSit;
     [SerializeField] private float _breakForce = 3000;
     [SerializeField] private float _maxSteeringAngle = 30;
 
@@ -89,9 +91,9 @@ public class CarController : NoneAnimationObj
                                            //other스크립트가 꺼져있어 거기서 패킷을 주고 받을 수가없음 해결책(1)은 usingUserID를 차가 계속 동기화 해서 이것을 rideCarID에다가 넣어주는것임 [87번줄]
                 {
                     _isCarStartControll = false;
-            
+                    otherSit.SetActive(false);
                     _driver.gameObject.SetActive(true);
-
+                    
                 }
             }
             Move();
@@ -239,6 +241,7 @@ public class CarController : NoneAnimationObj
             {
                 _driver.gameObject.GetComponent<Player>().TakeoffCar();
                 carCamera.gameObject.SetActive(false);
+                playerSit.SetActive(false);
             }
             
         }
@@ -257,6 +260,7 @@ public class CarController : NoneAnimationObj
         _driver.gameObject.SetActive(false);
         carCamera.gameObject.SetActive(true);
         _isCarStartControll = true;
+        playerSit.SetActive(true);
         usingUserId = _driver.id;//여기서 변경됨
 
     }
@@ -265,6 +269,7 @@ public class CarController : NoneAnimationObj
         _driver = other;
         _driver.gameObject.SetActive(false);
         _isCarStartControll = true;
+        otherSit.SetActive(true);
         usingUserId = _driver.id;//여기서 변경됨
     }
     
