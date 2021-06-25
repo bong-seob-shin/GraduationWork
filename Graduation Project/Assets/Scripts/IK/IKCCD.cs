@@ -20,7 +20,11 @@ public class IKCCD : MonoBehaviour
     public float weight = 0;
     
     public List<Transform> _boneList = new List<Transform>();
-    public List<float> _boneRotationLimit = new List<float>();
+    public List<RotationLimit> _boneRotationLimit = new List<RotationLimit>();
+    
+
+
+    
     private Transform standardPos;
     public float armDistance;
 
@@ -42,7 +46,10 @@ public class IKCCD : MonoBehaviour
         standardPos = _boneList[_boneList.Count - 1];
         armDistance = (standardPos.position - endEffector.position).sqrMagnitude;
 
-       
+        for (int i = 0; i < _boneList.Count; i++)
+        {
+            _boneRotationLimit.Add(_boneList[i].GetComponent<RotationLimit>());
+        }
      
     }
 
@@ -86,7 +93,7 @@ public class IKCCD : MonoBehaviour
             {
                 for (int j = 1; j < i + 3 && j < _boneList.Count; j++)
                 {
-                    RotateBone(_boneList[0], _boneList[j],target, _boneRotationLimit[j]);
+                    RotateBone(_boneList[0], _boneList[j],target, _boneRotationLimit[j]._boneRotationLimitMax,_boneRotationLimit[j]._boneRotationLimitMin);
 
                     sqrDistance = (_boneList[0].position - target).sqrMagnitude;
 
@@ -102,7 +109,7 @@ public class IKCCD : MonoBehaviour
         } while (iterCount <= maxIterCount && sqrDistance > 0.01f);
     }
     
-    void RotateBone(Transform effector, Transform bone, Vector3 targetPos, float boneAxis)
+    void RotateBone(Transform effector, Transform bone, Vector3 targetPos, Vector3 boneRotLimitMax, Vector3 boneRotLimitMin)
     {
         Vector3 endEffectorPos = effector.position;
         Vector3 boneToTarget = targetPos -  bone.position;
@@ -114,21 +121,34 @@ public class IKCCD : MonoBehaviour
         
         Quaternion fromToRotation = Quaternion.FromToRotation(boneToEnd, boneToTarget);
 
-        Vector3 eulerFTR = fromToRotation.eulerAngles;
-        
-        eulerFTR = new Vector3(Mathf.Clamp(eulerFTR.x,-boneAxis,boneAxis),Mathf.Clamp(eulerFTR.y,-boneAxis,boneAxis),
-            Mathf.Clamp(eulerFTR.z,-boneAxis,boneAxis));
-        
-        //Quaternion newRot = fromToRotation * boneRotation;
-        Quaternion newRot = Quaternion.Euler(eulerFTR) * boneRotation;
+        // Vector3 eulerFTR = fromToRotation.eulerAngles;
+        //
+        // eulerFTR.x = (eulerFTR.x > 180) ? eulerFTR.x - 360 : eulerFTR.x;
+        // eulerFTR.y = (eulerFTR.y > 180) ? eulerFTR.y - 360 : eulerFTR.y;
+        // eulerFTR.z = (eulerFTR.z > 180) ? eulerFTR.z - 360 : eulerFTR.z;
+        //
+        // eulerFTR.x = Mathf.Clamp(eulerFTR.x, boneRotLimitMin.x, boneRotLimitMax.x);
+        // eulerFTR.y = Mathf.Clamp(eulerFTR.y, boneRotLimitMin.y, boneRotLimitMax.y);
+        // eulerFTR.z = Mathf.Clamp(eulerFTR.z, boneRotLimitMin.z, boneRotLimitMax.z);
+
+        Quaternion newRot = fromToRotation * boneRotation;
+        //Quaternion newRot = Quaternion.Euler(eulerFTR) * boneRotation;
 
         
         bone.rotation = newRot;
+        
+        
+        Vector3 eulerFTR =  bone.localRotation.eulerAngles;
 
-       
+        eulerFTR.x = (eulerFTR.x > 180) ? -eulerFTR.x : eulerFTR.x;
+        eulerFTR.y = (eulerFTR.y > 180) ? eulerFTR.y - 360 : eulerFTR.y;
+        eulerFTR.z = (eulerFTR.z > 180) ? eulerFTR.z - 360 : eulerFTR.z;
+        
+        eulerFTR.x = Mathf.Clamp(eulerFTR.x, boneRotLimitMin.x, boneRotLimitMax.x);
+        eulerFTR.y = Mathf.Clamp(eulerFTR.y, boneRotLimitMin.y, boneRotLimitMax.y);
+        eulerFTR.z = Mathf.Clamp(eulerFTR.z, boneRotLimitMin.z, boneRotLimitMax.z);
 
-
-
-
+        
+        bone.localRotation = Quaternion.Euler(eulerFTR);
     }
 }
