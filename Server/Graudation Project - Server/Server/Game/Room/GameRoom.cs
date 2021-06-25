@@ -38,10 +38,12 @@ namespace Server.Game
 
             Buggy buggy = ObjectManager.Instance.Add<Buggy>();
             buggy.CellPos = new Vector3(2240.4f, 110.8f, 3450.24f);
+            buggy.Info.Name = $"Buggy_{buggy.Info.ObjectId}";
             EnterGame(buggy);
 
             Buggy buggy1 = ObjectManager.Instance.Add<Buggy>();
             buggy1.CellPos = new Vector3(2230.4f, 110.8f, 3460.24f);
+            buggy1.Info.Name = $"Buggy_{buggy1.Info.ObjectId}";
             EnterGame(buggy1);
 
 
