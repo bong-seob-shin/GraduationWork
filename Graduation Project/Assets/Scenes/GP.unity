@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
+  m_IndirectSpecularColor: {r: 131.13168, g: 162.57239, b: 215.29922, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1377,6 +1377,7 @@ MonoBehaviour:
   maxIterCount: 10
   weight: 1
   _boneList: []
+  _boneRotationLimit: []
   armDistance: 0
 --- !u!65 &115009794
 BoxCollider:
@@ -7322,6 +7323,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1f2db19ca6b234ba96cc61ba0656b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  speed: 0
+  dirX: 0
+  dirZ: 0
+  MaxHP: 0
+  HP: 0
+  armor: 0
   monsters:
   - {fileID: 948968541}
   - {fileID: 45541854}
@@ -8151,6 +8159,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1f2db19ca6b234ba96cc61ba0656b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  speed: 0
+  dirX: 0
+  dirZ: 0
+  MaxHP: 0
+  HP: 0
+  armor: 0
   monsters:
   - {fileID: 2136625757}
   - {fileID: 2019175940}
@@ -9312,6 +9327,26 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9058893411047028301, guid: 59d3dde85c4cf6b4ebc1da73037a8225, type: 3}
+--- !u!114 &801946509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801946505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1f2db19ca6b234ba96cc61ba0656b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  speed: 0
+  dirX: 0
+  dirZ: 0
+  MaxHP: 0
+  HP: 0
+  armor: 0
+  monsters: []
 --- !u!54 &801946510
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15642,6 +15677,7 @@ MonoBehaviour:
   maxIterCount: 10
   weight: 1
   _boneList: []
+  _boneRotationLimit: []
   armDistance: 0
 --- !u!1 &1269916297
 GameObject:
@@ -18420,6 +18456,7 @@ MonoBehaviour:
   maxIterCount: 10
   weight: 1
   _boneList: []
+  _boneRotationLimit: []
   armDistance: 0
 --- !u!4 &1451786367 stripped
 Transform:
@@ -20221,6 +20258,7 @@ MonoBehaviour:
   maxIterCount: 10
   weight: 1
   _boneList: []
+  _boneRotationLimit: []
   armDistance: 0
 --- !u!4 &1620811240 stripped
 Transform:

@@ -117,6 +117,7 @@ public class Gun : MonoBehaviour
                 RangedMonster Rmonster = hit.transform.GetComponent<RangedMonster>();
                 BossMonster bossMonster = hit.transform.GetComponent<BossMonster>();
                 Core planeCore = hit.transform.GetComponent<Core>();
+                Door door = hit.transform.GetComponent<Door>();
                 if (monster != null)
                 {
                     monster.hit(damage,penetration);
@@ -145,8 +146,12 @@ public class Gun : MonoBehaviour
                 
                 if (hit.transform.gameObject.tag == "Sliceable")
                 {
-                    insideMaterial = hit.transform.GetComponent<MeshRenderer>().materials.ElementAt(0);
-                    StartCoroutine(ShatterObject(hit.transform.gameObject, hit.point, generations));
+                    door.hit(damage,0.0f);
+                    if (door.HP <= 0.0f)
+                    {
+                        insideMaterial = hit.transform.GetComponent<MeshRenderer>().materials.ElementAt(0);
+                        StartCoroutine(ShatterObject(hit.transform.gameObject, hit.point, generations));
+                    }
                 }
                 
             }
