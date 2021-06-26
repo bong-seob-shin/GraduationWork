@@ -121,34 +121,44 @@ public class IKCCD : MonoBehaviour
         
         Quaternion fromToRotation = Quaternion.FromToRotation(boneToEnd, boneToTarget);
 
-        // Vector3 eulerFTR = fromToRotation.eulerAngles;
-        //
-        // eulerFTR.x = (eulerFTR.x > 180) ? eulerFTR.x - 360 : eulerFTR.x;
-        // eulerFTR.y = (eulerFTR.y > 180) ? eulerFTR.y - 360 : eulerFTR.y;
-        // eulerFTR.z = (eulerFTR.z > 180) ? eulerFTR.z - 360 : eulerFTR.z;
-        //
-        // eulerFTR.x = Mathf.Clamp(eulerFTR.x, boneRotLimitMin.x, boneRotLimitMax.x);
-        // eulerFTR.y = Mathf.Clamp(eulerFTR.y, boneRotLimitMin.y, boneRotLimitMax.y);
-        // eulerFTR.z = Mathf.Clamp(eulerFTR.z, boneRotLimitMin.z, boneRotLimitMax.z);
+       
 
         Quaternion newRot = fromToRotation * boneRotation;
-        //Quaternion newRot = Quaternion.Euler(eulerFTR) * boneRotation;
-
-        
+ 
         bone.rotation = newRot;
-        
-        
-        Vector3 eulerFTR =  bone.localRotation.eulerAngles;
-
-        eulerFTR.x = (eulerFTR.x > 180) ? -eulerFTR.x : eulerFTR.x;
-        eulerFTR.y = (eulerFTR.y > 180) ? eulerFTR.y - 360 : eulerFTR.y;
-        eulerFTR.z = (eulerFTR.z > 180) ? eulerFTR.z - 360 : eulerFTR.z;
-        
-        eulerFTR.x = Mathf.Clamp(eulerFTR.x, boneRotLimitMin.x, boneRotLimitMax.x);
-        eulerFTR.y = Mathf.Clamp(eulerFTR.y, boneRotLimitMin.y, boneRotLimitMax.y);
-        eulerFTR.z = Mathf.Clamp(eulerFTR.z, boneRotLimitMin.z, boneRotLimitMax.z);
 
         
-        bone.localRotation = Quaternion.Euler(eulerFTR);
+        Vector3 eulerBoneLocalRot =  bone.localRotation.eulerAngles;
+        bool isBoneOutOfRotation = false;
+
+        if (eulerBoneLocalRot.x > boneRotLimitMax.x || eulerBoneLocalRot.x < boneRotLimitMin.x)
+        {        
+            Debug.Log("x 들어옴 :  " + bone.name);
+            isBoneOutOfRotation = true;
+            
+        }
+        if (eulerBoneLocalRot.y > boneRotLimitMax.y || eulerBoneLocalRot.y < boneRotLimitMin.y)
+        {
+            Debug.Log("y 들어옴 :  " + bone.name);
+            isBoneOutOfRotation = true;
+
+            
+        }
+        if (eulerBoneLocalRot.z > boneRotLimitMax.z || eulerBoneLocalRot.z < boneRotLimitMin.z)
+        {
+            Debug.Log("z 들어옴 :  " + bone.name);
+            isBoneOutOfRotation = true;
+
+          
+        }
+
+        if (isBoneOutOfRotation)
+        {
+            Quaternion inverseFTR = Quaternion.Inverse(fromToRotation);
+            Quaternion inverseRot = inverseFTR * bone.rotation;
+
+            bone.rotation = inverseRot;
+        }
+        
     }
 }
