@@ -132,14 +132,11 @@ public class IKCCD : MonoBehaviour
         bool isBoneOutOfRotation = false;
 
         if (eulerBoneLocalRot.x > boneRotLimitMax.x || eulerBoneLocalRot.x < boneRotLimitMin.x)
-        {        
-            Debug.Log("x 들어옴 :  " + bone.name);
+        { 
             isBoneOutOfRotation = true;
-            
         }
         if (eulerBoneLocalRot.y > boneRotLimitMax.y || eulerBoneLocalRot.y < boneRotLimitMin.y)
         {
-            Debug.Log("y 들어옴 :  " + bone.name);
             isBoneOutOfRotation = true;
 
             
@@ -147,7 +144,6 @@ public class IKCCD : MonoBehaviour
         if (eulerBoneLocalRot.z > boneRotLimitMax.z || eulerBoneLocalRot.z < boneRotLimitMin.z)
         {
             Debug.Log("z 들어옴 :  " + bone.name);
-            isBoneOutOfRotation = true;
 
           
         }
