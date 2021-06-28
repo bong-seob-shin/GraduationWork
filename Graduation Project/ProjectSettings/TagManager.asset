@@ -15,7 +15,6 @@ TagManager:
   - Boss1SummonsMonster
   - deongunTransform
   - Lever
-  - Climb
   layers:
   - Default
   - TransparentFX
