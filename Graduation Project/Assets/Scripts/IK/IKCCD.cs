@@ -69,6 +69,7 @@ public class IKCCD : MonoBehaviour
 
 
                 IKCCDSolution();
+                _boneList[0].rotation = targetPos.rotation;
             }
         }
 
@@ -143,9 +144,8 @@ public class IKCCD : MonoBehaviour
         }
         if (eulerBoneLocalRot.z > boneRotLimitMax.z || eulerBoneLocalRot.z < boneRotLimitMin.z)
         {
-            Debug.Log("z 들어옴 :  " + bone.name);
+            isBoneOutOfRotation = true;
 
-          
         }
 
         if (isBoneOutOfRotation)

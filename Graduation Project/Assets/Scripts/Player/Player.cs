@@ -184,7 +184,7 @@ public class Player : AnimationObj
     // Update is called once per frame
     void Update()
     {
-        if (rideCarID<=0)
+        if (rideCarID<=0 &&!isClimbing)
         {
             //IsGround();
             KeyboardInput();
@@ -237,20 +237,27 @@ public class Player : AnimationObj
 
     private void FixedUpdate()//물리적인 충돌을 계산하기위해서 움직임등을 모두 fixedupdate에 넣음 이 update는 매 프레임마다 불림
     {
-        if (rideCarID<=0 && !isDead)
+        if (rideCarID<=0 && !isDead&&!isClimbing)
         {
             IsGround();
-            
-            CharacterRotation();
-            
-            Move();
             _stateMachine.ExecuteUpdate();
+
+
+            CharacterRotation();
+
+            Move();
+                
+            
+        }
+        if (isClimbing)
+        {
+            Climbing();
         }
     }
 
     private void LateUpdate()
     {
-        if (!isDead)
+        if (!isDead&&!isClimbing)
         {
             OperationBonRotate();
         }
@@ -424,6 +431,18 @@ public class Player : AnimationObj
 
     }
 
+    void Climbing()
+    {
+
+        Vector3 _moveHorizontal = transform.right * Input.GetAxis("Horizontal");
+        Vector3 _moveVertical = transform.up * Input.GetAxis("Vertical");
+        
+        Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *applySpeed;
+        
+        playerRb.position += _velocity * Time.deltaTime;
+
+
+    }
     public void hit(int damage)
     {
         if (invincibilityTime <= 0)
@@ -578,6 +597,17 @@ public class Player : AnimationObj
             SubCam.gameObject.SetActive(true);
             
         }
+
+        if (other.CompareTag("Climb"))
+        {
+            isClimbing = true;
+            playerRb.useGravity = false;
+
+            myCam.gameObject.SetActive(false);
+
+
+            SubCam.gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -594,6 +624,11 @@ public class Player : AnimationObj
 
 
         SubCam.gameObject.SetActive(false);
-        
+
+        if (other.CompareTag("Climb"))
+        {
+            isClimbing = false;
+            playerRb.useGravity = true;
+        }
     }
 }

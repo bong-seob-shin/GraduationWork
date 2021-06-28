@@ -7,7 +7,6 @@ using UnityEngine.Rendering.HighDefinition;
 public class InteractiveButton : InteractObj
 {
     
-    public bool isAnimsPlay = false;
 
    
     protected override void Update()
@@ -24,14 +23,7 @@ public class InteractiveButton : InteractObj
             isSwitch = false;
         }
         
-        for (int i = 0; i < interactiveObjAnims.Length; i++)
-        {
-            if (!interactiveObjAnims[i].isPlaying)
-            {
-                isAnimsPlay = false;
-                break;
-            }
-        }
+      
 
       
 
@@ -40,7 +32,6 @@ public class InteractiveButton : InteractObj
 
     public override void InteractObjs()
     {
-        isAnimsPlay = true;
         if (!isOn)
         {
             

@@ -21,6 +21,7 @@ public class AnimationObj : ObjManager //애니메이션을 하는 오브젝트�
     [HideInInspector] public bool isDead = false;
 
     [HideInInspector] public bool isPlayer = false;
-    
+
+    [HideInInspector] public bool isClimbing = false;
     public int rideCarID = -1; //캐릭터가 어떤차를 탔는지에 대한변수, default는 -1이고 -1일때는 차를 타지 않은 상태 0이상일때는 0~3까지의 아이디를 가진 차를 타고있다는 뜻 이건 cellpos에 있어야함! 그래야 아더가 차를 알아서 탈 수 있음
 }
