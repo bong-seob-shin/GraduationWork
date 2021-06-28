@@ -41,6 +41,7 @@
           <e p="InputIp.cs" t="Include" />
           <e p="InteractiveObj" t="Include">
             <e p="CarController.cs" t="Include" />
+            <e p="ClimbWall.cs" t="Include" />
             <e p="FloorTrigger.cs" t="Include" />
             <e p="InteractiveButton.cs" t="Include" />
             <e p="InteractiveDoubleButton.cs" t="Include" />
@@ -74,6 +75,7 @@
             <e p="RMRandomSpawner.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="Climb.cs" t="Include" />
             <e p="OhterPlayer.cs" t="Include" />
             <e p="Player.cs" t="Include" />
           </e>

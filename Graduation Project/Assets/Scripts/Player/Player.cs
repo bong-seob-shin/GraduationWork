@@ -53,10 +53,10 @@ public class Player : AnimationObj
     
     
     public Rigidbody playerRb;
-
+    
 
     private IKGunGrab _gunGrab;
-
+    public Climb climb;
     
     [Tooltip("목 움직이기")]
     private Transform _cameraTansform;
@@ -106,6 +106,7 @@ public class Player : AnimationObj
     private UIManager _uiManager;
 
     public bool isJumping = false;
+    public bool enableJump = false; // 상호작용 트리거에 들어왔을때 점프가 되지않게 하기 위한 변수
     private void Awake()
     {
         
@@ -170,7 +171,7 @@ public class Player : AnimationObj
         HP = MaxHP;
         applySpeed = speed;
         runSpeed = speed * 3;
-        
+        enableJump= true;
         if (anim)
         {
             _playerSpineTransform = anim.GetBoneTransform(HumanBodyBones.Spine); //spine bone transform받아오기
@@ -184,14 +185,12 @@ public class Player : AnimationObj
     // Update is called once per frame
     void Update()
     {
-        if (rideCarID<=0 &&!isClimbing)
+        if (rideCarID<=0&& !isClimbing)
         {
-            //IsGround();
+            
             KeyboardInput();
             Interact();
-            //CharacterRotation();
-            //Move();
-            //_stateMachine.ExecuteUpdate();
+            
         }
 
         if (_interactCoolDown > 0.0f)
@@ -237,27 +236,27 @@ public class Player : AnimationObj
 
     private void FixedUpdate()//물리적인 충돌을 계산하기위해서 움직임등을 모두 fixedupdate에 넣음 이 update는 매 프레임마다 불림
     {
-        if (rideCarID<=0 && !isDead&&!isClimbing)
+        if (rideCarID<=0 && !isDead)
         {
             IsGround();
-            _stateMachine.ExecuteUpdate();
+
+            if (!isClimbing)
+            {
+                _stateMachine.ExecuteUpdate();
 
 
-            CharacterRotation();
+                CharacterRotation();
 
-            Move();
-                
-            
+                Move();
+            }
+
         }
-        if (isClimbing)
-        {
-            Climbing();
-        }
+       
     }
 
     private void LateUpdate()
     {
-        if (!isDead&&!isClimbing)
+        if (!isDead&& !isClimbing)
         {
             OperationBonRotate();
         }
@@ -286,7 +285,7 @@ public class Player : AnimationObj
         d_keyPress = Input.GetKey(KeyCode.D);
 
 
-
+        
         if (!isDead)
         {
             if (w_keyPress || a_keyPress || s_keyPress || d_keyPress)
@@ -295,7 +294,7 @@ public class Player : AnimationObj
 
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    if (!isJumping)
+                    if (!isJumping&&enableJump)
                     {
                         _stateMachine.SetState(_stateDic[PlayerState.Run]);
                     }
@@ -431,18 +430,7 @@ public class Player : AnimationObj
 
     }
 
-    void Climbing()
-    {
-
-        Vector3 _moveHorizontal = transform.right * Input.GetAxis("Horizontal");
-        Vector3 _moveVertical = transform.up * Input.GetAxis("Vertical");
-        
-        Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *applySpeed;
-        
-        playerRb.position += _velocity * Time.deltaTime;
-
-
-    }
+  
     public void hit(int damage)
     {
         if (invincibilityTime <= 0)
@@ -495,6 +483,7 @@ public class Player : AnimationObj
             InteractiveButton ib = _hitInfo.transform.GetComponent<InteractiveButton>();
             InteractiveDoubleButton idb = _hitInfo.transform.GetComponent<InteractiveDoubleButton>();
             InteractiveLiftButton ilb = _hitInfo.transform.GetComponent<InteractiveLiftButton>();
+            ClimbWall cw = _hitInfo.transform.GetComponent<ClimbWall>();
             if ( car != null && rideCarID<=0 )
             {
                 if (onInteractKey)
@@ -566,6 +555,25 @@ public class Player : AnimationObj
                     Debug.Log(_hitInfo.transform.name);
                 }
             }
+
+            if (cw != null)
+            {
+                if (onInteractKey)
+                {
+                    transform.rotation = Quaternion.Euler(Vector3.zero);
+                    isClimbing = true;
+                    playerRb.velocity = Vector3.zero;
+                    playerRb.useGravity = false;
+                    
+                    climb.enabled = true;
+                    
+                }
+                else
+                {
+                    interactText.text = "Interact Key 'F'";
+                    Debug.Log(_hitInfo.transform.name);
+                }
+            }
         }
         else
         {
@@ -584,7 +592,7 @@ public class Player : AnimationObj
         dirZ = 0;
         myCam.gameObject.SetActive(true);
         rideCarID = -1; // 차를 내릴때 불리는 함수에서 rideCarID를 디폴트값으로 수정한다.
-
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -598,16 +606,7 @@ public class Player : AnimationObj
             
         }
 
-        if (other.CompareTag("Climb"))
-        {
-            isClimbing = true;
-            playerRb.useGravity = false;
-
-            myCam.gameObject.SetActive(false);
-
-
-            SubCam.gameObject.SetActive(true);
-        }
+       
     }
 
     private void OnTriggerStay(Collider other)
@@ -616,19 +615,21 @@ public class Player : AnimationObj
         {
             hit(10);
         }
+       
     }
 
     private void OnTriggerExit(Collider other)
     {
-        myCam.gameObject.SetActive(true);
-
-
-        SubCam.gameObject.SetActive(false);
-
-        if (other.CompareTag("Climb"))
+        if (other.CompareTag("Lever"))
         {
+            myCam.gameObject.SetActive(true);
+
+
+            SubCam.gameObject.SetActive(false);
             isClimbing = false;
             playerRb.useGravity = true;
         }
+
+      
     }
 }
