@@ -78,7 +78,9 @@
      <Compile Include="Assets\Scripts\IK\IKCCD.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\FloorTrigger.cs" />
      <Compile Include="Assets\Scripts\Monster\PlanePattern.cs" />
+     <Compile Include="Assets\Scripts\Player\Climb.cs" />
      <Compile Include="Assets\Scripts\Framework\ObjManager.cs" />
+     <Compile Include="Assets\Scripts\InteractiveObj\ClimbWall.cs" />
      <Compile Include="Assets\Scripts\Monster\CMRandomSpawner.cs" />
      <Compile Include="Assets\Scripts\Player State\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Weapon\DebugDrawLine.cs" />
@@ -103,8 +105,6 @@
      <Compile Include="Assets\Scripts\InteractiveObj\Laser.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\InteractiveDoubleButton.cs" />
      <Compile Include="Assets\Scripts\Player State\StateIdle.cs" />
-     <Compile Include="Assets\Scripts\Player\Climb.cs" />
-     <Compile Include="Assets\Scripts\InteractiveObj\ClimbWall.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

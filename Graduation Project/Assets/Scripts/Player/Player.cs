@@ -564,7 +564,11 @@ public class Player : AnimationObj
                     isClimbing = true;
                     playerRb.velocity = Vector3.zero;
                     playerRb.useGravity = false;
+                    dirX = 0;
+                    dirZ = 0;
                     
+                    anim.SetFloat("MoveDirZ",dirZ);
+                    anim.SetFloat("MoveDirX",dirX);
                     climb.enabled = true;
                     
                 }
