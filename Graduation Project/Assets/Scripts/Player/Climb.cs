@@ -8,6 +8,8 @@ public class Climb : MonoBehaviour
     private Player _player;
     [SerializeField]
     private bool isUpMove =false;
+
+    public Vector3 Rayoffset;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class Climb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         Climbing();
     }
     

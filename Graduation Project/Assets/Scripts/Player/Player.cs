@@ -290,7 +290,8 @@ public class Player : AnimationObj
         {
             if (w_keyPress || a_keyPress || s_keyPress || d_keyPress)
             {
-                _stateMachine.SetState(_stateDic[PlayerState.Walk]);
+                if (!isJumping&&enableJump)
+                    _stateMachine.SetState(_stateDic[PlayerState.Walk]);
 
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
@@ -452,9 +453,13 @@ public class Player : AnimationObj
     {
         
         isGround = Physics.Raycast(transform.position, Vector3.down, _capsuleCollider.bounds.extents.y/5.0f);
-        if ( vel.y>0.0f)
+        if ( vel.y>0.0f )
         {
             isJumping = true;
+        }
+        else
+        {
+            isJumping = false;
         }
         if(isGround)
         {

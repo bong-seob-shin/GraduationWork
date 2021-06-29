@@ -9,7 +9,7 @@ public class StateRun : IState
     UIManager uiManager = UIManager.instance;
     public void OperateEnter()
     {
-        //if (player.isGround)
+        if (player.isGround)
         {
             if (player.w_keyPress)
             {

@@ -8,7 +8,7 @@ public class StateWalk : IState
    UIManager uiManager = UIManager.instance;
    public void OperateEnter()
    {
-      if (player.isGround)
+     // if (player.isGround)
       {
          if (player.w_keyPress)
          {
@@ -67,8 +67,11 @@ public class StateWalk : IState
                player.dirX -= 0.02f;
             }
 
-       
+         
          }
+
+         
+         
       }
       player.anim.SetFloat("MoveDirZ", player.dirZ);
       player.anim.SetFloat("MoveDirX", player.dirX);
@@ -84,11 +87,22 @@ public class StateWalk : IState
       {
          uiManager.crossHairSize -= 150.0f * Time.deltaTime;
       }
+      if (!player.isGround)
+      {
+         player.applySpeed = player.speed/3.0f;
+
+      }
+      else
+      {
+         player.applySpeed = player.speed;
+
+      }
    }
 
    public void OperateExit()
    {
-
+      
+      
 
    }
 }
