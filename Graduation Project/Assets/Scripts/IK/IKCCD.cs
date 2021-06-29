@@ -9,13 +9,14 @@ public class IKCCD : MonoBehaviour
 
     
     public Transform targetPos;
-    
+
     public Transform endEffector;
     public Transform parentBone;
 
 
     public int maxIterCount = 10;
 
+    public bool isIKOn;
     [Range(0,1)]
     public float weight = 0;
     
@@ -31,8 +32,7 @@ public class IKCCD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    
-     
+
        
         Transform currentBone = endEffector;
 
@@ -59,7 +59,7 @@ public class IKCCD : MonoBehaviour
     {
                 
         
-        if (targetPos !=null)//null연산에 사용되는데 비용이 적게듬
+        if (targetPos !=null)
         {
             float dist = (standardPos.position - targetPos.position).sqrMagnitude;
 
@@ -67,14 +67,15 @@ public class IKCCD : MonoBehaviour
             if (dist < armDistance)
             {
 
-
+                isIKOn = true;
                 IKCCDSolution();
                 _boneList[0].rotation = targetPos.rotation;
             }
+            else
+            {
+                isIKOn = false;
+            }
         }
-
-
-        //bone받아서 계산하기
     }
 
     void IKCCDSolution()
@@ -110,10 +111,10 @@ public class IKCCD : MonoBehaviour
         } while (iterCount <= maxIterCount && sqrDistance > 0.01f);
     }
     
-    void RotateBone(Transform effector, Transform bone, Vector3 targetPos, Vector3 boneRotLimitMax, Vector3 boneRotLimitMin)
+    void RotateBone(Transform effector, Transform bone, Vector3 _targetPos, Vector3 boneRotLimitMax, Vector3 boneRotLimitMin)
     {
         Vector3 endEffectorPos = effector.position;
-        Vector3 boneToTarget = targetPos -  bone.position;
+        Vector3 boneToTarget = _targetPos -  bone.position;
         Vector3 boneToEnd = endEffectorPos - bone.position;
         Quaternion boneRotation = bone.rotation;
 
@@ -155,6 +156,13 @@ public class IKCCD : MonoBehaviour
 
             bone.rotation = inverseRot;
         }
+        
+    }
+
+    public void SetTarget(Transform target)
+    {
+        
+        targetPos = target;
         
     }
 }

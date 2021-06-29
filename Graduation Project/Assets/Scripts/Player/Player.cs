@@ -236,6 +236,8 @@ public class Player : AnimationObj
 
     private void FixedUpdate()//물리적인 충돌을 계산하기위해서 움직임등을 모두 fixedupdate에 넣음 이 update는 매 프레임마다 불림
     {
+        
+
         if (rideCarID<=0 && !isDead)
         {
             IsGround();
@@ -565,15 +567,18 @@ public class Player : AnimationObj
             {
                 if (onInteractKey)
                 {
+                    interactText.text = " ";
+
                     transform.rotation = Quaternion.Euler(Vector3.zero);
                     isClimbing = true;
                     playerRb.velocity = Vector3.zero;
                     playerRb.useGravity = false;
                     dirX = 0;
                     dirZ = 0;
-                    
+                    climb.targetTransforms = cw.BrickTransfroms;
                     anim.SetFloat("MoveDirZ",dirZ);
                     anim.SetFloat("MoveDirX",dirX);
+                    
                     climb.enabled = true;
                     
                 }

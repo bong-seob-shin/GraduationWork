@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ClimbWall : MonoBehaviour
 {
+    public Transform[] BrickTransfroms;
     // Start is called before the first frame update
     void Start()
     {
