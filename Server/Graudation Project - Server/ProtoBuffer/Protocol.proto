@@ -19,6 +19,8 @@ enum MsgId {
   S_BOSS_ONE = 11;
   C_CAR = 12;
   S_CAR = 13;
+  C_BUTTON = 14;
+  S_BUTTON = 15;
 }
 
 enum State{
@@ -109,6 +111,15 @@ message S_Car {
   CarInfo carInfo = 1;
 }
 
+message S_Button {
+  int32 objectId = 1;
+  ButtonInfo buttonInfo = 2;
+}
+
+message C_Button {
+  ButtonInfo buttonInfo = 1;
+}
+
 message AttackInfo {
   bool IsShoot = 1;
   bool IsEquiq = 2;
@@ -132,6 +143,7 @@ message ObjectInfo {
   AttackInfo attackInfo = 4;
   StatInfo statInfo = 5;
   CarInfo carInfo = 6;
+  ButtonInfo buttonInfo = 7;
 }
 
 message PositionInfo {
@@ -170,4 +182,10 @@ message CarInfo {
   float dirX = 6;
   float dirZ = 7;
   bool isRide = 8;
+}
+
+message ButtonInfo {
+  bool oneBtn = 1;
+  bool twoBtn = 2;
+  bool threeBtn = 3;
 }

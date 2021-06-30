@@ -74,6 +74,24 @@ class PacketHandler
 		room.HandleCar(player, carPacket);
 	}
 
+	public static void C_ButtonHandler(PacketSession session, IMessage packet)
+	{
+		C_Button buttonPacket = packet as C_Button;
+		ClientSession clientSession = session as ClientSession;
+
+		Player player = clientSession.MyPlayer;
+		if (player == null)
+			return;
+
+		GameRoom room = player.Room;
+		if (room == null)
+			return;
+
+		room.HandleButton(player, buttonPacket);
+	}
+	
+
+
 	public static void C_BossOneHandler(PacketSession session, IMessage packet)
 	{
 

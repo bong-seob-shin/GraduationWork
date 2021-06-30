@@ -345,6 +345,22 @@ namespace Server.Game
             }
         }
 
+        public void HandleButton(Player player, C_Button buttonPacket)
+        {
+            if (player == null)
+                return;
+
+            lock (_lock)
+            {
+                S_Button resButtonPacket = new S_Button();
+                resButtonPacket.ObjectId = player.Info.ObjectId;
+                resButtonPacket.ButtonInfo = buttonPacket.ButtonInfo;
+
+                Broadcast(resButtonPacket);
+                Console.WriteLine("res" + resButtonPacket.ButtonInfo.OneBtn);
+            }
+        }
+
         public void HandleBossOne(Player player, C_BossOne bossPacket)
         { 
 

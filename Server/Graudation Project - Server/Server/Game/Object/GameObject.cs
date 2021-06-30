@@ -25,7 +25,7 @@ namespace Server.Game
         public AttackInfo AttackInfo { get; private set; } = new AttackInfo();
         public StatInfo StatInfo { get; private set; } = new StatInfo();
         public CarInfo carInfo { get; private set; } = new CarInfo();
-
+        public ButtonInfo buttonInfo { get; private set; } = new ButtonInfo();
 
 		public GameObject()
 		{
@@ -33,7 +33,45 @@ namespace Server.Game
             Info.AttackInfo = AttackInfo;
 			Info.StatInfo = StatInfo;
             Info.CarInfo = carInfo;
+            Info.ButtonInfo = buttonInfo;           
 		}
+
+        public bool oneButton
+        {
+            get
+            {
+                return buttonInfo.OneBtn;
+            }
+            set
+            {
+                buttonInfo.OneBtn = value;
+            }
+        }
+
+        public bool twoButton
+        {
+            get
+            {
+                return buttonInfo.TwoBtn;
+            }
+            set
+            {
+                buttonInfo.TwoBtn = value;
+            }
+        }
+
+        public bool threeButton
+        {
+            get
+            {
+                return buttonInfo.ThreeBtn;
+            }
+            set
+            {
+                buttonInfo.ThreeBtn = value;
+            }
+        }
+
 
         public int carId_test
         {
