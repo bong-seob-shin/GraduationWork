@@ -21,12 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GP.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IK/IKCCD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IK/IKCCD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/ClimbWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/ClimbWall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,8 +95,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateWalk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/ClimbWall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IK/IKCCD.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" />
       </list>
     </option>
   </component>
@@ -264,6 +265,8 @@
       <workItem from="1624901398931" duration="8029000" />
       <workItem from="1624968473516" duration="8432000" />
       <workItem from="1624985880055" duration="7579000" />
+      <workItem from="1625164883282" duration="477000" />
+      <workItem from="1625166138893" duration="749000" />
     </task>
     <servers />
   </component>

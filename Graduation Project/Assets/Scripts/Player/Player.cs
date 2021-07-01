@@ -569,7 +569,7 @@ public class Player : AnimationObj
                 {
                     interactText.text = " ";
 
-                    transform.rotation = Quaternion.Euler(Vector3.zero);
+                    transform.rotation = Quaternion.LookRotation(-_hitInfo.normal);
                     isClimbing = true;
                     playerRb.velocity = Vector3.zero;
                     playerRb.useGravity = false;
@@ -619,6 +619,7 @@ public class Player : AnimationObj
             SubCam.gameObject.SetActive(true);
             
         }
+        
 
        
     }

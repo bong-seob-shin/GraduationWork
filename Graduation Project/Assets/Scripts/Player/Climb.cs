@@ -114,7 +114,7 @@ public class Climb : MonoBehaviour
         Vector3 _moveHorizontal = transform.right * Input.GetAxis("Horizontal");
         Vector3 _moveVertical = transform.up * Input.GetAxis("Vertical");
         
-        Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *_player.applySpeed/3;
+        Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized *_player.speed/3;
         
         _player.playerRb.position += _velocity * Time.deltaTime;
 
@@ -145,7 +145,16 @@ public class Climb : MonoBehaviour
             this.enabled = false;
             
         }
+        
+    }
 
-      
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("WallTop"))
+        {
+            if(_player.isClimbing)
+                transform.Translate(Vector3.up*2f+Vector3.forward*0.5f);
+
+        }
     }
 }
