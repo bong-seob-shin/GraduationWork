@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.16867, g: 162.54297, b: 215.1647, a: 1}
+  m_IndirectSpecularColor: {r: 131.1594, g: 162.49646, b: 215.04776, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -574,7 +574,7 @@ Transform:
   - {fileID: 1787373467}
   - {fileID: 1216095036}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &12718448
 PrefabInstance:
@@ -2599,12 +2599,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194978689}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 4.4408916e-16, w: 1}
   m_LocalPosition: {x: 2251.984, y: 120.2, z: 3515.3223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &202292051
 GameObject:
@@ -15567,6 +15567,8 @@ MonoBehaviour:
   - {fileID: 930503053}
   - {fileID: 1783471956}
   buttonId: 6
+  currentButtonOn: 0
+  lateButtonOn: 0
 --- !u!111 &930503053
 Animation:
   m_ObjectHideFlags: 0
@@ -21837,35 +21839,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2256.91
+      value: 728.8
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 110.14
+      value: 209.26
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3509.04
+      value: 402.09
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000005122274
+      value: -0.000000014901159
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8389089
+      value: 0.83890885
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000029802322
+      value: 0.000000029802319
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.54427195
+      value: 0.5442719
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 295754743235524960, guid: c30428f0a505dbb45ba35f2db5a50fc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -24903,6 +24905,8 @@ MonoBehaviour:
   - {fileID: 1758899742}
   - {fileID: 1335710743}
   buttonId: 3
+  currentButtonOn: 0
+  lateButtonOn: 0
   pairButton: {fileID: 1488486622}
   isFirstButton: 1
 --- !u!1 &1376460316
@@ -25422,6 +25426,8 @@ MonoBehaviour:
   - {fileID: 1335710743}
   - {fileID: 1758899742}
   buttonId: 5
+  currentButtonOn: 0
+  lateButtonOn: 0
   liftTrigger: {fileID: 2007324696}
   liftAnims:
   - {fileID: 1375148147}
@@ -26538,6 +26544,8 @@ MonoBehaviour:
   - {fileID: 1202068711}
   - {fileID: 991710587}
   buttonId: 4
+  currentButtonOn: 0
+  lateButtonOn: 0
   pairButton: {fileID: 1376329382}
   isFirstButton: 0
 --- !u!1 &1490876414
@@ -30293,6 +30301,8 @@ MonoBehaviour:
   - {fileID: 1202068711}
   - {fileID: 991710587}
   buttonId: 2
+  currentButtonOn: 0
+  lateButtonOn: 0
   liftTrigger: {fileID: 861143280}
   liftAnims:
   - {fileID: 1375148147}
