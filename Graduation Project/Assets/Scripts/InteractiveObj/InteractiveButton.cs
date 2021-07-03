@@ -6,9 +6,12 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class InteractiveButton : InteractObj
 {
-    
+    protected override void Start()
+    {
+        buttonList.Add(this);
+    }
 
-   
+
     protected override void Update()
     {
         if (isSwitch)

@@ -8,9 +8,9 @@ public class InteractObj : MonoBehaviour
     public bool isOn =false;
     [SerializeField] protected bool isSwitch = false;
     public Animation[] interactiveObjAnims;
-
-    public Transform ikPosition;
-
+    public int buttonId = 0;
+    
+    public static List<InteractObj> buttonList = new List<InteractObj>();
     
     // Start is called before the first frame update
     protected virtual void Start()
@@ -19,9 +19,12 @@ public class InteractObj : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    protected  virtual void Update()
     {
-        
+        for (int i = 0; i < buttonList.Count; i++)
+        {
+            Debug.Log(buttonList[i].name+ " = index" +buttonList[i].buttonId);
+        }
     }
 
     public virtual void InteractObjs()

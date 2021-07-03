@@ -7,7 +7,14 @@ public class InteractiveDoubleButton : InteractObj
 
     public InteractiveDoubleButton pairButton;
 
+    
+    
     public bool isFirstButton = false;
+    
+    protected override void Start()
+    {
+        buttonList.Add(this);
+    }
     protected override void Update()
     {
         if (isSwitch)

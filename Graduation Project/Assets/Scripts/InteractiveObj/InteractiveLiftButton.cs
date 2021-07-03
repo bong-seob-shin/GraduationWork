@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class InteractiveLiftButton : InteractObj
 {
-     public LiftTrigger liftTrigger =null;
+    public LiftTrigger liftTrigger =null;
     public Animation[] liftAnims;
     public InteractiveDoubleButton downButton;
     public InteractiveDoubleButton upButton;
     public bool isUpbutton = false;
     
  
-
+    protected override void Start()
+    {
+        buttonList.Add(this);
+    }
    
     protected override void Update()
     {
