@@ -11,7 +11,10 @@ public class InteractObj : MonoBehaviour
     public int buttonId = 0;
     
     public static List<InteractObj> buttonList = new List<InteractObj>();
-    
+
+    public bool currentButtonOn;
+    public bool lateButtonOn;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
