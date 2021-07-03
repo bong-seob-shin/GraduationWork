@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
+  m_IndirectSpecularColor: {r: 131.16867, g: 162.54297, b: 215.1647, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2562,6 +2562,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcf0ea2c2b246054c8131f83aa8c8dde, type: 3}
+--- !u!1 &194978689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194978691}
+  - component: {fileID: 194978690}
+  m_Layer: 0
+  m_Name: InteractManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &194978690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194978689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41722994cd476774fbed7271c372fe36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonNum: 0
+--- !u!4 &194978691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194978689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2251.984, y: 120.2, z: 3515.3223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &202292051
 GameObject:
   m_ObjectHideFlags: 0
@@ -15522,7 +15566,7 @@ MonoBehaviour:
   interactiveObjAnims:
   - {fileID: 930503053}
   - {fileID: 1783471956}
-  ikPosition: {fileID: 0}
+  buttonId: 6
 --- !u!111 &930503053
 Animation:
   m_ObjectHideFlags: 0
@@ -20189,6 +20233,10 @@ PrefabInstance:
       propertyPath: ikPosition
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 578113651, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
+      propertyPath: buttonId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 578113652, guid: 5942373ca34a42b40a42c06e0836e69c, type: 3}
       propertyPath: m_Size.z
       value: 1.1139522
@@ -24854,7 +24902,7 @@ MonoBehaviour:
   - {fileID: 1375148147}
   - {fileID: 1758899742}
   - {fileID: 1335710743}
-  ikPosition: {fileID: 0}
+  buttonId: 3
   pairButton: {fileID: 1488486622}
   isFirstButton: 1
 --- !u!1 &1376460316
@@ -25373,7 +25421,7 @@ MonoBehaviour:
   interactiveObjAnims:
   - {fileID: 1335710743}
   - {fileID: 1758899742}
-  ikPosition: {fileID: 0}
+  buttonId: 5
   liftTrigger: {fileID: 2007324696}
   liftAnims:
   - {fileID: 1375148147}
@@ -26489,7 +26537,7 @@ MonoBehaviour:
   - {fileID: 1375148147}
   - {fileID: 1202068711}
   - {fileID: 991710587}
-  ikPosition: {fileID: 0}
+  buttonId: 4
   pairButton: {fileID: 1376329382}
   isFirstButton: 0
 --- !u!1 &1490876414
@@ -30244,7 +30292,7 @@ MonoBehaviour:
   interactiveObjAnims:
   - {fileID: 1202068711}
   - {fileID: 991710587}
-  ikPosition: {fileID: 0}
+  buttonId: 2
   liftTrigger: {fileID: 861143280}
   liftAnims:
   - {fileID: 1375148147}

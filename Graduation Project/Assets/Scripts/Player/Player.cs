@@ -107,6 +107,8 @@ public class Player : AnimationObj
 
     public bool isJumping = false;
     public bool enableJump = false; // 상호작용 트리거에 들어왔을때 점프가 되지않게 하기 위한 변수
+
+    private InteractManager _IManager;
     private void Awake()
     {
         
@@ -179,6 +181,7 @@ public class Player : AnimationObj
 
         _cameraTansform = GetComponentInChildren<Camera>().transform;
         _uiManager = UIManager.instance;
+        _IManager = GameObject.Find("InteractManager").GetComponent<InteractManager>();
 
     }
 
@@ -519,7 +522,8 @@ public class Player : AnimationObj
 
                 if (onInteractKey)
                 {
-                    ib.InteractObjs();
+                    //ib.InteractObjs();
+                    _IManager.SetButton(ib.buttonId);
                     Debug.Log("불렸음");
                     _interactCoolDown = 1.0f;
                     onInteractKey = false;
