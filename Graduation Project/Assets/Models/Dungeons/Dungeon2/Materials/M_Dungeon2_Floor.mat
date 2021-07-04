@@ -266,6 +266,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_561C20F3: {r: 1, g: 1, b: 1, a: 0}
+    - Color_7CDA2637: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.5764706, g: 0.627451, b: 0.3372549, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.57647055, g: 0.62745106, b: 0.33725488, a: 1}
