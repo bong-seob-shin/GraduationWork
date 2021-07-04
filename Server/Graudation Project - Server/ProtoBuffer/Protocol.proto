@@ -47,6 +47,7 @@ enum GameObjectType {
   RMONSTER = 5;
   BUGGY = 6;
   BOSSONE = 7;
+  BUTTON = 8;
 }
 
 message S_EnterGame {
@@ -117,7 +118,8 @@ message S_Button {
 }
 
 message C_Button {
-  ButtonInfo buttonInfo = 1;
+  int32 objectId = 1;
+  ButtonInfo buttonInfo = 2;
 }
 
 message AttackInfo {
@@ -185,7 +187,6 @@ message CarInfo {
 }
 
 message ButtonInfo {
-  bool oneBtn = 1;
-  bool twoBtn = 2;
-  bool threeBtn = 3;
+  int32 buttonId = 1;
+  bool IsPushButton = 2;
 }
