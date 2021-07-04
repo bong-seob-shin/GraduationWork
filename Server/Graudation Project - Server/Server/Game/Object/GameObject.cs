@@ -36,39 +36,27 @@ namespace Server.Game
             Info.ButtonInfo = buttonInfo;           
 		}
 
-        public bool oneButton
+        public bool IsPushButton
         {
             get
             {
-                return buttonInfo.OneBtn;
+                return buttonInfo.IsPushButton;
             }
             set
             {
-                buttonInfo.OneBtn = value;
+                buttonInfo.IsPushButton = value;
             }
         }
 
-        public bool twoButton
+        public int ButtonId
         {
             get
             {
-                return buttonInfo.TwoBtn;
+                return buttonInfo.ButtonId;
             }
             set
             {
-                buttonInfo.TwoBtn = value;
-            }
-        }
-
-        public bool threeButton
-        {
-            get
-            {
-                return buttonInfo.ThreeBtn;
-            }
-            set
-            {
-                buttonInfo.ThreeBtn = value;
+                buttonInfo.ButtonId = value;
             }
         }
 

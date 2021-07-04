@@ -43,43 +43,44 @@ namespace Google.Protobuf.Protocol {
             "b2NvbC5TdGF0SW5mbyIrCgVDX0NhchIiCgdjYXJJbmZvGAEgASgLMhEuUHJv",
             "dG9jb2wuQ2FySW5mbyIrCgVTX0NhchIiCgdjYXJJbmZvGAEgASgLMhEuUHJv",
             "dG9jb2wuQ2FySW5mbyJGCghTX0J1dHRvbhIQCghvYmplY3RJZBgBIAEoBRIo",
-            "CgpidXR0b25JbmZvGAIgASgLMhQuUHJvdG9jb2wuQnV0dG9uSW5mbyI0CghD",
-            "X0J1dHRvbhIoCgpidXR0b25JbmZvGAEgASgLMhQuUHJvdG9jb2wuQnV0dG9u",
-            "SW5mbyJ6CgpBdHRhY2tJbmZvEg8KB0lzU2hvb3QYASABKAgSDwoHSXNFcXVp",
-            "cRgCIAEoCBINCgVJc0hpdBgDIAEoCBIQCghJc1JlbG9hZBgEIAEoCBIOCgZJ",
-            "c0RlYWQYBSABKAgSDQoFTWF4SFAYBiABKAUSCgoCSFAYByABKAUiVQoKUGxh",
-            "eWVySW5mbxIQCghwbGF5ZXJJZBgBIAEoBRIMCgRuYW1lGAIgASgJEicKB3Bv",
-            "c0luZm8YAyABKAsyFi5Qcm90b2NvbC5Qb3NpdGlvbkluZm8i8wEKCk9iamVj",
-            "dEluZm8SEAoIb2JqZWN0SWQYASABKAUSDAoEbmFtZRgCIAEoCRInCgdwb3NJ",
-            "bmZvGAMgASgLMhYuUHJvdG9jb2wuUG9zaXRpb25JbmZvEigKCmF0dGFja0lu",
-            "Zm8YBCABKAsyFC5Qcm90b2NvbC5BdHRhY2tJbmZvEiQKCHN0YXRJbmZvGAUg",
-            "ASgLMhIuUHJvdG9jb2wuU3RhdEluZm8SIgoHY2FySW5mbxgGIAEoCzIRLlBy",
-            "b3RvY29sLkNhckluZm8SKAoKYnV0dG9uSW5mbxgHIAEoCzIULlByb3RvY29s",
-            "LkJ1dHRvbkluZm8i5AEKDFBvc2l0aW9uSW5mbxIMCgRwb3NYGAEgASgCEgwK",
-            "BHBvc1kYAiABKAISDAoEcG9zWhgDIAEoAhIMCgRkaXJYGAQgASgCEgwKBGRp",
-            "cloYBSABKAISDAoEcm90WRgGIAEoAhIOCgZzcGluZVgYByABKAISDgoGc3Bp",
-            "bmVZGAggASgCEg4KBnNwaW5lWhgJIAEoAhIeCgVzdGF0ZRgKIAEoDjIPLlBy",
-            "b3RvY29sLlN0YXRlEg4KBmlzSnVtcBgLIAEoCBINCgVjYXJJZBgMIAEoBRIR",
-            "CgljYXJ1c2VySWQYDSABKAUimwEKCFN0YXRJbmZvEg0KBWxldmVsGAEgASgF",
-            "EgoKAmhwGAIgASgFEg0KBW1heEhwGAMgASgFEg4KBmF0dGFjaxgEIAEoBRIN",
-            "CgVzcGVlZBgFIAEoAhIQCgh0b3RhbEV4cBgGIAEoBRIiCgdwYXR0ZXJuGAcg",
-            "ASgOMhEuUHJvdG9jb2wuUGF0dGVybhIQCghyYW5kd2FsbBgIIAEoBSKDAQoH",
-            "Q2FySW5mbxINCgVjYXJJZBgBIAEoBRITCgtjYXJwbGF5ZXJJZBgCIAEoBRIM",
-            "CgRjYXJYGAMgASgCEgwKBGNhclkYBCABKAISDAoEY2FyWhgFIAEoAhIMCgRk",
-            "aXJYGAYgASgCEgwKBGRpcloYByABKAISDgoGaXNSaWRlGAggASgIIj4KCkJ1",
-            "dHRvbkluZm8SDgoGb25lQnRuGAEgASgIEg4KBnR3b0J0bhgCIAEoCBIQCgh0",
-            "aHJlZUJ0bhgDIAEoCCrvAQoFTXNnSWQSEAoMU19FTlRFUl9HQU1FEAASEAoM",
-            "U19MRUFWRV9HQU1FEAESCwoHU19TUEFXThACEg0KCVNfREVTUEFXThADEgoK",
-            "BkNfTU9WRRAEEgoKBlNfTU9WRRAFEgwKCENfQVRUQUNLEAYSDAoIU19BVFRB",
-            "Q0sQBxIPCgtDX0NIQU5HRV9IUBAIEg8KC1NfQ0hBTkdFX0hQEAkSDgoKQ19C",
-            "T1NTX09ORRAKEg4KClNfQk9TU19PTkUQCxIJCgVDX0NBUhAMEgkKBVNfQ0FS",
-            "EA0SDAoIQ19CVVRUT04QDhIMCghTX0JVVFRPThAPKjMKBVN0YXRlEggKBElE",
-            "TEUQABIKCgZNT1ZJTkcQARIKCgZBVFRBQ0sQAhIICgRERUFEEAMqOAoHUGF0",
-            "dGVybhIGCgJOTxAAEgcKA09ORRABEgcKA1RXTxACEgkKBVRIUkVFEAMSCAoE",
-            "Rk9VUhAEKoQBCg5HYW1lT2JqZWN0VHlwZRIICgROT05FEAASCgoGUExBWUVS",
-            "EAESEwoPQ01PTlNURVJTUEFXTkVSEAISEwoPUk1PTlNURVJTUEFXTkVSEAMS",
-            "DAoIQ01PTlNURVIQBBIMCghSTU9OU1RFUhAFEgkKBUJVR0dZEAYSCwoHQk9T",
-            "U09ORRAHQhuqAhhHb29nbGUuUHJvdG9idWYuUHJvdG9jb2xiBnByb3RvMw=="));
+            "CgpidXR0b25JbmZvGAIgASgLMhQuUHJvdG9jb2wuQnV0dG9uSW5mbyJGCghD",
+            "X0J1dHRvbhIQCghvYmplY3RJZBgBIAEoBRIoCgpidXR0b25JbmZvGAIgASgL",
+            "MhQuUHJvdG9jb2wuQnV0dG9uSW5mbyJ6CgpBdHRhY2tJbmZvEg8KB0lzU2hv",
+            "b3QYASABKAgSDwoHSXNFcXVpcRgCIAEoCBINCgVJc0hpdBgDIAEoCBIQCghJ",
+            "c1JlbG9hZBgEIAEoCBIOCgZJc0RlYWQYBSABKAgSDQoFTWF4SFAYBiABKAUS",
+            "CgoCSFAYByABKAUiVQoKUGxheWVySW5mbxIQCghwbGF5ZXJJZBgBIAEoBRIM",
+            "CgRuYW1lGAIgASgJEicKB3Bvc0luZm8YAyABKAsyFi5Qcm90b2NvbC5Qb3Np",
+            "dGlvbkluZm8i8wEKCk9iamVjdEluZm8SEAoIb2JqZWN0SWQYASABKAUSDAoE",
+            "bmFtZRgCIAEoCRInCgdwb3NJbmZvGAMgASgLMhYuUHJvdG9jb2wuUG9zaXRp",
+            "b25JbmZvEigKCmF0dGFja0luZm8YBCABKAsyFC5Qcm90b2NvbC5BdHRhY2tJ",
+            "bmZvEiQKCHN0YXRJbmZvGAUgASgLMhIuUHJvdG9jb2wuU3RhdEluZm8SIgoH",
+            "Y2FySW5mbxgGIAEoCzIRLlByb3RvY29sLkNhckluZm8SKAoKYnV0dG9uSW5m",
+            "bxgHIAEoCzIULlByb3RvY29sLkJ1dHRvbkluZm8i5AEKDFBvc2l0aW9uSW5m",
+            "bxIMCgRwb3NYGAEgASgCEgwKBHBvc1kYAiABKAISDAoEcG9zWhgDIAEoAhIM",
+            "CgRkaXJYGAQgASgCEgwKBGRpcloYBSABKAISDAoEcm90WRgGIAEoAhIOCgZz",
+            "cGluZVgYByABKAISDgoGc3BpbmVZGAggASgCEg4KBnNwaW5lWhgJIAEoAhIe",
+            "CgVzdGF0ZRgKIAEoDjIPLlByb3RvY29sLlN0YXRlEg4KBmlzSnVtcBgLIAEo",
+            "CBINCgVjYXJJZBgMIAEoBRIRCgljYXJ1c2VySWQYDSABKAUimwEKCFN0YXRJ",
+            "bmZvEg0KBWxldmVsGAEgASgFEgoKAmhwGAIgASgFEg0KBW1heEhwGAMgASgF",
+            "Eg4KBmF0dGFjaxgEIAEoBRINCgVzcGVlZBgFIAEoAhIQCgh0b3RhbEV4cBgG",
+            "IAEoBRIiCgdwYXR0ZXJuGAcgASgOMhEuUHJvdG9jb2wuUGF0dGVybhIQCghy",
+            "YW5kd2FsbBgIIAEoBSKDAQoHQ2FySW5mbxINCgVjYXJJZBgBIAEoBRITCgtj",
+            "YXJwbGF5ZXJJZBgCIAEoBRIMCgRjYXJYGAMgASgCEgwKBGNhclkYBCABKAIS",
+            "DAoEY2FyWhgFIAEoAhIMCgRkaXJYGAYgASgCEgwKBGRpcloYByABKAISDgoG",
+            "aXNSaWRlGAggASgIIjQKCkJ1dHRvbkluZm8SEAoIYnV0dG9uSWQYASABKAUS",
+            "FAoMSXNQdXNoQnV0dG9uGAIgASgIKu8BCgVNc2dJZBIQCgxTX0VOVEVSX0dB",
+            "TUUQABIQCgxTX0xFQVZFX0dBTUUQARILCgdTX1NQQVdOEAISDQoJU19ERVNQ",
+            "QVdOEAMSCgoGQ19NT1ZFEAQSCgoGU19NT1ZFEAUSDAoIQ19BVFRBQ0sQBhIM",
+            "CghTX0FUVEFDSxAHEg8KC0NfQ0hBTkdFX0hQEAgSDwoLU19DSEFOR0VfSFAQ",
+            "CRIOCgpDX0JPU1NfT05FEAoSDgoKU19CT1NTX09ORRALEgkKBUNfQ0FSEAwS",
+            "CQoFU19DQVIQDRIMCghDX0JVVFRPThAOEgwKCFNfQlVUVE9OEA8qMwoFU3Rh",
+            "dGUSCAoESURMRRAAEgoKBk1PVklORxABEgoKBkFUVEFDSxACEggKBERFQUQQ",
+            "Ayo4CgdQYXR0ZXJuEgYKAk5PEAASBwoDT05FEAESBwoDVFdPEAISCQoFVEhS",
+            "RUUQAxIICgRGT1VSEAQqkAEKDkdhbWVPYmplY3RUeXBlEggKBE5PTkUQABIK",
+            "CgZQTEFZRVIQARITCg9DTU9OU1RFUlNQQVdORVIQAhITCg9STU9OU1RFUlNQ",
+            "QVdORVIQAxIMCghDTU9OU1RFUhAEEgwKCFJNT05TVEVSEAUSCQoFQlVHR1kQ",
+            "BhILCgdCT1NTT05FEAcSCgoGQlVUVE9OEAhCG6oCGEdvb2dsZS5Qcm90b2J1",
+            "Zi5Qcm90b2NvbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.State), typeof(global::Google.Protobuf.Protocol.Pattern), typeof(global::Google.Protobuf.Protocol.GameObjectType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -98,14 +99,14 @@ namespace Google.Protobuf.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_Car), global::Google.Protobuf.Protocol.C_Car.Parser, new[]{ "CarInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_Car), global::Google.Protobuf.Protocol.S_Car.Parser, new[]{ "CarInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_Button), global::Google.Protobuf.Protocol.S_Button.Parser, new[]{ "ObjectId", "ButtonInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_Button), global::Google.Protobuf.Protocol.C_Button.Parser, new[]{ "ButtonInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.C_Button), global::Google.Protobuf.Protocol.C_Button.Parser, new[]{ "ObjectId", "ButtonInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.AttackInfo), global::Google.Protobuf.Protocol.AttackInfo.Parser, new[]{ "IsShoot", "IsEquiq", "IsHit", "IsReload", "IsDead", "MaxHP", "HP" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PlayerInfo), global::Google.Protobuf.Protocol.PlayerInfo.Parser, new[]{ "PlayerId", "Name", "PosInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ObjectInfo), global::Google.Protobuf.Protocol.ObjectInfo.Parser, new[]{ "ObjectId", "Name", "PosInfo", "AttackInfo", "StatInfo", "CarInfo", "ButtonInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PositionInfo), global::Google.Protobuf.Protocol.PositionInfo.Parser, new[]{ "PosX", "PosY", "PosZ", "DirX", "DirZ", "RotY", "SpineX", "SpineY", "SpineZ", "State", "IsJump", "CarId", "CaruserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.StatInfo), global::Google.Protobuf.Protocol.StatInfo.Parser, new[]{ "Level", "Hp", "MaxHp", "Attack", "Speed", "TotalExp", "Pattern", "Randwall" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.CarInfo), global::Google.Protobuf.Protocol.CarInfo.Parser, new[]{ "CarId", "CarplayerId", "CarX", "CarY", "CarZ", "DirX", "DirZ", "IsRide" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ButtonInfo), global::Google.Protobuf.Protocol.ButtonInfo.Parser, new[]{ "OneBtn", "TwoBtn", "ThreeBtn" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ButtonInfo), global::Google.Protobuf.Protocol.ButtonInfo.Parser, new[]{ "ButtonId", "IsPushButton" }, null, null, null, null)
           }));
     }
     #endregion
@@ -155,6 +156,7 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("RMONSTER")] Rmonster = 5,
     [pbr::OriginalName("BUGGY")] Buggy = 6,
     [pbr::OriginalName("BOSSONE")] Bossone = 7,
+    [pbr::OriginalName("BUTTON")] Button = 8,
   }
 
   #endregion
@@ -2345,6 +2347,7 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public C_Button(C_Button other) : this() {
+      objectId_ = other.objectId_;
       buttonInfo_ = other.buttonInfo_ != null ? other.buttonInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2354,8 +2357,19 @@ namespace Google.Protobuf.Protocol {
       return new C_Button(this);
     }
 
+    /// <summary>Field number for the "objectId" field.</summary>
+    public const int ObjectIdFieldNumber = 1;
+    private int objectId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ObjectId {
+      get { return objectId_; }
+      set {
+        objectId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "buttonInfo" field.</summary>
-    public const int ButtonInfoFieldNumber = 1;
+    public const int ButtonInfoFieldNumber = 2;
     private global::Google.Protobuf.Protocol.ButtonInfo buttonInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.Protocol.ButtonInfo ButtonInfo {
@@ -2378,6 +2392,7 @@ namespace Google.Protobuf.Protocol {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ObjectId != other.ObjectId) return false;
       if (!object.Equals(ButtonInfo, other.ButtonInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2385,6 +2400,7 @@ namespace Google.Protobuf.Protocol {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (ObjectId != 0) hash ^= ObjectId.GetHashCode();
       if (buttonInfo_ != null) hash ^= ButtonInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2399,8 +2415,12 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (ObjectId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ObjectId);
+      }
       if (buttonInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteMessage(ButtonInfo);
       }
       if (_unknownFields != null) {
@@ -2411,6 +2431,9 @@ namespace Google.Protobuf.Protocol {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (ObjectId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjectId);
+      }
       if (buttonInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ButtonInfo);
       }
@@ -2424,6 +2447,9 @@ namespace Google.Protobuf.Protocol {
     public void MergeFrom(C_Button other) {
       if (other == null) {
         return;
+      }
+      if (other.ObjectId != 0) {
+        ObjectId = other.ObjectId;
       }
       if (other.buttonInfo_ != null) {
         if (buttonInfo_ == null) {
@@ -2442,7 +2468,11 @@ namespace Google.Protobuf.Protocol {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            ObjectId = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (buttonInfo_ == null) {
               ButtonInfo = new global::Google.Protobuf.Protocol.ButtonInfo();
             }
@@ -4410,9 +4440,8 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ButtonInfo(ButtonInfo other) : this() {
-      oneBtn_ = other.oneBtn_;
-      twoBtn_ = other.twoBtn_;
-      threeBtn_ = other.threeBtn_;
+      buttonId_ = other.buttonId_;
+      isPushButton_ = other.isPushButton_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4421,36 +4450,25 @@ namespace Google.Protobuf.Protocol {
       return new ButtonInfo(this);
     }
 
-    /// <summary>Field number for the "oneBtn" field.</summary>
-    public const int OneBtnFieldNumber = 1;
-    private bool oneBtn_;
+    /// <summary>Field number for the "buttonId" field.</summary>
+    public const int ButtonIdFieldNumber = 1;
+    private int buttonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool OneBtn {
-      get { return oneBtn_; }
+    public int ButtonId {
+      get { return buttonId_; }
       set {
-        oneBtn_ = value;
+        buttonId_ = value;
       }
     }
 
-    /// <summary>Field number for the "twoBtn" field.</summary>
-    public const int TwoBtnFieldNumber = 2;
-    private bool twoBtn_;
+    /// <summary>Field number for the "IsPushButton" field.</summary>
+    public const int IsPushButtonFieldNumber = 2;
+    private bool isPushButton_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool TwoBtn {
-      get { return twoBtn_; }
+    public bool IsPushButton {
+      get { return isPushButton_; }
       set {
-        twoBtn_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "threeBtn" field.</summary>
-    public const int ThreeBtnFieldNumber = 3;
-    private bool threeBtn_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool ThreeBtn {
-      get { return threeBtn_; }
-      set {
-        threeBtn_ = value;
+        isPushButton_ = value;
       }
     }
 
@@ -4467,18 +4485,16 @@ namespace Google.Protobuf.Protocol {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OneBtn != other.OneBtn) return false;
-      if (TwoBtn != other.TwoBtn) return false;
-      if (ThreeBtn != other.ThreeBtn) return false;
+      if (ButtonId != other.ButtonId) return false;
+      if (IsPushButton != other.IsPushButton) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (OneBtn != false) hash ^= OneBtn.GetHashCode();
-      if (TwoBtn != false) hash ^= TwoBtn.GetHashCode();
-      if (ThreeBtn != false) hash ^= ThreeBtn.GetHashCode();
+      if (ButtonId != 0) hash ^= ButtonId.GetHashCode();
+      if (IsPushButton != false) hash ^= IsPushButton.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4492,17 +4508,13 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (OneBtn != false) {
+      if (ButtonId != 0) {
         output.WriteRawTag(8);
-        output.WriteBool(OneBtn);
+        output.WriteInt32(ButtonId);
       }
-      if (TwoBtn != false) {
+      if (IsPushButton != false) {
         output.WriteRawTag(16);
-        output.WriteBool(TwoBtn);
-      }
-      if (ThreeBtn != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(ThreeBtn);
+        output.WriteBool(IsPushButton);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4512,13 +4524,10 @@ namespace Google.Protobuf.Protocol {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (OneBtn != false) {
-        size += 1 + 1;
+      if (ButtonId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ButtonId);
       }
-      if (TwoBtn != false) {
-        size += 1 + 1;
-      }
-      if (ThreeBtn != false) {
+      if (IsPushButton != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -4532,14 +4541,11 @@ namespace Google.Protobuf.Protocol {
       if (other == null) {
         return;
       }
-      if (other.OneBtn != false) {
-        OneBtn = other.OneBtn;
+      if (other.ButtonId != 0) {
+        ButtonId = other.ButtonId;
       }
-      if (other.TwoBtn != false) {
-        TwoBtn = other.TwoBtn;
-      }
-      if (other.ThreeBtn != false) {
-        ThreeBtn = other.ThreeBtn;
+      if (other.IsPushButton != false) {
+        IsPushButton = other.IsPushButton;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4553,15 +4559,11 @@ namespace Google.Protobuf.Protocol {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            OneBtn = input.ReadBool();
+            ButtonId = input.ReadInt32();
             break;
           }
           case 16: {
-            TwoBtn = input.ReadBool();
-            break;
-          }
-          case 24: {
-            ThreeBtn = input.ReadBool();
+            IsPushButton = input.ReadBool();
             break;
           }
         }

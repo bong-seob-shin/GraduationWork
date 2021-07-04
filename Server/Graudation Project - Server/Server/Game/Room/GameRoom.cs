@@ -23,6 +23,7 @@ namespace Server.Game
 
         Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
         Dictionary<int, Boss1> _boss1 = new Dictionary<int, Boss1>();
+        Dictionary<int, Button> _button = new Dictionary<int, Button>();
 
         public List<Vector3> CMonster_pos = new List<Vector3>();
         public List<Vector3> RMonster_pos = new List<Vector3>();
@@ -67,6 +68,12 @@ namespace Server.Game
             Boss1 boss1 = ObjectManager.Instance.Add<Boss1>();
             boss1.CellPos = new Vector3(1412.6f, 225.914f, 4909.44f);
             EnterGame(boss1);
+
+            Button button = ObjectManager.Instance.Add<Button>();
+            button.CellPos = new Vector3(1f, 1f, 1f);
+            button.Info.Name = $"InteractManager";
+            EnterGame(button);
+
         }
 
         public void Update()
@@ -139,7 +146,8 @@ namespace Server.Game
                         foreach (Boss1 b in _boss1.Values)
                             spawnPacket.Objects.Add(b.Info);
 
-
+                        foreach (Button b in _button.Values)
+                            spawnPacket.Objects.Add(b.Info);
 
                         player.Session.Send(spawnPacket);
                     }
@@ -178,6 +186,13 @@ namespace Server.Game
                     Boss1 boss1 = gameObject as Boss1;
                     _boss1.Add(gameObject.Id, boss1);
                     boss1.Room = this;
+                }
+
+                else if (type == GameObjectType.Button)
+                {
+                    Button button = gameObject as Button;
+                    _button.Add(gameObject.Id, button);
+                    button.Room = this;
                 }
 
                 // 타인한테 새로운 신입에 대한 정보 보내기
@@ -353,11 +368,14 @@ namespace Server.Game
             lock (_lock)
             {
                 S_Button resButtonPacket = new S_Button();
-                resButtonPacket.ObjectId = player.Info.ObjectId;
+                
+                //resButtonPacket.ObjectId = player.Info.ObjectId;
+                resButtonPacket.ObjectId = buttonPacket.ObjectId;
                 resButtonPacket.ButtonInfo = buttonPacket.ButtonInfo;
 
+                Console.WriteLine("버튼 : " + resButtonPacket);
+
                 Broadcast(resButtonPacket);
-                Console.WriteLine("res" + resButtonPacket.ButtonInfo.OneBtn);
             }
         }
 
