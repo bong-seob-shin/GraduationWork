@@ -67,6 +67,7 @@ namespace Server.Game
 
             Boss1 boss1 = ObjectManager.Instance.Add<Boss1>();
             boss1.CellPos = new Vector3(1412.6f, 225.914f, 4909.44f);
+            boss1.Info.Name = $"BossOne";
             EnterGame(boss1);
 
             Button button = ObjectManager.Instance.Add<Button>();
@@ -254,7 +255,8 @@ namespace Server.Game
                 ObjectInfo info = player.Info;
 
                 // 실시간으로 플레이어 좌표를 CellPos에 받아와서 몬스터와의 거리를 Check할 예정
-                // player.CellPos = new Vector3(movePacket.PosInfo.PosX, movePacket.PosInfo.PosY, movePacket.PosInfo.PosZ);
+                // 이 값을 설정해주지 않으면 Player 스크립트의 CellPos 값은 유효하지 않음
+                player.CellPos = new Vector3(movePacket.PosInfo.PosX, movePacket.PosInfo.PosY, movePacket.PosInfo.PosZ);
 
                 // 다른 플레이어한테도 알려준다
                 S_Move resMovePacket = new S_Move();

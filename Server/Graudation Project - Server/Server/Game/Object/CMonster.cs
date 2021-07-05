@@ -55,7 +55,27 @@ namespace Server.Game
             this.PosInfo.SpineX = rand_x;
             this.PosInfo.SpineZ = rand_z;
 
+            //Player target = Room.FindPlayer(p =>
+            //{
+            //    float dist = DistanceToPoint(p.CellPos, CellPos);                
+            //    return dist <= 20f;
+            //});
+
+            //if (target != null)
+            //{
+            //    Console.WriteLine("거리 20 내부");
+            //    State = State.Dead;
+            //    BroadcastMove();
+            //}
+            //else 
+            //{
+            //    Console.WriteLine("거리 20 바깥");
+            //    State = State.Attack;
+            //    BroadcastMove();
+            //}
+
             BroadcastMove();
+
         }
 
         private float DistanceToPoint(Vector3 a, Vector3 b)
