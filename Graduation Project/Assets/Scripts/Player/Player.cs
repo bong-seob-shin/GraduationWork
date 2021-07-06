@@ -522,8 +522,8 @@ public class Player : AnimationObj
 
                 if (onInteractKey)
                 {
-                    //ib.InteractObjs();
-                    _IManager.SetButton(ib.buttonId);
+                    ib.InteractObjs();
+                    //_IManager.SetButton(ib.buttonId);
                     Debug.Log("불렸음");
                     _interactCoolDown = 1.0f;
                     onInteractKey = false;

@@ -24,10 +24,7 @@ public class InteractObj : MonoBehaviour
     // Update is called once per frame
     protected  virtual void Update()
     {
-        for (int i = 0; i < buttonList.Count; i++)
-        {
-            Debug.Log(buttonList[i].name+ " = index" +buttonList[i].buttonId);
-        }
+       
     }
 
     public virtual void InteractObjs()
