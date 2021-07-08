@@ -87,11 +87,13 @@ message S_Attack {
 message C_ChangeHp {
   int32 objectId = 1;
   StatInfo statInfo = 2;
+  PositionInfo posInfo = 3;
 }
 
 message S_ChangeHp {
   int32 objectId = 1;
   StatInfo statInfo = 2;
+  PositionInfo posInfo = 3;
 }
 
 message C_BossOne {

@@ -392,11 +392,12 @@ namespace Server.Game
                     S_ChangeHp resHpPacket = new S_ChangeHp();
 
                     door.StatInfo.Hp -= 30;
+                    resHpPacket.PosInfo = door.PosInfo;
                     resHpPacket.StatInfo = door.StatInfo;
                     resHpPacket.ObjectId = hpPacket.ObjectId;
                     Broadcast(resHpPacket);
 
-                    Console.WriteLine("Door" + resHpPacket.StatInfo.Hp);
+                    Console.WriteLine("Door" + resHpPacket);
                 }
             }
         }
