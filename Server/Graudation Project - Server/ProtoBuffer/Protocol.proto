@@ -48,6 +48,7 @@ enum GameObjectType {
   BUGGY = 6;
   BOSSONE = 7;
   BUTTON = 8;
+  DOOR = 9;
 }
 
 message S_EnterGame {

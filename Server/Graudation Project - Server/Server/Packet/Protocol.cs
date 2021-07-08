@@ -76,11 +76,11 @@ namespace Google.Protobuf.Protocol {
             "CQoFU19DQVIQDRIMCghDX0JVVFRPThAOEgwKCFNfQlVUVE9OEA8qMwoFU3Rh",
             "dGUSCAoESURMRRAAEgoKBk1PVklORxABEgoKBkFUVEFDSxACEggKBERFQUQQ",
             "Ayo4CgdQYXR0ZXJuEgYKAk5PEAASBwoDT05FEAESBwoDVFdPEAISCQoFVEhS",
-            "RUUQAxIICgRGT1VSEAQqkAEKDkdhbWVPYmplY3RUeXBlEggKBE5PTkUQABIK",
+            "RUUQAxIICgRGT1VSEAQqmgEKDkdhbWVPYmplY3RUeXBlEggKBE5PTkUQABIK",
             "CgZQTEFZRVIQARITCg9DTU9OU1RFUlNQQVdORVIQAhITCg9STU9OU1RFUlNQ",
             "QVdORVIQAxIMCghDTU9OU1RFUhAEEgwKCFJNT05TVEVSEAUSCQoFQlVHR1kQ",
-            "BhILCgdCT1NTT05FEAcSCgoGQlVUVE9OEAhCG6oCGEdvb2dsZS5Qcm90b2J1",
-            "Zi5Qcm90b2NvbGIGcHJvdG8z"));
+            "BhILCgdCT1NTT05FEAcSCgoGQlVUVE9OEAgSCAoERE9PUhAJQhuqAhhHb29n",
+            "bGUuUHJvdG9idWYuUHJvdG9jb2xiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.State), typeof(global::Google.Protobuf.Protocol.Pattern), typeof(global::Google.Protobuf.Protocol.GameObjectType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -157,6 +157,7 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("BUGGY")] Buggy = 6,
     [pbr::OriginalName("BOSSONE")] Bossone = 7,
     [pbr::OriginalName("BUTTON")] Button = 8,
+    [pbr::OriginalName("DOOR")] Door = 9,
   }
 
   #endregion

@@ -24,6 +24,7 @@ namespace Server.Game
         Dictionary<int, Buggy> _buggy = new Dictionary<int, Buggy>();
         Dictionary<int, Boss1> _boss1 = new Dictionary<int, Boss1>();
         Dictionary<int, Button> _button = new Dictionary<int, Button>();
+        Dictionary<int, Door> _door = new Dictionary<int, Door>();
 
         public List<Vector3> CMonster_pos = new List<Vector3>();
         public List<Vector3> RMonster_pos = new List<Vector3>();
@@ -74,6 +75,21 @@ namespace Server.Game
             button.CellPos = new Vector3(1f, 1f, 1f);
             button.Info.Name = $"InteractManager";
             EnterGame(button);
+
+            Door door1 = ObjectManager.Instance.Add<Door>();
+            EnterGame(door1);
+
+            Door door2 = ObjectManager.Instance.Add<Door>();
+            EnterGame(door2);
+
+            Door door3 = ObjectManager.Instance.Add<Door>();
+            EnterGame(door3);
+
+            Door door4 = ObjectManager.Instance.Add<Door>();
+            EnterGame(door4);
+
+            Door door5 = ObjectManager.Instance.Add<Door>();
+            EnterGame(door5);
 
         }
 
@@ -132,7 +148,7 @@ namespace Server.Game
                                 spawnPacket.Objects.Add(p.Info);
                         }
 
-                        foreach (CMonsterSpawner cms in _cmonsterspawn.Values)                        
+                        foreach (CMonsterSpawner cms in _cmonsterspawn.Values)
                             spawnPacket.Objects.Add(cms.Info);
 
                         foreach (CMonster cm in _cmonsters.Values)
@@ -143,12 +159,15 @@ namespace Server.Game
 
                         foreach (Buggy b in _buggy.Values)
                             spawnPacket.Objects.Add(b.Info);
-                        
+
                         foreach (Boss1 b in _boss1.Values)
                             spawnPacket.Objects.Add(b.Info);
 
                         foreach (Button b in _button.Values)
                             spawnPacket.Objects.Add(b.Info);
+
+                        foreach (Door d in _door.Values)
+                            spawnPacket.Objects.Add(d.Info);
 
                         player.Session.Send(spawnPacket);
                     }
@@ -194,6 +213,13 @@ namespace Server.Game
                     Button button = gameObject as Button;
                     _button.Add(gameObject.Id, button);
                     button.Room = this;
+                }
+
+                else if (type == GameObjectType.Door)
+                {
+                    Door door = gameObject as Door;
+                    _door.Add(gameObject.Id, door);
+                    door.Room = this;
                 }
 
                 // 타인한테 새로운 신입에 대한 정보 보내기
@@ -326,6 +352,7 @@ namespace Server.Game
             {
                 CMonster cm = new CMonster();
                 RMonster rm = new RMonster();
+                Door door = new Door();
                 Player p = new Player();
 
                 if (_cmonsters.TryGetValue(hpPacket.ObjectId, out cm))
@@ -358,6 +385,18 @@ namespace Server.Game
                     Broadcast(resHpPacket);
 
                     Console.WriteLine(resHpPacket.StatInfo.Hp);
+                }
+
+                if (_door.TryGetValue(hpPacket.ObjectId, out door))
+                {
+                    S_ChangeHp resHpPacket = new S_ChangeHp();
+
+                    door.StatInfo.Hp -= 30;
+                    resHpPacket.StatInfo = door.StatInfo;
+                    resHpPacket.ObjectId = hpPacket.ObjectId;
+                    Broadcast(resHpPacket);
+
+                    Console.WriteLine("Door" + resHpPacket.StatInfo.Hp);
                 }
             }
         }
