@@ -12,8 +12,12 @@ public class DroneMissileShockWave : MonoBehaviour
     private bool isBomb;
     public float persistTime;
 
+    public GameObject explosionEffect;
+
     private void Start()
     {
+        GameObject effect = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        // effect.transform.SetParent(this.gameObject.transform);
         isBomb = true;
     }
 

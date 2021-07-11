@@ -15,7 +15,11 @@ public class MonsterManager : ObjManager
     protected override void Dead()
     {
         isDead = true;
-        nav.enabled = false;
+        if (nav)
+        {
+            nav.enabled = false;
+        }
+
         rigid.velocity = Vector3.zero;
         //anim.SetTrigger("Dead");
     }

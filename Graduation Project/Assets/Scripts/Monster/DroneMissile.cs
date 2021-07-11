@@ -12,12 +12,14 @@ public class DroneMissile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Instantiate(shockWave, transform.position, Quaternion.identity);
+
             Destroy(this.gameObject);
         }
     
         if (other.CompareTag("Terrain"))
         {
             Instantiate(shockWave, transform.position, Quaternion.identity);
+
             Destroy(this.gameObject);
         }
     }

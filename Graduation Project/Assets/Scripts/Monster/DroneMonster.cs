@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class DroneMonster : MonsterManager
@@ -163,6 +164,9 @@ public class DroneMonster : MonsterManager
         if (isDead)
         {
             rigid.useGravity = true;
+            rigid.AddForce(Vector3.down * 400.0f,ForceMode.Acceleration);
+            
+            
             timer -= Time.deltaTime;
             if (timer <= 0.0)
             {

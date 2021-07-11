@@ -116,6 +116,7 @@ public class Gun : MonoBehaviour
                 ClosedMonster monster = hit.transform.GetComponent<ClosedMonster>();
                 RangedMonster Rmonster = hit.transform.GetComponent<RangedMonster>();
                 BossMonster bossMonster = hit.transform.GetComponent<BossMonster>();
+                DroneMonster droneMonster = hit.transform.GetComponent<DroneMonster>();
                 Core planeCore = hit.transform.GetComponent<Core>();
                 Door door = hit.transform.GetComponent<Door>();
                 if (monster != null)
@@ -132,6 +133,14 @@ public class Gun : MonoBehaviour
                     Rmonster.target = transform.parent.parent.parent;
                     Rmonster.isHit = true;
                     Rmonster.targetOn = true;
+                }
+
+                if (droneMonster != null)
+                {
+                    droneMonster.hit(damage,penetration);
+                    droneMonster.target = transform.parent.parent.parent;
+                    droneMonster.isHit = true;
+                    droneMonster.targetOn = true;
                 }
 
                 if (bossMonster != null)

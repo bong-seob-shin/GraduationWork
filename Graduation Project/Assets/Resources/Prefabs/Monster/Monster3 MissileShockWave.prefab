@@ -46,3 +46,4 @@ MonoBehaviour:
   radius: 3
   colls: []
   persistTime: 0.1
+  explosionEffect: {fileID: 6524908028719894505, guid: 23240d25e5c6f2f49ae59871eecf05dd, type: 3}
