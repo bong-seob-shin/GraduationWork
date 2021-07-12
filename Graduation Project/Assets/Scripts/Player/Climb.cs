@@ -86,7 +86,7 @@ public class Climb : MonoBehaviour
             }
             
             
-            //if (!leftFoot.isIKOn)
+            if (!leftFoot.isIKOn)
             {
                 int index = 0;
                 float temp = (leftFoot.transform.position - targetTransforms[0].position).sqrMagnitude;
@@ -101,21 +101,21 @@ public class Climb : MonoBehaviour
                     }
                 }
 
-                if (leftFoot.targetPos != Vector3.zero)
-                {
-                    
-                    Vector3 targetPos = Vector3.Lerp(leftFoot.targetPos, targetTransforms[index].position,
-                        Time.deltaTime*5);
-                    leftFoot.SetTarget(targetPos, targetTransforms[index].rotation);
-
-                }
-                else
+                // if (leftFoot.targetPos != Vector3.zero)
+                // {
+                //     
+                //     Vector3 targetPos = Vector3.Lerp(leftFoot.targetPos, targetTransforms[index].position,
+                //         Time.deltaTime*5);
+                //     leftFoot.SetTarget(targetPos, targetTransforms[index].rotation);
+                //
+                // }
+                // else
                 {
                     leftFoot.SetTarget(targetTransforms[index].position,targetTransforms[index].rotation);
                 }
             }
             
-            //if (!rightFoot.isIKOn)
+            if (!rightFoot.isIKOn)
             {
                 int index = 0;
                 float temp = (rightFoot.transform.position - targetTransforms[0].position).sqrMagnitude;
@@ -130,13 +130,13 @@ public class Climb : MonoBehaviour
                     }
                 }
 
-                if (rightFoot.targetPos != Vector3.zero)
-                {
-                    Vector3 targetPos = Vector3.Lerp(rightFoot.targetPos, targetTransforms[index].position,
-                        Time.deltaTime*5);
-                    rightFoot.SetTarget(targetPos,targetTransforms[index].rotation);
-                }
-                else
+                // if (rightFoot.targetPos != Vector3.zero)
+                // {
+                //     Vector3 targetPos = Vector3.Lerp(rightFoot.targetPos, targetTransforms[index].position,
+                //         Time.deltaTime*5);
+                //     rightFoot.SetTarget(targetPos,targetTransforms[index].rotation);
+                // }
+                // else
                 {
                     rightFoot.SetTarget(targetTransforms[index].position,targetTransforms[index].rotation);
                 }

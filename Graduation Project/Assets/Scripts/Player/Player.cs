@@ -57,6 +57,7 @@ public class Player : AnimationObj
 
     private IKGunGrab _gunGrab;
     public Climb climb;
+    public ClimbLadder climbL;
     
     [Tooltip("목 움직이기")]
     private Transform _cameraTansform;
@@ -494,6 +495,7 @@ public class Player : AnimationObj
             InteractiveDoubleButton idb = _hitInfo.transform.GetComponent<InteractiveDoubleButton>();
             InteractiveLiftButton ilb = _hitInfo.transform.GetComponent<InteractiveLiftButton>();
             ClimbWall cw = _hitInfo.transform.GetComponent<ClimbWall>();
+            ClimbLadderWall cl = _hitInfo.transform.GetComponent<ClimbLadderWall>();
             if ( car != null && rideCarID<=0 )
             {
                 if (onInteractKey)
@@ -584,6 +586,37 @@ public class Player : AnimationObj
                     anim.SetFloat("MoveDirX",dirX);
                     
                     climb.enabled = true;
+                    
+                }
+                else
+                {
+                    interactText.text = "Interact Key 'F'";
+                    Debug.Log(_hitInfo.transform.name);
+                }
+            }
+            
+            if (cl != null)
+            {
+                if (onInteractKey)
+                {
+                    interactText.text = " ";
+
+                    transform.rotation = Quaternion.LookRotation(-_hitInfo.normal);
+                    isClimbing = true;
+                    playerRb.velocity = Vector3.zero;
+                    playerRb.useGravity = false;
+                    dirX = 0;
+                    dirZ = 0;
+                    
+                    climbL.targetLeftFootTransforms = cl.targetLeftFootTransforms;
+                    climbL.targetLeftHandTransforms = cl.targetLeftHandTransforms;
+                    climbL.targetRightFootTransforms = cl.targetRightFootTransforms;
+                    climbL.targetRightHandTransforms = cl.targetRightHandTransforms;
+
+                    anim.SetFloat("MoveDirZ",dirZ);
+                    anim.SetFloat("MoveDirX",dirX);
+                    
+                    climbL.enabled = true;
                     
                 }
                 else
