@@ -8,7 +8,8 @@ public class IKCCD : MonoBehaviour
     
 
     
-    public Transform targetPos;
+    public Vector3 targetPos;
+    private Quaternion targetRot;
 
     public Transform endEffector;
     public Transform parentBone;
@@ -61,7 +62,7 @@ public class IKCCD : MonoBehaviour
         
         if (targetPos !=null)
         {
-            float dist = (standardPos.position - targetPos.position).sqrMagnitude;
+            float dist = (standardPos.position - targetPos).sqrMagnitude;
 
            
             if (dist < armDistance)
@@ -69,7 +70,7 @@ public class IKCCD : MonoBehaviour
 
                 isIKOn = true;
                 IKCCDSolution();
-                _boneList[0].rotation = targetPos.rotation;
+                _boneList[0].rotation = targetRot;
             }
             else
             {
@@ -82,7 +83,7 @@ public class IKCCD : MonoBehaviour
     {
         Vector3 effectorPos = _boneList[0].position;
         
-        Vector3 target = Vector3.Lerp(effectorPos, targetPos.position, weight);
+        Vector3 target = Vector3.Lerp(effectorPos, targetPos, weight);
 
         
         float sqrDistance;
@@ -159,7 +160,7 @@ public class IKCCD : MonoBehaviour
         
     }
 
-    public void SetTarget(Transform target)
+    public void SetTarget(Vector3 target ,Quaternion Rot)
     {
         
         targetPos = target;

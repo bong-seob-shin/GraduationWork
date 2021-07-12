@@ -31,7 +31,7 @@ public class Climb : MonoBehaviour
         if (targetTransforms.Length != 0)
         {
 
-            if (!leftHand.isIKOn)
+            //if (!leftHand.isIKOn)
             {
                 int index = 0;
                 float temp = (leftHand.transform.position - targetTransforms[0].position).sqrMagnitude;
@@ -46,10 +46,19 @@ public class Climb : MonoBehaviour
                     }
                 }
 
-                leftHand.SetTarget(targetTransforms[index]);
+                if (leftHand.targetPos != Vector3.zero)
+                {
+                    Vector3 targetPos = Vector3.Lerp(leftHand.targetPos, targetTransforms[index].position,
+                        Time.deltaTime * 5);
+                    leftHand.SetTarget(targetPos,targetTransforms[index].rotation);
+                }
+                else
+                {
+                    leftHand.SetTarget(targetTransforms[index].position,targetTransforms[index].rotation);
+                }
             }
             
-            if (!rightHand.isIKOn)
+            //if (!rightHand.isIKOn)
             {
                 int index = 0;
                 float temp = (rightHand.transform.position - targetTransforms[0].position).sqrMagnitude;
@@ -63,8 +72,17 @@ public class Climb : MonoBehaviour
                         temp = dist;
                     }
                 }
-
-                rightHand.SetTarget(targetTransforms[index]);
+                if (rightHand.targetPos != Vector3.zero)
+                {
+                    Vector3 targetPos = Vector3.Lerp(rightHand.targetPos, targetTransforms[index].position,
+                        Time.deltaTime * 5);
+                    rightHand.SetTarget(targetPos,targetTransforms[index].rotation);
+                }
+                else
+                {
+                    rightHand.SetTarget(targetTransforms[index].position,targetTransforms[index].rotation);
+                }
+               
             }
             
             
@@ -83,7 +101,18 @@ public class Climb : MonoBehaviour
                     }
                 }
 
-                leftFoot.SetTarget(targetTransforms[index]);
+                if (leftFoot.targetPos != Vector3.zero)
+                {
+                    
+                    Vector3 targetPos = Vector3.Lerp(leftFoot.targetPos, targetTransforms[index].position,
+                        Time.deltaTime*5);
+                    leftFoot.SetTarget(targetPos, targetTransforms[index].rotation);
+
+                }
+                else
+                {
+                    leftFoot.SetTarget(targetTransforms[index].position,targetTransforms[index].rotation);
+                }
             }
             
             //if (!rightFoot.isIKOn)
@@ -101,7 +130,16 @@ public class Climb : MonoBehaviour
                     }
                 }
 
-                rightFoot.SetTarget(targetTransforms[index]);
+                if (rightFoot.targetPos != Vector3.zero)
+                {
+                    Vector3 targetPos = Vector3.Lerp(rightFoot.targetPos, targetTransforms[index].position,
+                        Time.deltaTime*5);
+                    rightFoot.SetTarget(targetPos,targetTransforms[index].rotation);
+                }
+                else
+                {
+                    rightFoot.SetTarget(targetTransforms[index].position,targetTransforms[index].rotation);
+                }
             }
         }
 
@@ -142,6 +180,11 @@ public class Climb : MonoBehaviour
             _player.isClimbing = false;
             _player.playerRb.useGravity = true;
             targetTransforms = new Transform[0];
+            leftHand.targetPos = new Vector3();
+            rightHand.targetPos = new Vector3();
+            leftFoot.targetPos = new Vector3();
+            rightFoot.targetPos = new Vector3();
+
             this.enabled = false;
             
         }

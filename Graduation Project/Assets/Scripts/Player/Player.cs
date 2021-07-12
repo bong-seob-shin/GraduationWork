@@ -531,7 +531,7 @@ public class Player : AnimationObj
                 else
                 {
                     interactText.text = "Interact Key 'F'";
-                    leftHandIKCCD.targetPos = ib.transform;
+                    leftHandIKCCD.targetPos = ib.transform.position;
 
                     Debug.Log(_hitInfo.transform.name);
                 }
