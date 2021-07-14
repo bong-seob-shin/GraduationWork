@@ -23,9 +23,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Dungeons/Dungeon2/Materials/M_Dungeon2_Stuffs.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Dungeons/Dungeon2/Materials/M_Dungeon2_Stuffs.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GP.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ClimbLadder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ClimbLadder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractiveObj/OnOffLamp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ClimbLadder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractiveObj/ClimbLadderWall.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,7 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/SliceController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CrossHair.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateIdle.cs" />
@@ -94,8 +95,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/IK/IKCCD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/ClimbLadderWall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ClimbLadder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ClimbLadder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/OnOffLamp.cs" />
       </list>
     </option>
   </component>
@@ -274,6 +276,7 @@
       <workItem from="1626016039776" duration="1499000" />
       <workItem from="1626017595058" duration="323000" />
       <workItem from="1626118742300" duration="6692000" />
+      <workItem from="1626273935852" duration="1886000" />
     </task>
     <servers />
   </component>

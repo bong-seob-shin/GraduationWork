@@ -203,7 +203,7 @@ public class ClimbLadder : MonoBehaviour
         if (other.CompareTag("WallTop"))
         {
             if(_player.isClimbing)
-                transform.Translate(Vector3.up*2f+Vector3.forward*0.1f);
+                transform.Translate(Vector3.up*2f+Vector3.forward*0.01f);
 
         }
     }
