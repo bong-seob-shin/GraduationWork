@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Dungeon2_Stuffs
+  m_Name: M_Dungeon2_Stuffs ColorChanged
   m_Shader: {fileID: -6465566751694194690, guid: 27324c9a69249a84ea1d3ae0ac078638, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -252,7 +252,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_561C20F3: {r: 1500, g: 1500, b: 1500, a: 1500}
+    - Color_561C20F3: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1500}
     - Color_7CDA2637: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.38039216, g: 0.21568628, b: 0.21568628, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}

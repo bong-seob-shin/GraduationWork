@@ -61,6 +61,13 @@ public class InteractManager : MonoBehaviour
                 }
             }
         }
+        
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Debug.Log( InteractObj.buttonList.Count);
+        }
+        #endif
     }
 
 

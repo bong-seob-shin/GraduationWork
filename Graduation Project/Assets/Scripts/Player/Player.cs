@@ -494,8 +494,10 @@ public class Player : AnimationObj
             InteractiveButton ib = _hitInfo.transform.GetComponent<InteractiveButton>();
             InteractiveDoubleButton idb = _hitInfo.transform.GetComponent<InteractiveDoubleButton>();
             InteractiveLiftButton ilb = _hitInfo.transform.GetComponent<InteractiveLiftButton>();
+            InteractiveNonAnimButton inab = _hitInfo.transform.GetComponent<InteractiveNonAnimButton>();
             ClimbWall cw = _hitInfo.transform.GetComponent<ClimbWall>();
             ClimbLadderWall cl = _hitInfo.transform.GetComponent<ClimbLadderWall>();
+            
             if ( car != null && rideCarID<=0 )
             {
                 if (onInteractKey)
@@ -618,6 +620,26 @@ public class Player : AnimationObj
                     
                     climbL.enabled = true;
                     
+                }
+                else
+                {
+                    interactText.text = "Interact Key 'F'";
+                    Debug.Log(_hitInfo.transform.name);
+                }
+            }
+
+            if (inab != null)
+            {
+                if (onInteractKey)
+                {
+                    interactText.text = " ";
+
+                    inab.InteractObjs();
+                    
+                    Debug.Log("불렸음");
+                    _interactCoolDown = 1.0f;
+                    onInteractKey = false;
+
                 }
                 else
                 {

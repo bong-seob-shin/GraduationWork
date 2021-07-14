@@ -8,12 +8,12 @@ public class OnOffLamp : MonoBehaviour
 
     public Material lampOnMat;
     public Material lampOffMat;
-
-    private bool currentOnOff = false;
+    private Renderer _myRenderer;
+    private bool _currentOnOff = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _myRenderer = gameObject.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -21,18 +21,18 @@ public class OnOffLamp : MonoBehaviour
     {
         if (isOnOff)
         {
-            if (currentOnOff)
+            if (_currentOnOff)
             {
-                gameObject.GetComponent<Renderer>().material = lampOnMat;
-                currentOnOff = false;
+                _myRenderer.material = lampOnMat;
+                _currentOnOff = false;
             }
         }
         else
         {
-            if (!currentOnOff)
+            if (!_currentOnOff)
             {
-                gameObject.GetComponent<Renderer>().material = lampOffMat;
-                currentOnOff = true;
+                _myRenderer.material = lampOffMat;
+                _currentOnOff = true;
             }
         }
 

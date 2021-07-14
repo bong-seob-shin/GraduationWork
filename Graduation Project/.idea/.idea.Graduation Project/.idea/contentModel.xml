@@ -47,6 +47,7 @@
             <e p="InteractiveButton.cs" t="Include" />
             <e p="InteractiveDoubleButton.cs" t="Include" />
             <e p="InteractiveLiftButton.cs" t="Include" />
+            <e p="InteractiveNonAnimButton.cs" t="Include" />
             <e p="InteractManager.cs" t="Include" />
             <e p="InteractObj.cs" t="Include" />
             <e p="Laser.cs" t="Include" />
