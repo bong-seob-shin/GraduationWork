@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.18076, g: 162.51416, b: 215.03311, a: 1}
+  m_IndirectSpecularColor: {r: 131.1594, g: 162.49646, b: 215.04776, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -49932,7 +49932,6 @@ MonoBehaviour:
   triggers:
   - {fileID: 6393514949215822721}
   - {fileID: 112786007}
-  - {fileID: 703792099}
   doorAnim: {fileID: 919132147965663893}
 --- !u!111 &919132147965663893
 Animation:
