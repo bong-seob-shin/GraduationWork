@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,4 +38,24 @@ public class OnOffLamp : MonoBehaviour
         }
 
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isOnOff = true;
+        }
+    }
+    
+    #if UNITY_EDITOR
+    #else
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isOnOff = false;
+        }
+    }
+    #endif
 }
