@@ -54,6 +54,7 @@
             <e p="LiftTrigger.cs" t="Include" />
             <e p="MovingFloor.cs" t="Include" />
             <e p="OnOffLamp.cs" t="Include" />
+            <e p="PuzzleDoorTrigger.cs" t="Include" />
           </e>
           <e p="MeshSlice" t="Include">
             <e p="Door.cs" t="Include" />
