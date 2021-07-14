@@ -9,14 +9,7 @@ public class DroneMissile : MonoBehaviour
     public int damage;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            Instantiate(shockWave, transform.position, Quaternion.identity);
-
-            Destroy(this.gameObject);
-        }
-    
-        if (other.CompareTag("Terrain"))
+        if (other.gameObject.layer != LayerMask.NameToLayer("DroneMonster"))
         {
             Instantiate(shockWave, transform.position, Quaternion.identity);
 

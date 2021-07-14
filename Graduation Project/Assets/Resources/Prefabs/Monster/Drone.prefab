@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7100888827149091305}
   - component: {fileID: 7492308987526586747}
   - component: {fileID: 4407194911818777193}
+  - component: {fileID: 44879061791200092}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -163,7 +164,26 @@ MonoBehaviour:
   patrolTime: 3
   agroOn: 0
   patrolOn: 0
-  anim: {fileID: 0}
+  anim: {fileID: 44879061791200092}
+--- !u!95 &44879061791200092
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383542906078091921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5dab8f9dac2ded740ac701e40001e084, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2831277091210635243
 GameObject:
   m_ObjectHideFlags: 0

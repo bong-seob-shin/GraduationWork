@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DroneMonster : MonsterManager
 {
@@ -59,6 +61,8 @@ public class DroneMonster : MonsterManager
         //missleStartPos = missilePos.transform.position;
         
         monsterStartPos = transform.position;
+
+        maximumHeight = Random.Range(5, 20);
         
         // 플레이어 타겟 잡는 곳
         targetOn = false;
@@ -87,20 +91,32 @@ public class DroneMonster : MonsterManager
             }
 
             RaycastHit hit;
-            if (Physics.Raycast(new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z),Vector3.down, out hit,50.0f))
+            if (Physics.Raycast(new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z),Vector3.down, out hit,100.0f))
             {
-                if (hit.collider.gameObject.GetComponent<Terrain>())
+                if (hit.collider != null)
                 {
-                    if (Mathf.Abs(this.transform.position.y - hit.point.y) <= maximumHeight)
-                    {
-                        transform.position = new Vector3(transform.position.x, transform.position.y + droneVelocity * Time.deltaTime,
-                            transform.position.z);
-                        patrolOn = false;
-                    }
-                    else
+                    // if (Mathf.Abs(this.transform.position.y - hit.point.y) != maximumHeight)
+                    // {
+                    //     transform.position = Vector3.MoveTowards(transform.position,
+                    //         new Vector3(transform.position.x, hit.point.y + (float)maximumHeight, transform.position.z),
+                    //         droneVelocity * Time.deltaTime);
+                    //     // transform.position = new Vector3(transform.position.x,
+                    //     //     transform.position.y + droneVelocity * Time.deltaTime,
+                    //     //     transform.position.z);
+                    //     patrolOn = false;
+                    // }
+                    transform.position = Vector3.MoveTowards(transform.position,
+                        new Vector3(transform.position.x, hit.point.y + (float)maximumHeight, transform.position.z),
+                        droneVelocity * Time.deltaTime);
+                    // transform.position = new Vector3(transform.position.x,
+                    //     transform.position.y + droneVelocity * Time.deltaTime,
+                    //     transform.position.z);
+                    patrolOn = false;
+                    if(Mathf.Abs(this.transform.position.y - hit.point.y) <= maximumHeight || Mathf.Abs(this.transform.position.y - hit.point.y) >= maximumHeight)
                     {
                         patrolOn = true;
                     }
+                    
                 }
                 
                 colls = Physics.OverlapSphere(hit.point, 40.0f);
