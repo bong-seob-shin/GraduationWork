@@ -55,6 +55,7 @@
             <e p="MovingFloor.cs" t="Include" />
             <e p="OnOffLamp.cs" t="Include" />
             <e p="PuzzleDoorTrigger.cs" t="Include" />
+            <e p="SafetyArea.cs" t="Include" />
           </e>
           <e p="MeshSlice" t="Include">
             <e p="Door.cs" t="Include" />
@@ -65,7 +66,10 @@
           </e>
           <e p="Monster" t="Include">
             <e p="Boss1Plane.cs" t="Include" />
+            <e p="Boss2Bullet.cs" t="Include" />
+            <e p="Boss2FloorAttack.cs" t="Include" />
             <e p="Boss2Laser.cs" t="Include" />
+            <e p="Boss2OperationField.cs" t="Include" />
             <e p="BossMonster.cs" t="Include" />
             <e p="BossMonster2.cs" t="Include" />
             <e p="BossMonsterBullet.cs" t="Include" />

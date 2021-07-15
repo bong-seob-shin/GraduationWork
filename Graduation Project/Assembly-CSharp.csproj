@@ -51,6 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Monster\ClosedMonster.cs" />
+     <Compile Include="Assets\Scripts\Monster\Boss2Laser.cs" />
      <Compile Include="Assets\Scripts\Monster\Boss1Plane.cs" />
      <Compile Include="Assets\Scripts\Framework\NoneControlObj.cs" />
      <Compile Include="Assets\Scripts\MeshSlice\MeshDestroy.cs" />
@@ -81,6 +82,7 @@
      <Compile Include="Assets\Scripts\InteractiveObj\InteractiveButton.cs" />
      <Compile Include="Assets\Scripts\IK\IKCCD.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\FloorTrigger.cs" />
+     <Compile Include="Assets\Scripts\Monster\BossMonster2.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\PuzzleDoorTrigger.cs" />
      <Compile Include="Assets\Scripts\Monster\PlanePattern.cs" />
      <Compile Include="Assets\Scripts\Player\Climb.cs" />
@@ -97,6 +99,7 @@
      <Compile Include="Assets\Scripts\Monster\DroneMissileShockWave.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\MeshSlice\Shatter.cs" />
+     <Compile Include="Assets\Scripts\Monster\Boss2OperationField.cs" />
      <Compile Include="Assets\Scripts\Monster\RangedMonster.cs" />
      <Compile Include="Assets\Scripts\Weapon\Gun.cs" />
      <Compile Include="Assets\Scripts\Monster\MonsterManager.cs" />
@@ -113,9 +116,9 @@
      <Compile Include="Assets\Scripts\InteractiveObj\Laser.cs" />
      <Compile Include="Assets\Scripts\InteractiveObj\InteractiveDoubleButton.cs" />
      <Compile Include="Assets\Scripts\Player State\StateIdle.cs" />
-     <Compile Include="Assets\Scripts\Monster\Boss2Laser.cs" />
-     <Compile Include="Assets\Scripts\Monster\BossMonster2.cs" />
-     <Compile Include="Assets\Scripts\Monster\Boss2OperationField.cs" />
+     <Compile Include="Assets\Scripts\Monster\Boss2Bullet.cs" />
+     <Compile Include="Assets\Scripts\Monster\Boss2FloorAttack.cs" />
+     <Compile Include="Assets\Scripts\InteractiveObj\SafetyArea.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

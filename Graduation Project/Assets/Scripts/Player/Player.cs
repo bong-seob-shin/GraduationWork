@@ -110,6 +110,8 @@ public class Player : AnimationObj
     public bool enableJump = false; // 상호작용 트리거에 들어왔을때 점프가 되지않게 하기 위한 변수
 
     private InteractManager _IManager;
+
+    public bool boss2Safety = false;
     private void Awake()
     {
         
@@ -189,6 +191,7 @@ public class Player : AnimationObj
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(boss2Safety);
         if (rideCarID<=0&& !isClimbing)
         {
             

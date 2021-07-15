@@ -32,6 +32,13 @@ public class BossMonster2 : MonsterManager
     // 전깃 줄 공격
     public GameObject electricWire;
     public GameObject[] electricWirePoints;
+    
+    // 장판 공격
+    public GameObject boss2_ShootPoint;
+    public GameObject boss2_BulletTargetPoint;
+    public GameObject boss2_bullet;
+    
+    
 
     // 드론 소환
     public List<MonsterManager> spawnList = new List<MonsterManager>();
@@ -71,7 +78,8 @@ public class BossMonster2 : MonsterManager
                     if (currentAttackTime <= 0.0f)
                     {
                         // phaseFirstPattern();
-                        phaseThirdPattern();
+                        //phaseThirdPattern();
+                        phaseFourthPattern();
                         currentAttackTime = attackTime;
                     }
                 }
@@ -113,6 +121,13 @@ public class BossMonster2 : MonsterManager
             Boss2Laser laser = Instantiate(electricWire, electricWirePoints[i].transform.position, Quaternion.Euler(0.0f,0.0f,90.0f)).GetComponent<Boss2Laser>();
             laser.target = centerPoint.position;
         }
+    }
+
+    private void phaseFourthPattern()
+    {
+        Boss2Bullet boss2Bullet = Instantiate(boss2_bullet, boss2_ShootPoint.transform.position, Quaternion.identity)
+            .GetComponent<Boss2Bullet>();
+        boss2Bullet.target = boss2_BulletTargetPoint.transform.position;
     }
     
     private void CalcPhase()
