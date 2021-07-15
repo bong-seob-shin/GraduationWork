@@ -102,7 +102,7 @@ public class Gun : MonoBehaviour
         {
             RaycastHit hit;
             int layerMask = (-1) - (1 << LayerMask.NameToLayer("PlayerCamera"));  // Everything에서 Player 레이어만 제외하고 충돌 체크함
-            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,layerMask))
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,layerMask, QueryTriggerInteraction.Ignore))
             {
                 GameObject mark =  Instantiate(bulletMark, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 GameObject markP =  Instantiate(markParticle, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
