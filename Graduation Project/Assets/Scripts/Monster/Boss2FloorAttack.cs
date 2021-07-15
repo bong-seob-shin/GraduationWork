@@ -12,6 +12,8 @@ public class Boss2FloorAttack : MonoBehaviour
         existTime += Time.deltaTime;
         if (existTime >= 5.0f)
         {
+            //GameObject.Find("_Dungeon2").transform.Find("ElectroFloor").gameObject.SetActive(false);
+
             Destroy(this.gameObject);
         }
     }

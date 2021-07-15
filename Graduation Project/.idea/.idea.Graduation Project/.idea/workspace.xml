@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Dungeons/Dungeon2/Materials/M_Dungeon2_MetalWireFence.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Dungeons/Dungeon2/Materials/M_Dungeon2_MetalWireFence.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2FloorAttack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2FloorAttack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GP.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +40,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractiveObj/SafetyArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F8918D0C-C5FC-41A1-BABA-01B207A4C016/4d/53084f96/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -87,14 +89,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/OnOffLamp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/DroneMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/DroneMissile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster2.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/SafetyArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Mesh_Maker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshCut.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
       </list>
     </option>
@@ -280,6 +282,7 @@
       <workItem from="1626343153250" duration="18000" />
       <workItem from="1626348785021" duration="782000" />
       <workItem from="1626350111507" duration="4429000" />
+      <workItem from="1626367098532" duration="4497000" />
     </task>
     <servers />
   </component>

@@ -108,6 +108,12 @@ public class Gun : MonoBehaviour
                 GameObject markP =  Instantiate(markParticle, hit.point+hit.normal*0.001f,Quaternion.identity,hit.transform);
                 mark.transform.LookAt(hit.point+hit.normal);
                 markP.transform.LookAt(hit.point+hit.normal);
+                mark.transform.localScale = new Vector3(1/ hit.transform.localScale.x,
+                    1 / hit.transform.localScale.x,
+                    1 / hit.transform.localScale.x); 
+                markP.transform.localScale = new Vector3(1/ hit.transform.localScale.x,
+                    1 / hit.transform.localScale.x,
+                    1 / hit.transform.localScale.x); 
                 Destroy(mark, 5f);
                 Destroy(markP, 1f);
                 ClosedMonster monster = hit.transform.GetComponent<ClosedMonster>();

@@ -8,6 +8,12 @@ public class Boss2Bullet : MonoBehaviour
     public Vector3 target;
 
     public GameObject floorAttack;
+
+
+    private void Start()
+    {
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -19,6 +25,9 @@ public class Boss2Bullet : MonoBehaviour
         if (transform.position == target)
         {
             Instantiate(floorAttack, transform.position, Quaternion.identity);
+            //GameObject.Find("_Dungeon2").transform.Find("ElectroFloor").gameObject.SetActive(true);
+
+            
             Destroy(this.gameObject);
         }
     }
