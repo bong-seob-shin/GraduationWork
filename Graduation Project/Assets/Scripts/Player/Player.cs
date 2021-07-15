@@ -191,7 +191,6 @@ public class Player : AnimationObj
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(boss2Safety);
         if (rideCarID<=0&& !isClimbing)
         {
             
