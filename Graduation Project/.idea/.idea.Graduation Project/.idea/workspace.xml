@@ -20,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GP.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshCut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshCut.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Mesh_Maker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Mesh_Maker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +48,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractLiftButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/LiftTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterBullet.cs" />
@@ -65,7 +68,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Plane.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Framework/AnimationObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateRun.cs" />
@@ -75,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveLiftButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractiveButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/InteractObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/DroneMissileShockWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IK/IKCCD.cs" />
@@ -94,6 +95,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/SafetyArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Mesh_Maker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshCut.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" />
       </list>
     </option>
   </component>
@@ -276,6 +281,7 @@
       <workItem from="1626292853460" duration="530000" />
       <workItem from="1626339408261" duration="2962000" />
       <workItem from="1626343153250" duration="18000" />
+      <workItem from="1626348785021" duration="782000" />
     </task>
     <servers />
   </component>
@@ -328,10 +334,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="578" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622980552153" />
-    <state x="604" y="148" width="930" height="1026" key="dock-window-1" timestamp="1622279470012">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1543" y="0" width="1559" height="995" maximized="true" key="dock-window-1" timestamp="1626349223055">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="604" y="148" width="930" height="1026" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622279470012" />
+    <state x="-1543" y="0" width="1559" height="995" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1626349223055" />
     <state x="694" y="141" width="1096" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618302181257" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1624211489752">
       <screen x="0" y="0" width="1920" height="1040" />
