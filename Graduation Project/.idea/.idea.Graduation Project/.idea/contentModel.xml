@@ -63,6 +63,7 @@
             <e p="MeshCut.cs" t="Include" />
             <e p="MeshDestroy.cs" t="Include" />
             <e p="Shatter.cs" t="Include" />
+            <e p="SliceManager.cs" t="Include" />
           </e>
           <e p="Monster" t="Include">
             <e p="Boss1Plane.cs" t="Include" />

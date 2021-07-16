@@ -22,16 +22,10 @@
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2Bullet.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2Bullet.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttackBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttackBullet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GP.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +45,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/MonsterBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonsterBullet.cs" />
@@ -95,13 +88,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Mesh_Maker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshCut.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/SliceManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" />
       </list>
     </option>
   </component>
@@ -291,6 +285,7 @@
       <workItem from="1626420093196" duration="24000" />
       <workItem from="1626420306782" duration="15000" />
       <workItem from="1626420430759" duration="4995000" />
+      <workItem from="1626427221483" duration="1024000" />
     </task>
     <servers />
   </component>
