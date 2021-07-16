@@ -20,8 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c55a49-19e9-4dec-9553-f9f7b3e86311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graduation Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2Bullet.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Monster/Boss2Bullet.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttackBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttackBullet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,9 +42,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IK/IKGrab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshDestroy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F8918D0C-C5FC-41A1-BABA-01B207A4C016/4d/53084f96/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Core.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -58,7 +69,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshSlicer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputIp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player State/StateJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/CarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Framework/AnimationObj.cs" />
@@ -81,16 +91,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/OnOffLamp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/DroneMonster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/DroneMissile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractiveObj/SafetyArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Mesh_Maker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/MeshCut.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshSlice/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2FloorAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Climb.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/Boss2Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Monster/BossMonster2.cs" />
       </list>
     </option>
   </component>
@@ -276,6 +287,10 @@
       <workItem from="1626348785021" duration="782000" />
       <workItem from="1626350111507" duration="4429000" />
       <workItem from="1626367098532" duration="6862000" />
+      <workItem from="1626419785424" duration="6000" />
+      <workItem from="1626420093196" duration="24000" />
+      <workItem from="1626420306782" duration="15000" />
+      <workItem from="1626420430759" duration="4995000" />
     </task>
     <servers />
   </component>
@@ -328,10 +343,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="578" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622980552153" />
-    <state x="-1543" y="0" width="1559" height="995" maximized="true" key="dock-window-1" timestamp="1626349223055">
+    <state x="-1730" y="0" width="1521" height="995" maximized="true" key="dock-window-1" timestamp="1626425534908">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1543" y="0" width="1559" height="995" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1626349223055" />
+    <state x="-1730" y="0" width="1521" height="995" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1626425534908" />
     <state x="694" y="141" width="1096" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1080.1880@0.0.1920.1040" timestamp="1618302181257" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1624211489752">
       <screen x="0" y="0" width="1920" height="1040" />

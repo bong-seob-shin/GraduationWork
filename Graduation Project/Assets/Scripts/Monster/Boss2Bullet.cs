@@ -7,29 +7,29 @@ public class Boss2Bullet : MonoBehaviour
 {
     public Vector3 target;
 
-    public GameObject floorAttack;
-
-
-    private void Start()
-    {
-    }
+    public float existTime;
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.localScale = new Vector3(transform.localScale.x + Time.deltaTime,
-            transform.localScale.y + Time.deltaTime, transform.localScale.z + Time.deltaTime);
-
-        this.transform.position = Vector3.MoveTowards(transform.position, target, 5.0f * Time.deltaTime);
+        this.transform.position = Vector3.MoveTowards(transform.position, target, 10.0f * Time.deltaTime);
 
         if (transform.position == target)
         {
-            Instantiate(floorAttack, transform.position, Quaternion.identity);
-            //GameObject.Find("_Dungeon2").transform.Find("ElectroFloor").gameObject.SetActive(true);
+            existTime -= Time.deltaTime;
+            if (existTime <= 0.0f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
 
-            
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<Player>().hit(30);
             Destroy(this.gameObject);
         }
     }
-    
 }

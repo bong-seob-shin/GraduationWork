@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6052539596536645262}
   - component: {fileID: 4911214645516543906}
   - component: {fileID: 3272636190834026387}
-  - component: {fileID: 6843135382277012426}
+  - component: {fileID: 500738046436503363}
   m_Layer: 0
-  m_Name: Boss2Bullet
+  m_Name: Boss2FloorAttackBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,17 +51,14 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 10000
+      - m_Value: 1
         m_Name: SpawnRate
         m_Overridden: 1
-      - m_Value: 2
+      - m_Value: 1
         m_Name: Size
         m_Overridden: 1
-      - m_Value: 2000
+      - m_Value: 500
         m_Name: TrailsSpawnRate
-        m_Overridden: 1
-      - m_Value: 5
-        m_Name: TrailsLifetime
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -69,7 +66,7 @@ VisualEffect:
       m_Array: []
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0.97868246, y: 0, z: 2.65792, w: 1}
+      - m_Value: {x: 1.8437601, y: 3.442872, z: 7.2021885, w: 1}
         m_Name: Color
         m_Overridden: 1
     m_Uint:
@@ -155,9 +152,9 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6843135382277012426
+--- !u!114 &500738046436503363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,8 +163,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2303348207035807735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aede947790d0c145a7086204f6fff9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f19492e0d8254b4eaba0d2cc49af557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0, z: 0}
-  existTime: 3
+  floorAttack: {fileID: 801756349288524818, guid: ac3d357516fbabc4abd8a0a0715c00f4, type: 3}

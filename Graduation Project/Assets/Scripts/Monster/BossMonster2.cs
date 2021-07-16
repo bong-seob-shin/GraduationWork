@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BossMonster2 : MonsterManager
 {
@@ -36,9 +37,12 @@ public class BossMonster2 : MonsterManager
     // 장판 공격
     public GameObject boss2_ShootPoint;
     public GameObject boss2_BulletTargetPoint;
+    public GameObject boss2_floorAttackBullet;
+    
+    // 총알 공격
     public GameObject boss2_bullet;
-    
-    
+    public Collider[] TargetsColls;
+    public GameObject Target;
 
     // 드론 소환
     public List<MonsterManager> spawnList = new List<MonsterManager>();
@@ -67,37 +71,167 @@ public class BossMonster2 : MonsterManager
             if (!isDead)
             {
                 CalcPhase();
-                if (isRotate)
-                {
-                    transform.RotateAround(centerPoint.position, Vector3.up, boss2_speed * Time.deltaTime);
-                }
 
                 if (phase == 1)
                 {
+                    transform.RotateAround(centerPoint.position, Vector3.up, boss2_speed * Time.deltaTime);
+                    
+                    attackTime = 10;
+
                     currentAttackTime -= Time.deltaTime;
                     if (currentAttackTime <= 0.0f)
                     {
-                        // phaseFirstPattern();
-                        //phaseThirdPattern();
-                        phaseFourthPattern();
+                        //phaseFourthPattern();
+                        phaseFirstPattern();
                         currentAttackTime = attackTime;
                     }
                 }
 
                 if (phase == 2)
                 {
+                    transform.RotateAround(centerPoint.position, Vector3.up, -boss2_speed * Time.deltaTime);
                     
+                    attackTime = 8;
+                    currentAttackTime -= Time.deltaTime;
+                    if (currentAttackTime <= 0.0f)
+                    {
+                        randomPattern = Random.Range(0, 2);
+                        if (randomPattern == 0)
+                        {
+                            phaseFirstPattern();
+                        }
+
+                        if (randomPattern == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+
+                        currentAttackTime = attackTime;
+                    }
                 }
-                
+
+                if (phase == 3)
+                {
+                    transform.RotateAround(centerPoint.position, Vector3.up, boss2_speed * Time.deltaTime);
+                    
+                    List<int> randList = new List<int>(){0,1,2};
+                    attackTime = 6;
+
+                    currentAttackTime -= Time.deltaTime;
+                    if (currentAttackTime <= 0.0f)
+                    {
+                        randomPattern = Random.Range(0, randList.Count);
+                        if (randList[randomPattern] == 0)
+                        {
+                            phaseFirstPattern();
+                        }
+
+                        if (randList[randomPattern] == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+
+                        if (randList[randomPattern] == 2)
+                        {
+                            phaseThirdPattern();
+                        }
+                        randList.RemoveAt(randomPattern);
+
+                        int pattern2 = Random.Range(0, randList.Count);
+
+                        if (randList[pattern2] == 0)
+                        {
+                            phaseFirstPattern();
+                        }
+
+                        if (randList[pattern2] == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+
+                        if (randList[pattern2] == 2)
+                        {
+                            phaseThirdPattern();
+                        }
+
+                        currentAttackTime = attackTime;
+                    }
+                }
+
+                if (phase == 4)
+                {
+                    transform.RotateAround(centerPoint.position, Vector3.up, -boss2_speed * 1.3f * Time.deltaTime);
+
+                    attackTime = 4;
+                    List<int> randList = new List<int>() {0, 1, 2, 3};
+
+                    currentAttackTime -= Time.deltaTime;
+                    if (currentAttackTime <= 0.0f)
+                    {
+                        randomPattern = Random.Range(0, randList.Count);
+                        if (randList[randomPattern] == 0)
+                        {
+                            phaseFirstPattern();
+                        }
+
+                        if (randList[randomPattern] == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+
+                        if (randList[randomPattern] == 2)
+                        {
+                            phaseThirdPattern();
+                        }
+
+                        if (randList[randomPattern] == 3)
+                        {
+
+                            phaseFourthPattern();
+                        }
+
+                        randList.RemoveAt(randomPattern);
+
+                        int pattern2 = Random.Range(0, randList.Count);
+
+                        if (randList[pattern2] == 0)
+                        {
+                            phaseFirstPattern();
+                        }
+
+                        if (randList[pattern2] == 1)
+                        {
+                            phaseSecondPattern();
+                        }
+
+                        if (randList[pattern2] == 2)
+                        {
+                            phaseThirdPattern();
+                        }
+
+                        if (randList[pattern2] == 3)
+                        {
+                            phaseFourthPattern();
+                        }
+
+                        currentAttackTime = attackTime;
+
+                    }
+                }
             }
             
             //hp가 0% 이하일 때 죽이자.
             if (isDead)
             {
+                this.gameObject.AddComponent<Rigidbody>().useGravity = true;
+                boss2_Wheel.transform.parent = null;
+                boss2_Head.transform.parent = null;
                 dead_timer += Time.deltaTime;
                 if (dead_timer >= 3.0f)
                 {
                     Destroy(this.gameObject);
+                    Destroy(boss2_Wheel);
+                    Destroy(boss2_Head);
                 }
             }
             
@@ -113,6 +247,15 @@ public class BossMonster2 : MonsterManager
             spawnList.Add(droneMonster);
         }
     }
+
+    private void phaseSecondPattern()
+    {
+        DetectTarget();
+
+        Boss2Bullet boss2Bullet = Instantiate(boss2_bullet, boss2_ShootPoint.transform.position, Quaternion.identity)
+            .GetComponent<Boss2Bullet>();
+        boss2Bullet.target = Target.transform.position;
+    }
     
     private void phaseThirdPattern()
     {
@@ -125,31 +268,41 @@ public class BossMonster2 : MonsterManager
 
     private void phaseFourthPattern()
     {
-        Boss2Bullet boss2Bullet = Instantiate(boss2_bullet, boss2_ShootPoint.transform.position, Quaternion.identity)
-            .GetComponent<Boss2Bullet>();
-        boss2Bullet.target = boss2_BulletTargetPoint.transform.position;
+        Boss2FloorAttackBullet boss2FloorAttackBullet = Instantiate(boss2_floorAttackBullet, boss2_ShootPoint.transform.position, Quaternion.identity)
+            .GetComponent<Boss2FloorAttackBullet>();
+        boss2FloorAttackBullet.target = boss2_BulletTargetPoint.transform.position;
+    }
+    
+    private void DetectTarget()
+    {
+        TargetsColls = Physics.OverlapSphere(transform.position, 100.0f);
+
+        // 여기서 범위 안에 들어온 플레이어를 찾아서 Targets[] 에 append
+        for (int i = 0; i < TargetsColls.Length; i++)
+        {
+            if (TargetsColls[i].tag == "Player")
+            {
+                Target = TargetsColls[i].gameObject;
+            }
+        }
     }
     
     private void CalcPhase()
     {
         float hpPer = ((float)((float)this.HP / (float)this.MaxHP) * 100.0f);
-        // hp가 80% 이상 100% 이하일 때  = 1페이즈  ----> first_face 분리 후 제거
         if (hpPer <= 100.0f && hpPer >= 80.0f)
         {
             phase = 1;
         }
-        // hp가 50% 이상 80% 미만일 때 = 2페이즈   ----> second_face 분리 후 제거  몬스터 소환만 하는 패턴
         if (hpPer < 80.0f && hpPer >= 50.0f)
         {
             phase = 2;
             
         }
-        // hp가 30% 이상 50% 미만일 때 = 3페이즈    ---->  third_face 분리 후 제거  투사체 공격하는 패턴
         if (hpPer < 50.0f && hpPer >= 30.0f)
         {
             phase = 3;
         }
-        // hp가 0% 초과 30% 미만일 때 = 4페이즈(광폭화)  ----> 0프로 이하되면 죽음   2,3 패턴 둘다
         if (hpPer < 30.0f && hpPer > 0.0f)
         {
             phase = 4;
