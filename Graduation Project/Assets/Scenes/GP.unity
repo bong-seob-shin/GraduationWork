@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.13168, g: 162.57239, b: 215.29922, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -47286,6 +47286,62 @@ PrefabInstance:
       propertyPath: boss2_floorAttackBullet
       value: 
       objectReference: {fileID: 2303348207035807735, guid: 9d27c457c5f3a9d4081e56dbe4ceef7b, type: 3}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 9.771383e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000001117587
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.05235258
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99862874
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555663018124728, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -353.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555664260902441, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555664260902441, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555664679829882, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555664679829882, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271555664679829882, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.989
+      objectReference: {fileID: 0}
     - target: {fileID: 8448965588335425617, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
       propertyPath: m_Name
       value: Boss2
@@ -47296,11 +47352,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8448965588335425619, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 377.46
+      value: 377.272
       objectReference: {fileID: 0}
     - target: {fileID: 8448965588335425619, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2276.212
+      value: 2277.944
       objectReference: {fileID: 0}
     - target: {fileID: 8448965588335425619, guid: 933c2965dcd4cfc4da70c59b2ff0578c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -47493,7 +47549,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 5390815080229017947, guid: b2d1c1618d1f66c45833e0a37cb821e7, type: 3}
+  m_Mesh: {fileID: 8800704712510051588, guid: b2d1c1618d1f66c45833e0a37cb821e7, type: 3}
 --- !u!1001 &1636164367
 PrefabInstance:
   m_ObjectHideFlags: 0
