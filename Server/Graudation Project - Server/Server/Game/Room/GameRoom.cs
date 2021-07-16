@@ -97,6 +97,11 @@ namespace Server.Game
         {
             lock (_lock)
             {
+                foreach (Player player in _players.Values)
+                {
+                    player.Update();
+                }
+
                 foreach (CMonsterSpawner CMonseter_spawn in _cmonsterspawn.Values)
                 {
                     CMonseter_spawn.Update();
@@ -392,8 +397,8 @@ namespace Server.Game
                     S_ChangeHp resHpPacket = new S_ChangeHp();
 
                     door.StatInfo.Hp -= 30;
-                    resHpPacket.PosInfo = door.PosInfo;
                     resHpPacket.StatInfo = door.StatInfo;
+                    resHpPacket.PosInfo = hpPacket.PosInfo;
                     resHpPacket.ObjectId = hpPacket.ObjectId;
                     Broadcast(resHpPacket);
 
@@ -438,6 +443,39 @@ namespace Server.Game
 
             return null;
         }
+
+        //public float Visibility() 
+        //{
+        //    foreach (Player player in _players.Values)
+        //    {
+        //        foreach (CMonster cmonster in _cmonsters.Values)
+        //        {
+        //            float dist = DistanceToPoint(player.CellPos, cmonster.CellPos);
+
+        //            return dist;
+        //        }
+        //    }
+
+        //    return 0;
+        //}
+
+        //public CMonster FindCMonster(Func<GameObject, bool> condition)
+        //{
+        //    foreach (Player player in _players.Values)
+        //    {
+        //        foreach (CMonster cmonster in _cmonsters.Values)
+        //        {
+        //            if (condition.Invoke(cmonster))
+        //                return cmonster;
+        //        }
+        //    }
+        //    return null;
+        //}
+
+        //private float DistanceToPoint(Vector3 a, Vector3 b)
+        //{
+        //    return (float)Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2) + Math.Pow(a.Z - b.Z, 2));
+        //}
 
         public void Broadcast(IMessage packet)
         {

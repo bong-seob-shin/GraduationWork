@@ -57,20 +57,20 @@ namespace Server.Game
 
             //Player target = Room.FindPlayer(p =>
             //{
-            //    float dist = DistanceToPoint(p.CellPos, CellPos);                
+            //    float dist = DistanceToPoint(p.CellPos, new Vector3(this.PosInfo.SpineX, CellPos.Y, this.PosInfo.SpineZ));
             //    return dist <= 20f;
             //});
 
             //if (target != null)
             //{
-            //    Console.WriteLine("거리 20 내부");
-            //    State = State.Dead;
+            //    Console.WriteLine("살아나야해");
+            //    State = State.Moving;
             //    BroadcastMove();
             //}
-            //else 
+            //else
             //{
-            //    Console.WriteLine("거리 20 바깥");
-            //    State = State.Attack;
+            //    //Console.WriteLine("거리 20 바깥");
+            //    State = State.Dead;
             //    BroadcastMove();
             //}
 
