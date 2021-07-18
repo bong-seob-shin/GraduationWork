@@ -5,12 +5,14 @@ using System.Text;
 
 namespace Server.Game
 {
-    public class ObsCore : GameObject
+    public class DoorManager : GameObject
     {
-        public ObsCore()
+        public DoorManager()
         {
-            StatInfo.MaxHp = 90;
-            StatInfo.Hp = 90;
+            ObjectType = GameObjectType.Doormanager;
         }
     }
 }
+
+
+

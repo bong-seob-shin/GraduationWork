@@ -25,6 +25,9 @@ namespace Server.Game
         Dictionary<int, Boss1> _boss1 = new Dictionary<int, Boss1>();
         Dictionary<int, Button> _button = new Dictionary<int, Button>();
         Dictionary<int, Door> _door = new Dictionary<int, Door>();
+        Dictionary<int, DoorManager> _doorManager = new Dictionary<int, DoorManager>();
+
+        Dictionary<int, ObsCore> _core = new Dictionary<int, ObsCore>();
 
         public List<Vector3> CMonster_pos = new List<Vector3>();
         public List<Vector3> RMonster_pos = new List<Vector3>();
@@ -76,6 +79,10 @@ namespace Server.Game
             button.Info.Name = $"InteractManager";
             EnterGame(button);
 
+            DoorManager doorManager = ObjectManager.Instance.Add<DoorManager>();
+            doorManager.Info.Name = $"DoorManager";
+            EnterGame(doorManager);
+
             Door door1 = ObjectManager.Instance.Add<Door>();
             EnterGame(door1);
 
@@ -90,7 +97,6 @@ namespace Server.Game
 
             Door door5 = ObjectManager.Instance.Add<Door>();
             EnterGame(door5);
-
         }
 
         public void Update()
@@ -174,6 +180,12 @@ namespace Server.Game
                         foreach (Door d in _door.Values)
                             spawnPacket.Objects.Add(d.Info);
 
+                        foreach (DoorManager dm in _doorManager.Values)
+                            spawnPacket.Objects.Add(dm.Info);
+
+                        foreach (ObsCore core in _core.Values)
+                            spawnPacket.Objects.Add(core.Info);
+
                         player.Session.Send(spawnPacket);
                     }
                 }
@@ -225,6 +237,20 @@ namespace Server.Game
                     Door door = gameObject as Door;
                     _door.Add(gameObject.Id, door);
                     door.Room = this;
+                }
+
+                else if (type == GameObjectType.Doormanager)
+                {
+                    DoorManager doorManager = gameObject as DoorManager;
+                    _doorManager.Add(gameObject.Id, doorManager);
+                    doorManager.Room = this;
+                }
+
+                else if (type == GameObjectType.Core)
+                {
+                    ObsCore core = gameObject as ObsCore;
+                    _core.Add(gameObject.Id, core);
+                    core.Room = this;
                 }
 
                 // 타인한테 새로운 신입에 대한 정보 보내기
@@ -359,6 +385,17 @@ namespace Server.Game
                 RMonster rm = new RMonster();
                 Door door = new Door();
                 Player p = new Player();
+
+                if (hpPacket.ObjectId == 5097508)
+                {
+
+                    S_ChangeHp resHpPacket = new S_ChangeHp();
+                    resHpPacket.ObjectId = hpPacket.ObjectId;
+                    resHpPacket.StatInfo = hpPacket.StatInfo;
+                    Broadcast(resHpPacket);
+
+                    Console.WriteLine("코어 : " + resHpPacket);
+                }
 
                 if (_cmonsters.TryGetValue(hpPacket.ObjectId, out cm))
                 {

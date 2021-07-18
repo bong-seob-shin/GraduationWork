@@ -97,6 +97,7 @@ namespace Server.Game
             Random rand = new Random();
 
             //int randPattern = rand.Next(1, 5);
+
             int randPattern = 4;
 
             if (randPattern == 1)
