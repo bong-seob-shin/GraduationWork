@@ -21,7 +21,7 @@ public class Door : ObjManager
         if (this.HP <= 0.0f)
         {
             SliceManager sliceManager = FindObjectOfType<SliceManager>();
-            sliceManager.SliceObject = this.gameObject;
+            sliceManager.SliceObject = this.transform.gameObject;
             sliceManager.insideMaterial = GetComponent<MeshRenderer>().materials.ElementAt(0);
             sliceManager.SlicePos = slicePos;
             sliceManager.isSlice = true;

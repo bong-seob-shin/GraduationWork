@@ -43,6 +43,7 @@ public class SliceManager : MonoBehaviour
         }
 
         Destroy(obj);
+        isSlice = false;
 
     }
     private Vector3 GetAngle(GameObject obj , int gen)
